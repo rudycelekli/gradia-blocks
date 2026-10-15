@@ -30,12 +30,19 @@ class Features(StrictModel):
     enabled: bool = True
     audio: bool = False
     triage: bool = True
+    photo: bool = False
+    screenshot: bool = False
+    video: bool = False
 
 
 class RuntimeConfig(StrictModel):
     categories: tuple[str, ...] = ("general", "bug", "idea")
     max_message_chars: int = Field(default=10000, ge=1, le=10000)
     max_audio_bytes: int = Field(default=262144, ge=1, le=262144)
+
+    max_attachment_bytes: int = Field(default=5242880, ge=1, le=16777216)
+    max_total_attachment_bytes: int = Field(default=10485760, ge=1, le=33554432)
+    max_attachments: int = Field(default=4, ge=1, le=8)
 
     @field_validator("categories")
     @classmethod
@@ -71,11 +78,32 @@ class Audio(StrictModel):
     data_base64: str = Field(min_length=1, max_length=349528)
 
 
+class Attachment(StrictModel):
+    kind: Literal["photo", "screenshot", "video"]
+    mime_type: Literal["image/png", "image/jpeg", "image/webp", "video/webm", "video/mp4"]
+    data_base64: str = Field(min_length=1, max_length=22369624)
+
+
+class AttachmentMetadata(StrictModel):
+    id: str
+    kind: Literal["photo", "screenshot", "video"]
+    mime_type: str
+    size_bytes: int
+    sha256: str
+
+
+class AttachmentStorageSettings(StrictModel):
+    """Host-only configuration; never included in the public block config."""
+    backend: Literal["sqlite", "filesystem"] = "sqlite"
+    directory: str | None = None
+
+
 class Submission(StrictModel):
     message: str = Field(min_length=1, max_length=10000)
     category: str = Field(default="general", min_length=1, max_length=60)
     context: Context = Field(default_factory=Context)
     audio: Audio | None = None
+    attachments: list[Attachment] = Field(default_factory=list, max_length=8)
 
     @field_validator("message")
     @classmethod
@@ -107,6 +135,7 @@ class FeedbackRecord(StrictModel):
     assignee: str | None
     context: Context
     audio: AudioMetadata | None
+    attachments: list[AttachmentMetadata] = Field(default_factory=list)
     created_at: str
     updated_at: str
 

@@ -2,7 +2,7 @@
   "schema_version": 2,
   "diagram_type": "workflow",
   "meta": {
-    "title": "Feedback composition: working core and planned extensions",
+    "title": "Feedback v0.2: capture, persist and compose",
     "output": "apps/console/public/blocks/diagrams/feedback-workflow.html",
     "locale": "en",
     "quality_profile": "showcase"
@@ -24,7 +24,7 @@
       "col": 0,
       "type": "frontend",
       "label": "Capture feedback",
-      "sublabel": "Text + optional audio"
+      "sublabel": "Text / audio / photo / screen / video"
     },
     {
       "id": "persist",
@@ -32,7 +32,7 @@
       "col": 1,
       "type": "database",
       "label": "Persist + receipt",
-      "sublabel": "Commit before success"
+      "sublabel": "Selected storage; commit first"
     },
     {
       "id": "triage",
@@ -112,9 +112,10 @@
       "dot": "cyan",
       "title": "Working now",
       "items": [
-        "Local feedback API and optional audio attachment",
-        "Tenant operator reads and revision-checked triage",
-        "Durable mutation events plus volatile HTTP attempt telemetry"
+        "Optional bounded media capture with explicit user action",
+        "SQLite metadata plus configured DB or private filesystem bytes",
+        "Tenant-scoped media reads and revision-checked triage",
+        "Durable mutation events plus volatile request diagnostics"
       ]
     },
     {
@@ -122,7 +123,8 @@
       "title": "Future blocks \u2014 illustrative chain",
       "items": [
         "Approval, notification and linked workflow evidence are planned",
-        "No automatic actions or live provider connections here"
+        "No automatic actions or live provider connections here",
+        "Filesystem crash orphans require explicit stopped-writer reconciliation"
       ]
     }
   ]

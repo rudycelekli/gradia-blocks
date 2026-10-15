@@ -1,7 +1,7 @@
 # Gradia Feedback block · local reference candidate
 
 One behavioral HTTP contract for a feedback widget, operator queue or agent.
-The Python/FastAPI reference persists tenant-scoped reports in SQLite. A
+The Python/FastAPI reference persists tenant-scoped reports in SQLite with selectable media storage. A
 TypeScript client calls the same API. This is runnable local code, **not an
 admitted production package, a hosted service or a native multi-language server**.
 No customer implementation was copied into this package.
@@ -54,7 +54,8 @@ assigned exclusively by that credential. OpenAPI/docs expose schemas, not data.
 | `GET /v1/feedback/{id}` | Operator | Tenant-only record; foreign tenant IDs return 404 |
 | `PATCH /v1/feedback/{id}` | Operator | Triage with mandatory `expected_revision` |
 | `GET /v1/feedback/{id}/events?after=0&limit=100` | Operator | Bounded committed-mutation audit sequence |
-| `GET /v1/feedback/{id}/audio` | Operator | Private attachment download when audio enabled |
+| `GET /v1/feedback/{id}/audio` | Operator | Private legacy audio download when enabled |
+| `GET /v1/feedback/{id}/attachments/{attachment_id}` | Operator | Own-tenant photo/screenshot/video bytes; feature gate and SHA256 integrity check |
 | `GET /v1/feedback/diagnostics/attempts` | Operator | Own-tenant bounded process-memory HTTP attempt spans and coverage gaps |
 
 Submission JSON:
@@ -97,7 +98,7 @@ only after that promise completes. The deadline bounds credential lookup, transp
 ## Configuration and optional audio
 
 Four strict namespaces: `design` (accent hex, radius, density, placement),
-`content` (plain text labels), `features` (`enabled`, `audio`, `triage`), `config`
+`content` (plain text labels), `features` (`enabled`, `audio`, `triage`, `photo`, `screenshot`, `video`), `config`
 (categories, message limit, audio limit). Settings are host-owned. A feature flag
 never weakens mandatory tenant or audit controls. Consumers must render content
 as text and implement their own accessibility/conformance checks.
@@ -105,7 +106,8 @@ as text and implement their own accessibility/conformance checks.
 Audio defaults **off**. When explicitly enabled, `audio` is
 `{"mime_type":"audio/ogg","data_base64":"..."}`. Accepted MIME types are
 `audio/webm`, `audio/ogg`, `audio/wav`, with matching file signatures; maximum
-256 KiB decoded audio and 400000 total request bytes, including streamed bodies.
+256 KiB decoded legacy audio. The total HTTP-body limit is derived from the
+configured media allowance and enforced for streamed bodies too.
 Normalize MediaRecorder MIME parameters before submission. This service stores
 and returns bytes; it does not record microphones, transcribe, decode, inspect
 spoken content, certify media safety, fetch remote URLs or call providers.
@@ -121,7 +123,8 @@ latency excludes final database commit and network transport; it is not end-to-e
 latency. Human involvement is explicitly unknown for configured principals; no human role is inferred from a key. The durable audit uses `coverage=committed_mutations_only`. A second mandatory process-memory ring collects safe HTTP attempt metadata, including reads and refusals, with `coverage=volatile_http_attempts`. Each configured tenant has a maximum 100 entries; eviction and collection-failure counters are exposed to its operators. Unauthenticated attempts have a separate bounded ring accessible only to the embedding host, and cannot inherit a caller-supplied tenant. Route templates, methods, status, stable safe refusal codes, server-generated correlation IDs, measured duration and unknown cost are collected; raw URL paths/queries, body contents, tokens and audio are excluded. Mutation and HTTP evidence share correlation IDs. Process restart loses the volatile ring; no retention/collector availability claim is made. Attempt collection failure leaves a committed acknowledgment unchanged and increments its tenant gap counter. The event mechanism is mandatory for writes and cannot be disabled by feature flags. A local event reader is included; vendor collection, monetization, optional host sinks, provider spans and delivery workers remain separate adapters.
 
 Schema version 1 is stored in `block_metadata`; unsupported versions refuse.
-No migration from another schema, automatic upgrade or hosted bridge is claimed.
+Version0.2 adds an attachment table to schema1 without rewriting existing feedback.
+Cross-backend media migration, automatic downgrade or a hosted bridge is not implemented.
 Stop writers, back up the entire SQLite file, restore into an isolated host and
 rerun acceptance before changing a version. There is no purge/export management,
 encryption at rest, rate limiting, identity provider, secret rotation endpoint,
@@ -138,7 +141,7 @@ The package license is Apache-2.0, scoped to this directory. Third-party
 requirements retain their licenses; this does not relicense the containing repo.
 `requirements-tested.txt` records tested direct versions, not a transitive lock.
 Python is the only server implementation. `typescript/client.ts` is a typed HTTP
-client; React/browser host, Go/JVM/.NET clients and native implementations require
+client; Go/JVM/.NET clients and native implementations require
 separate integration and behavior evidence.
 
 ## TypeScript client transport checks
@@ -151,3 +154,104 @@ mkdir -p /tmp/gradia-feedback-client-test
 tsc --strict --target ES2022 --module commonjs --lib ES2022,DOM --outDir /tmp/gradia-feedback-client-test packages/blocks-feedback/typescript/client.ts
 GRADIA_FEEDBACK_COMPILED_CLIENT=/tmp/gradia-feedback-client-test/client.js node --test packages/blocks-feedback/typescript/client.test.cjs
 ```
+
+
+## Media edition 0.2.0: screenshots, photos and video
+
+All media features default off. Use one of the complete settings presets in
+[`examples/text-only.json`](examples/text-only.json) or
+[`examples/media-enabled.json`](examples/media-enabled.json):
+
+```sh
+export GRADIA_FEEDBACK_SETTINGS_FILE="$PWD/packages/blocks-feedback/examples/media-enabled.json"
+# Keep the credentials and database configuration from the local quickstart.
+/tmp/gradia-feedback-env/bin/python -m gradia_feedback.server
+```
+
+The request adds `attachments` while retaining the separate legacy `audio` field:
+
+```json
+{
+  "message": "The chart disappears after filtering",
+  "category": "bug",
+  "attachments": [
+    {"kind": "screenshot", "mime_type": "image/png", "data_base64": "<base64 bytes>"}
+  ]
+}
+```
+
+`photo` and `screenshot` accept PNG, JPEG or WebP; `video` accepts WebM or MP4.
+The server rejects an unsupported kind/MIME combination, mismatched signatures,
+invalid base64, unknown fields, disabled feature or excessive count/bytes before
+acknowledging persistence. Defaults: four attachments, 5MiB each, 10MiB aggregate;
+configurable hard ceilings: eight, 16MiB each and 32MiB aggregate. Legacy audio
+retains its 256KiB ceiling. JSON/base64 has encoding overhead; this is a bounded
+small-evidence profile, not resumable video or unlimited session recording.
+
+A returned feedback record contains only attachment IDs, kind, MIME, decoded
+size and SHA256. Retrieve bytes with the operator-only attachment endpoint.
+Credentials establish tenant identity; knowing an attachment ID grants no access.
+Downloads use `Cache-Control: no-store`, `nosniff` and attachment disposition.
+The diagnostic event contract excludes captured contents, filenames and paths.
+Format signatures do not certify media decoding, safety, recording duration or
+accuracy. Uploaded files may contain metadata such as EXIF; no automatic metadata
+stripping, content redaction, malware scanning or transcription is claimed.
+
+## Choose persistence per host
+
+Metadata, original idempotency receipts and audit events always use SQLite in
+this reference. Select where the **new attachment bytes** live at startup:
+
+| Profile | Configuration | Persistence boundary |
+|---|---|---|
+| Database | Default, or `GRADIA_FEEDBACK_ATTACHMENT_STORAGE=sqlite` | Media blobs and metadata commit in the same SQLite transaction |
+| Local files | `GRADIA_FEEDBACK_ATTACHMENT_STORAGE=filesystem` plus `GRADIA_FEEDBACK_ATTACHMENT_DIRECTORY=/absolute/private/media` | Owner-private files are flushed before metadata commit and acknowledgment |
+
+```sh
+umask 077
+mkdir -p /tmp/gradia-feedback-local/media
+export GRADIA_FEEDBACK_ATTACHMENT_STORAGE=filesystem
+export GRADIA_FEEDBACK_ATTACHMENT_DIRECTORY="$(cd /tmp/gradia-feedback-local/media && pwd -P)"
+/tmp/gradia-feedback-env/bin/python -m gradia_feedback.server
+```
+
+The library equivalent is `create_app(database, keys, settings,
+attachment_storage=AttachmentStorageSettings(backend="filesystem",
+directory="/absolute/private/media"))`. Import this settings class from
+`gradia_feedback.contracts`. The private directory is never returned by the
+configuration endpoint. Existing paths with permissive permissions or symlinks
+are refused; the service does not silently chmod or repurpose them. Legacy audio
+continues in the database for compatibility.
+
+Filesystem writes and SQLite are not one distributed transaction. A failed
+submission rolls back database changes and attempts to remove files it staged.
+Process death or failed cleanup may leave unreferenced files. Stop **all writers**,
+back up the database and directory together, and inspect
+`app.state.store.orphan_files()` during an exclusive maintenance window. It is
+inspection only; never delete its results during active writes. Preserve a
+verified backup before any backend/root change. Encryption, database replication,
+PostgreSQL/S3 adapters, lifecycle deletion and retention automation remain work
+for separately qualified storage profiles.
+
+## Browser integration
+
+`typescript/feedback-widget.tsx` is a transport-injected React component. Feature
+flags and limits belong to the host configuration; server enforcement remains
+authoritative. Capture starts only from an explicit action. Screen capture asks
+the browser's picker for a user-selected source; camera/microphone use their
+own grants. Permission denial and unsupported APIs leave written feedback usable.
+Users preview/remove attachments before submitting. Disabling a feature or
+unmounting stops owned capture tracks and releases preview URLs. File upload is
+the fallback for browsers without recording support. No screen or camera stream
+is started in the background.
+
+For other stacks, use the OpenAPI HTTP contract and your own interface. Browser
+credentials must come from an authorized host/BFF or scoped session; do not ship
+long-lived operator credentials in client bundles. Native mobile capture,
+iframe permissions policies, real devices and each customer host require their
+own integration acceptance. A browser preview that reports `delivery: preview`
+is intentionally separate from a durable service acknowledgment.
+
+Screen-capture requirements and browser limitations follow the
+[MediaDevices.getDisplayMedia reference](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getDisplayMedia);
+recording follows the [MediaRecorder reference](https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder).

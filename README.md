@@ -10,9 +10,9 @@ Gradia is an AI Research & Implementation Lab. This repository starts our open c
 
 | Artifact | What it does | Current boundary |
 |---|---|---|
-| [Feedback](packages/blocks-feedback/README.md) | FastAPI/SQLite API, tenant-scoped reports, operator triage, idempotency, local telemetry, optional audio attachments | Local reference candidate; no managed hosting or production admission |
+| [Feedback](packages/blocks-feedback/README.md) | FastAPI/SQLite API, tenant-scoped reports, operator triage, idempotency, local telemetry, opt-in photo/screenshot/video/audio, SQLite or private-filesystem attachment storage | Local reference candidate; no managed hosting or production admission |
 | [TypeScript client](packages/blocks-feedback/typescript/client.ts) | Calls the same HTTP contract; distinguishes acknowledgment from uncertain transport | A client, not another server implementation |
-| [React widget](packages/blocks-feedback/typescript/feedback-widget.tsx) | Configurable labels/accent/categories, optional explicit microphone capture and audio review | Host supplies transport and authority; never embed operator keys in a browser |
+| [React widget](packages/blocks-feedback/typescript/feedback-widget.tsx) | Configurable labels/accent/categories, explicit image paste/upload, screen/photo/video/audio capture and review | Host supplies transport and authority; never embed operator keys in a browser |
 | [Admission screen](packages/blocks-admission/README.md) | Checks pinned artifacts and independently supplied gate receipts; bounded parallel trusted-lane runner | Does not run tests, prove claims or merge changes |
 | [Skills](packages/blocks-skills/README.md) | First-party integration/review instructions with explicit scope | Instructions grant no tool permissions or credentials |
 | [Diagrams](diagrams/README.md) | Standalone interactive HTML and SVG; typed source IR | Planned nodes remain labeled; no external provider calls |
@@ -49,10 +49,11 @@ For the client and widget checks, use Node 22 and npm:
 ```sh
 npm ci --ignore-scripts --no-audit --no-fund
 npm run test:client
+npm run test:media
 npm run check:widget
 ```
 
-Feedback acknowledgment follows a committed transaction. Retry an uncertain submission only with its original payload/key; operator triage uses an expected revision. Local telemetry excludes message/audio bodies and does not phone home. Audio is optional and off by default; the reference does not transcribe it.
+Feedback acknowledgment follows a committed transaction. Retry an uncertain submission only with its original payload/key; operator triage uses an expected revision. Local telemetry excludes message/media bodies and does not phone home. Audio is optional and off by default; the reference does not transcribe it.
 
 ## Compose deliberately
 
@@ -63,3 +64,13 @@ Read [SECURITY.md](SECURITY.md) before exposing the reference remotely. Review [
 ## License
 
 Gradia-authored source is Apache-2.0. Diagram output preserves Archify MIT attribution and embedded font licenses. Third-party dependencies keep their licenses; see [NOTICE](NOTICE). This export contains no customer implementations, private operational documents or provider credentials.
+
+
+## Feedback 0.2.0
+
+Choose the [text-only](packages/blocks-feedback/examples/text-only.json) or
+[media-enabled](packages/blocks-feedback/examples/media-enabled.json) preset.
+The host adapter maps server feature flags, categories, content and limits into
+the React widget. Screen/camera capture is explicit; file upload is available
+when capture is unsupported. Filesystem and SQLite backups require coordinated
+recovery; no PostgreSQL/S3, media scanning or production admission is implied.

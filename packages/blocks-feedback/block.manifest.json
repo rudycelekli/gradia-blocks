@@ -1,15 +1,15 @@
 {
   "schema_version": "1",
   "id": "gradia.feedback",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "status": "local_reference_candidate",
-  "summary": "Tenant-scoped feedback intake, optional bounded audio, triage and committed mutation evidence",
+  "summary": "Tenant-scoped text, opt-in photo/screenshot/video/audio feedback, selectable private media storage, triage and metadata-only evidence",
   "license": "Apache-2.0",
   "implementation": {
     "language": "Python",
     "runtime": ">=3.11",
     "framework": "FastAPI",
-    "storage": "SQLite schema 1"
+    "storage": "SQLite metadata schema1 plus additive attachment table; SQLite blobs or private filesystem media"
   },
   "clients": [
     {
@@ -57,6 +57,15 @@
       "transport": "local file",
       "authority": "host filesystem owner",
       "effect": "persistent customer feedback and optional audio bytes"
+    },
+    {
+      "name": "feedback.attachments.read.v1",
+      "direction": "provided",
+      "transport": "HTTP",
+      "method": "GET",
+      "path": "/v1/feedback/{identity}/attachments/{attachment_id}",
+      "authority": "tenant operator; corresponding media feature enabled",
+      "effect": "private bounded read with stored SHA256 integrity verification"
     }
   ],
   "configuration_namespaces": [
@@ -81,15 +90,21 @@
       "disabled_feature",
       "invalid_audio",
       "oversized_payload",
-      "audit_failure_rollback"
+      "audit_failure_rollback",
+      "disabled_media_kind",
+      "cross_tenant_attachment",
+      "attachment_byte_limits",
+      "filesystem_rollback",
+      "attachment_integrity"
     ]
   },
   "limitations": [
-    "Not admitted, published, production deployed or universally compatible",
-    "No anonymous intake, transcription, screenshot annotation, external delivery or hosted telemetry",
-    "Audio signatures are not media decoding or malware verification",
-    "No private-variant resolver or compatibility graph runtime yet",
-    "No distributed runtime or SQLite replication qualification"
+    "Reference candidate; enterprise admission and managed hosting remain open",
+    "Browser screen capture requires explicit user selection in a supporting secure-context browser",
+    "MIME/signature screening is not decoding, malware scanning or automated redaction",
+    "SQLite and filesystem backups require a coordinated maintenance window; crash orphans need inspection",
+    "No PostgreSQL, S3, resumable large uploads, transcription or screenshot annotation implementation",
+    "No universal compatibility, distributed runtime or automatic private-variant migration qualification"
   ],
   "rights": {
     "origin": "new reference implementation; no customer source copied",
@@ -102,6 +117,6 @@
     "volatile_coverage": "http_attempts",
     "per_tenant_attempt_capacity": 100,
     "export": "none",
-    "privacy": "metadata_only; no body/audio/token/raw URL"
+    "privacy": "metadata_only; no body/media/token/raw URL or filesystem root"
   }
 }

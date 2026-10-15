@@ -1,0 +1,6 @@
+{
+  "design": {"accent": "#3d6b4f", "radius": 8, "density": "compact", "placement": "inline"},
+  "content": {"title": "Report an issue", "launcher_label": "Feedback", "message_label": "What happened?", "success_message": "Your report was saved."},
+  "features": {"enabled": true, "triage": true, "audio": false, "photo": false, "screenshot": false, "video": false},
+  "config": {"categories": ["general", "bug", "idea"], "max_message_chars": 5000}
+}

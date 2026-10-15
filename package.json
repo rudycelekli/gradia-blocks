@@ -6,7 +6,8 @@
   "license": "Apache-2.0",
   "scripts": {
     "test:client": "tsc --strict --target ES2022 --module commonjs --lib ES2022,DOM --outDir .build/client packages/blocks-feedback/typescript/client.ts && GRADIA_FEEDBACK_COMPILED_CLIENT=../../../.build/client/client.js node --test packages/blocks-feedback/typescript/client.test.cjs",
-    "check:widget": "tsc --noEmit --strict --target ES2022 --module ESNext --moduleResolution bundler --jsx react-jsx --lib ES2022,DOM packages/blocks-feedback/typescript/feedback-widget.tsx"
+    "check:widget": "tsc --noEmit --strict --target ES2022 --module ESNext --moduleResolution bundler --jsx react-jsx --lib ES2022,DOM packages/blocks-feedback/typescript/feedback-widget.tsx",
+    "test:media": "tsc --strict --target ES2022 --module commonjs --moduleResolution node --jsx react-jsx --lib ES2022,DOM --outDir .build/client packages/blocks-feedback/typescript/host-integration.ts packages/blocks-feedback/typescript/media.ts && GRADIA_FEEDBACK_COMPILED_MEDIA=../../../.build/client/media.js GRADIA_FEEDBACK_COMPILED_HOST_INTEGRATION=../../../.build/client/host-integration.js node --test packages/blocks-feedback/typescript/media.test.cjs packages/blocks-feedback/typescript/host-integration.test.cjs"
   },
   "devDependencies": {
     "typescript": "5.9.3",

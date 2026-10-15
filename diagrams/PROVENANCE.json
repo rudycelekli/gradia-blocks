@@ -2,23 +2,21 @@
   "upstream": "https://github.com/tt-a1i/archify",
   "upstream_revision": "807ad7a31dac511612c951384e7700fbba9660a3",
   "upstream_tracked_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-  "untracked_upstream": [
-    "node_modules (existing runtime dependencies; not copied)"
-  ],
   "node": "22.19.0",
-  "feedback_revision": "d7a9b2945f860bedb106f31230343ae7b3c37bea",
+  "feedback_revision": "c93d8e3c7a9620beb3519a0ca8940d7a135bb7a1",
   "network_update_check": "disabled via ARCHIFY_UPDATE_CHECK_DISABLED=1",
   "assets": {
-    "feedback-architecture.svg": "6a55416a9fbe9cc0ef50a8a578037da713bfc55924661faaf203c0b0d8cdbe9f",
-    "feedback-workflow.html": "8ee7a6571748cba132bbd60fe749fd586f1c2a0ee1941c33c81459bb412875d2",
     "ARCHIFY-LICENSE.txt": "b799ab081703e7821ae5096d2c1abdf14bbdc75e8ea1c4045998c36ed6db9706",
-    "feedback-workflow.svg": "fbf5a547b4d724903a13bfa25d14831c26aabcf03a21ef8be83b10d7192cb000",
-    "feedback-architecture.html": "87cf10e55798f1627dab2f9d7856d3e91e0acf118a7aa93c35357648290c3915"
+    "feedback-architecture.html": "fd59724331223d353564aacbdb5d77d8063297fa348416d9a9ba35bb1cf61d4a",
+    "feedback-architecture.svg": "9f6c0679b1d9e22a692127258c70b3c7caa1428be7978c526e10d2b5a369e87c",
+    "feedback-workflow.html": "b9997a8b18432a959aff3db364a73febb50b6c3a15ff4b5101d041d718530857",
+    "feedback-workflow.svg": "a32060e3bc1a021dddcbc7cbe7492ccb30ca3ce0d8c3bd02505517be0f94e0fa"
   },
   "claims": {
     "automated_archify_gates": "passed both diagrams",
     "visual_review": "not performed",
     "workflow_extensions": "planned, not implemented",
-    "telemetry": "Durable mutation events and bounded volatile HTTP attempt/refusal diagnostics; unknown costs"
+    "telemetry": "Durable mutation events and bounded volatile HTTP attempt/refusal diagnostics; unknown costs",
+    "media_storage": "Optional audio/photo/screenshot/video; SQLite metadata and selected SQLite BLOB/private filesystem media; fsync before commit; crash orphan inspection only"
   }
 }

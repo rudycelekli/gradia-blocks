@@ -25,3 +25,25 @@ test('known HTTP refusal is typed and no automatic replay occurs', async () => {
   await assert.rejects(c.triage('x',{expected_revision:1}), error => error instanceof FeedbackHttpError && error.code==='revision_conflict');
   assert.equal(calls,1);
 });
+test('attachment download is authenticated binary with deadline and typed refusal',async()=>{
+ let observed;
+ const c=client(async(url,options)=>{observed={url,options};return new Response(new Uint8Array([1,2,3]),{headers:{'Content-Type':'image/png'}});});
+ const blob=await c.downloadAttachment('report/id','attachment/id');
+ assert.equal(blob.type,'image/png');assert.equal(blob.size,3);
+ assert.match(observed.url,/report%2Fid\/attachments\/attachment%2Fid$/);assert.doesNotMatch(observed.url,/fixture|token|Bearer/);
+ assert.equal(observed.options.headers.Authorization,'Bearer server-only-fixture');
+ assert.equal(observed.options.redirect,'error');
+ await assert.rejects(client(response({error:{code:'not_found',message:'Absent'}},404)).downloadAttachment('x','y'),error=>error instanceof FeedbackHttpError&&error.code==='not_found');
+ await assert.rejects(client(()=>new Promise(()=>{})).downloadAttachment('x','y'),FeedbackTransportUncertain);
+});
+test('media submission preserves typed attachment payload and acknowledgment',async()=>{
+ const input={message:'visual issue',attachments:[{kind:'screenshot',mime_type:'image/png',data_base64:'AQID'}]};let observed;
+ const c=client(async(url,options)=>{observed=JSON.parse(options.body);return new Response(JSON.stringify({status:'acknowledged',feedback:{id:'report',revision:1,attachments:[{id:'media'}]},replayed:false}));});
+ assert.equal((await c.submit(input,'same-request')).feedback.attachments[0].id,'media');assert.deepEqual(observed,input);
+});
+test('binary download refuses declared and streamed oversized bodies',async()=>{
+ await assert.rejects(client(async()=>new Response('x',{headers:{'Content-Length':'16777217'}})).downloadAttachment('x','y'),FeedbackTransportUncertain);
+ const chunk=new Uint8Array(100000);let delivered=0,cancelled=false;
+ const c=client(async()=>new Response(new ReadableStream({pull(controller){delivered++;controller.enqueue(chunk);},cancel(){cancelled=true;}})));
+ await assert.rejects(c.downloadAudio('x'),FeedbackTransportUncertain);assert.equal(cancelled,true);assert.ok(delivered<8);
+});

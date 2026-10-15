@@ -2,13 +2,13 @@
   "schema_version": 1,
   "diagram_type": "architecture",
   "meta": {
-    "title": "Feedback block: local reference architecture",
+    "title": "Feedback v0.2: media and configurable storage",
     "output": "apps/console/public/blocks/diagrams/feedback-architecture.html",
     "locale": "en",
     "quality_profile": "showcase",
     "repository": {
       "url": "https://github.com/rudycelekli/gradia.git",
-      "revision": "d7a9b2945f860bedb106f31230343ae7b3c37bea",
+      "revision": "c93d8e3c7a9620beb3519a0ca8940d7a135bb7a1",
       "link_mode": "local-only"
     }
   },
@@ -17,7 +17,7 @@
       "id": "client",
       "type": "external",
       "label": "Client or agent",
-      "sublabel": "POST /v1/feedback",
+      "sublabel": "Text + optional capture",
       "pos": [
         40,
         60
@@ -29,13 +29,8 @@
       "sources": [
         {
           "path": "packages/blocks-feedback/gradia_feedback/api.py",
-          "line": 134,
-          "end_line": 136
-        },
-        {
-          "path": "packages/blocks-feedback/gradia_feedback/telemetry.py",
-          "line": 34,
-          "end_line": 70
+          "line": 142,
+          "end_line": 185
         }
       ]
     },
@@ -55,8 +50,8 @@
       "sources": [
         {
           "path": "packages/blocks-feedback/gradia_feedback/api.py",
-          "line": 98,
-          "end_line": 114
+          "line": 106,
+          "end_line": 115
         }
       ]
     },
@@ -64,20 +59,20 @@
       "id": "bounds",
       "type": "backend",
       "label": "Input + feature gates",
-      "sublabel": "Text / optional audio",
+      "sublabel": "Audio / photo / screen / video",
       "pos": [
-        560,
+        660,
         60
       ],
       "size": [
-        170,
+        210,
         64
       ],
       "sources": [
         {
           "path": "packages/blocks-feedback/gradia_feedback/api.py",
-          "line": 135,
-          "end_line": 152
+          "line": 145,
+          "end_line": 185
         }
       ]
     },
@@ -87,7 +82,7 @@
       "label": "Idempotency scope",
       "sublabel": "Tenant + actor + key",
       "pos": [
-        560,
+        660,
         260
       ],
       "size": [
@@ -97,29 +92,29 @@
       "sources": [
         {
           "path": "packages/blocks-feedback/gradia_feedback/api.py",
-          "line": 153,
-          "end_line": 168
+          "line": 186,
+          "end_line": 199
         }
       ]
     },
     {
       "id": "sqlite",
       "type": "database",
-      "label": "SQLite transaction",
-      "sublabel": "Feedback / events / receipts",
+      "label": "SQLite metadata + receipt",
+      "sublabel": "Bytes in DB or private files",
       "pos": [
         300,
         260
       ],
       "size": [
-        170,
+        210,
         64
       ],
       "sources": [
         {
           "path": "packages/blocks-feedback/gradia_feedback/store.py",
-          "line": 6,
-          "end_line": 23
+          "line": 87,
+          "end_line": 130
         }
       ]
     },
@@ -139,8 +134,8 @@
       "sources": [
         {
           "path": "packages/blocks-feedback/gradia_feedback/api.py",
-          "line": 155,
-          "end_line": 170
+          "line": 200,
+          "end_line": 210
         }
       ]
     },
@@ -148,7 +143,7 @@
       "id": "operator",
       "type": "external",
       "label": "Tenant operator",
-      "sublabel": "Read / triage / audio",
+      "sublabel": "Read / triage / media",
       "pos": [
         300,
         450
@@ -160,13 +155,29 @@
       "sources": [
         {
           "path": "packages/blocks-feedback/gradia_feedback/api.py",
-          "line": 172,
-          "end_line": 221
-        },
+          "line": 253,
+          "end_line": 263
+        }
+      ]
+    },
+    {
+      "id": "files",
+      "type": "database",
+      "label": "Private filesystem adapter",
+      "sublabel": "Optional; synced before DB commit",
+      "pos": [
+        660,
+        450
+      ],
+      "size": [
+        230,
+        64
+      ],
+      "sources": [
         {
-          "path": "packages/blocks-feedback/gradia_feedback/api.py",
-          "line": 126,
-          "end_line": 128
+          "path": "packages/blocks-feedback/gradia_feedback/store.py",
+          "line": 110,
+          "end_line": 161
         }
       ]
     }
@@ -207,6 +218,12 @@
       "from": "operator",
       "to": "sqlite",
       "label": "Tenant read"
+    },
+    {
+      "id": "sqlite-files",
+      "from": "sqlite",
+      "to": "files",
+      "label": "Selected media bytes"
     }
   ],
   "cards": [
@@ -214,18 +231,18 @@
       "dot": "cyan",
       "title": "Implemented local reference",
       "items": [
-        "Authenticated API; tenant-scoped operator reads and triage",
-        "Audio is optional and bounded; no anonymous capture"
+        "Authenticated, tenant-scoped API; optional audio, photo, screenshot and video",
+        "SQLite metadata; choose SQLite BLOBs or private filesystem media",
+        "Filesystem bytes sync before commit; crash orphans need explicit maintenance"
       ]
     },
     {
       "dot": "amber",
       "title": "Telemetry: two evidence tiers",
       "items": [
-        "Durable metadata events commit with each mutation",
+        "Durable metadata events commit with mutations; media excluded from telemetry",
         "HTTP attempts and refusals: volatile 100-event tenant ring",
-        "Operator diagnostics show eviction and collection gaps",
-        "Costs remain unknown; no bodies, URLs or secrets in attempt events"
+        "Diagnostics expose collection gaps; costs remain unknown"
       ]
     }
   ]

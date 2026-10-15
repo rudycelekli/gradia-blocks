@@ -1,11 +1,12 @@
 {
   "scope": "Original reference packages and attributed Archify diagrams; excludes private plans/customer implementations",
-  "validation": "Local14API+37admission/runner+3SDK+8Rust tests passed; strict widget compilation; CI separatelyverified",
+  "checkedAt": "2026-10-15T06:15:20.528932+00:00",
+  "validation": "30 API tests; 9 transport/media/adapter tests; strict TypeScript; browser synthetic capture and real TCP persistence/read in both storage modes passed; CI separately verified",
   "files": [
     {
       "path": ".github/workflows/ci.yml",
-      "sha256": "714103f9fa586ca0dd742020e08cff61f50dd019dfec130c88234e1fcadadf59",
-      "bytes": 1978
+      "sha256": "a12beae4e82fc9148da36d0fd725f78c4be22b9c78f11e615727f1c8bfe5e21e",
+      "bytes": 2007
     },
     {
       "path": ".gitignore",
@@ -29,8 +30,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "e7711a21555bc5d26ef56413c05d6f391f840cfabcef4a8ed12a44794053d07b",
-      "bytes": 4629
+      "sha256": "7ba96b846c570189b50a64e7800f6451b77393379cadc39b00daaf1e4cbf39d8",
+      "bytes": 5216
     },
     {
       "path": "SECURITY.md",
@@ -44,8 +45,8 @@
     },
     {
       "path": "diagrams/PROVENANCE.json",
-      "sha256": "437ff09b7db1a6661d8f5389bf6cde3b6474a40b3570edbe64e9aa6ed7995661",
-      "bytes": 1269
+      "sha256": "b0211b6fa1aa6687685f504fa68c14b3e979aadd986324c7ba43f7159b54d392",
+      "bytes": 1355
     },
     {
       "path": "diagrams/README.md",
@@ -59,33 +60,33 @@
     },
     {
       "path": "diagrams/feedback-architecture.html",
-      "sha256": "87cf10e55798f1627dab2f9d7856d3e91e0acf118a7aa93c35357648290c3915",
-      "bytes": 795696
+      "sha256": "fd59724331223d353564aacbdb5d77d8063297fa348416d9a9ba35bb1cf61d4a",
+      "bytes": 798308
     },
     {
       "path": "diagrams/feedback-architecture.svg",
-      "sha256": "6a55416a9fbe9cc0ef50a8a578037da713bfc55924661faaf203c0b0d8cdbe9f",
-      "bytes": 315657
+      "sha256": "9f6c0679b1d9e22a692127258c70b3c7caa1428be7978c526e10d2b5a369e87c",
+      "bytes": 318269
     },
     {
       "path": "diagrams/feedback-workflow.html",
-      "sha256": "8ee7a6571748cba132bbd60fe749fd586f1c2a0ee1941c33c81459bb412875d2",
-      "bytes": 790328
+      "sha256": "b9997a8b18432a959aff3db364a73febb50b6c3a15ff4b5101d041d718530857",
+      "bytes": 790558
     },
     {
       "path": "diagrams/feedback-workflow.svg",
-      "sha256": "fbf5a547b4d724903a13bfa25d14831c26aabcf03a21ef8be83b10d7192cb000",
-      "bytes": 311528
+      "sha256": "a32060e3bc1a021dddcbc7cbe7492ccb30ca3ce0d8c3bd02505517be0f94e0fa",
+      "bytes": 311604
     },
     {
       "path": "diagrams/ir/feedback-architecture.json",
-      "sha256": "628804cd8a414c4b36c9674fedefe98bb75e043aade3f607d4c34ae131f73b6d",
-      "bytes": 4930
+      "sha256": "6859af40961c2c6cffa1e57503de1bed37a52d7592236d769a2ffa1c50b1304c",
+      "bytes": 5294
     },
     {
       "path": "diagrams/ir/feedback-workflow.json",
-      "sha256": "190423158d985677dbb41497aa9c73785f7cb32a453e3ae0f31f270c9b3cd919",
-      "bytes": 2826
+      "sha256": "0fe6188876f7b654e20420f9453e456816840431d455ac87d583f4134491b6ab",
+      "bytes": 3003
     },
     {
       "path": "package-lock.json",
@@ -94,8 +95,8 @@
     },
     {
       "path": "package.json",
-      "sha256": "b61b1406ad2419af1cca52ab5f3461267c2b5e4d43c1b5288da4d1c5761de8b9",
-      "bytes": 796
+      "sha256": "c663dfaea158d4d4bdf9e41e61e99ba4fecc914bbaabc21b7c1acc6ff133e8fb",
+      "bytes": 1321
     },
     {
       "path": "packages/blocks-admission/LICENSE",
@@ -209,38 +210,48 @@
     },
     {
       "path": "packages/blocks-feedback/README.md",
-      "sha256": "d276e1b8d68dd5dbc96cea524867ad680456e81d6e59837868b58774e8b1624b",
-      "bytes": 10649
+      "sha256": "d7ea11eda028509ea4f6798e18170b4539a54cb638887715ad59cf2d128b3e9e",
+      "bytes": 16421
     },
     {
       "path": "packages/blocks-feedback/block.manifest.json",
-      "sha256": "6df498f68666a01d8de4dbf5fe74f0cdb118b097d5e3f40cba1e905937bf85ca",
-      "bytes": 3440
+      "sha256": "92c31beac8922f4ed871c10d51cc87e690174fdf5a9e664f41ef79e2dea4ee43",
+      "bytes": 4303
+    },
+    {
+      "path": "packages/blocks-feedback/examples/media-enabled.json",
+      "sha256": "a571f2c1e4ebfbafb046d8eac06d284c74a83ff17707f15d8369b2545c3c3532",
+      "bytes": 601
+    },
+    {
+      "path": "packages/blocks-feedback/examples/text-only.json",
+      "sha256": "72308e350445cb133c4ad9dbcac9733788e7eebc6812a394a9aaabc5533cfc50",
+      "bytes": 450
     },
     {
       "path": "packages/blocks-feedback/gradia_feedback/__init__.py",
-      "sha256": "24e293643d7f726289ada38991075663e0960898706f2100152c8447ed15acd0",
-      "bytes": 196
+      "sha256": "8f42e4c636ae262a8b8bd5af451301d74c35ba30510b8edc98c10e10b104f747",
+      "bytes": 252
     },
     {
       "path": "packages/blocks-feedback/gradia_feedback/api.py",
-      "sha256": "1b2e1392dfd4e93a763930364f97a0b77b0ad03a0f39c286ff9efce77e37282d",
-      "bytes": 13454
+      "sha256": "c06dda02c5718e0839cbc5d58e51b00c1572c63719db7006d49865946a40916f",
+      "bytes": 17440
     },
     {
       "path": "packages/blocks-feedback/gradia_feedback/contracts.py",
-      "sha256": "c84543f7f4beb000d3f1c109061482d04a115bf6e8447ed0e6572bd6783a0040",
-      "bytes": 4231
+      "sha256": "ab19aa454d476082057eb456cfb13d4c295f9288b5de7856a0c352e66844c343",
+      "bytes": 5281
     },
     {
       "path": "packages/blocks-feedback/gradia_feedback/server.py",
-      "sha256": "550e1a9fc9185eaedde1f9a8ca6248ee4720ef2acdd69e2fab2f7c20817a719f",
-      "bytes": 1246
+      "sha256": "fa5804bd6dfe2626005340de3ad2ee88b45d27860c673621b387f3cdb762bc3c",
+      "bytes": 1479
     },
     {
       "path": "packages/blocks-feedback/gradia_feedback/store.py",
-      "sha256": "220d24f1edd4daa22a3333950b9c6f4c51ff6271228d3348c2ce905bf21bc923",
-      "bytes": 2730
+      "sha256": "746477485d07b6cb85b7a74aa73ec56eacd0ae83b3c10be2fd0722e227ebbb1e",
+      "bytes": 8987
     },
     {
       "path": "packages/blocks-feedback/gradia_feedback/telemetry.py",
@@ -249,7 +260,7 @@
     },
     {
       "path": "packages/blocks-feedback/pyproject.toml",
-      "sha256": "3f47346f0de95edb48bd9f2e381d48422607221c35ead4d0f3c1ba7c7af932e6",
+      "sha256": "f101cbe22e8facb489cdf9788add2088cb5c75a0f3dbbed584f1a94b719fee1d",
       "bytes": 491
     },
     {
@@ -258,24 +269,49 @@
       "bytes": 222
     },
     {
+      "path": "packages/blocks-feedback/tests/test_media.py",
+      "sha256": "d1d16e04e31ee3ebb1fde6d2a1b3f942b66e52b040c363c1be70da8dbe31d6f5",
+      "bytes": 12517
+    },
+    {
       "path": "packages/blocks-feedback/tests/test_reference.py",
       "sha256": "4428fee198f0b52ed323c271af6eafba989980e4d07daf5d9ab437d6a0b33303",
       "bytes": 13248
     },
     {
       "path": "packages/blocks-feedback/typescript/client.test.cjs",
-      "sha256": "dfe68e0aca31f70e9ba7bbd4957052a7ce6d5af16118e8aac8d879cadc2afb5b",
-      "bytes": 2035
+      "sha256": "b91671d97f3349d3a257454b7fed5dc52410824ced0e1fe2bfd281618f42de20",
+      "bytes": 4124
     },
     {
       "path": "packages/blocks-feedback/typescript/client.ts",
-      "sha256": "4fc74e14a5e849edd232061550403f54af658c357bc66ddb96fafac3b6f99554",
-      "bytes": 5876
+      "sha256": "179a4af49dc79e76386f42dc7ff1a66669d88959536b7d52cae733eff93fdcf8",
+      "bytes": 7967
     },
     {
       "path": "packages/blocks-feedback/typescript/feedback-widget.tsx",
-      "sha256": "b973400e17f241f128353a884c7c84133d532a1fa777db131ccde61c2db4f5b8",
-      "bytes": 8302
+      "sha256": "4d6059f2006ed2f4722ef38e5d7d1021bbb299ba61f7685cf18edd66e79819cb",
+      "bytes": 19177
+    },
+    {
+      "path": "packages/blocks-feedback/typescript/host-integration.test.cjs",
+      "sha256": "b8692c8fa5f42e86e15fddc914e2af7e3bc99e2c0ea311a405ec775e1608aced",
+      "bytes": 1816
+    },
+    {
+      "path": "packages/blocks-feedback/typescript/host-integration.ts",
+      "sha256": "a488a8e4dfe1d5c4d57b9b619922d95edaf0a81601938b1d38a16bb48942176c",
+      "bytes": 2335
+    },
+    {
+      "path": "packages/blocks-feedback/typescript/media.test.cjs",
+      "sha256": "9925ed61f1fd8565e6d0798dbb174c36f95eb857bc08cfb356a455e03479e7ef",
+      "bytes": 1755
+    },
+    {
+      "path": "packages/blocks-feedback/typescript/media.ts",
+      "sha256": "ee02a90c21d7217281f01c5332c5e80c4c8ff44f4c49e1d00524cadbee51fd13",
+      "bytes": 3889
     },
     {
       "path": "packages/blocks-skills/LICENSE",
@@ -284,13 +320,13 @@
     },
     {
       "path": "packages/blocks-skills/README.md",
-      "sha256": "8016792113942a27f9d27b6afe23f07f065b8089a2df0a7010f9e09b7d058e08",
-      "bytes": 1352
+      "sha256": "a7cfbcea5b84884a9246ed4dee38c31668e788cc297bc788cb18610f25f8a7d0",
+      "bytes": 1381
     },
     {
       "path": "packages/blocks-skills/skills/integrate-feedback.md",
-      "sha256": "6e2a2aaa6405fc2cb7242eb283eed620ac9f44cbbd84aca3e12ee3037091733b",
-      "bytes": 2126
+      "sha256": "278b157b3b462da24b7a7599afbb93057a64430645f120769f8a8c95d0aa7ec9",
+      "bytes": 3329
     },
     {
       "path": "packages/blocks-skills/skills/review-block-candidate.md",

@@ -4,7 +4,7 @@ import os
 from pathlib import Path
 
 from .api import create_app
-from .contracts import BlockSettings, Principal
+from .contracts import AttachmentStorageSettings, BlockSettings, Principal
 
 
 def configured_app():
@@ -20,7 +20,8 @@ def configured_app():
     keys = {key: Principal.model_validate(value) for key, value in raw.items()}
     config_path = os.environ.get("GRADIA_FEEDBACK_SETTINGS_FILE")
     settings = BlockSettings.model_validate_json(Path(config_path).read_text()) if config_path else BlockSettings()
-    return create_app(database, keys, settings)
+    storage = AttachmentStorageSettings(backend=os.environ.get("GRADIA_FEEDBACK_ATTACHMENT_STORAGE", "sqlite"), directory=os.environ.get("GRADIA_FEEDBACK_ATTACHMENT_DIRECTORY"))
+    return create_app(database, keys, settings, attachment_storage=storage)
 
 
 if __name__ == "__main__":

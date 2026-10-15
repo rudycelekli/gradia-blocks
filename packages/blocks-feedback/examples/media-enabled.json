@@ -1,0 +1,6 @@
+{
+  "design": {"accent": "#714b35", "radius": 12, "density": "comfortable", "placement": "inline"},
+  "content": {"title": "Show us what happened", "launcher_label": "Feedback", "message_label": "Describe the issue", "success_message": "Your report and attachments were saved."},
+  "features": {"enabled": true, "triage": true, "audio": true, "photo": true, "screenshot": true, "video": true},
+  "config": {"categories": ["general", "bug", "idea"], "max_message_chars": 10000, "max_audio_bytes": 262144, "max_attachment_bytes": 5242880, "max_total_attachment_bytes": 10485760, "max_attachments": 4}
+}
