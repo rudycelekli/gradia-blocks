@@ -1,0 +1,16 @@
+{
+  "schema": "gradia.block.manifest.v1",
+  "id": "notifications",
+  "version": "0.1.0",
+  "status": "reference-candidate",
+  "license": "Apache-2.0",
+  "category": "connections",
+  "runtime": "Python3.11+ / FastAPI / SQLite / HTTPX",
+  "capabilities": ["durable-queue", "actor-scoped-idempotent-enqueue", "tenant-and-role-isolation", "exclusive-send-claim", "host-pinned-destinations", "hmac-signed-delivery-and-acknowledgment", "explicit-receipt-reconciliation", "conditional-principal-config-edition-fences", "durable-mutation-metadata", "bounded-http-attempt-telemetry"],
+  "api": "/v1/outbox",
+  "telemetry": {"mode": "atomic durable mutation metadata plus bounded process-local HTTP attempts", "rawPayloads": false, "payloadStorage": "private queue database", "cost": "unknown", "externalCollector": false},
+  "delivery": {"automaticRetries": false, "backgroundSender": false, "receiverProtocol": "gradia.webhook.v1 + signed gradia.webhook.ack.v1", "receiptLookup": "GET configured webhook URL + /receipts/{delivery_id}", "genericProviderSupport": false},
+  "limits": {"payloadBytes": 16384, "httpBodyBytes": 49152, "ackBytes": 16384, "destinationCount": 100, "apiCredentialCount": 256, "httpAttemptCapacityPerTenant": 100, "mutationReadLimit": 100},
+  "admission": "not_admitted",
+  "boundary": "Self-hosted custom-protocol reference. No email/Slack adapter, managed notification backend, automatic retry, HA, universal exactly-once guarantee, process-quiescence proof or enterprise admission."
+}

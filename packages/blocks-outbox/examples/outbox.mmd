@@ -1,0 +1,12 @@
+flowchart TD
+  App[Authorized app] -->|Idempotent enqueue| API[Outbox API]
+  API -->|Atomic record plus metadata| DB[(Private SQLite queue)]
+  Operator[Operator authority] -->|Explicit revision-bound attempt| API
+  API -->|Commit exclusive in-flight claim| DB
+  API -->|Signed immutable envelope POST| Receiver[Host-configured receiver]
+  Receiver -->|Atomic dedup receipt| ReceiverDB[(Receiver's durable store)]
+  Receiver -->|Signed identity-bound acknowledgment| API
+  API -->|Delivered or uncertain plus metadata| DB
+  Operator -->|Explicit receipt reconciliation| API
+  API -->|Signed GET only; no payload resend| Receiver
+  Observer[Metadata diagnostics] -->|Tenant-scoped read| DB

@@ -1,31 +1,11 @@
 {
-  "scope": "Original reference packages plus screened, attributed upstream skill bundles and Archify diagrams; quarantined raw skill bundles excluded; original dynamic local CLI provider bridge (upstream runtime excluded); original offline composition planner and fictional example graphs; Work Items original state API/handoff and Feedback0.2.1 identity patch",
-  "validation": "39 static intake/export regressions passed; filtered distribution rescreen matched20upstream+4Gradia references; behavioral qualification not established;27 bridge tests passed locally with pinned Ruflo3.56.9; CI actual-runtime test may skip;37 composition lock/CLI/observation/adversarial tests passed locally;76 combined WorkItems/Feedback tests plus real TCP happy-path and post-commit acknowledgment-loss restart replays passed",
+  "scope": "Original reference packages plus screened, attributed upstream skill bundles and Archify diagrams; quarantined raw skill bundles excluded; original dynamic local CLI provider bridge (upstream runtime excluded); original offline composition planner and fictional example graphs; Work Items original state API/handoff and Feedback0.2.1 identity patch; original durable webhook Outbox reference and synthetic protocol receiver",
+  "validation": "Scoped local and public CI tests; independent adversarial cases and actual loopback TCP fixtures. Static evidence does not grant enterprise admission.",
   "files": [
     {
-      "path": ".build/client/client.js",
-      "sha256": "86f0d2471e55fe4c7d47fe895d1dc70ba78980fed7056ebd17c0d3259e857da7",
-      "bytes": 5998
-    },
-    {
-      "path": ".build/client/feedback-widget.js",
-      "sha256": "e1f0dfe44a4bf9d80cf94b4949f5723e8c504034fd165421cedfba703ab20394",
-      "bytes": 23370
-    },
-    {
-      "path": ".build/client/host-integration.js",
-      "sha256": "ca01064e7ebfc90be62ed60314f714f09b1f505362b30decb3374d5701d19fb8",
-      "bytes": 2275
-    },
-    {
-      "path": ".build/client/media.js",
-      "sha256": "b83285299dbc65beed5e3e45490710be0f286769c6e67814fb16f31820d3a57a",
-      "bytes": 3924
-    },
-    {
       "path": ".github/workflows/ci.yml",
-      "sha256": "a017cf7960343088d7e65e94bf0dfbf12f25fe415b9d9583bab1b081edb56902",
-      "bytes": 3315
+      "sha256": "787e038127096f1108d3dfdfd64a162f5c88fc0d6a66484d8fcee50d856ca18f",
+      "bytes": 3679
     },
     {
       "path": ".gitignore",
@@ -49,8 +29,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "c62b21c7ffdbbaed66abd711992268aa09732453bf1a75de729cd924e93f5a28",
-      "bytes": 6980
+      "sha256": "75ed9ee70a3bc3e6ebd817c967f0c0fb1a836b9efdd662f8bc0e67b5c5e30a8a",
+      "bytes": 7245
     },
     {
       "path": "SECURITY.md",
@@ -106,6 +86,11 @@
       "path": "diagrams/ir/feedback-workflow.json",
       "sha256": "0fe6188876f7b654e20420f9453e456816840431d455ac87d583f4134491b6ab",
       "bytes": 3003
+    },
+    {
+      "path": "docs/adr/0027-durable-outbox-and-explicit-delivery-reconciliation.md",
+      "sha256": "78eaef347147d2313f3b0dc87a7393d7ef013c2dbf07c6fae1404d48785dcab6",
+      "bytes": 3798
     },
     {
       "path": "docs/decisions/0025-composition-locks-and-impact.md",
@@ -426,6 +411,101 @@
       "path": "packages/blocks-feedback/typescript/media.ts",
       "sha256": "ee02a90c21d7217281f01c5332c5e80c4c8ff44f4c49e1d00524cadbee51fd13",
       "bytes": 3889
+    },
+    {
+      "path": "packages/blocks-outbox/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358
+    },
+    {
+      "path": "packages/blocks-outbox/README.md",
+      "sha256": "64ec72a9f50263f039270615f60bcebd8863087c04443160b2071ddeb46f6bae",
+      "bytes": 11346
+    },
+    {
+      "path": "packages/blocks-outbox/block.manifest.json",
+      "sha256": "ff681a707a9c04df8181a0cebd3ff45b2f80e99725eb8b313e240a9788ad5082",
+      "bytes": 1504
+    },
+    {
+      "path": "packages/blocks-outbox/examples/fixture_receiver.py",
+      "sha256": "4dc3945ddcb6c13f6deb20e120d151c8712e45d76bb0f2bcb67c1b25e41c5648",
+      "bytes": 5997
+    },
+    {
+      "path": "packages/blocks-outbox/examples/outbox-openapi.json",
+      "sha256": "f9876fe23d0597f63af27487768421469ee19c6ba5a0fead7fbeb63e2dcf7320",
+      "bytes": 31912
+    },
+    {
+      "path": "packages/blocks-outbox/examples/outbox.mmd",
+      "sha256": "0ae66829c834cfa7c8b1e8f3ba4d9789a11f2ed8869dae039ec5d89d4a4a21b8",
+      "bytes": 688
+    },
+    {
+      "path": "packages/blocks-outbox/examples/tcp_replay.py",
+      "sha256": "597ff4f43693851d6aca86bdd126371acea43a879066e5889355bd816afd1ade",
+      "bytes": 8211
+    },
+    {
+      "path": "packages/blocks-outbox/gradia_outbox/__init__.py",
+      "sha256": "4dc8dc72d69325d093f137d11652aee6bbf83351d7fc821741aae88cf28b3e32",
+      "bytes": 269
+    },
+    {
+      "path": "packages/blocks-outbox/gradia_outbox/api.py",
+      "sha256": "a074e79c116cece335d7800b0dd8ab7826178b554c207b293cf79492bcf6bae7",
+      "bytes": 12818
+    },
+    {
+      "path": "packages/blocks-outbox/gradia_outbox/contracts.py",
+      "sha256": "9616f252c02681cdd5aba10c0d5b344dd75ec0506bf8c01d5a7f786cc11c5ffa",
+      "bytes": 4229
+    },
+    {
+      "path": "packages/blocks-outbox/gradia_outbox/delivery.py",
+      "sha256": "6cd6a8a05cf0d015455d7444c42be94c25dba89b7af051ce16fb86ecc8112d45",
+      "bytes": 14110
+    },
+    {
+      "path": "packages/blocks-outbox/gradia_outbox/server.py",
+      "sha256": "d40ac34d1e434da74cc804760a0458e32a14fcad17cb83e3bc8cc0ae5515ea17",
+      "bytes": 1705
+    },
+    {
+      "path": "packages/blocks-outbox/gradia_outbox/store.py",
+      "sha256": "8948b10607e358d530ba2ad3021182fe356902243c588df8e1e17f1fe8394245",
+      "bytes": 3408
+    },
+    {
+      "path": "packages/blocks-outbox/pyproject.toml",
+      "sha256": "b64d83d8690be19ce063730ee50c4cf3456771b7eabeed3a4dbae4a38f5f6ced",
+      "bytes": 477
+    },
+    {
+      "path": "packages/blocks-outbox/requirements-tested.txt",
+      "sha256": "06c25384eb2c6f24c2adf6116a340dc1e7d67fc6c95259b73ecd1b2cb79b7596",
+      "bytes": 78
+    },
+    {
+      "path": "packages/blocks-outbox/tests/test_adversarial.py",
+      "sha256": "26d6d00e4ff9024c3cd949c9f857109a82eeea81a93fd99ccb8105354ed0ed7e",
+      "bytes": 13825
+    },
+    {
+      "path": "packages/blocks-outbox/tests/test_api.py",
+      "sha256": "b14a5a686991c32b0a6e2403af69c125bf801d473d881e6680fe4054d5af0c28",
+      "bytes": 6583
+    },
+    {
+      "path": "packages/blocks-outbox/tests/test_api_adversarial.py",
+      "sha256": "2bb9db47bc28601ea85339654a1444b514102f2946b0c0114e41ad8785671cd3",
+      "bytes": 6389
+    },
+    {
+      "path": "packages/blocks-outbox/tests/test_core.py",
+      "sha256": "1633cda049cdc659837f6589d0d4b630dd445fac820dbbd8f5ae7915ff327b45",
+      "bytes": 10621
     },
     {
       "path": "packages/blocks-ruflo/LICENSE",

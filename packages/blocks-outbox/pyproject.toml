@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "gradia-blocks-outbox"
+version = "0.1.0"
+description = "Durable, explicitly operated webhook outbox reference"
+requires-python = ">=3.11"
+dependencies = ["httpx>=0.28,<0.29", "fastapi>=0.115,<0.142", "pydantic>=2.8,<3", "uvicorn>=0.30,<0.53"]
+license = "Apache-2.0"
+[tool.setuptools.packages.find]
+include = ["gradia_outbox*"]
+[tool.pytest.ini_options]
+testpaths = ["tests"]
