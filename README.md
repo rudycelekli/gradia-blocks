@@ -2,7 +2,7 @@
 
 **Adaptable capabilities. Explicit contracts. Evidence before promotion.**
 
-Gradia is an AI Research & Implementation Lab. This repository starts our open capability library with a working **Feedback reference block**, an independent **candidate admission screen**, and two selectively fetched **Skills**. Build a small useful workflow, inspect its contract, and adapt it to your application.
+Gradia is an AI Research & Implementation Lab. This repository starts our open capability library with a working **Feedback reference block**, an independent **candidate admission screen**, and source-pinned **Skills**. Build a small useful workflow, inspect its contract, and adapt it to your application.
 
 ![Feedback architecture](diagrams/feedback-architecture.svg)
 
@@ -14,7 +14,7 @@ Gradia is an AI Research & Implementation Lab. This repository starts our open c
 | [TypeScript client](packages/blocks-feedback/typescript/client.ts) | Calls the same HTTP contract; distinguishes acknowledgment from uncertain transport | A client, not another server implementation |
 | [React widget](packages/blocks-feedback/typescript/feedback-widget.tsx) | Configurable labels/accent/categories, explicit image paste/upload, screen/photo/video/audio capture and review | Host supplies transport and authority; never embed operator keys in a browser |
 | [Admission screen](packages/blocks-admission/README.md) | Checks pinned artifacts and independently supplied gate receipts; bounded parallel trusted-lane runner | Does not run tests, prove claims or merge changes |
-| [Skills](packages/blocks-skills/README.md) | First-party integration/review instructions with explicit scope | Instructions grant no tool permissions or credentials |
+| [Skills](packages/blocks-skills/README.md) | 24 statically screened Gradia/upstream references, selected resources and intake screening | Instructions grant no tool permissions or credentials |
 | [Diagrams](diagrams/README.md) | Standalone interactive HTML and SVG; typed source IR | Planned nodes remain labeled; no external provider calls |
 
 ## Explore and discover
@@ -63,7 +63,7 @@ Read [SECURITY.md](SECURITY.md) before exposing the reference remotely. Review [
 
 ## License
 
-Gradia-authored source is Apache-2.0. Diagram output preserves Archify MIT attribution and embedded font licenses. Third-party dependencies keep their licenses; see [NOTICE](NOTICE). This export contains no customer implementations, private operational documents or provider credentials.
+Gradia-authored source is Apache-2.0. Upstream skill bundles retain their individual MIT/Apache-2.0 licenses and notices in packages/blocks-skills/THIRD-PARTY-NOTICES.md. Diagram output preserves Archify MIT attribution and embedded font licenses. Third-party dependencies keep their licenses; see [NOTICE](NOTICE). This export contains no customer implementations, private operational documents or provider credentials.
 
 
 ## Feedback 0.2.0
@@ -74,3 +74,16 @@ The host adapter maps server feature flags, categories, content and limits into
 the React widget. Screen/camera capture is explicit; file upload is available
 when capture is unsupported. Filesystem and SQLite backups require coordinated
 recovery; no PostgreSQL/S3, media scanning or production admission is implied.
+
+
+## Skills intake 0.3.0
+
+678 source entries inventoried across six pinned collections; 38 candidates inspected,
+20 upstream references plus four Gradia references retrievable. Eighteen candidates
+are quarantined; their raw executable bundles are excluded from this distribution.
+Static screening is not behavioral qualification or production admission.
+
+```sh
+PYTHONPATH=packages/blocks-skills python -m unittest discover -s packages/blocks-skills/tests -v
+PYTHONPATH=packages/blocks-skills python -m gradia_skills.verify --root packages/blocks-skills
+```

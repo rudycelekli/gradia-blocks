@@ -1,0 +1,1116 @@
+{
+  "schema": "gradia.skills.screen.v1",
+  "screenVersion": "0.1.0",
+  "records": [
+    {
+      "id": "anthropics-frontend-design",
+      "status": "screened-reference",
+      "reasons": [],
+      "resources": [
+        {
+          "id": "d0ed4cc3fb70489f",
+          "name": "LICENSE.txt",
+          "mediaType": "text/plain; charset=utf-8",
+          "bytes": 10174,
+          "contentSha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+        }
+      ],
+      "contentSha256": "d91970639e9f5c37682ac7ab60094d35f1c7c1f38d731bd56396563aee10c1d3",
+      "behavioral": "not_evaluated",
+      "checks": {
+        "sourceAndLicensePins": "pass",
+        "inventoryIntegrity": "pass",
+        "format": "pass",
+        "resourceLinks": "pass",
+        "instructionHeuristics": "pass",
+        "execution": "not_run"
+      },
+      "overlaps": []
+    },
+    {
+      "id": "anthropics-internal-comms",
+      "status": "screened-reference",
+      "reasons": [],
+      "resources": [
+        {
+          "id": "d0ed4cc3fb70489f",
+          "name": "LICENSE.txt",
+          "mediaType": "text/plain; charset=utf-8",
+          "bytes": 11345,
+          "contentSha256": "bc6b3af2f331cbc7fb0da1344efb2cbe5877a31498b4d70dbc7000f3405a1362"
+        },
+        {
+          "id": "e954f27115031e66",
+          "name": "examples/3p-updates.md",
+          "mediaType": "text/plain; charset=utf-8",
+          "bytes": 3274,
+          "contentSha256": "087e4363c0f3513728a7e695eeb9ead5c3ecd12a4681b59340691180e65b68fc"
+        },
+        {
+          "id": "090e1ef137c97082",
+          "name": "examples/company-newsletter.md",
+          "mediaType": "text/plain; charset=utf-8",
+          "bytes": 3295,
+          "contentSha256": "30f81cfbdb03858a006169c72169024089c7c5d3d32611d337782da4f38c86b5"
+        },
+        {
+          "id": "6248ad0439be5227",
+          "name": "examples/faq-answers.md",
+          "mediaType": "text/plain; charset=utf-8",
+          "bytes": 2366,
+          "contentSha256": "5ecd3356cd6666937f2ebefa753253edfdbdca15e368d07baf398bfcced72484"
+        },
+        {
+          "id": "283114092b9237e3",
+          "name": "examples/general-comms.md",
+          "mediaType": "text/plain; charset=utf-8",
+          "bytes": 602,
+          "contentSha256": "4d3a4bb198a77626bcf018e96b2b45a2dbabed172d4ade0fcd70d23ae8a47a47"
+        }
+      ],
+      "contentSha256": "067b7587a344a928fc6534ef66b1bcd591fc7c26d207ea7ca3334aeb678d6475",
+      "behavioral": "not_evaluated",
+      "checks": {
+        "sourceAndLicensePins": "pass",
+        "inventoryIntegrity": "pass",
+        "format": "pass",
+        "resourceLinks": "pass",
+        "instructionHeuristics": "pass",
+        "execution": "not_run"
+      },
+      "overlaps": []
+    },
+    {
+      "id": "anthropics-mcp-builder",
+      "status": "quarantined",
+      "reasons": [
+        "requires_execution_or_asset_review"
+      ],
+      "resources": [],
+      "contentSha256": "0f4592dcb53cf2b5d6b7febee6b4152018b565551a1c29e3c612f57b218ab295",
+      "behavioral": "not_evaluated",
+      "checks": {
+        "sourceAndLicensePins": "pass",
+        "inventoryIntegrity": "pass",
+        "format": "pass",
+        "resourceLinks": "pass",
+        "instructionHeuristics": "pass",
+        "execution": "not_run"
+      },
+      "overlaps": []
+    },
+    {
+      "id": "anthropics-webapp-testing",
+      "status": "quarantined",
+      "reasons": [
+        "requires_execution_or_asset_review"
+      ],
+      "resources": [],
+      "contentSha256": "51b7349e77ec63b7744a6f63647e7566a0b4d2e301121cc10e8c2113af6556a2",
+      "behavioral": "not_evaluated",
+      "checks": {
+        "sourceAndLicensePins": "pass",
+        "inventoryIntegrity": "pass",
+        "format": "pass",
+        "resourceLinks": "pass",
+        "instructionHeuristics": "pass",
+        "execution": "not_run"
+      },
+      "overlaps": []
+    },
+    {
+      "id": "microsoft-azure-identity-py",
+      "status": "screened-reference",
+      "reasons": [],
+      "resources": [
+        {
+          "id": "c693279643b8cd5d",
+          "name": "LICENSE",
+          "mediaType": "text/plain; charset=utf-8",
+          "bytes": 1140,
+          "contentSha256": "d9a1b1e30d633d5732ea18e3cba9538d293ebc53e1a9e4e96ab739e0c5c4f1cb"
+        },
+        {
+          "id": "0b2ae73d4b850ee4",
+          "name": "references/capabilities.md",
+          "mediaType": "text/plain; charset=utf-8",
+          "bytes": 2234,
+          "contentSha256": "294c3cb8b688c5a435acfd5633ecea51cd07845363fc893fa29efcc418f597b0"
+        },
+        {
+          "id": "d05824ad0bf5f7f1",
+          "name": "references/non-hero-scenarios.md",
+          "mediaType": "text/plain; charset=utf-8",
+          "bytes": 4355,
+          "contentSha256": "3c3fdd62c8a3bc43e71b7bd4010a51d8d2809b5458eb898426523e28466bbdd1"
+        }
+      ],
+      "contentSha256": "b10709c8cadc23134bfee415010f9f0292e39f06c216df3f3dd6fc826897414c",
+      "behavioral": "not_evaluated",
+      "checks": {
+        "sourceAndLicensePins": "pass",
+        "inventoryIntegrity": "pass",
+        "format": "pass",
+        "resourceLinks": "pass",
+        "instructionHeuristics": "pass",
+        "execution": "not_run"
+      },
+      "overlaps": []
+    },
+    {
+      "id": "microsoft-azure-search-documents-py",
+      "status": "quarantined",
+      "reasons": [
+        "requires_execution_or_asset_review"
+      ],
+      "resources": [],
+      "contentSha256": "4a8d46e6e8def539b71987804fdc2d0946948e6e332c98ca831eeaea9e596401",
+      "behavioral": "not_evaluated",
+      "checks": {
+        "sourceAndLicensePins": "pass",
+        "inventoryIntegrity": "pass",
+        "format": "pass",
+        "resourceLinks": "pass",
+        "instructionHeuristics": "pass",
+        "execution": "not_run"
+      },
+      "overlaps": []
+    },
+    {
+      "id": "microsoft-azure-storage-blob-py",
+      "status": "screened-reference",
+      "reasons": [],
+      "resources": [
+        {
+          "id": "c693279643b8cd5d",
+          "name": "LICENSE",
+          "mediaType": "text/plain; charset=utf-8",
+          "bytes": 1140,
+          "contentSha256": "d9a1b1e30d633d5732ea18e3cba9538d293ebc53e1a9e4e96ab739e0c5c4f1cb"
+        },
+        {
+          "id": "0b2ae73d4b850ee4",
+          "name": "references/capabilities.md",
+          "mediaType": "text/plain; charset=utf-8",
+          "bytes": 1310,
+          "contentSha256": "5f07b3f4925a40b16c7f5aaa4ad7e61524142a72a7d88de4031773297d67b942"
+        },
+        {
+          "id": "d05824ad0bf5f7f1",
+          "name": "references/non-hero-scenarios.md",
+          "mediaType": "text/plain; charset=utf-8",
+          "bytes": 1621,
+          "contentSha256": "b0ad5f98350ef38460ebda48b5ae2299b24a7b93dec149610ee5b10911533db6"
+        }
+      ],
+      "contentSha256": "036cde228f87b9e6aacbd3ec317bd504cb5639e04aec81f1b3ef631a9b240622",
+      "behavioral": "not_evaluated",
+      "checks": {
+        "sourceAndLicensePins": "pass",
+        "inventoryIntegrity": "pass",
+        "format": "pass",
+        "resourceLinks": "pass",
+        "instructionHeuristics": "pass",
+        "execution": "not_run"
+      },
+      "overlaps": []
+    },
+    {
+      "id": "microsoft-azure-servicebus-py",
+      "status": "quarantined",
+      "reasons": [
+        "requires_execution_or_asset_review"
+      ],
+      "resources": [],
+      "contentSha256": "6d1905fe12c4c84a3e4520ee6c03d21b205111b0c394c14e4a0d5bb322c94435",
+      "behavioral": "not_evaluated",
+      "checks": {
+        "sourceAndLicensePins": "pass",
+        "inventoryIntegrity": "pass",
+        "format": "pass",
+        "resourceLinks": "pass",
+        "instructionHeuristics": "pass",
+        "execution": "not_run"
+      },
+      "overlaps": []
+    },
+    {
+      "id": "microsoft-appinsights-instrumentation",
+      "status": "quarantined",
+      "reasons": [
+        "requires_execution_or_asset_review"
+      ],
+      "resources": [],
+      "contentSha256": "8865590c029e53142edc56634914625fe23869baf7828a8181aed67e096a9e31",
+      "behavioral": "not_evaluated",
+      "checks": {
+        "sourceAndLicensePins": "pass",
+        "inventoryIntegrity": "pass",
+        "format": "pass",
+        "resourceLinks": "pass",
+        "instructionHeuristics": "pass",
+        "execution": "not_run"
+      },
+      "overlaps": []
+    },
+    {
+      "id": "microsoft-azure-cosmos-py",
+      "status": "quarantined",
+      "reasons": [
+        "missing_relative_reference",
+        "upstream_intake_blocked"
+      ],
+      "resources": [],
+      "contentSha256": "7b3c8cbbee11c4900cec94db00927a60f69d002385194df953af665768281925",
+      "behavioral": "not_evaluated",
+      "checks": {
+        "sourceAndLicensePins": "pass",
+        "inventoryIntegrity": "pass",
+        "format": "pass",
+        "resourceLinks": "fail",
+        "instructionHeuristics": "pass",
+        "execution": "not_run"
+      },
+      "overlaps": []
+    },
+    {
+      "id": "microsoft-azure-data-tables-py",
+      "status": "screened-reference",
+      "reasons": [],
+      "resources": [
+        {
+          "id": "c693279643b8cd5d",
+          "name": "LICENSE",
+          "mediaType": "text/plain; charset=utf-8",
+          "bytes": 1140,
+          "contentSha256": "d9a1b1e30d633d5732ea18e3cba9538d293ebc53e1a9e4e96ab739e0c5c4f1cb"
+        },
+        {
+          "id": "0b2ae73d4b850ee4",
+          "name": "references/capabilities.md",
+          "mediaType": "text/plain; charset=utf-8",
+          "bytes": 1389,
+          "contentSha256": "85f71185bb124f051c6c2213c12512155670d516a3270be35db032677d73e7c4"
+        },
+        {
+          "id": "d05824ad0bf5f7f1",
+          "name": "references/non-hero-scenarios.md",
+          "mediaType": "text/plain; charset=utf-8",
+          "bytes": 1755,
+          "contentSha256": "33485310a13b17feab2f2d5e5be4cd48f6c287680a431334170dcbebb9b0682c"
+        }
+      ],
+      "contentSha256": "e28e8908e2a19511abab4ede57bfb967e75dba99b92b242c97c0eb23d729cc7a",
+      "behavioral": "not_evaluated",
+      "checks": {
+        "sourceAndLicensePins": "pass",
+        "inventoryIntegrity": "pass",
+        "format": "pass",
+        "resourceLinks": "pass",
+        "instructionHeuristics": "pass",
+        "execution": "not_run"
+      },
+      "overlaps": []
+    },
+    {
+      "id": "microsoft-azure-keyvault-py",
+      "status": "screened-reference",
+      "reasons": [],
+      "resources": [
+        {
+          "id": "c693279643b8cd5d",
+          "name": "LICENSE",
+          "mediaType": "text/plain; charset=utf-8",
+          "bytes": 1140,
+          "contentSha256": "d9a1b1e30d633d5732ea18e3cba9538d293ebc53e1a9e4e96ab739e0c5c4f1cb"
+        },
+        {
+          "id": "0b2ae73d4b850ee4",
+          "name": "references/capabilities.md",
+          "mediaType": "text/plain; charset=utf-8",
+          "bytes": 1287,
+          "contentSha256": "46d0a786957f19e87e0e1ade56bd94e1e77cfb6db20421ad53438d80bbc58377"
+        },
+        {
+          "id": "d05824ad0bf5f7f1",
+          "name": "references/non-hero-scenarios.md",
+          "mediaType": "text/plain; charset=utf-8",
+          "bytes": 1060,
+          "contentSha256": "1f2fb0a97eff30cbabe4e5af479e9edba42dc7517480b1a82a147652c3071359"
+        }
+      ],
+      "contentSha256": "5300434b6d8025604bfb4e16514b27d1e380255f0a587c65d000cbdf59248ce1",
+      "behavioral": "not_evaluated",
+      "checks": {
+        "sourceAndLicensePins": "pass",
+        "inventoryIntegrity": "pass",
+        "format": "pass",
+        "resourceLinks": "pass",
+        "instructionHeuristics": "pass",
+        "execution": "not_run"
+      },
+      "overlaps": []
+    },
+    {
+      "id": "microsoft-azure-monitor-opentelemetry-py",
+      "status": "screened-reference",
+      "reasons": [],
+      "resources": [
+        {
+          "id": "c693279643b8cd5d",
+          "name": "LICENSE",
+          "mediaType": "text/plain; charset=utf-8",
+          "bytes": 1140,
+          "contentSha256": "d9a1b1e30d633d5732ea18e3cba9538d293ebc53e1a9e4e96ab739e0c5c4f1cb"
+        },
+        {
+          "id": "0b2ae73d4b850ee4",
+          "name": "references/capabilities.md",
+          "mediaType": "text/plain; charset=utf-8",
+          "bytes": 2609,
+          "contentSha256": "a77bb9ba1d178a1543689630c2ec13a66597b51224513dc2c50eef38f4e48f37"
+        },
+        {
+          "id": "d05824ad0bf5f7f1",
+          "name": "references/non-hero-scenarios.md",
+          "mediaType": "text/plain; charset=utf-8",
+          "bytes": 3616,
+          "contentSha256": "69fb0a7db8cb2d54955df1175e6363b252ce06d3b99382054488565b5966953d"
+        }
+      ],
+      "contentSha256": "5f3da3c631f76fe4a52a159c8eb055e54819eb6fd5269803b4106773a70f98fd",
+      "behavioral": "not_evaluated",
+      "checks": {
+        "sourceAndLicensePins": "pass",
+        "inventoryIntegrity": "pass",
+        "format": "pass",
+        "resourceLinks": "pass",
+        "instructionHeuristics": "pass",
+        "execution": "not_run"
+      },
+      "overlaps": []
+    },
+    {
+      "id": "microsoft-azure-monitor-query-py",
+      "status": "screened-reference",
+      "reasons": [],
+      "resources": [
+        {
+          "id": "c693279643b8cd5d",
+          "name": "LICENSE",
+          "mediaType": "text/plain; charset=utf-8",
+          "bytes": 1140,
+          "contentSha256": "d9a1b1e30d633d5732ea18e3cba9538d293ebc53e1a9e4e96ab739e0c5c4f1cb"
+        },
+        {
+          "id": "0b2ae73d4b850ee4",
+          "name": "references/capabilities.md",
+          "mediaType": "text/plain; charset=utf-8",
+          "bytes": 1090,
+          "contentSha256": "34bae8188f7a80b55d852633f95e86e30448386e4003b8a4ecdb444670abbc16"
+        },
+        {
+          "id": "d05824ad0bf5f7f1",
+          "name": "references/non-hero-scenarios.md",
+          "mediaType": "text/plain; charset=utf-8",
+          "bytes": 389,
+          "contentSha256": "0a34c80f2b7525a4ec0d504701e8b075cb630121c83c9b4761b82e8ad0f91e5b"
+        }
+      ],
+      "contentSha256": "02a36d349fa9ce1b194f032975ad82cd04d95598059f6d14902872162688edbd",
+      "behavioral": "not_evaluated",
+      "checks": {
+        "sourceAndLicensePins": "pass",
+        "inventoryIntegrity": "pass",
+        "format": "pass",
+        "resourceLinks": "pass",
+        "instructionHeuristics": "pass",
+        "execution": "not_run"
+      },
+      "overlaps": []
+    },
+    {
+      "id": "obra-brainstorming",
+      "status": "quarantined",
+      "reasons": [
+        "requires_execution_or_asset_review"
+      ],
+      "resources": [],
+      "contentSha256": "6ee10d1481b8a2580d5336ff66c5c08acc9d4b251b13bbc3bfd31be99c261d43",
+      "behavioral": "not_evaluated",
+      "checks": {
+        "sourceAndLicensePins": "pass",
+        "inventoryIntegrity": "pass",
+        "format": "pass",
+        "resourceLinks": "pass",
+        "instructionHeuristics": "pass",
+        "execution": "not_run"
+      },
+      "overlaps": []
+    },
+    {
+      "id": "obra-systematic-debugging",
+      "status": "quarantined",
+      "reasons": [
+        "requires_execution_or_asset_review"
+      ],
+      "resources": [],
+      "contentSha256": "51c6435d98c83c42c96ba7c35725a0b2c376cd487fb1a4e6bd0ddbe7e33ef202",
+      "behavioral": "not_evaluated",
+      "checks": {
+        "sourceAndLicensePins": "pass",
+        "inventoryIntegrity": "pass",
+        "format": "pass",
+        "resourceLinks": "pass",
+        "instructionHeuristics": "pass",
+        "execution": "not_run"
+      },
+      "overlaps": []
+    },
+    {
+      "id": "obra-test-driven-development",
+      "status": "screened-reference",
+      "reasons": [],
+      "resources": [
+        {
+          "id": "c693279643b8cd5d",
+          "name": "LICENSE",
+          "mediaType": "text/plain; charset=utf-8",
+          "bytes": 1070,
+          "contentSha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400"
+        },
+        {
+          "id": "2d34d8618f2db608",
+          "name": "writing-good-tests.md",
+          "mediaType": "text/plain; charset=utf-8",
+          "bytes": 8268,
+          "contentSha256": "51471c853306ff92ca8bb41dcaea05f31c0e46b03651f8f3c99754b7172f4ae1"
+        }
+      ],
+      "contentSha256": "64b03fce4aee5a97a93160cea8111f3ba13a17b7c001db4bd5836d67fd10705d",
+      "behavioral": "not_evaluated",
+      "checks": {
+        "sourceAndLicensePins": "pass",
+        "inventoryIntegrity": "pass",
+        "format": "pass",
+        "resourceLinks": "pass",
+        "instructionHeuristics": "pass",
+        "execution": "not_run"
+      },
+      "overlaps": []
+    },
+    {
+      "id": "obra-verification-before-completion",
+      "status": "screened-reference",
+      "reasons": [],
+      "resources": [
+        {
+          "id": "c693279643b8cd5d",
+          "name": "LICENSE",
+          "mediaType": "text/plain; charset=utf-8",
+          "bytes": 1070,
+          "contentSha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400"
+        }
+      ],
+      "contentSha256": "2befe7fc55bcadaa3d97dd9e8efeb633d2561c0ebe74c5a8b17c4d9e7e4520b3",
+      "behavioral": "not_evaluated",
+      "checks": {
+        "sourceAndLicensePins": "pass",
+        "inventoryIntegrity": "pass",
+        "format": "pass",
+        "resourceLinks": "pass",
+        "instructionHeuristics": "pass",
+        "execution": "not_run"
+      },
+      "overlaps": []
+    },
+    {
+      "id": "obra-writing-plans",
+      "status": "screened-reference",
+      "reasons": [],
+      "resources": [
+        {
+          "id": "c693279643b8cd5d",
+          "name": "LICENSE",
+          "mediaType": "text/plain; charset=utf-8",
+          "bytes": 1070,
+          "contentSha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400"
+        }
+      ],
+      "contentSha256": "a6c67c1900064347c2a329990dd3c555657c51c3ec53b259a08aa01a2c26139a",
+      "behavioral": "not_evaluated",
+      "checks": {
+        "sourceAndLicensePins": "pass",
+        "inventoryIntegrity": "pass",
+        "format": "pass",
+        "resourceLinks": "pass",
+        "instructionHeuristics": "pass",
+        "execution": "not_run"
+      },
+      "overlaps": []
+    },
+    {
+      "id": "obra-receiving-code-review",
+      "status": "screened-reference",
+      "reasons": [],
+      "resources": [
+        {
+          "id": "c693279643b8cd5d",
+          "name": "LICENSE",
+          "mediaType": "text/plain; charset=utf-8",
+          "bytes": 1070,
+          "contentSha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400"
+        }
+      ],
+      "contentSha256": "091df1629510af1b92fc4abd6f96732ebedb4cb2c0f3457e8f2740b0504a2438",
+      "behavioral": "not_evaluated",
+      "checks": {
+        "sourceAndLicensePins": "pass",
+        "inventoryIntegrity": "pass",
+        "format": "pass",
+        "resourceLinks": "pass",
+        "instructionHeuristics": "pass",
+        "execution": "not_run"
+      },
+      "overlaps": []
+    },
+    {
+      "id": "obra-requesting-code-review",
+      "status": "screened-reference",
+      "reasons": [],
+      "resources": [
+        {
+          "id": "c693279643b8cd5d",
+          "name": "LICENSE",
+          "mediaType": "text/plain; charset=utf-8",
+          "bytes": 1070,
+          "contentSha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400"
+        },
+        {
+          "id": "7ad1bf8039e0c725",
+          "name": "code-reviewer.md",
+          "mediaType": "text/plain; charset=utf-8",
+          "bytes": 6449,
+          "contentSha256": "82e370be6b3447523816286195571e4216ba56ba1ad6ad0e87862294c4c78dcb"
+        }
+      ],
+      "contentSha256": "2180e14a448e9410bec88e6646a2d1f0ce7fdd58de27388c1e052e929679d2bc",
+      "behavioral": "not_evaluated",
+      "checks": {
+        "sourceAndLicensePins": "pass",
+        "inventoryIntegrity": "pass",
+        "format": "pass",
+        "resourceLinks": "pass",
+        "instructionHeuristics": "pass",
+        "execution": "not_run"
+      },
+      "overlaps": []
+    },
+    {
+      "id": "obra-using-git-worktrees",
+      "status": "screened-reference",
+      "reasons": [],
+      "resources": [
+        {
+          "id": "c693279643b8cd5d",
+          "name": "LICENSE",
+          "mediaType": "text/plain; charset=utf-8",
+          "bytes": 1070,
+          "contentSha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400"
+        }
+      ],
+      "contentSha256": "8cfb86f121269e8f7f12361e6795c4f6738828340e28964c9229d365666c9edd",
+      "behavioral": "not_evaluated",
+      "checks": {
+        "sourceAndLicensePins": "pass",
+        "inventoryIntegrity": "pass",
+        "format": "pass",
+        "resourceLinks": "pass",
+        "instructionHeuristics": "pass",
+        "execution": "not_run"
+      },
+      "overlaps": []
+    },
+    {
+      "id": "obra-executing-plans",
+      "status": "quarantined",
+      "reasons": [
+        "requires_execution_or_asset_review",
+        "reference_escape_or_symlink",
+        "upstream_intake_blocked"
+      ],
+      "resources": [],
+      "contentSha256": "f38e8f2ddcf079f65493adc713c1fed78421dfaf5f4dbf6b3a6b2b1d95466e71",
+      "behavioral": "not_evaluated",
+      "checks": {
+        "sourceAndLicensePins": "pass",
+        "inventoryIntegrity": "pass",
+        "format": "pass",
+        "resourceLinks": "fail",
+        "instructionHeuristics": "pass",
+        "execution": "not_run"
+      },
+      "overlaps": []
+    },
+    {
+      "id": "obra-subagent-driven-development",
+      "status": "quarantined",
+      "reasons": [
+        "requires_execution_or_asset_review",
+        "reference_escape_or_symlink",
+        "upstream_intake_blocked"
+      ],
+      "resources": [],
+      "contentSha256": "8dde5589ee083fb4999106d116f01c8fdaf3116a8a9813fdedeb80329de49046",
+      "behavioral": "not_evaluated",
+      "checks": {
+        "sourceAndLicensePins": "pass",
+        "inventoryIntegrity": "pass",
+        "format": "pass",
+        "resourceLinks": "fail",
+        "instructionHeuristics": "pass",
+        "execution": "not_run"
+      },
+      "overlaps": []
+    },
+    {
+      "id": "openai-security-best-practices",
+      "status": "screened-reference",
+      "reasons": [],
+      "resources": [
+        {
+          "id": "d0ed4cc3fb70489f",
+          "name": "LICENSE.txt",
+          "mediaType": "text/plain; charset=utf-8",
+          "bytes": 10776,
+          "contentSha256": "4dd13869245e356246a5b770723247bbb80a8f07a181d1d3d873a1734297cdb9"
+        },
+        {
+          "id": "deb9755d273fc668",
+          "name": "agents/openai.yaml",
+          "mediaType": "text/plain; charset=utf-8",
+          "bytes": 237,
+          "contentSha256": "6e9c6f2edce448eb2b589f81ad6e3f722665021785513bcbfd0bf7b86b529171"
+        },
+        {
+          "id": "9919a57b966a2b34",
+          "name": "references/golang-general-backend-security.md",
+          "mediaType": "text/plain; charset=utf-8",
+          "bytes": 38659,
+          "contentSha256": "a73c47c34497b120672d48411fe51dc90d426a571801a0b3f649e2ce4ec658b4"
+        },
+        {
+          "id": "8dd569c1ca762fcb",
+          "name": "references/javascript-express-web-server-security.md",
+          "mediaType": "text/plain; charset=utf-8",
+          "bytes": 49357,
+          "contentSha256": "427835cbb5be7ba96172ea6ca9af80ddd4419c833e9ebf870996740c80d8406c"
+        },
+        {
+          "id": "ccb596932da3db82",
+          "name": "references/javascript-general-web-frontend-security.md",
+          "mediaType": "text/plain; charset=utf-8",
+          "bytes": 38638,
+          "contentSha256": "3a7bc7b3f6e7ff043db9dbaa8933894d7a19d987d0607e4ddae5d70184a63d63"
+        },
+        {
+          "id": "77296e925faa3373",
+          "name": "references/javascript-jquery-web-frontend-security.md",
+          "mediaType": "text/plain; charset=utf-8",
+          "bytes": 33581,
+          "contentSha256": "bcbad2fa6c2a02709e47e889e70102c76886bf36bc798624d27db570eccf40da"
+        },
+        {
+          "id": "e793227b87ae5732",
+          "name": "references/javascript-typescript-nextjs-web-server-security.md",
+          "mediaType": "text/plain; charset=utf-8",
+          "bytes": 43423,
+          "contentSha256": "71c773f7a97ce60c853adfa100b3d88b3b7bc4c6b8acaef1432ffabd923ee182"
+        },
+        {
+          "id": "a521da2a2c02441d",
+          "name": "references/javascript-typescript-react-web-frontend-security.md",
+          "mediaType": "text/plain; charset=utf-8",
+          "bytes": 41686,
+          "contentSha256": "d3030c0f24bddb56b9bbb91bbec1ee49eb7778bce4d3e0297b2641b2fc6b0d9c"
+        },
+        {
+          "id": "9f793256c20b6063",
+          "name": "references/javascript-typescript-vue-web-frontend-security.md",
+          "mediaType": "text/plain; charset=utf-8",
+          "bytes": 31445,
+          "contentSha256": "77c6a747f9f17e3df03aad0fcb20d99ac7898001b81aef8b80908e45ac14a688"
+        },
+        {
+          "id": "f82f5012fc9b6f15",
+          "name": "references/python-django-web-server-security.md",
+          "mediaType": "text/plain; charset=utf-8",
+          "bytes": 38661,
+          "contentSha256": "4fb69b5d45f10e588d1a8c35cdc5f59e18910f6b46a93e2d342d90f286f8dfd2"
+        },
+        {
+          "id": "e0cd6ae74c83957b",
+          "name": "references/python-fastapi-web-server-security.md",
+          "mediaType": "text/plain; charset=utf-8",
+          "bytes": 44926,
+          "contentSha256": "7383c7f4fc271190b05e562ada7e825982a2c76b6c79a9f95a1da7687b65a616"
+        },
+        {
+          "id": "93dfe1bd443d3bc2",
+          "name": "references/python-flask-web-server-security.md",
+          "mediaType": "text/plain; charset=utf-8",
+          "bytes": 31748,
+          "contentSha256": "9606d69190c04c167fdeac57e61297547a57b0542fd89dede36f355970446929"
+        }
+      ],
+      "contentSha256": "7b3dae1ffc5434d890f3c65c8f552af52d0307fab3b35dec13013c9ca3844c4f",
+      "behavioral": "not_evaluated",
+      "checks": {
+        "sourceAndLicensePins": "pass",
+        "inventoryIntegrity": "pass",
+        "format": "pass",
+        "resourceLinks": "pass",
+        "instructionHeuristics": "pass",
+        "execution": "not_run"
+      },
+      "overlaps": []
+    },
+    {
+      "id": "openai-security-threat-model",
+      "status": "screened-reference",
+      "reasons": [],
+      "resources": [
+        {
+          "id": "d0ed4cc3fb70489f",
+          "name": "LICENSE.txt",
+          "mediaType": "text/plain; charset=utf-8",
+          "bytes": 10776,
+          "contentSha256": "4dd13869245e356246a5b770723247bbb80a8f07a181d1d3d873a1734297cdb9"
+        },
+        {
+          "id": "deb9755d273fc668",
+          "name": "agents/openai.yaml",
+          "mediaType": "text/plain; charset=utf-8",
+          "bytes": 254,
+          "contentSha256": "3319b59736312abceca614e341c0e59cae47263e3b58a22b2b5ddf1e5fc8c227"
+        },
+        {
+          "id": "6c9ea0e624de189d",
+          "name": "references/prompt-template.md",
+          "mediaType": "text/plain; charset=utf-8",
+          "bytes": 12642,
+          "contentSha256": "81a59aa3fb3ac3a739d6a26ab38e4015965f215581ee54becef21a2b121ec29b"
+        },
+        {
+          "id": "37470cb5032c74a0",
+          "name": "references/security-controls-and-assets.md",
+          "mediaType": "text/plain; charset=utf-8",
+          "bytes": 1680,
+          "contentSha256": "d536cfa9acad2523dc39134bcf33b9566c29dd9a57b407cbc9901637230c6b98"
+        }
+      ],
+      "contentSha256": "1283c0dd62a8104d9edda4583569b5d8510b4ddaa45120687c999250fd96bad2",
+      "behavioral": "not_evaluated",
+      "checks": {
+        "sourceAndLicensePins": "pass",
+        "inventoryIntegrity": "pass",
+        "format": "pass",
+        "resourceLinks": "pass",
+        "instructionHeuristics": "pass",
+        "execution": "not_run"
+      },
+      "overlaps": []
+    },
+    {
+      "id": "openai-security-ownership-map",
+      "status": "quarantined",
+      "reasons": [
+        "requires_execution_or_asset_review"
+      ],
+      "resources": [],
+      "contentSha256": "f06c1a59247569326702c945f397af163ea96cf2ecfdf2dde280605bf89a3ec8",
+      "behavioral": "not_evaluated",
+      "checks": {
+        "sourceAndLicensePins": "pass",
+        "inventoryIntegrity": "pass",
+        "format": "pass",
+        "resourceLinks": "pass",
+        "instructionHeuristics": "pass",
+        "execution": "not_run"
+      },
+      "overlaps": []
+    },
+    {
+      "id": "openai-gh-fix-ci",
+      "status": "quarantined",
+      "reasons": [
+        "requires_execution_or_asset_review"
+      ],
+      "resources": [],
+      "contentSha256": "7b326b4a2f0f5f85122144628ec02077e48841e0e0e82efce88b3415bcfb7c26",
+      "behavioral": "not_evaluated",
+      "checks": {
+        "sourceAndLicensePins": "pass",
+        "inventoryIntegrity": "pass",
+        "format": "pass",
+        "resourceLinks": "pass",
+        "instructionHeuristics": "pass",
+        "execution": "not_run"
+      },
+      "overlaps": []
+    },
+    {
+      "id": "openai-gh-address-comments",
+      "status": "quarantined",
+      "reasons": [
+        "requires_execution_or_asset_review"
+      ],
+      "resources": [],
+      "contentSha256": "77389eefd3fb6584210668ca8e43f4b8de87e7722ddd953474bc9e24cdfaaedd",
+      "behavioral": "not_evaluated",
+      "checks": {
+        "sourceAndLicensePins": "pass",
+        "inventoryIntegrity": "pass",
+        "format": "pass",
+        "resourceLinks": "pass",
+        "instructionHeuristics": "pass",
+        "execution": "not_run"
+      },
+      "overlaps": []
+    },
+    {
+      "id": "openai-openai-docs",
+      "status": "quarantined",
+      "reasons": [
+        "requires_execution_or_asset_review",
+        "reference_escape_or_symlink"
+      ],
+      "resources": [],
+      "contentSha256": "669a42ccf3323fe0ceda6e466730bcb05dddf1e0c220d6523ea504909fc49165",
+      "behavioral": "not_evaluated",
+      "checks": {
+        "sourceAndLicensePins": "pass",
+        "inventoryIntegrity": "pass",
+        "format": "pass",
+        "resourceLinks": "fail",
+        "instructionHeuristics": "pass",
+        "execution": "not_run"
+      },
+      "overlaps": []
+    },
+    {
+      "id": "openai-aspnet-core",
+      "status": "quarantined",
+      "reasons": [
+        "requires_execution_or_asset_review"
+      ],
+      "resources": [],
+      "contentSha256": "1f487ef3565e5ac1ee6c93cbeb9ac666292b30285877c82ddb0a77c9777fe92f",
+      "behavioral": "not_evaluated",
+      "checks": {
+        "sourceAndLicensePins": "pass",
+        "inventoryIntegrity": "pass",
+        "format": "pass",
+        "resourceLinks": "pass",
+        "instructionHeuristics": "pass",
+        "execution": "not_run"
+      },
+      "overlaps": []
+    },
+    {
+      "id": "openai-cli-creator",
+      "status": "screened-reference",
+      "reasons": [],
+      "resources": [
+        {
+          "id": "d0ed4cc3fb70489f",
+          "name": "LICENSE.txt",
+          "mediaType": "text/plain; charset=utf-8",
+          "bytes": 10776,
+          "contentSha256": "4dd13869245e356246a5b770723247bbb80a8f07a181d1d3d873a1734297cdb9"
+        },
+        {
+          "id": "deb9755d273fc668",
+          "name": "agents/openai.yaml",
+          "mediaType": "text/plain; charset=utf-8",
+          "bytes": 280,
+          "contentSha256": "356c648dcdd7e10d65df0c348175344b36f28c7da51e031010a7385124a89f4c"
+        },
+        {
+          "id": "eeb02de01f5feda5",
+          "name": "references/agent-cli-patterns.md",
+          "mediaType": "text/plain; charset=utf-8",
+          "bytes": 5244,
+          "contentSha256": "ac11612b780a80a97b15a5ffca23b21a182f854003911cce2363dd69b6126272"
+        }
+      ],
+      "contentSha256": "24058eabf0aafce6def3fb937ac93cbe3fa341c653c658dc589edb77f73d6152",
+      "behavioral": "not_evaluated",
+      "checks": {
+        "sourceAndLicensePins": "pass",
+        "inventoryIntegrity": "pass",
+        "format": "pass",
+        "resourceLinks": "pass",
+        "instructionHeuristics": "pass",
+        "execution": "not_run"
+      },
+      "overlaps": []
+    },
+    {
+      "id": "openai-notion-knowledge-capture",
+      "status": "quarantined",
+      "reasons": [
+        "requires_execution_or_asset_review"
+      ],
+      "resources": [],
+      "contentSha256": "b49383b229bc766190ea22bb58502cfcf7e08449f5fce55a104eef1e54e27f00",
+      "behavioral": "not_evaluated",
+      "checks": {
+        "sourceAndLicensePins": "pass",
+        "inventoryIntegrity": "pass",
+        "format": "pass",
+        "resourceLinks": "pass",
+        "instructionHeuristics": "pass",
+        "execution": "not_run"
+      },
+      "overlaps": []
+    },
+    {
+      "id": "openai-notion-research-documentation",
+      "status": "quarantined",
+      "reasons": [
+        "requires_execution_or_asset_review"
+      ],
+      "resources": [],
+      "contentSha256": "e88a46da978cf6f088a788fa92ee736df699a355a72f41f14bdc258bf3ef57e7",
+      "behavioral": "not_evaluated",
+      "checks": {
+        "sourceAndLicensePins": "pass",
+        "inventoryIntegrity": "pass",
+        "format": "pass",
+        "resourceLinks": "pass",
+        "instructionHeuristics": "pass",
+        "execution": "not_run"
+      },
+      "overlaps": []
+    },
+    {
+      "id": "openai-pdf",
+      "status": "quarantined",
+      "reasons": [
+        "requires_execution_or_asset_review"
+      ],
+      "resources": [],
+      "contentSha256": "d108cf2b36355ab37eb5962933f4d09785ec002f3105c506129320209306b9d2",
+      "behavioral": "not_evaluated",
+      "checks": {
+        "sourceAndLicensePins": "pass",
+        "inventoryIntegrity": "pass",
+        "format": "pass",
+        "resourceLinks": "pass",
+        "instructionHeuristics": "pass",
+        "execution": "not_run"
+      },
+      "overlaps": []
+    },
+    {
+      "id": "ruvnet-ddd-context",
+      "status": "screened-reference",
+      "reasons": [],
+      "resources": [
+        {
+          "id": "c693279643b8cd5d",
+          "name": "LICENSE",
+          "mediaType": "text/plain; charset=utf-8",
+          "bytes": 1068,
+          "contentSha256": "a45ba66fa502c49ad108440536d8aa91dfe9c04575a32a01287839bee336199c"
+        }
+      ],
+      "contentSha256": "86a0b9f77478e961e1bc6e58e2b6602b7c33af8bbf424320319efb7bb7370954",
+      "behavioral": "not_evaluated",
+      "checks": {
+        "sourceAndLicensePins": "pass",
+        "inventoryIntegrity": "pass",
+        "format": "pass",
+        "resourceLinks": "pass",
+        "instructionHeuristics": "pass",
+        "execution": "not_run"
+      },
+      "overlaps": []
+    },
+    {
+      "id": "ruvnet-adr-create",
+      "status": "screened-reference",
+      "reasons": [],
+      "resources": [
+        {
+          "id": "c693279643b8cd5d",
+          "name": "LICENSE",
+          "mediaType": "text/plain; charset=utf-8",
+          "bytes": 1068,
+          "contentSha256": "a45ba66fa502c49ad108440536d8aa91dfe9c04575a32a01287839bee336199c"
+        }
+      ],
+      "contentSha256": "5a7334223fa826f2ca75be0446b3e7d6c358aa02e795fd1f42599ea7d4d43153",
+      "behavioral": "not_evaluated",
+      "checks": {
+        "sourceAndLicensePins": "pass",
+        "inventoryIntegrity": "pass",
+        "format": "pass",
+        "resourceLinks": "pass",
+        "instructionHeuristics": "pass",
+        "execution": "not_run"
+      },
+      "overlaps": []
+    },
+    {
+      "id": "ruvnet-test-gaps",
+      "status": "screened-reference",
+      "reasons": [],
+      "resources": [
+        {
+          "id": "c693279643b8cd5d",
+          "name": "LICENSE",
+          "mediaType": "text/plain; charset=utf-8",
+          "bytes": 1068,
+          "contentSha256": "a45ba66fa502c49ad108440536d8aa91dfe9c04575a32a01287839bee336199c"
+        }
+      ],
+      "contentSha256": "af23a403e73b7267203727e1810a1e821e54efbca20091d8a540ea08be73c15a",
+      "behavioral": "not_evaluated",
+      "checks": {
+        "sourceAndLicensePins": "pass",
+        "inventoryIntegrity": "pass",
+        "format": "pass",
+        "resourceLinks": "pass",
+        "instructionHeuristics": "pass",
+        "execution": "not_run"
+      },
+      "overlaps": []
+    }
+  ],
+  "errors": [],
+  "limits": {
+    "candidates": 128,
+    "filesPerCandidate": 256,
+    "fileBytes": 262144,
+    "candidateBytes": 2097152,
+    "totalBytes": 33554432
+  },
+  "boundary": "Static integrity, packaging and heuristic screening only; behavioral quality, tool compatibility and legal clearance are not established",
+  "sourceManifestSha256": "4dc556a01b1849b3810aca51878bb18c8e3863942130573cf7a5cd0e4f26f6dc",
+  "evaluatorSha256": "0dff781a92d0e41b07aa26f5d536b6877b8ec010842fade003a52ca22a802e16",
+  "summary": {
+    "candidates": 38,
+    "screened": 20,
+    "quarantined": 18,
+    "inspectedBytes": 1632542,
+    "behavioralEvaluations": 0
+  },
+  "projection": {
+    "skills": 42,
+    "retrievable": 24,
+    "resources": 54,
+    "firstParty": 4
+  }
+}

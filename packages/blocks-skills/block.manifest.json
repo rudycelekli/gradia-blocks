@@ -1,12 +1,21 @@
 {
   "schema_version": "1",
   "id": "gradia.reference-skills",
-  "version": "0.2.0",
-  "license": "Apache-2.0",
+  "version": "0.3.0",
+  "license": "Apache-2.0 AND MIT",
   "status": "public_reference",
   "skills": {
     "integrate-feedback": "0.2.0",
-    "review-block-candidate": "0.1.0"
+    "review-block-candidate": "0.1.0",
+    "compose-verified-skills": "0.1.0",
+    "assess-upstream-skill": "0.1.0"
   },
-  "authority": "Instructions do not grant tool or tenant access"
+  "authority": "Instructions do not grant tool or tenant access",
+  "intake": {
+    "sourceManifest": "sources/sources.json",
+    "screening": "sources/screening.json",
+    "status": "static_screening_only",
+    "executableAssets": "quarantined_pending_separate_review"
+  },
+  "licenseScope": "Gradia original code/instructions Apache-2.0; each upstream bundle retains its own pinned license"
 }

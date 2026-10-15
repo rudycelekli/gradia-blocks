@@ -6,3 +6,5 @@ Generated diagrams incorporate Archify MIT-licensed output and embedded font
 notices; see diagrams/THIRD-PARTY-NOTICES.md and diagrams/ARCHIFY-LICENSE.txt.
 Third-party dependencies retain their own licenses. No customer source or data
 is included. The name Gradia is not licensed as a third-party endorsement.
+
+Upstream skill bundles retain their individual licenses; see packages/blocks-skills/THIRD-PARTY-NOTICES.md and each bundle license. No upstream endorsement is implied.

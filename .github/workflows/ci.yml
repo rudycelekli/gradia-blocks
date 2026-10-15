@@ -11,7 +11,7 @@ jobs:
       fail-fast: false
       max-parallel: 4
       matrix:
-        lane: [feedback-api, admission-and-runner, client-and-widget, rust-contracts]
+        lane: [feedback-api, admission-and-runner, client-and-widget, rust-contracts, skills-intake]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -24,6 +24,10 @@ jobs:
           python -m pytest -c /dev/null -p no:cacheprovider packages/blocks-feedback/tests -q
       - if: matrix.lane == 'admission-and-runner'
         run: PYTHONPATH=packages/blocks-admission python -m unittest discover -s packages/blocks-admission/tests -v
+      - if: matrix.lane == 'skills-intake'
+        run: |
+          PYTHONPATH=packages/blocks-skills python -m unittest discover -s packages/blocks-skills/tests -v
+          PYTHONPATH=packages/blocks-skills python -m gradia_skills.verify --root packages/blocks-skills
       - uses: actions/setup-node@v4
         if: matrix.lane == 'client-and-widget'
         with:

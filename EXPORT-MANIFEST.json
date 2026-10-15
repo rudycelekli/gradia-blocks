@@ -1,12 +1,11 @@
 {
-  "scope": "Original reference packages and attributed Archify diagrams; excludes private plans/customer implementations",
-  "checkedAt": "2026-10-15T06:15:20.528932+00:00",
-  "validation": "30 API tests; 9 transport/media/adapter tests; strict TypeScript; browser synthetic capture and real TCP persistence/read in both storage modes passed; CI separately verified",
+  "scope": "Original reference packages plus screened, attributed upstream skill bundles and Archify diagrams; quarantined raw skill bundles excluded",
+  "validation": "39 static intake/export regressions passed; filtered distribution rescreen matched20upstream+4Gradia references; behavioral qualification not established",
   "files": [
     {
       "path": ".github/workflows/ci.yml",
-      "sha256": "a12beae4e82fc9148da36d0fd725f78c4be22b9c78f11e615727f1c8bfe5e21e",
-      "bytes": 2007
+      "sha256": "12f1d84b06035a9df4b1a5997cd25b1030f58fefcda87f65d922d8394d6ae92d",
+      "bytes": 2292
     },
     {
       "path": ".gitignore",
@@ -25,13 +24,13 @@
     },
     {
       "path": "NOTICE",
-      "sha256": "40c4336a6b1dcc52cbbe9d49ff6e1568aba1a766fd67e1a4b858c578b190fdbf",
-      "bytes": 442
+      "sha256": "fe1e269c00fba8e4a92a9f8612c3838721a95e84296b48a767278caee6ff9f27",
+      "bytes": 611
     },
     {
       "path": "README.md",
-      "sha256": "7ba96b846c570189b50a64e7800f6451b77393379cadc39b00daaf1e4cbf39d8",
-      "bytes": 5216
+      "sha256": "803388e66edf6c0adfdd981d753d1b6520c20867cb7d3b822e98b32bd43757aa",
+      "bytes": 5923
     },
     {
       "path": "SECURITY.md",
@@ -320,13 +319,53 @@
     },
     {
       "path": "packages/blocks-skills/README.md",
-      "sha256": "a7cfbcea5b84884a9246ed4dee38c31668e788cc297bc788cb18610f25f8a7d0",
-      "bytes": 1381
+      "sha256": "d7465ca40db6a34faf293b63d06f448a2541d021fed9e9da30f11de2fdeb478c",
+      "bytes": 4727
+    },
+    {
+      "path": "packages/blocks-skills/THIRD-PARTY-NOTICES.md",
+      "sha256": "8fe176feb36bcbc42f5c3d2c4908dc4e7e95ee50c20e34ff67e90e592fb808ea",
+      "bytes": 4834
     },
     {
       "path": "packages/blocks-skills/block.manifest.json",
-      "sha256": "9cbb44917bad8bebdf46e42665f2925ae05b45cc5edec317fdb685eb6961124c",
-      "bytes": 302
+      "sha256": "549febecc864d7632fe2f79543bdd45e7840ced60c6ab462387191bc8162ae79",
+      "bytes": 716
+    },
+    {
+      "path": "packages/blocks-skills/gradia_skills/__init__.py",
+      "sha256": "46724edc9586143af2a5d5cfda31ef0e06d88e83960c4f97830a91d9dd4da712",
+      "bytes": 83
+    },
+    {
+      "path": "packages/blocks-skills/gradia_skills/archives.py",
+      "sha256": "274c8a1dd2d31947464c41c11618f1e7dfbafc1b18965b1c510b4ac74eee59b8",
+      "bytes": 1954
+    },
+    {
+      "path": "packages/blocks-skills/gradia_skills/intake.py",
+      "sha256": "0dff781a92d0e41b07aa26f5d536b6877b8ec010842fade003a52ca22a802e16",
+      "bytes": 15284
+    },
+    {
+      "path": "packages/blocks-skills/gradia_skills/projection.py",
+      "sha256": "a441ff38c1beee9a15c88edf6a8440c1ccfd64edd8fc3fc055695fac0dacba53",
+      "bytes": 6140
+    },
+    {
+      "path": "packages/blocks-skills/gradia_skills/verify.py",
+      "sha256": "55c5968f07b3927f34d58f56fdd682e985e880661399ab432358bfc286cc296f",
+      "bytes": 1098
+    },
+    {
+      "path": "packages/blocks-skills/skills/assess-upstream-skill.md",
+      "sha256": "a82513dd0afdb8bc74a2fc0218de807ed27c5716195f5d87e63b3b78be9a7ef2",
+      "bytes": 2053
+    },
+    {
+      "path": "packages/blocks-skills/skills/compose-verified-skills.md",
+      "sha256": "f11e8aa34f9a9fbb5daa543616012fff004301ad611fbb94655b75409c6e765e",
+      "bytes": 2280
     },
     {
       "path": "packages/blocks-skills/skills/integrate-feedback.md",
@@ -337,6 +376,406 @@
       "path": "packages/blocks-skills/skills/review-block-candidate.md",
       "sha256": "109cac6b9da62dd336a21df2e50ad99126ecfa41cb3e2368188d752c83c34cb0",
       "bytes": 2009
+    },
+    {
+      "path": "packages/blocks-skills/sources/README.md",
+      "sha256": "09ff976ae17921ff454b8720455c93cde7e3dcdaae97164eddc5447e0cb37c97",
+      "bytes": 2192
+    },
+    {
+      "path": "packages/blocks-skills/sources/screening.json",
+      "sha256": "a1472a2a47648bb47275c4f8c320a5cbe4fdaea33ed6de2689ffb38c9dfcd0e5",
+      "bytes": 36660
+    },
+    {
+      "path": "packages/blocks-skills/sources/sources.json",
+      "sha256": "103f88f759061acefc2efd7b042a563603ebb43dad68c0a7617feacd32e2ca7f",
+      "bytes": 180726
+    },
+    {
+      "path": "packages/blocks-skills/tests/README.md",
+      "sha256": "1dec948df01f7d07d588eb2aa99f0a7059dd027a78ed7709c6af3c11fb8f5036",
+      "bytes": 1140
+    },
+    {
+      "path": "packages/blocks-skills/tests/test_intake.py",
+      "sha256": "73a99ec73c686bf9b368b31350adf8882389f8af0544a69b04a3d67201dc0546",
+      "bytes": 12453
+    },
+    {
+      "path": "packages/blocks-skills/tests/test_projection_archives.py",
+      "sha256": "268815137d969449e80d53b06176fff58c907707f8de0e243cb7e0b150d6ad3c",
+      "bytes": 5552
+    },
+    {
+      "path": "packages/blocks-skills/upstream/anthropics__skills/frontend-design/LICENSE.txt",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "bytes": 10174
+    },
+    {
+      "path": "packages/blocks-skills/upstream/anthropics__skills/frontend-design/SKILL.md",
+      "sha256": "d91970639e9f5c37682ac7ab60094d35f1c7c1f38d731bd56396563aee10c1d3",
+      "bytes": 9390
+    },
+    {
+      "path": "packages/blocks-skills/upstream/anthropics__skills/internal-comms/LICENSE.txt",
+      "sha256": "bc6b3af2f331cbc7fb0da1344efb2cbe5877a31498b4d70dbc7000f3405a1362",
+      "bytes": 11345
+    },
+    {
+      "path": "packages/blocks-skills/upstream/anthropics__skills/internal-comms/SKILL.md",
+      "sha256": "067b7587a344a928fc6534ef66b1bcd591fc7c26d207ea7ca3334aeb678d6475",
+      "bytes": 1511
+    },
+    {
+      "path": "packages/blocks-skills/upstream/anthropics__skills/internal-comms/examples/3p-updates.md",
+      "sha256": "087e4363c0f3513728a7e695eeb9ead5c3ecd12a4681b59340691180e65b68fc",
+      "bytes": 3274
+    },
+    {
+      "path": "packages/blocks-skills/upstream/anthropics__skills/internal-comms/examples/company-newsletter.md",
+      "sha256": "30f81cfbdb03858a006169c72169024089c7c5d3d32611d337782da4f38c86b5",
+      "bytes": 3295
+    },
+    {
+      "path": "packages/blocks-skills/upstream/anthropics__skills/internal-comms/examples/faq-answers.md",
+      "sha256": "5ecd3356cd6666937f2ebefa753253edfdbdca15e368d07baf398bfcced72484",
+      "bytes": 2366
+    },
+    {
+      "path": "packages/blocks-skills/upstream/anthropics__skills/internal-comms/examples/general-comms.md",
+      "sha256": "4d3a4bb198a77626bcf018e96b2b45a2dbabed172d4ade0fcd70d23ae8a47a47",
+      "bytes": 602
+    },
+    {
+      "path": "packages/blocks-skills/upstream/microsoft__skills/azure-data-tables-py/LICENSE",
+      "sha256": "d9a1b1e30d633d5732ea18e3cba9538d293ebc53e1a9e4e96ab739e0c5c4f1cb",
+      "bytes": 1140
+    },
+    {
+      "path": "packages/blocks-skills/upstream/microsoft__skills/azure-data-tables-py/SKILL.md",
+      "sha256": "e28e8908e2a19511abab4ede57bfb967e75dba99b92b242c97c0eb23d729cc7a",
+      "bytes": 8418
+    },
+    {
+      "path": "packages/blocks-skills/upstream/microsoft__skills/azure-data-tables-py/references/capabilities.md",
+      "sha256": "85f71185bb124f051c6c2213c12512155670d516a3270be35db032677d73e7c4",
+      "bytes": 1389
+    },
+    {
+      "path": "packages/blocks-skills/upstream/microsoft__skills/azure-data-tables-py/references/non-hero-scenarios.md",
+      "sha256": "33485310a13b17feab2f2d5e5be4cd48f6c287680a431334170dcbebb9b0682c",
+      "bytes": 1755
+    },
+    {
+      "path": "packages/blocks-skills/upstream/microsoft__skills/azure-identity-py/LICENSE",
+      "sha256": "d9a1b1e30d633d5732ea18e3cba9538d293ebc53e1a9e4e96ab739e0c5c4f1cb",
+      "bytes": 1140
+    },
+    {
+      "path": "packages/blocks-skills/upstream/microsoft__skills/azure-identity-py/SKILL.md",
+      "sha256": "b10709c8cadc23134bfee415010f9f0292e39f06c216df3f3dd6fc826897414c",
+      "bytes": 17698
+    },
+    {
+      "path": "packages/blocks-skills/upstream/microsoft__skills/azure-identity-py/references/capabilities.md",
+      "sha256": "294c3cb8b688c5a435acfd5633ecea51cd07845363fc893fa29efcc418f597b0",
+      "bytes": 2234
+    },
+    {
+      "path": "packages/blocks-skills/upstream/microsoft__skills/azure-identity-py/references/non-hero-scenarios.md",
+      "sha256": "3c3fdd62c8a3bc43e71b7bd4010a51d8d2809b5458eb898426523e28466bbdd1",
+      "bytes": 4355
+    },
+    {
+      "path": "packages/blocks-skills/upstream/microsoft__skills/azure-keyvault-py/LICENSE",
+      "sha256": "d9a1b1e30d633d5732ea18e3cba9538d293ebc53e1a9e4e96ab739e0c5c4f1cb",
+      "bytes": 1140
+    },
+    {
+      "path": "packages/blocks-skills/upstream/microsoft__skills/azure-keyvault-py/SKILL.md",
+      "sha256": "5300434b6d8025604bfb4e16514b27d1e380255f0a587c65d000cbdf59248ce1",
+      "bytes": 9599
+    },
+    {
+      "path": "packages/blocks-skills/upstream/microsoft__skills/azure-keyvault-py/references/capabilities.md",
+      "sha256": "46d0a786957f19e87e0e1ade56bd94e1e77cfb6db20421ad53438d80bbc58377",
+      "bytes": 1287
+    },
+    {
+      "path": "packages/blocks-skills/upstream/microsoft__skills/azure-keyvault-py/references/non-hero-scenarios.md",
+      "sha256": "1f2fb0a97eff30cbabe4e5af479e9edba42dc7517480b1a82a147652c3071359",
+      "bytes": 1060
+    },
+    {
+      "path": "packages/blocks-skills/upstream/microsoft__skills/azure-monitor-opentelemetry-py/LICENSE",
+      "sha256": "d9a1b1e30d633d5732ea18e3cba9538d293ebc53e1a9e4e96ab739e0c5c4f1cb",
+      "bytes": 1140
+    },
+    {
+      "path": "packages/blocks-skills/upstream/microsoft__skills/azure-monitor-opentelemetry-py/SKILL.md",
+      "sha256": "5f3da3c631f76fe4a52a159c8eb055e54819eb6fd5269803b4106773a70f98fd",
+      "bytes": 7877
+    },
+    {
+      "path": "packages/blocks-skills/upstream/microsoft__skills/azure-monitor-opentelemetry-py/references/capabilities.md",
+      "sha256": "a77bb9ba1d178a1543689630c2ec13a66597b51224513dc2c50eef38f4e48f37",
+      "bytes": 2609
+    },
+    {
+      "path": "packages/blocks-skills/upstream/microsoft__skills/azure-monitor-opentelemetry-py/references/non-hero-scenarios.md",
+      "sha256": "69fb0a7db8cb2d54955df1175e6363b252ce06d3b99382054488565b5966953d",
+      "bytes": 3616
+    },
+    {
+      "path": "packages/blocks-skills/upstream/microsoft__skills/azure-monitor-query-py/LICENSE",
+      "sha256": "d9a1b1e30d633d5732ea18e3cba9538d293ebc53e1a9e4e96ab739e0c5c4f1cb",
+      "bytes": 1140
+    },
+    {
+      "path": "packages/blocks-skills/upstream/microsoft__skills/azure-monitor-query-py/SKILL.md",
+      "sha256": "02a36d349fa9ce1b194f032975ad82cd04d95598059f6d14902872162688edbd",
+      "bytes": 8569
+    },
+    {
+      "path": "packages/blocks-skills/upstream/microsoft__skills/azure-monitor-query-py/references/capabilities.md",
+      "sha256": "34bae8188f7a80b55d852633f95e86e30448386e4003b8a4ecdb444670abbc16",
+      "bytes": 1090
+    },
+    {
+      "path": "packages/blocks-skills/upstream/microsoft__skills/azure-monitor-query-py/references/non-hero-scenarios.md",
+      "sha256": "0a34c80f2b7525a4ec0d504701e8b075cb630121c83c9b4761b82e8ad0f91e5b",
+      "bytes": 389
+    },
+    {
+      "path": "packages/blocks-skills/upstream/microsoft__skills/azure-storage-blob-py/LICENSE",
+      "sha256": "d9a1b1e30d633d5732ea18e3cba9538d293ebc53e1a9e4e96ab739e0c5c4f1cb",
+      "bytes": 1140
+    },
+    {
+      "path": "packages/blocks-skills/upstream/microsoft__skills/azure-storage-blob-py/SKILL.md",
+      "sha256": "036cde228f87b9e6aacbd3ec317bd504cb5639e04aec81f1b3ef631a9b240622",
+      "bytes": 9154
+    },
+    {
+      "path": "packages/blocks-skills/upstream/microsoft__skills/azure-storage-blob-py/references/capabilities.md",
+      "sha256": "5f07b3f4925a40b16c7f5aaa4ad7e61524142a72a7d88de4031773297d67b942",
+      "bytes": 1310
+    },
+    {
+      "path": "packages/blocks-skills/upstream/microsoft__skills/azure-storage-blob-py/references/non-hero-scenarios.md",
+      "sha256": "b0ad5f98350ef38460ebda48b5ae2299b24a7b93dec149610ee5b10911533db6",
+      "bytes": 1621
+    },
+    {
+      "path": "packages/blocks-skills/upstream/obra__superpowers/receiving-code-review/LICENSE",
+      "sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400",
+      "bytes": 1070
+    },
+    {
+      "path": "packages/blocks-skills/upstream/obra__superpowers/receiving-code-review/SKILL.md",
+      "sha256": "091df1629510af1b92fc4abd6f96732ebedb4cb2c0f3457e8f2740b0504a2438",
+      "bytes": 6203
+    },
+    {
+      "path": "packages/blocks-skills/upstream/obra__superpowers/requesting-code-review/LICENSE",
+      "sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400",
+      "bytes": 1070
+    },
+    {
+      "path": "packages/blocks-skills/upstream/obra__superpowers/requesting-code-review/SKILL.md",
+      "sha256": "2180e14a448e9410bec88e6646a2d1f0ce7fdd58de27388c1e052e929679d2bc",
+      "bytes": 2974
+    },
+    {
+      "path": "packages/blocks-skills/upstream/obra__superpowers/requesting-code-review/code-reviewer.md",
+      "sha256": "82e370be6b3447523816286195571e4216ba56ba1ad6ad0e87862294c4c78dcb",
+      "bytes": 6449
+    },
+    {
+      "path": "packages/blocks-skills/upstream/obra__superpowers/test-driven-development/LICENSE",
+      "sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400",
+      "bytes": 1070
+    },
+    {
+      "path": "packages/blocks-skills/upstream/obra__superpowers/test-driven-development/SKILL.md",
+      "sha256": "64b03fce4aee5a97a93160cea8111f3ba13a17b7c001db4bd5836d67fd10705d",
+      "bytes": 9578
+    },
+    {
+      "path": "packages/blocks-skills/upstream/obra__superpowers/test-driven-development/writing-good-tests.md",
+      "sha256": "51471c853306ff92ca8bb41dcaea05f31c0e46b03651f8f3c99754b7172f4ae1",
+      "bytes": 8268
+    },
+    {
+      "path": "packages/blocks-skills/upstream/obra__superpowers/using-git-worktrees/LICENSE",
+      "sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400",
+      "bytes": 1070
+    },
+    {
+      "path": "packages/blocks-skills/upstream/obra__superpowers/using-git-worktrees/SKILL.md",
+      "sha256": "8cfb86f121269e8f7f12361e6795c4f6738828340e28964c9229d365666c9edd",
+      "bytes": 6813
+    },
+    {
+      "path": "packages/blocks-skills/upstream/obra__superpowers/verification-before-completion/LICENSE",
+      "sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400",
+      "bytes": 1070
+    },
+    {
+      "path": "packages/blocks-skills/upstream/obra__superpowers/verification-before-completion/SKILL.md",
+      "sha256": "2befe7fc55bcadaa3d97dd9e8efeb633d2561c0ebe74c5a8b17c4d9e7e4520b3",
+      "bytes": 3646
+    },
+    {
+      "path": "packages/blocks-skills/upstream/obra__superpowers/writing-plans/LICENSE",
+      "sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400",
+      "bytes": 1070
+    },
+    {
+      "path": "packages/blocks-skills/upstream/obra__superpowers/writing-plans/SKILL.md",
+      "sha256": "a6c67c1900064347c2a329990dd3c555657c51c3ec53b259a08aa01a2c26139a",
+      "bytes": 10335
+    },
+    {
+      "path": "packages/blocks-skills/upstream/openai__skills/cli-creator/LICENSE.txt",
+      "sha256": "4dd13869245e356246a5b770723247bbb80a8f07a181d1d3d873a1734297cdb9",
+      "bytes": 10776
+    },
+    {
+      "path": "packages/blocks-skills/upstream/openai__skills/cli-creator/SKILL.md",
+      "sha256": "24058eabf0aafce6def3fb937ac93cbe3fa341c653c658dc589edb77f73d6152",
+      "bytes": 10502
+    },
+    {
+      "path": "packages/blocks-skills/upstream/openai__skills/cli-creator/agents/openai.yaml",
+      "sha256": "356c648dcdd7e10d65df0c348175344b36f28c7da51e031010a7385124a89f4c",
+      "bytes": 280
+    },
+    {
+      "path": "packages/blocks-skills/upstream/openai__skills/cli-creator/references/agent-cli-patterns.md",
+      "sha256": "ac11612b780a80a97b15a5ffca23b21a182f854003911cce2363dd69b6126272",
+      "bytes": 5244
+    },
+    {
+      "path": "packages/blocks-skills/upstream/openai__skills/security-best-practices/LICENSE.txt",
+      "sha256": "4dd13869245e356246a5b770723247bbb80a8f07a181d1d3d873a1734297cdb9",
+      "bytes": 10776
+    },
+    {
+      "path": "packages/blocks-skills/upstream/openai__skills/security-best-practices/SKILL.md",
+      "sha256": "7b3dae1ffc5434d890f3c65c8f552af52d0307fab3b35dec13013c9ca3844c4f",
+      "bytes": 8612
+    },
+    {
+      "path": "packages/blocks-skills/upstream/openai__skills/security-best-practices/agents/openai.yaml",
+      "sha256": "6e9c6f2edce448eb2b589f81ad6e3f722665021785513bcbfd0bf7b86b529171",
+      "bytes": 237
+    },
+    {
+      "path": "packages/blocks-skills/upstream/openai__skills/security-best-practices/references/golang-general-backend-security.md",
+      "sha256": "a73c47c34497b120672d48411fe51dc90d426a571801a0b3f649e2ce4ec658b4",
+      "bytes": 38659
+    },
+    {
+      "path": "packages/blocks-skills/upstream/openai__skills/security-best-practices/references/javascript-express-web-server-security.md",
+      "sha256": "427835cbb5be7ba96172ea6ca9af80ddd4419c833e9ebf870996740c80d8406c",
+      "bytes": 49357
+    },
+    {
+      "path": "packages/blocks-skills/upstream/openai__skills/security-best-practices/references/javascript-general-web-frontend-security.md",
+      "sha256": "3a7bc7b3f6e7ff043db9dbaa8933894d7a19d987d0607e4ddae5d70184a63d63",
+      "bytes": 38638
+    },
+    {
+      "path": "packages/blocks-skills/upstream/openai__skills/security-best-practices/references/javascript-jquery-web-frontend-security.md",
+      "sha256": "bcbad2fa6c2a02709e47e889e70102c76886bf36bc798624d27db570eccf40da",
+      "bytes": 33581
+    },
+    {
+      "path": "packages/blocks-skills/upstream/openai__skills/security-best-practices/references/javascript-typescript-nextjs-web-server-security.md",
+      "sha256": "71c773f7a97ce60c853adfa100b3d88b3b7bc4c6b8acaef1432ffabd923ee182",
+      "bytes": 43423
+    },
+    {
+      "path": "packages/blocks-skills/upstream/openai__skills/security-best-practices/references/javascript-typescript-react-web-frontend-security.md",
+      "sha256": "d3030c0f24bddb56b9bbb91bbec1ee49eb7778bce4d3e0297b2641b2fc6b0d9c",
+      "bytes": 41686
+    },
+    {
+      "path": "packages/blocks-skills/upstream/openai__skills/security-best-practices/references/javascript-typescript-vue-web-frontend-security.md",
+      "sha256": "77c6a747f9f17e3df03aad0fcb20d99ac7898001b81aef8b80908e45ac14a688",
+      "bytes": 31445
+    },
+    {
+      "path": "packages/blocks-skills/upstream/openai__skills/security-best-practices/references/python-django-web-server-security.md",
+      "sha256": "4fb69b5d45f10e588d1a8c35cdc5f59e18910f6b46a93e2d342d90f286f8dfd2",
+      "bytes": 38661
+    },
+    {
+      "path": "packages/blocks-skills/upstream/openai__skills/security-best-practices/references/python-fastapi-web-server-security.md",
+      "sha256": "7383c7f4fc271190b05e562ada7e825982a2c76b6c79a9f95a1da7687b65a616",
+      "bytes": 44926
+    },
+    {
+      "path": "packages/blocks-skills/upstream/openai__skills/security-best-practices/references/python-flask-web-server-security.md",
+      "sha256": "9606d69190c04c167fdeac57e61297547a57b0542fd89dede36f355970446929",
+      "bytes": 31748
+    },
+    {
+      "path": "packages/blocks-skills/upstream/openai__skills/security-threat-model/LICENSE.txt",
+      "sha256": "4dd13869245e356246a5b770723247bbb80a8f07a181d1d3d873a1734297cdb9",
+      "bytes": 10776
+    },
+    {
+      "path": "packages/blocks-skills/upstream/openai__skills/security-threat-model/SKILL.md",
+      "sha256": "1283c0dd62a8104d9edda4583569b5d8510b4ddaa45120687c999250fd96bad2",
+      "bytes": 5561
+    },
+    {
+      "path": "packages/blocks-skills/upstream/openai__skills/security-threat-model/agents/openai.yaml",
+      "sha256": "3319b59736312abceca614e341c0e59cae47263e3b58a22b2b5ddf1e5fc8c227",
+      "bytes": 254
+    },
+    {
+      "path": "packages/blocks-skills/upstream/openai__skills/security-threat-model/references/prompt-template.md",
+      "sha256": "81a59aa3fb3ac3a739d6a26ab38e4015965f215581ee54becef21a2b121ec29b",
+      "bytes": 12642
+    },
+    {
+      "path": "packages/blocks-skills/upstream/openai__skills/security-threat-model/references/security-controls-and-assets.md",
+      "sha256": "d536cfa9acad2523dc39134bcf33b9566c29dd9a57b407cbc9901637230c6b98",
+      "bytes": 1680
+    },
+    {
+      "path": "packages/blocks-skills/upstream/ruvnet__ruflo/adr-create/LICENSE",
+      "sha256": "a45ba66fa502c49ad108440536d8aa91dfe9c04575a32a01287839bee336199c",
+      "bytes": 1068
+    },
+    {
+      "path": "packages/blocks-skills/upstream/ruvnet__ruflo/adr-create/SKILL.md",
+      "sha256": "5a7334223fa826f2ca75be0446b3e7d6c358aa02e795fd1f42599ea7d4d43153",
+      "bytes": 2720
+    },
+    {
+      "path": "packages/blocks-skills/upstream/ruvnet__ruflo/ddd-context/LICENSE",
+      "sha256": "a45ba66fa502c49ad108440536d8aa91dfe9c04575a32a01287839bee336199c",
+      "bytes": 1068
+    },
+    {
+      "path": "packages/blocks-skills/upstream/ruvnet__ruflo/ddd-context/SKILL.md",
+      "sha256": "86a0b9f77478e961e1bc6e58e2b6602b7c33af8bbf424320319efb7bb7370954",
+      "bytes": 2503
+    },
+    {
+      "path": "packages/blocks-skills/upstream/ruvnet__ruflo/test-gaps/LICENSE",
+      "sha256": "a45ba66fa502c49ad108440536d8aa91dfe9c04575a32a01287839bee336199c",
+      "bytes": 1068
+    },
+    {
+      "path": "packages/blocks-skills/upstream/ruvnet__ruflo/test-gaps/SKILL.md",
+      "sha256": "af23a403e73b7267203727e1810a1e821e54efbca20091d8a540ea08be73c15a",
+      "bytes": 927
     }
   ]
 }

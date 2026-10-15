@@ -1,0 +1,4120 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-15",
+  "retrievalMethod": "Pinned GitHub API trees and raw files; no scripts installed or executed",
+  "repositories": [
+    {
+      "id": "anthropics-skills",
+      "repository": "https://github.com/anthropics/skills",
+      "commit": "dbd4588f9e1033efb41dad4bef2f7947c8993d44",
+      "skillCount": 20,
+      "skillPaths": [
+        "skills/academy-guide/SKILL.md",
+        "skills/algorithmic-art/SKILL.md",
+        "skills/brand-guidelines/SKILL.md",
+        "skills/canvas-design/SKILL.md",
+        "skills/claude-api/SKILL.md",
+        "skills/discernment-nudge/SKILL.md",
+        "skills/doc-coauthoring/SKILL.md",
+        "skills/docx/SKILL.md",
+        "skills/frontend-design/SKILL.md",
+        "skills/internal-comms/SKILL.md",
+        "skills/mcp-builder/SKILL.md",
+        "skills/pdf/SKILL.md",
+        "skills/pptx/SKILL.md",
+        "skills/skill-creator/SKILL.md",
+        "skills/slack-gif-creator/SKILL.md",
+        "skills/theme-factory/SKILL.md",
+        "skills/web-artifacts-builder/SKILL.md",
+        "skills/webapp-testing/SKILL.md",
+        "skills/xlsx/SKILL.md",
+        "template/SKILL.md"
+      ],
+      "treeTruncated": false,
+      "selectionStatus": "selected",
+      "reason": null
+    },
+    {
+      "id": "microsoft-skills",
+      "repository": "https://github.com/microsoft/skills",
+      "commit": "d2f769fd9d7ee81b4d768301bcd2eae14ddcfd0a",
+      "skillCount": 210,
+      "skillPaths": [
+        ".github/plugins/aks-skills/skills/aks-gpu-inference/SKILL.md",
+        ".github/plugins/aks-skills/skills/aks-known-issues/SKILL.md",
+        ".github/plugins/aks-skills/skills/aks-network-capture/SKILL.md",
+        ".github/plugins/aks-skills/skills/aks-troubleshooting/SKILL.md",
+        ".github/plugins/aks-skills/skills/azure-search-nav/SKILL.md",
+        ".github/plugins/azure-cost/skills/cost-analysis/SKILL.md",
+        ".github/plugins/azure-cost/skills/cost-estimation/SKILL.md",
+        ".github/plugins/azure-cost/skills/cost-governance/SKILL.md",
+        ".github/plugins/azure-cost/skills/cost-optimization/SKILL.md",
+        ".github/plugins/azure-kusto-graph-skills/skills/azure-kusto-graph/SKILL.md",
+        ".github/plugins/azure-kusto-graph-skills/skills/azure-kusto-irql-graph/SKILL.md",
+        ".github/plugins/azure-kusto-graph-skills/skills/azure-kusto-irql/SKILL.md",
+        ".github/plugins/azure-local-skills/skills/azure-local-multi-rack/SKILL.md",
+        ".github/plugins/azure-local-skills/skills/azure-local/SKILL.md",
+        ".github/plugins/azure-sdk-dotnet/skills/azure-ai-agents-persistent-dotnet/SKILL.md",
+        ".github/plugins/azure-sdk-dotnet/skills/azure-ai-document-intelligence-dotnet/SKILL.md",
+        ".github/plugins/azure-sdk-dotnet/skills/azure-ai-openai-dotnet/SKILL.md",
+        ".github/plugins/azure-sdk-dotnet/skills/azure-ai-projects-dotnet/SKILL.md",
+        ".github/plugins/azure-sdk-dotnet/skills/azure-ai-voicelive-dotnet/SKILL.md",
+        ".github/plugins/azure-sdk-dotnet/skills/azure-eventgrid-dotnet/SKILL.md",
+        ".github/plugins/azure-sdk-dotnet/skills/azure-eventhub-dotnet/SKILL.md",
+        ".github/plugins/azure-sdk-dotnet/skills/azure-identity-dotnet/SKILL.md",
+        ".github/plugins/azure-sdk-dotnet/skills/azure-maps-search-dotnet/SKILL.md",
+        ".github/plugins/azure-sdk-dotnet/skills/azure-mgmt-apicenter-dotnet/SKILL.md",
+        ".github/plugins/azure-sdk-dotnet/skills/azure-mgmt-apimanagement-dotnet/SKILL.md",
+        ".github/plugins/azure-sdk-dotnet/skills/azure-mgmt-applicationinsights-dotnet/SKILL.md",
+        ".github/plugins/azure-sdk-dotnet/skills/azure-mgmt-arizeaiobservabilityeval-dotnet/SKILL.md",
+        ".github/plugins/azure-sdk-dotnet/skills/azure-mgmt-botservice-dotnet/SKILL.md",
+        ".github/plugins/azure-sdk-dotnet/skills/azure-mgmt-fabric-dotnet/SKILL.md",
+        ".github/plugins/azure-sdk-dotnet/skills/azure-mgmt-mongodbatlas-dotnet/SKILL.md",
+        ".github/plugins/azure-sdk-dotnet/skills/azure-mgmt-weightsandbiases-dotnet/SKILL.md",
+        ".github/plugins/azure-sdk-dotnet/skills/azure-resource-manager-cosmosdb-dotnet/SKILL.md",
+        ".github/plugins/azure-sdk-dotnet/skills/azure-resource-manager-durabletask-dotnet/SKILL.md",
+        ".github/plugins/azure-sdk-dotnet/skills/azure-resource-manager-mysql-dotnet/SKILL.md",
+        ".github/plugins/azure-sdk-dotnet/skills/azure-resource-manager-playwright-dotnet/SKILL.md",
+        ".github/plugins/azure-sdk-dotnet/skills/azure-resource-manager-postgresql-dotnet/SKILL.md",
+        ".github/plugins/azure-sdk-dotnet/skills/azure-resource-manager-redis-dotnet/SKILL.md",
+        ".github/plugins/azure-sdk-dotnet/skills/azure-resource-manager-sql-dotnet/SKILL.md",
+        ".github/plugins/azure-sdk-dotnet/skills/azure-search-documents-dotnet/SKILL.md",
+        ".github/plugins/azure-sdk-dotnet/skills/azure-security-keyvault-keys-dotnet/SKILL.md",
+        ".github/plugins/azure-sdk-dotnet/skills/azure-servicebus-dotnet/SKILL.md",
+        ".github/plugins/azure-sdk-dotnet/skills/m365-agents-dotnet/SKILL.md",
+        ".github/plugins/azure-sdk-dotnet/skills/microsoft-azure-webjobs-extensions-authentication-events-dotnet/SKILL.md",
+        ".github/plugins/azure-sdk-java/skills/azure-ai-agents-persistent-java/SKILL.md",
+        ".github/plugins/azure-sdk-java/skills/azure-ai-anomalydetector-java/SKILL.md",
+        ".github/plugins/azure-sdk-java/skills/azure-ai-contentsafety-java/SKILL.md",
+        ".github/plugins/azure-sdk-java/skills/azure-ai-formrecognizer-java/SKILL.md",
+        ".github/plugins/azure-sdk-java/skills/azure-ai-projects-java/SKILL.md",
+        ".github/plugins/azure-sdk-java/skills/azure-ai-vision-imageanalysis-java/SKILL.md",
+        ".github/plugins/azure-sdk-java/skills/azure-ai-voicelive-java/SKILL.md",
+        ".github/plugins/azure-sdk-java/skills/azure-appconfiguration-java/SKILL.md",
+        ".github/plugins/azure-sdk-java/skills/azure-communication-callautomation-java/SKILL.md",
+        ".github/plugins/azure-sdk-java/skills/azure-communication-callingserver-java/SKILL.md",
+        ".github/plugins/azure-sdk-java/skills/azure-communication-chat-java/SKILL.md",
+        ".github/plugins/azure-sdk-java/skills/azure-communication-common-java/SKILL.md",
+        ".github/plugins/azure-sdk-java/skills/azure-communication-sms-java/SKILL.md",
+        ".github/plugins/azure-sdk-java/skills/azure-compute-batch-java/SKILL.md",
+        ".github/plugins/azure-sdk-java/skills/azure-cosmos-java/SKILL.md",
+        ".github/plugins/azure-sdk-java/skills/azure-data-tables-java/SKILL.md",
+        ".github/plugins/azure-sdk-java/skills/azure-eventgrid-java/SKILL.md",
+        ".github/plugins/azure-sdk-java/skills/azure-eventhub-java/SKILL.md",
+        ".github/plugins/azure-sdk-java/skills/azure-identity-java/SKILL.md",
+        ".github/plugins/azure-sdk-java/skills/azure-messaging-webpubsub-java/SKILL.md",
+        ".github/plugins/azure-sdk-java/skills/azure-monitor-ingestion-java/SKILL.md",
+        ".github/plugins/azure-sdk-java/skills/azure-monitor-opentelemetry-exporter-java/SKILL.md",
+        ".github/plugins/azure-sdk-java/skills/azure-monitor-query-java/SKILL.md",
+        ".github/plugins/azure-sdk-java/skills/azure-security-keyvault-keys-java/SKILL.md",
+        ".github/plugins/azure-sdk-java/skills/azure-security-keyvault-secrets-java/SKILL.md",
+        ".github/plugins/azure-sdk-java/skills/azure-storage-blob-java/SKILL.md",
+        ".github/plugins/azure-sdk-python/skills/agent-framework-azure-ai-py/SKILL.md",
+        ".github/plugins/azure-sdk-python/skills/azure-ai-contentsafety-py/SKILL.md",
+        ".github/plugins/azure-sdk-python/skills/azure-ai-contentunderstanding-py/SKILL.md",
+        ".github/plugins/azure-sdk-python/skills/azure-ai-language-conversations-py/SKILL.md",
+        ".github/plugins/azure-sdk-python/skills/azure-ai-ml-py/SKILL.md",
+        ".github/plugins/azure-sdk-python/skills/azure-ai-projects-py/SKILL.md",
+        ".github/plugins/azure-sdk-python/skills/azure-ai-textanalytics-py/SKILL.md",
+        ".github/plugins/azure-sdk-python/skills/azure-ai-transcription-py/SKILL.md",
+        ".github/plugins/azure-sdk-python/skills/azure-ai-translation-document-py/SKILL.md",
+        ".github/plugins/azure-sdk-python/skills/azure-ai-translation-text-py/SKILL.md",
+        ".github/plugins/azure-sdk-python/skills/azure-ai-vision-imageanalysis-py/SKILL.md",
+        ".github/plugins/azure-sdk-python/skills/azure-ai-voicelive-py/SKILL.md",
+        ".github/plugins/azure-sdk-python/skills/azure-appconfiguration-py/SKILL.md",
+        ".github/plugins/azure-sdk-python/skills/azure-containerregistry-py/SKILL.md",
+        ".github/plugins/azure-sdk-python/skills/azure-cosmos-db-py/SKILL.md",
+        ".github/plugins/azure-sdk-python/skills/azure-cosmos-py/SKILL.md",
+        ".github/plugins/azure-sdk-python/skills/azure-data-tables-py/SKILL.md",
+        ".github/plugins/azure-sdk-python/skills/azure-eventgrid-py/SKILL.md",
+        ".github/plugins/azure-sdk-python/skills/azure-eventhub-py/SKILL.md",
+        ".github/plugins/azure-sdk-python/skills/azure-identity-py/SKILL.md",
+        ".github/plugins/azure-sdk-python/skills/azure-keyvault-py/SKILL.md",
+        ".github/plugins/azure-sdk-python/skills/azure-messaging-webpubsubservice-py/SKILL.md",
+        ".github/plugins/azure-sdk-python/skills/azure-mgmt-apicenter-py/SKILL.md",
+        ".github/plugins/azure-sdk-python/skills/azure-mgmt-apimanagement-py/SKILL.md",
+        ".github/plugins/azure-sdk-python/skills/azure-mgmt-botservice-py/SKILL.md",
+        ".github/plugins/azure-sdk-python/skills/azure-mgmt-fabric-py/SKILL.md",
+        ".github/plugins/azure-sdk-python/skills/azure-monitor-ingestion-py/SKILL.md",
+        ".github/plugins/azure-sdk-python/skills/azure-monitor-opentelemetry-exporter-py/SKILL.md",
+        ".github/plugins/azure-sdk-python/skills/azure-monitor-opentelemetry-py/SKILL.md",
+        ".github/plugins/azure-sdk-python/skills/azure-monitor-query-py/SKILL.md",
+        ".github/plugins/azure-sdk-python/skills/azure-search-documents-py/SKILL.md",
+        ".github/plugins/azure-sdk-python/skills/azure-servicebus-py/SKILL.md",
+        ".github/plugins/azure-sdk-python/skills/azure-speech-to-text-rest-py/SKILL.md",
+        ".github/plugins/azure-sdk-python/skills/azure-storage-blob-py/SKILL.md",
+        ".github/plugins/azure-sdk-python/skills/azure-storage-file-datalake-py/SKILL.md",
+        ".github/plugins/azure-sdk-python/skills/azure-storage-file-share-py/SKILL.md",
+        ".github/plugins/azure-sdk-python/skills/azure-storage-queue-py/SKILL.md",
+        ".github/plugins/azure-sdk-python/skills/fastapi-router-py/SKILL.md",
+        ".github/plugins/azure-sdk-python/skills/m365-agents-py/SKILL.md",
+        ".github/plugins/azure-sdk-python/skills/pydantic-models-py/SKILL.md",
+        ".github/plugins/azure-sdk-rust/skills/azure-cosmos-rust/SKILL.md",
+        ".github/plugins/azure-sdk-rust/skills/azure-eventhub-rust/SKILL.md",
+        ".github/plugins/azure-sdk-rust/skills/azure-identity-rust/SKILL.md",
+        ".github/plugins/azure-sdk-rust/skills/azure-keyvault-certificates-rust/SKILL.md",
+        ".github/plugins/azure-sdk-rust/skills/azure-keyvault-keys-rust/SKILL.md",
+        ".github/plugins/azure-sdk-rust/skills/azure-keyvault-secrets-rust/SKILL.md",
+        ".github/plugins/azure-sdk-rust/skills/azure-storage-blob-rust/SKILL.md",
+        ".github/plugins/azure-sdk-rust/skills/azure-storage-queue-rust/SKILL.md",
+        ".github/plugins/azure-sdk-typescript/skills/applicationinsights-web-ts/SKILL.md",
+        ".github/plugins/azure-sdk-typescript/skills/azure-ai-contentsafety-ts/SKILL.md",
+        ".github/plugins/azure-sdk-typescript/skills/azure-ai-document-intelligence-ts/SKILL.md",
+        ".github/plugins/azure-sdk-typescript/skills/azure-ai-projects-ts/SKILL.md",
+        ".github/plugins/azure-sdk-typescript/skills/azure-ai-translation-ts/SKILL.md",
+        ".github/plugins/azure-sdk-typescript/skills/azure-ai-voicelive-ts/SKILL.md",
+        ".github/plugins/azure-sdk-typescript/skills/azure-appconfiguration-ts/SKILL.md",
+        ".github/plugins/azure-sdk-typescript/skills/azure-cosmos-ts/SKILL.md",
+        ".github/plugins/azure-sdk-typescript/skills/azure-eventhub-ts/SKILL.md",
+        ".github/plugins/azure-sdk-typescript/skills/azure-identity-ts/SKILL.md",
+        ".github/plugins/azure-sdk-typescript/skills/azure-keyvault-keys-ts/SKILL.md",
+        ".github/plugins/azure-sdk-typescript/skills/azure-keyvault-secrets-ts/SKILL.md",
+        ".github/plugins/azure-sdk-typescript/skills/azure-microsoft-playwright-testing-ts/SKILL.md",
+        ".github/plugins/azure-sdk-typescript/skills/azure-monitor-opentelemetry-ts/SKILL.md",
+        ".github/plugins/azure-sdk-typescript/skills/azure-postgres-ts/SKILL.md",
+        ".github/plugins/azure-sdk-typescript/skills/azure-search-documents-ts/SKILL.md",
+        ".github/plugins/azure-sdk-typescript/skills/azure-servicebus-ts/SKILL.md",
+        ".github/plugins/azure-sdk-typescript/skills/azure-storage-blob-ts/SKILL.md",
+        ".github/plugins/azure-sdk-typescript/skills/azure-storage-file-share-ts/SKILL.md",
+        ".github/plugins/azure-sdk-typescript/skills/azure-storage-queue-ts/SKILL.md",
+        ".github/plugins/azure-sdk-typescript/skills/azure-web-pubsub-ts/SKILL.md",
+        ".github/plugins/azure-sdk-typescript/skills/frontend-ui-dark-ts/SKILL.md",
+        ".github/plugins/azure-sdk-typescript/skills/m365-agents-ts/SKILL.md",
+        ".github/plugins/azure-sdk-typescript/skills/react-flow-node-ts/SKILL.md",
+        ".github/plugins/azure-sdk-typescript/skills/zustand-store-ts/SKILL.md",
+        ".github/plugins/azure-skills/skills/airunway-aks-setup/SKILL.md",
+        ".github/plugins/azure-skills/skills/appinsights-instrumentation/SKILL.md",
+        ".github/plugins/azure-skills/skills/azure-ai/SKILL.md",
+        ".github/plugins/azure-skills/skills/azure-aigateway/SKILL.md",
+        ".github/plugins/azure-skills/skills/azure-app-onboard-prereq/SKILL.md",
+        ".github/plugins/azure-skills/skills/azure-app-onboard/SKILL.md",
+        ".github/plugins/azure-skills/skills/azure-app-onboard/deploy/SKILL.md",
+        ".github/plugins/azure-skills/skills/azure-app-onboard/prepare/SKILL.md",
+        ".github/plugins/azure-skills/skills/azure-app-onboard/scaffold/SKILL.md",
+        ".github/plugins/azure-skills/skills/azure-cloud-migrate/SKILL.md",
+        ".github/plugins/azure-skills/skills/azure-compliance/SKILL.md",
+        ".github/plugins/azure-skills/skills/azure-compute/SKILL.md",
+        ".github/plugins/azure-skills/skills/azure-deploy/SKILL.md",
+        ".github/plugins/azure-skills/skills/azure-diagnostics/SKILL.md",
+        ".github/plugins/azure-skills/skills/azure-enterprise-infra-planner/SKILL.md",
+        ".github/plugins/azure-skills/skills/azure-kubernetes/SKILL.md",
+        ".github/plugins/azure-skills/skills/azure-kubernetes/azure-kubernetes-app-deploy/SKILL.md",
+        ".github/plugins/azure-skills/skills/azure-kubernetes/azure-kubernetes-automatic-readiness/SKILL.md",
+        ".github/plugins/azure-skills/skills/azure-kusto/SKILL.md",
+        ".github/plugins/azure-skills/skills/azure-messaging/SKILL.md",
+        ".github/plugins/azure-skills/skills/azure-prepare/SKILL.md",
+        ".github/plugins/azure-skills/skills/azure-quotas/SKILL.md",
+        ".github/plugins/azure-skills/skills/azure-reliability/SKILL.md",
+        ".github/plugins/azure-skills/skills/azure-resource-lookup/SKILL.md",
+        ".github/plugins/azure-skills/skills/azure-resource-visualizer/SKILL.md",
+        ".github/plugins/azure-skills/skills/azure-storage/SKILL.md",
+        ".github/plugins/azure-skills/skills/azure-upgrade/SKILL.md",
+        ".github/plugins/azure-skills/skills/azure-validate/SKILL.md",
+        ".github/plugins/azure-skills/skills/discover-azure-skills/SKILL.md",
+        ".github/plugins/azure-skills/skills/entra-agent-id/SKILL.md",
+        ".github/plugins/azure-skills/skills/entra-app-registration/SKILL.md",
+        ".github/plugins/azure-skills/skills/microsoft-foundry/SKILL.md",
+        ".github/plugins/azure-skills/skills/microsoft-foundry/finetuning/SKILL.md",
+        ".github/plugins/azure-skills/skills/microsoft-foundry/models/deploy-model/SKILL.md",
+        ".github/plugins/azure-skills/skills/microsoft-foundry/models/deploy-model/capacity/SKILL.md",
+        ".github/plugins/azure-skills/skills/microsoft-foundry/models/deploy-model/customize/SKILL.md",
+        ".github/plugins/azure-skills/skills/microsoft-foundry/models/deploy-model/preset/SKILL.md",
+        ".github/plugins/azure-skills/skills/python-appservice-deploy/SKILL.md",
+        ".github/plugins/deep-wiki/skills/wiki-ado-convert/SKILL.md",
+        ".github/plugins/deep-wiki/skills/wiki-agents-md/SKILL.md",
+        ".github/plugins/deep-wiki/skills/wiki-architect/SKILL.md",
+        ".github/plugins/deep-wiki/skills/wiki-changelog/SKILL.md",
+        ".github/plugins/deep-wiki/skills/wiki-llms-txt/SKILL.md",
+        ".github/plugins/deep-wiki/skills/wiki-onboarding/SKILL.md",
+        ".github/plugins/deep-wiki/skills/wiki-page-writer/SKILL.md",
+        ".github/plugins/deep-wiki/skills/wiki-qa/SKILL.md",
+        ".github/plugins/deep-wiki/skills/wiki-researcher/SKILL.md",
+        ".github/plugins/deep-wiki/skills/wiki-vitepress/SKILL.md",
+        ".github/plugins/foundry-iq-skills/skills/foundry-iq/SKILL.md",
+        ".github/plugins/microsoft-365-agents-toolkit/skills/declarative-agent-developer/SKILL.md",
+        ".github/plugins/microsoft-365-agents-toolkit/skills/install-atk/SKILL.md",
+        ".github/plugins/microsoft-365-agents-toolkit/skills/m365-agent-evaluator/SKILL.md",
+        ".github/plugins/microsoft-365-agents-toolkit/skills/teams-app-developer/SKILL.md",
+        ".github/plugins/microsoft-365-agents-toolkit/skills/teams-app-developer/slack-to-teams/SKILL.md",
+        ".github/plugins/microsoft-365-agents-toolkit/skills/ui-widget-developer/SKILL.md",
+        ".github/skills/applicationinsights-web-ts/SKILL.md",
+        ".github/skills/cloud-solution-architect/SKILL.md",
+        ".github/skills/continual-learning/SKILL.md",
+        ".github/skills/copilot-sdk/SKILL.md",
+        ".github/skills/debugview/SKILL.md",
+        ".github/skills/entra-agent-id/SKILL.md",
+        ".github/skills/frontend-design-review/SKILL.md",
+        ".github/skills/github-issue-creator/SKILL.md",
+        ".github/skills/kql/SKILL.md",
+        ".github/skills/mcp-builder/SKILL.md",
+        ".github/skills/microsoft-docs/SKILL.md",
+        ".github/skills/podcast-generation/SKILL.md",
+        ".github/skills/skill-creator/SKILL.md"
+      ],
+      "treeTruncated": false,
+      "selectionStatus": "selected",
+      "reason": null
+    },
+    {
+      "id": "obra-superpowers",
+      "repository": "https://github.com/obra/superpowers",
+      "commit": "bb92a77741419a4ab5f06e711a283343f1ada0c3",
+      "skillCount": 15,
+      "skillPaths": [
+        "skills/brainstorming/SKILL.md",
+        "skills/diagnosing-superpowers/SKILL.md",
+        "skills/dispatching-parallel-agents/SKILL.md",
+        "skills/executing-plans/SKILL.md",
+        "skills/finishing-a-development-branch/SKILL.md",
+        "skills/receiving-code-review/SKILL.md",
+        "skills/requesting-code-review/SKILL.md",
+        "skills/subagent-driven-development/SKILL.md",
+        "skills/systematic-debugging/SKILL.md",
+        "skills/test-driven-development/SKILL.md",
+        "skills/using-git-worktrees/SKILL.md",
+        "skills/using-superpowers/SKILL.md",
+        "skills/verification-before-completion/SKILL.md",
+        "skills/writing-plans/SKILL.md",
+        "skills/writing-skills/SKILL.md"
+      ],
+      "treeTruncated": false,
+      "selectionStatus": "selected",
+      "reason": null
+    },
+    {
+      "id": "openai-skills",
+      "repository": "https://github.com/openai/skills",
+      "commit": "49f948faa9258a0c61caceaf225e179651397431",
+      "skillCount": 44,
+      "skillPaths": [
+        "skills/.curated/aspnet-core/SKILL.md",
+        "skills/.curated/chatgpt-apps/SKILL.md",
+        "skills/.curated/cli-creator/SKILL.md",
+        "skills/.curated/cloudflare-deploy/SKILL.md",
+        "skills/.curated/define-goal/SKILL.md",
+        "skills/.curated/figma-code-connect-components/SKILL.md",
+        "skills/.curated/figma-create-design-system-rules/SKILL.md",
+        "skills/.curated/figma-create-new-file/SKILL.md",
+        "skills/.curated/figma-generate-design/SKILL.md",
+        "skills/.curated/figma-generate-library/SKILL.md",
+        "skills/.curated/figma-implement-design/SKILL.md",
+        "skills/.curated/figma-use/SKILL.md",
+        "skills/.curated/figma/SKILL.md",
+        "skills/.curated/gh-address-comments/SKILL.md",
+        "skills/.curated/gh-fix-ci/SKILL.md",
+        "skills/.curated/hatch-pet/SKILL.md",
+        "skills/.curated/jupyter-notebook/SKILL.md",
+        "skills/.curated/linear/SKILL.md",
+        "skills/.curated/migrate-to-codex/SKILL.md",
+        "skills/.curated/netlify-deploy/SKILL.md",
+        "skills/.curated/notion-knowledge-capture/SKILL.md",
+        "skills/.curated/notion-meeting-intelligence/SKILL.md",
+        "skills/.curated/notion-research-documentation/SKILL.md",
+        "skills/.curated/notion-spec-to-implementation/SKILL.md",
+        "skills/.curated/openai-docs/SKILL.md",
+        "skills/.curated/pdf/SKILL.md",
+        "skills/.curated/playwright-interactive/SKILL.md",
+        "skills/.curated/playwright/SKILL.md",
+        "skills/.curated/render-deploy/SKILL.md",
+        "skills/.curated/screenshot/SKILL.md",
+        "skills/.curated/security-best-practices/SKILL.md",
+        "skills/.curated/security-ownership-map/SKILL.md",
+        "skills/.curated/security-threat-model/SKILL.md",
+        "skills/.curated/sentry/SKILL.md",
+        "skills/.curated/speech/SKILL.md",
+        "skills/.curated/transcribe/SKILL.md",
+        "skills/.curated/vercel-deploy/SKILL.md",
+        "skills/.curated/winui-app/SKILL.md",
+        "skills/.curated/yeet/SKILL.md",
+        "skills/.system/imagegen/SKILL.md",
+        "skills/.system/openai-docs/SKILL.md",
+        "skills/.system/plugin-creator/SKILL.md",
+        "skills/.system/skill-creator/SKILL.md",
+        "skills/.system/skill-installer/SKILL.md"
+      ],
+      "treeTruncated": false,
+      "selectionStatus": "selected",
+      "reason": null
+    },
+    {
+      "id": "ruvnet-ruflo",
+      "repository": "https://github.com/ruvnet/ruflo",
+      "commit": "1882006a02487590c8c66a7eec8d7504f6af33c3",
+      "skillCount": 380,
+      "skillPaths": [
+        ".agents/skills/agent-adaptive-coordinator/SKILL.md",
+        ".agents/skills/agent-agent/SKILL.md",
+        ".agents/skills/agent-agentic-payments/SKILL.md",
+        ".agents/skills/agent-analyze-code-quality/SKILL.md",
+        ".agents/skills/agent-app-store/SKILL.md",
+        ".agents/skills/agent-arch-system-design/SKILL.md",
+        ".agents/skills/agent-architecture/SKILL.md",
+        ".agents/skills/agent-authentication/SKILL.md",
+        ".agents/skills/agent-automation-smart-agent/SKILL.md",
+        ".agents/skills/agent-base-template-generator/SKILL.md",
+        ".agents/skills/agent-benchmark-suite/SKILL.md",
+        ".agents/skills/agent-byzantine-coordinator/SKILL.md",
+        ".agents/skills/agent-challenges/SKILL.md",
+        ".agents/skills/agent-code-analyzer/SKILL.md",
+        ".agents/skills/agent-code-goal-planner/SKILL.md",
+        ".agents/skills/agent-code-review-swarm/SKILL.md",
+        ".agents/skills/agent-coder/SKILL.md",
+        ".agents/skills/agent-collective-intelligence-coordinator/SKILL.md",
+        ".agents/skills/agent-consensus-coordinator/SKILL.md",
+        ".agents/skills/agent-coordination/SKILL.md",
+        ".agents/skills/agent-coordinator-swarm-init/SKILL.md",
+        ".agents/skills/agent-crdt-synchronizer/SKILL.md",
+        ".agents/skills/agent-data-ml-model/SKILL.md",
+        ".agents/skills/agent-dev-backend-api/SKILL.md",
+        ".agents/skills/agent-docs-api-openapi/SKILL.md",
+        ".agents/skills/agent-github-modes/SKILL.md",
+        ".agents/skills/agent-github-pr-manager/SKILL.md",
+        ".agents/skills/agent-goal-planner/SKILL.md",
+        ".agents/skills/agent-gossip-coordinator/SKILL.md",
+        ".agents/skills/agent-hierarchical-coordinator/SKILL.md",
+        ".agents/skills/agent-implementer-sparc-coder/SKILL.md",
+        ".agents/skills/agent-issue-tracker/SKILL.md",
+        ".agents/skills/agent-load-balancer/SKILL.md",
+        ".agents/skills/agent-matrix-optimizer/SKILL.md",
+        ".agents/skills/agent-memory-coordinator/SKILL.md",
+        ".agents/skills/agent-mesh-coordinator/SKILL.md",
+        ".agents/skills/agent-migration-plan/SKILL.md",
+        ".agents/skills/agent-multi-repo-swarm/SKILL.md",
+        ".agents/skills/agent-neural-network/SKILL.md",
+        ".agents/skills/agent-ops-cicd-github/SKILL.md",
+        ".agents/skills/agent-orchestrator-task/SKILL.md",
+        ".agents/skills/agent-pagerank-analyzer/SKILL.md",
+        ".agents/skills/agent-payments/SKILL.md",
+        ".agents/skills/agent-performance-analyzer/SKILL.md",
+        ".agents/skills/agent-performance-benchmarker/SKILL.md",
+        ".agents/skills/agent-performance-monitor/SKILL.md",
+        ".agents/skills/agent-performance-optimizer/SKILL.md",
+        ".agents/skills/agent-planner/SKILL.md",
+        ".agents/skills/agent-pr-manager/SKILL.md",
+        ".agents/skills/agent-production-validator/SKILL.md",
+        ".agents/skills/agent-project-board-sync/SKILL.md",
+        ".agents/skills/agent-pseudocode/SKILL.md",
+        ".agents/skills/agent-queen-coordinator/SKILL.md",
+        ".agents/skills/agent-quorum-manager/SKILL.md",
+        ".agents/skills/agent-raft-manager/SKILL.md",
+        ".agents/skills/agent-refinement/SKILL.md",
+        ".agents/skills/agent-release-manager/SKILL.md",
+        ".agents/skills/agent-release-swarm/SKILL.md",
+        ".agents/skills/agent-repo-architect/SKILL.md",
+        ".agents/skills/agent-researcher/SKILL.md",
+        ".agents/skills/agent-resource-allocator/SKILL.md",
+        ".agents/skills/agent-reviewer/SKILL.md",
+        ".agents/skills/agent-safla-neural/SKILL.md",
+        ".agents/skills/agent-sandbox/SKILL.md",
+        ".agents/skills/agent-scout-explorer/SKILL.md",
+        ".agents/skills/agent-security-manager/SKILL.md",
+        ".agents/skills/agent-sona-learning-optimizer/SKILL.md",
+        ".agents/skills/agent-sparc-coordinator/SKILL.md",
+        ".agents/skills/agent-spec-mobile-react-native/SKILL.md",
+        ".agents/skills/agent-specification/SKILL.md",
+        ".agents/skills/agent-swarm-issue/SKILL.md",
+        ".agents/skills/agent-swarm-memory-manager/SKILL.md",
+        ".agents/skills/agent-swarm-pr/SKILL.md",
+        ".agents/skills/agent-swarm/SKILL.md",
+        ".agents/skills/agent-sync-coordinator/SKILL.md",
+        ".agents/skills/agent-tdd-london-swarm/SKILL.md",
+        ".agents/skills/agent-test-long-runner/SKILL.md",
+        ".agents/skills/agent-tester/SKILL.md",
+        ".agents/skills/agent-topology-optimizer/SKILL.md",
+        ".agents/skills/agent-trading-predictor/SKILL.md",
+        ".agents/skills/agent-user-tools/SKILL.md",
+        ".agents/skills/agent-v3-integration-architect/SKILL.md",
+        ".agents/skills/agent-v3-memory-specialist/SKILL.md",
+        ".agents/skills/agent-v3-performance-engineer/SKILL.md",
+        ".agents/skills/agent-v3-queen-coordinator/SKILL.md",
+        ".agents/skills/agent-v3-security-architect/SKILL.md",
+        ".agents/skills/agent-worker-specialist/SKILL.md",
+        ".agents/skills/agent-workflow-automation/SKILL.md",
+        ".agents/skills/agent-workflow/SKILL.md",
+        ".agents/skills/agentdb-advanced/SKILL.md",
+        ".agents/skills/agentdb-learning/SKILL.md",
+        ".agents/skills/agentdb-memory-patterns/SKILL.md",
+        ".agents/skills/agentdb-optimization/SKILL.md",
+        ".agents/skills/agentdb-vector-search/SKILL.md",
+        ".agents/skills/agentic-jujutsu/SKILL.md",
+        ".agents/skills/claims/SKILL.md",
+        ".agents/skills/embeddings/SKILL.md",
+        ".agents/skills/flow-nexus-neural/SKILL.md",
+        ".agents/skills/flow-nexus-platform/SKILL.md",
+        ".agents/skills/flow-nexus-swarm/SKILL.md",
+        ".agents/skills/github-automation/SKILL.md",
+        ".agents/skills/github-code-review/SKILL.md",
+        ".agents/skills/github-multi-repo/SKILL.md",
+        ".agents/skills/github-project-management/SKILL.md",
+        ".agents/skills/github-release-management/SKILL.md",
+        ".agents/skills/github-workflow-automation/SKILL.md",
+        ".agents/skills/hive-mind-advanced/SKILL.md",
+        ".agents/skills/hive-mind/SKILL.md",
+        ".agents/skills/hooks-automation/SKILL.md",
+        ".agents/skills/memory-management/SKILL.md",
+        ".agents/skills/neural-training/SKILL.md",
+        ".agents/skills/open-federation/SKILL.md",
+        ".agents/skills/pair-programming/SKILL.md",
+        ".agents/skills/performance-analysis/SKILL.md",
+        ".agents/skills/reasoningbank-agentdb/SKILL.md",
+        ".agents/skills/reasoningbank-intelligence/SKILL.md",
+        ".agents/skills/security-audit/SKILL.md",
+        ".agents/skills/skill-builder/SKILL.md",
+        ".agents/skills/sparc-methodology/SKILL.md",
+        ".agents/skills/stream-chain/SKILL.md",
+        ".agents/skills/swarm-advanced/SKILL.md",
+        ".agents/skills/swarm-orchestration/SKILL.md",
+        ".agents/skills/v3-cli-modernization/SKILL.md",
+        ".agents/skills/v3-core-implementation/SKILL.md",
+        ".agents/skills/v3-ddd-architecture/SKILL.md",
+        ".agents/skills/v3-integration-deep/SKILL.md",
+        ".agents/skills/v3-mcp-optimization/SKILL.md",
+        ".agents/skills/v3-memory-unification/SKILL.md",
+        ".agents/skills/v3-performance-optimization/SKILL.md",
+        ".agents/skills/v3-security-overhaul/SKILL.md",
+        ".agents/skills/v3-swarm-coordination/SKILL.md",
+        ".agents/skills/verification-quality/SKILL.md",
+        ".agents/skills/worker-benchmarks/SKILL.md",
+        ".agents/skills/worker-integration/SKILL.md",
+        ".agents/skills/workflow-automation/SKILL.md",
+        ".claude/skills/agentdb-advanced/SKILL.md",
+        ".claude/skills/agentdb-learning/SKILL.md",
+        ".claude/skills/agentdb-memory-patterns/SKILL.md",
+        ".claude/skills/agentdb-optimization/SKILL.md",
+        ".claude/skills/agentdb-vector-search/SKILL.md",
+        ".claude/skills/agentic-jujutsu/SKILL.md",
+        ".claude/skills/browser/SKILL.md",
+        ".claude/skills/flow-nexus-neural/SKILL.md",
+        ".claude/skills/flow-nexus-platform/SKILL.md",
+        ".claude/skills/flow-nexus-swarm/SKILL.md",
+        ".claude/skills/github-code-review/SKILL.md",
+        ".claude/skills/github-multi-repo/SKILL.md",
+        ".claude/skills/github-project-management/SKILL.md",
+        ".claude/skills/github-release-management/SKILL.md",
+        ".claude/skills/github-workflow-automation/SKILL.md",
+        ".claude/skills/hive-mind-advanced/SKILL.md",
+        ".claude/skills/hooks-automation/SKILL.md",
+        ".claude/skills/pair-programming/SKILL.md",
+        ".claude/skills/performance-analysis/SKILL.md",
+        ".claude/skills/reasoningbank-agentdb/SKILL.md",
+        ".claude/skills/reasoningbank-intelligence/SKILL.md",
+        ".claude/skills/skill-builder/SKILL.md",
+        ".claude/skills/sparc-methodology/SKILL.md",
+        ".claude/skills/stream-chain/SKILL.md",
+        ".claude/skills/swarm-advanced/SKILL.md",
+        ".claude/skills/swarm-orchestration/SKILL.md",
+        ".claude/skills/v3-cli-modernization/SKILL.md",
+        ".claude/skills/v3-core-implementation/SKILL.md",
+        ".claude/skills/v3-ddd-architecture/SKILL.md",
+        ".claude/skills/v3-integration-deep/SKILL.md",
+        ".claude/skills/v3-mcp-optimization/SKILL.md",
+        ".claude/skills/v3-memory-unification/SKILL.md",
+        ".claude/skills/v3-performance-optimization/SKILL.md",
+        ".claude/skills/v3-security-overhaul/SKILL.md",
+        ".claude/skills/v3-swarm-coordination/SKILL.md",
+        ".claude/skills/verification-quality/SKILL.md",
+        ".claude/skills/worker-benchmarks/SKILL.md",
+        ".claude/skills/worker-integration/SKILL.md",
+        "SKILL.md",
+        "plugins/ruflo-adr/skills/adr-create/SKILL.md",
+        "plugins/ruflo-adr/skills/adr-index/SKILL.md",
+        "plugins/ruflo-adr/skills/adr-reindex/SKILL.md",
+        "plugins/ruflo-adr/skills/adr-review/SKILL.md",
+        "plugins/ruflo-adr/skills/adr-verify/SKILL.md",
+        "plugins/ruflo-agent/skills/managed-agent/SKILL.md",
+        "plugins/ruflo-agent/skills/nested-subagents/SKILL.md",
+        "plugins/ruflo-agent/skills/wasm-agent/SKILL.md",
+        "plugins/ruflo-agent/skills/wasm-gallery/SKILL.md",
+        "plugins/ruflo-agentdb/skills/agentdb-query/SKILL.md",
+        "plugins/ruflo-agentdb/skills/vector-search/SKILL.md",
+        "plugins/ruflo-agntcy/skills/agntcy-status/SKILL.md",
+        "plugins/ruflo-ai-team/directory/skills/coordinate-team-work/SKILL.md",
+        "plugins/ruflo-ai-team/directory/skills/launch-ai-team/SKILL.md",
+        "plugins/ruflo-ai-team/directory/skills/manage-team-lifecycle/SKILL.md",
+        "plugins/ruflo-ai-team/directory/skills/monitor-ai-team/SKILL.md",
+        "plugins/ruflo-ai-team/directory/skills/remember-team-context/SKILL.md",
+        "plugins/ruflo-ai-team/directory/skills/review-team-deliverables/SKILL.md",
+        "plugins/ruflo-ai-team/skills/coordinate-team-work/SKILL.md",
+        "plugins/ruflo-ai-team/skills/launch-ai-team/SKILL.md",
+        "plugins/ruflo-ai-team/skills/manage-team-lifecycle/SKILL.md",
+        "plugins/ruflo-ai-team/skills/monitor-ai-team/SKILL.md",
+        "plugins/ruflo-ai-team/skills/remember-team-context/SKILL.md",
+        "plugins/ruflo-ai-team/skills/review-team-deliverables/SKILL.md",
+        "plugins/ruflo-aidefence/skills/pii-detect/SKILL.md",
+        "plugins/ruflo-aidefence/skills/safety-scan/SKILL.md",
+        "plugins/ruflo-autopilot/skills/autopilot-loop/SKILL.md",
+        "plugins/ruflo-autopilot/skills/autopilot-predict/SKILL.md",
+        "plugins/ruflo-bbs-federation/skills/cross-host-federation/SKILL.md",
+        "plugins/ruflo-browser/skills/browser-auth-flow/SKILL.md",
+        "plugins/ruflo-browser/skills/browser-extract/SKILL.md",
+        "plugins/ruflo-browser/skills/browser-form-fill/SKILL.md",
+        "plugins/ruflo-browser/skills/browser-intent/SKILL.md",
+        "plugins/ruflo-browser/skills/browser-login/SKILL.md",
+        "plugins/ruflo-browser/skills/browser-record/SKILL.md",
+        "plugins/ruflo-browser/skills/browser-replay/SKILL.md",
+        "plugins/ruflo-browser/skills/browser-scrape/SKILL.md",
+        "plugins/ruflo-browser/skills/browser-screenshot-diff/SKILL.md",
+        "plugins/ruflo-browser/skills/browser-test/SKILL.md",
+        "plugins/ruflo-business-pods/skills/pod-sales/SKILL.md",
+        "plugins/ruflo-console/skills/generate-console-theme/SKILL.md",
+        "plugins/ruflo-core/skills/discover-plugins/SKILL.md",
+        "plugins/ruflo-core/skills/init-project/SKILL.md",
+        "plugins/ruflo-core/skills/ruflo-doctor/SKILL.md",
+        "plugins/ruflo-core/skills/ruflo-status/SKILL.md",
+        "plugins/ruflo-core/skills/witness/SKILL.md",
+        "plugins/ruflo-cost-tracker/skills/cost-advise/SKILL.md",
+        "plugins/ruflo-cost-tracker/skills/cost-anomaly/SKILL.md",
+        "plugins/ruflo-cost-tracker/skills/cost-benchmark/SKILL.md",
+        "plugins/ruflo-cost-tracker/skills/cost-booster-edit/SKILL.md",
+        "plugins/ruflo-cost-tracker/skills/cost-booster-route/SKILL.md",
+        "plugins/ruflo-cost-tracker/skills/cost-budget-check/SKILL.md",
+        "plugins/ruflo-cost-tracker/skills/cost-burn/SKILL.md",
+        "plugins/ruflo-cost-tracker/skills/cost-compact-context/SKILL.md",
+        "plugins/ruflo-cost-tracker/skills/cost-conversation/SKILL.md",
+        "plugins/ruflo-cost-tracker/skills/cost-counterfactual/SKILL.md",
+        "plugins/ruflo-cost-tracker/skills/cost-diff/SKILL.md",
+        "plugins/ruflo-cost-tracker/skills/cost-export/SKILL.md",
+        "plugins/ruflo-cost-tracker/skills/cost-federation/SKILL.md",
+        "plugins/ruflo-cost-tracker/skills/cost-health/SKILL.md",
+        "plugins/ruflo-cost-tracker/skills/cost-ledger/SKILL.md",
+        "plugins/ruflo-cost-tracker/skills/cost-local/SKILL.md",
+        "plugins/ruflo-cost-tracker/skills/cost-openrouter/SKILL.md",
+        "plugins/ruflo-cost-tracker/skills/cost-optimize/SKILL.md",
+        "plugins/ruflo-cost-tracker/skills/cost-projection/SKILL.md",
+        "plugins/ruflo-cost-tracker/skills/cost-report/SKILL.md",
+        "plugins/ruflo-cost-tracker/skills/cost-session/SKILL.md",
+        "plugins/ruflo-cost-tracker/skills/cost-summary/SKILL.md",
+        "plugins/ruflo-cost-tracker/skills/cost-track/SKILL.md",
+        "plugins/ruflo-cost-tracker/skills/cost-trend/SKILL.md",
+        "plugins/ruflo-daa/skills/cognitive-pattern/SKILL.md",
+        "plugins/ruflo-daa/skills/daa-agent/SKILL.md",
+        "plugins/ruflo-ddd/skills/ddd-aggregate/SKILL.md",
+        "plugins/ruflo-ddd/skills/ddd-context/SKILL.md",
+        "plugins/ruflo-ddd/skills/ddd-validate/SKILL.md",
+        "plugins/ruflo-deepseek-harness/skills/deepseek-chat/SKILL.md",
+        "plugins/ruflo-deepseek-harness/skills/deepseek-reason/SKILL.md",
+        "plugins/ruflo-docs/skills/api-docs/SKILL.md",
+        "plugins/ruflo-docs/skills/doc-gen/SKILL.md",
+        "plugins/ruflo-federation/skills/federation-audit/SKILL.md",
+        "plugins/ruflo-federation/skills/federation-init/SKILL.md",
+        "plugins/ruflo-federation/skills/federation-status/SKILL.md",
+        "plugins/ruflo-goals/skills/deep-research/SKILL.md",
+        "plugins/ruflo-goals/skills/dossier-collect/SKILL.md",
+        "plugins/ruflo-goals/skills/goal-plan/SKILL.md",
+        "plugins/ruflo-goals/skills/horizon-track/SKILL.md",
+        "plugins/ruflo-goals/skills/research-synthesize/SKILL.md",
+        "plugins/ruflo-intelligence/skills/intelligence-route/SKILL.md",
+        "plugins/ruflo-intelligence/skills/intelligence-transfer/SKILL.md",
+        "plugins/ruflo-intelligence/skills/neural-train/SKILL.md",
+        "plugins/ruflo-iot-cognitum/skills/iot-anomalies/SKILL.md",
+        "plugins/ruflo-iot-cognitum/skills/iot-firmware/SKILL.md",
+        "plugins/ruflo-iot-cognitum/skills/iot-fleet/SKILL.md",
+        "plugins/ruflo-iot-cognitum/skills/iot-register/SKILL.md",
+        "plugins/ruflo-iot-cognitum/skills/iot-witness-verify/SKILL.md",
+        "plugins/ruflo-jujutsu/skills/diff-analyze/SKILL.md",
+        "plugins/ruflo-jujutsu/skills/git-workflow/SKILL.md",
+        "plugins/ruflo-knowledge-graph/skills/kg-extract/SKILL.md",
+        "plugins/ruflo-knowledge-graph/skills/kg-traverse/SKILL.md",
+        "plugins/ruflo-loop-workers/skills/cron-schedule/SKILL.md",
+        "plugins/ruflo-loop-workers/skills/loop-worker/SKILL.md",
+        "plugins/ruflo-market-data/skills/market-ingest/SKILL.md",
+        "plugins/ruflo-market-data/skills/market-pattern/SKILL.md",
+        "plugins/ruflo-metaharness/skills/harness-bench/SKILL.md",
+        "plugins/ruflo-metaharness/skills/harness-drift-from-history/SKILL.md",
+        "plugins/ruflo-metaharness/skills/harness-evolve/SKILL.md",
+        "plugins/ruflo-metaharness/skills/harness-genome/SKILL.md",
+        "plugins/ruflo-metaharness/skills/harness-gepa/SKILL.md",
+        "plugins/ruflo-metaharness/skills/harness-learn/SKILL.md",
+        "plugins/ruflo-metaharness/skills/harness-mcp-scan/SKILL.md",
+        "plugins/ruflo-metaharness/skills/harness-mint/SKILL.md",
+        "plugins/ruflo-metaharness/skills/harness-oia-audit/SKILL.md",
+        "plugins/ruflo-metaharness/skills/harness-score/SKILL.md",
+        "plugins/ruflo-metaharness/skills/harness-security-bench/SKILL.md",
+        "plugins/ruflo-metaharness/skills/harness-similarity/SKILL.md",
+        "plugins/ruflo-metaharness/skills/harness-threat-model/SKILL.md",
+        "plugins/ruflo-migrations/skills/migrate-create/SKILL.md",
+        "plugins/ruflo-migrations/skills/migrate-validate/SKILL.md",
+        "plugins/ruflo-music/skills/music-connect/SKILL.md",
+        "plugins/ruflo-music/skills/music-generate/SKILL.md",
+        "plugins/ruflo-music/skills/music-get/SKILL.md",
+        "plugins/ruflo-music/skills/music-list/SKILL.md",
+        "plugins/ruflo-music/skills/music-master/SKILL.md",
+        "plugins/ruflo-music/skills/music-midi/SKILL.md",
+        "plugins/ruflo-music/skills/music-stems/SKILL.md",
+        "plugins/ruflo-neural-trader/skills/trader-backtest/SKILL.md",
+        "plugins/ruflo-neural-trader/skills/trader-cloud-backtest/SKILL.md",
+        "plugins/ruflo-neural-trader/skills/trader-explain/SKILL.md",
+        "plugins/ruflo-neural-trader/skills/trader-portfolio-cg/SKILL.md",
+        "plugins/ruflo-neural-trader/skills/trader-portfolio/SKILL.md",
+        "plugins/ruflo-neural-trader/skills/trader-regime/SKILL.md",
+        "plugins/ruflo-neural-trader/skills/trader-risk/SKILL.md",
+        "plugins/ruflo-neural-trader/skills/trader-signal/SKILL.md",
+        "plugins/ruflo-neural-trader/skills/trader-train/SKILL.md",
+        "plugins/ruflo-observability/skills/observe-metrics/SKILL.md",
+        "plugins/ruflo-observability/skills/observe-trace/SKILL.md",
+        "plugins/ruflo-plugin-creator/skills/create-mod/SKILL.md",
+        "plugins/ruflo-plugin-creator/skills/create-plugin/SKILL.md",
+        "plugins/ruflo-plugin-creator/skills/validate-plugin/SKILL.md",
+        "plugins/ruflo-rag-memory/skills/memory-bridge/SKILL.md",
+        "plugins/ruflo-rag-memory/skills/memory-search/SKILL.md",
+        "plugins/ruflo-ruos/skills/ruos-host-run/SKILL.md",
+        "plugins/ruflo-ruvector/skills/vector-cluster/SKILL.md",
+        "plugins/ruflo-ruvector/skills/vector-embed/SKILL.md",
+        "plugins/ruflo-ruvector/skills/vector-hyperbolic/SKILL.md",
+        "plugins/ruflo-ruvector/skills/vector-setup/SKILL.md",
+        "plugins/ruflo-ruvllm/skills/chat-format/SKILL.md",
+        "plugins/ruflo-ruvllm/skills/llm-config/SKILL.md",
+        "plugins/ruflo-rvf/skills/rvf-manage/SKILL.md",
+        "plugins/ruflo-rvf/skills/session-persist/SKILL.md",
+        "plugins/ruflo-security-audit/skills/dependency-check/SKILL.md",
+        "plugins/ruflo-security-audit/skills/security-scan/SKILL.md",
+        "plugins/ruflo-sparc/skills/sparc-implement/SKILL.md",
+        "plugins/ruflo-sparc/skills/sparc-refine/SKILL.md",
+        "plugins/ruflo-sparc/skills/sparc-spec/SKILL.md",
+        "plugins/ruflo-swarm/skills/monitor-stream/SKILL.md",
+        "plugins/ruflo-swarm/skills/swarm-init/SKILL.md",
+        "plugins/ruflo-testgen/skills/tdd-repair/SKILL.md",
+        "plugins/ruflo-testgen/skills/tdd-workflow/SKILL.md",
+        "plugins/ruflo-testgen/skills/test-gaps/SKILL.md",
+        "plugins/ruflo-workflows/skills/gaia-architecture-comparison/SKILL.md",
+        "plugins/ruflo-workflows/skills/gaia-debugging/SKILL.md",
+        "plugins/ruflo-workflows/skills/gaia-submission/SKILL.md",
+        "plugins/ruflo-workflows/skills/workflow-create/SKILL.md",
+        "plugins/ruflo-workflows/skills/workflow-run/SKILL.md",
+        "ruflo/src/ruvocal/.claude/skills/add-model-descriptions/SKILL.md",
+        "v3/@claude-flow/browser/skills/browser/SKILL.md",
+        "v3/@claude-flow/cli/.claude/skills/agentdb-advanced/SKILL.md",
+        "v3/@claude-flow/cli/.claude/skills/agentdb-learning/SKILL.md",
+        "v3/@claude-flow/cli/.claude/skills/agentdb-memory-patterns/SKILL.md",
+        "v3/@claude-flow/cli/.claude/skills/agentdb-optimization/SKILL.md",
+        "v3/@claude-flow/cli/.claude/skills/agentdb-vector-search/SKILL.md",
+        "v3/@claude-flow/cli/.claude/skills/browser/SKILL.md",
+        "v3/@claude-flow/cli/.claude/skills/flow-nexus-neural/SKILL.md",
+        "v3/@claude-flow/cli/.claude/skills/flow-nexus-platform/SKILL.md",
+        "v3/@claude-flow/cli/.claude/skills/flow-nexus-swarm/SKILL.md",
+        "v3/@claude-flow/cli/.claude/skills/github-code-review/SKILL.md",
+        "v3/@claude-flow/cli/.claude/skills/github-multi-repo/SKILL.md",
+        "v3/@claude-flow/cli/.claude/skills/github-project-management/SKILL.md",
+        "v3/@claude-flow/cli/.claude/skills/github-release-management/SKILL.md",
+        "v3/@claude-flow/cli/.claude/skills/github-workflow-automation/SKILL.md",
+        "v3/@claude-flow/cli/.claude/skills/hooks-automation/SKILL.md",
+        "v3/@claude-flow/cli/.claude/skills/pair-programming/SKILL.md",
+        "v3/@claude-flow/cli/.claude/skills/reasoningbank-agentdb/SKILL.md",
+        "v3/@claude-flow/cli/.claude/skills/reasoningbank-intelligence/SKILL.md",
+        "v3/@claude-flow/cli/.claude/skills/skill-builder/SKILL.md",
+        "v3/@claude-flow/cli/.claude/skills/sparc-methodology/SKILL.md",
+        "v3/@claude-flow/cli/.claude/skills/stream-chain/SKILL.md",
+        "v3/@claude-flow/cli/.claude/skills/swarm-advanced/SKILL.md",
+        "v3/@claude-flow/cli/.claude/skills/swarm-orchestration/SKILL.md",
+        "v3/@claude-flow/cli/.claude/skills/v3-cli-modernization/SKILL.md",
+        "v3/@claude-flow/cli/.claude/skills/v3-core-implementation/SKILL.md",
+        "v3/@claude-flow/cli/.claude/skills/v3-ddd-architecture/SKILL.md",
+        "v3/@claude-flow/cli/.claude/skills/v3-integration-deep/SKILL.md",
+        "v3/@claude-flow/cli/.claude/skills/v3-mcp-optimization/SKILL.md",
+        "v3/@claude-flow/cli/.claude/skills/v3-memory-unification/SKILL.md",
+        "v3/@claude-flow/cli/.claude/skills/v3-performance-optimization/SKILL.md",
+        "v3/@claude-flow/cli/.claude/skills/v3-security-overhaul/SKILL.md",
+        "v3/@claude-flow/cli/.claude/skills/v3-swarm-coordination/SKILL.md",
+        "v3/@claude-flow/cli/.claude/skills/verification-quality/SKILL.md",
+        "v3/@claude-flow/codex/.agents/skills/github-automation/SKILL.md",
+        "v3/@claude-flow/codex/.agents/skills/memory-management/SKILL.md",
+        "v3/@claude-flow/codex/.agents/skills/performance-analysis/SKILL.md",
+        "v3/@claude-flow/codex/.agents/skills/security-audit/SKILL.md",
+        "v3/@claude-flow/codex/.agents/skills/sparc-methodology/SKILL.md",
+        "v3/@claude-flow/codex/.agents/skills/swarm-orchestration/SKILL.md"
+      ],
+      "treeTruncated": false,
+      "selectionStatus": "selected",
+      "reason": null
+    },
+    {
+      "id": "vercel-labs-agent-skills",
+      "repository": "https://github.com/vercel-labs/agent-skills",
+      "commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+      "skillCount": 9,
+      "skillPaths": [
+        "skills/composition-patterns/SKILL.md",
+        "skills/deploy-to-vercel/SKILL.md",
+        "skills/react-best-practices/SKILL.md",
+        "skills/react-native-skills/SKILL.md",
+        "skills/react-view-transitions/SKILL.md",
+        "skills/vercel-cli-with-tokens/SKILL.md",
+        "skills/vercel-optimize/SKILL.md",
+        "skills/web-design-guidelines/SKILL.md",
+        "skills/writing-guidelines/SKILL.md"
+      ],
+      "treeTruncated": false,
+      "selectionStatus": "quarantined",
+      "reason": "No explicit redistribution license found in pinned repository tree."
+    }
+  ],
+  "sources": [
+    {
+      "id": "anthropics-skills-frontend-design",
+      "repository": "https://github.com/anthropics/skills",
+      "commit": "dbd4588f9e1033efb41dad4bef2f7947c8993d44",
+      "license": "Apache-2.0",
+      "licensePath": "skills/frontend-design/LICENSE.txt",
+      "licenseSha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "sourceUrl": "https://github.com/anthropics/skills/blob/dbd4588f9e1033efb41dad4bef2f7947c8993d44/skills/frontend-design/LICENSE.txt"
+    },
+    {
+      "id": "anthropics-skills-internal-comms",
+      "repository": "https://github.com/anthropics/skills",
+      "commit": "dbd4588f9e1033efb41dad4bef2f7947c8993d44",
+      "license": "Apache-2.0",
+      "licensePath": "skills/internal-comms/LICENSE.txt",
+      "licenseSha256": "bc6b3af2f331cbc7fb0da1344efb2cbe5877a31498b4d70dbc7000f3405a1362",
+      "sourceUrl": "https://github.com/anthropics/skills/blob/dbd4588f9e1033efb41dad4bef2f7947c8993d44/skills/internal-comms/LICENSE.txt"
+    },
+    {
+      "id": "anthropics-skills-mcp-builder",
+      "repository": "https://github.com/anthropics/skills",
+      "commit": "dbd4588f9e1033efb41dad4bef2f7947c8993d44",
+      "license": "Apache-2.0",
+      "licensePath": "skills/mcp-builder/LICENSE.txt",
+      "licenseSha256": "bc6b3af2f331cbc7fb0da1344efb2cbe5877a31498b4d70dbc7000f3405a1362",
+      "sourceUrl": "https://github.com/anthropics/skills/blob/dbd4588f9e1033efb41dad4bef2f7947c8993d44/skills/mcp-builder/LICENSE.txt"
+    },
+    {
+      "id": "anthropics-skills-webapp-testing",
+      "repository": "https://github.com/anthropics/skills",
+      "commit": "dbd4588f9e1033efb41dad4bef2f7947c8993d44",
+      "license": "Apache-2.0",
+      "licensePath": "skills/webapp-testing/LICENSE.txt",
+      "licenseSha256": "bc6b3af2f331cbc7fb0da1344efb2cbe5877a31498b4d70dbc7000f3405a1362",
+      "sourceUrl": "https://github.com/anthropics/skills/blob/dbd4588f9e1033efb41dad4bef2f7947c8993d44/skills/webapp-testing/LICENSE.txt"
+    },
+    {
+      "id": "microsoft-skills",
+      "repository": "https://github.com/microsoft/skills",
+      "commit": "d2f769fd9d7ee81b4d768301bcd2eae14ddcfd0a",
+      "license": "MIT",
+      "licensePath": "LICENSE",
+      "licenseSha256": "d9a1b1e30d633d5732ea18e3cba9538d293ebc53e1a9e4e96ab739e0c5c4f1cb",
+      "sourceUrl": "https://github.com/microsoft/skills/blob/d2f769fd9d7ee81b4d768301bcd2eae14ddcfd0a/LICENSE"
+    },
+    {
+      "id": "microsoft-skills-appinsights-instrumentation",
+      "repository": "https://github.com/microsoft/skills",
+      "commit": "d2f769fd9d7ee81b4d768301bcd2eae14ddcfd0a",
+      "license": "MIT",
+      "licensePath": ".github/plugins/azure-skills/skills/appinsights-instrumentation/LICENSE.txt",
+      "licenseSha256": "cacacf3e9ede21a9237d9fdef6728ebe7a27d489f6df08cbf946f622ad9b834c",
+      "sourceUrl": "https://github.com/microsoft/skills/blob/d2f769fd9d7ee81b4d768301bcd2eae14ddcfd0a/.github/plugins/azure-skills/skills/appinsights-instrumentation/LICENSE.txt"
+    },
+    {
+      "id": "obra-superpowers",
+      "repository": "https://github.com/obra/superpowers",
+      "commit": "bb92a77741419a4ab5f06e711a283343f1ada0c3",
+      "license": "MIT",
+      "licensePath": "LICENSE",
+      "licenseSha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400",
+      "sourceUrl": "https://github.com/obra/superpowers/blob/bb92a77741419a4ab5f06e711a283343f1ada0c3/LICENSE"
+    },
+    {
+      "id": "openai-skills-security-best-practices",
+      "repository": "https://github.com/openai/skills",
+      "commit": "49f948faa9258a0c61caceaf225e179651397431",
+      "license": "Apache-2.0",
+      "licensePath": "skills/.curated/security-best-practices/LICENSE.txt",
+      "licenseSha256": "4dd13869245e356246a5b770723247bbb80a8f07a181d1d3d873a1734297cdb9",
+      "sourceUrl": "https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/security-best-practices/LICENSE.txt"
+    },
+    {
+      "id": "openai-skills-security-threat-model",
+      "repository": "https://github.com/openai/skills",
+      "commit": "49f948faa9258a0c61caceaf225e179651397431",
+      "license": "Apache-2.0",
+      "licensePath": "skills/.curated/security-threat-model/LICENSE.txt",
+      "licenseSha256": "4dd13869245e356246a5b770723247bbb80a8f07a181d1d3d873a1734297cdb9",
+      "sourceUrl": "https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/security-threat-model/LICENSE.txt"
+    },
+    {
+      "id": "openai-skills-security-ownership-map",
+      "repository": "https://github.com/openai/skills",
+      "commit": "49f948faa9258a0c61caceaf225e179651397431",
+      "license": "Apache-2.0",
+      "licensePath": "skills/.curated/security-ownership-map/LICENSE.txt",
+      "licenseSha256": "4dd13869245e356246a5b770723247bbb80a8f07a181d1d3d873a1734297cdb9",
+      "sourceUrl": "https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/security-ownership-map/LICENSE.txt"
+    },
+    {
+      "id": "openai-skills-gh-fix-ci",
+      "repository": "https://github.com/openai/skills",
+      "commit": "49f948faa9258a0c61caceaf225e179651397431",
+      "license": "Apache-2.0",
+      "licensePath": "skills/.curated/gh-fix-ci/LICENSE.txt",
+      "licenseSha256": "4dd13869245e356246a5b770723247bbb80a8f07a181d1d3d873a1734297cdb9",
+      "sourceUrl": "https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/gh-fix-ci/LICENSE.txt"
+    },
+    {
+      "id": "openai-skills-gh-address-comments",
+      "repository": "https://github.com/openai/skills",
+      "commit": "49f948faa9258a0c61caceaf225e179651397431",
+      "license": "Apache-2.0",
+      "licensePath": "skills/.curated/gh-address-comments/LICENSE.txt",
+      "licenseSha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+      "sourceUrl": "https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/gh-address-comments/LICENSE.txt"
+    },
+    {
+      "id": "openai-skills-openai-docs",
+      "repository": "https://github.com/openai/skills",
+      "commit": "49f948faa9258a0c61caceaf225e179651397431",
+      "license": "Apache-2.0",
+      "licensePath": "skills/.system/openai-docs/LICENSE.txt",
+      "licenseSha256": "4dd13869245e356246a5b770723247bbb80a8f07a181d1d3d873a1734297cdb9",
+      "sourceUrl": "https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.system/openai-docs/LICENSE.txt"
+    },
+    {
+      "id": "openai-skills-aspnet-core",
+      "repository": "https://github.com/openai/skills",
+      "commit": "49f948faa9258a0c61caceaf225e179651397431",
+      "license": "Apache-2.0",
+      "licensePath": "skills/.curated/aspnet-core/LICENSE.txt",
+      "licenseSha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+      "sourceUrl": "https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/aspnet-core/LICENSE.txt"
+    },
+    {
+      "id": "openai-skills-cli-creator",
+      "repository": "https://github.com/openai/skills",
+      "commit": "49f948faa9258a0c61caceaf225e179651397431",
+      "license": "Apache-2.0",
+      "licensePath": "skills/.curated/cli-creator/LICENSE.txt",
+      "licenseSha256": "4dd13869245e356246a5b770723247bbb80a8f07a181d1d3d873a1734297cdb9",
+      "sourceUrl": "https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/cli-creator/LICENSE.txt"
+    },
+    {
+      "id": "openai-skills-notion-knowledge-capture",
+      "repository": "https://github.com/openai/skills",
+      "commit": "49f948faa9258a0c61caceaf225e179651397431",
+      "license": "MIT",
+      "licensePath": "skills/.curated/notion-knowledge-capture/LICENSE.txt",
+      "licenseSha256": "0f377d9b2a1db642e4b0531ffa126e96d9bc6c085f8d9441f220fb25f723c6f8",
+      "sourceUrl": "https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/notion-knowledge-capture/LICENSE.txt"
+    },
+    {
+      "id": "openai-skills-notion-research-documentation",
+      "repository": "https://github.com/openai/skills",
+      "commit": "49f948faa9258a0c61caceaf225e179651397431",
+      "license": "MIT",
+      "licensePath": "skills/.curated/notion-research-documentation/LICENSE.txt",
+      "licenseSha256": "0f377d9b2a1db642e4b0531ffa126e96d9bc6c085f8d9441f220fb25f723c6f8",
+      "sourceUrl": "https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/notion-research-documentation/LICENSE.txt"
+    },
+    {
+      "id": "openai-skills-pdf",
+      "repository": "https://github.com/openai/skills",
+      "commit": "49f948faa9258a0c61caceaf225e179651397431",
+      "license": "Apache-2.0",
+      "licensePath": "skills/.curated/pdf/LICENSE.txt",
+      "licenseSha256": "4dd13869245e356246a5b770723247bbb80a8f07a181d1d3d873a1734297cdb9",
+      "sourceUrl": "https://github.com/openai/skills/blob/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/pdf/LICENSE.txt"
+    },
+    {
+      "id": "ruvnet-ruflo",
+      "repository": "https://github.com/ruvnet/ruflo",
+      "commit": "1882006a02487590c8c66a7eec8d7504f6af33c3",
+      "license": "MIT",
+      "licensePath": "LICENSE",
+      "licenseSha256": "a45ba66fa502c49ad108440536d8aa91dfe9c04575a32a01287839bee336199c",
+      "sourceUrl": "https://github.com/ruvnet/ruflo/blob/1882006a02487590c8c66a7eec8d7504f6af33c3/LICENSE"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "anthropics-frontend-design",
+      "name": "Frontend Design",
+      "category": "design",
+      "sourceId": "anthropics-skills-frontend-design",
+      "sourceUrl": "https://github.com/anthropics/skills/tree/dbd4588f9e1033efb41dad4bef2f7947c8993d44/skills/frontend-design",
+      "commit": "dbd4588f9e1033efb41dad4bef2f7947c8993d44",
+      "path": "upstream/anthropics__skills/frontend-design",
+      "entrypoint": "SKILL.md",
+      "license": "Apache-2.0",
+      "licensePath": "LICENSE.txt",
+      "files": [
+        {
+          "path": "LICENSE.txt",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+          "bytes": 10174,
+          "sourcePath": "skills/frontend-design/LICENSE.txt"
+        },
+        {
+          "path": "SKILL.md",
+          "sha256": "d91970639e9f5c37682ac7ab60094d35f1c7c1f38d731bd56396563aee10c1d3",
+          "bytes": 9390,
+          "sourcePath": "skills/frontend-design/SKILL.md"
+        }
+      ],
+      "status": "imported-reference",
+      "blockedReasons": [],
+      "dependencies": [],
+      "overlaps": [],
+      "executed": false,
+      "admitted": false,
+      "qualificationWarnings": [
+        "Runtime evaluation, independent review and host permission checks have not been performed."
+      ],
+      "requiresExecutionReview": false,
+      "executableAssets": [],
+      "behavioralStatus": "not_evaluated"
+    },
+    {
+      "id": "anthropics-internal-comms",
+      "name": "Internal Comms",
+      "category": "communication",
+      "sourceId": "anthropics-skills-internal-comms",
+      "sourceUrl": "https://github.com/anthropics/skills/tree/dbd4588f9e1033efb41dad4bef2f7947c8993d44/skills/internal-comms",
+      "commit": "dbd4588f9e1033efb41dad4bef2f7947c8993d44",
+      "path": "upstream/anthropics__skills/internal-comms",
+      "entrypoint": "SKILL.md",
+      "license": "Apache-2.0",
+      "licensePath": "LICENSE.txt",
+      "files": [
+        {
+          "path": "LICENSE.txt",
+          "sha256": "bc6b3af2f331cbc7fb0da1344efb2cbe5877a31498b4d70dbc7000f3405a1362",
+          "bytes": 11345,
+          "sourcePath": "skills/internal-comms/LICENSE.txt"
+        },
+        {
+          "path": "SKILL.md",
+          "sha256": "067b7587a344a928fc6534ef66b1bcd591fc7c26d207ea7ca3334aeb678d6475",
+          "bytes": 1511,
+          "sourcePath": "skills/internal-comms/SKILL.md"
+        },
+        {
+          "path": "examples/3p-updates.md",
+          "sha256": "087e4363c0f3513728a7e695eeb9ead5c3ecd12a4681b59340691180e65b68fc",
+          "bytes": 3274,
+          "sourcePath": "skills/internal-comms/examples/3p-updates.md"
+        },
+        {
+          "path": "examples/company-newsletter.md",
+          "sha256": "30f81cfbdb03858a006169c72169024089c7c5d3d32611d337782da4f38c86b5",
+          "bytes": 3295,
+          "sourcePath": "skills/internal-comms/examples/company-newsletter.md"
+        },
+        {
+          "path": "examples/faq-answers.md",
+          "sha256": "5ecd3356cd6666937f2ebefa753253edfdbdca15e368d07baf398bfcced72484",
+          "bytes": 2366,
+          "sourcePath": "skills/internal-comms/examples/faq-answers.md"
+        },
+        {
+          "path": "examples/general-comms.md",
+          "sha256": "4d3a4bb198a77626bcf018e96b2b45a2dbabed172d4ade0fcd70d23ae8a47a47",
+          "bytes": 602,
+          "sourcePath": "skills/internal-comms/examples/general-comms.md"
+        }
+      ],
+      "status": "imported-reference",
+      "blockedReasons": [],
+      "dependencies": [
+        {
+          "path": "examples/3p-updates.md",
+          "present": true,
+          "kind": "local-reference"
+        },
+        {
+          "path": "examples/company-newsletter.md",
+          "present": true,
+          "kind": "local-reference"
+        },
+        {
+          "path": "examples/faq-answers.md",
+          "present": true,
+          "kind": "local-reference"
+        },
+        {
+          "path": "examples/general-comms.md",
+          "present": true,
+          "kind": "local-reference"
+        }
+      ],
+      "overlaps": [],
+      "executed": false,
+      "admitted": false,
+      "qualificationWarnings": [
+        "Runtime evaluation, independent review and host permission checks have not been performed."
+      ],
+      "requiresExecutionReview": false,
+      "executableAssets": [],
+      "behavioralStatus": "not_evaluated"
+    },
+    {
+      "id": "anthropics-mcp-builder",
+      "name": "Mcp Builder",
+      "category": "integration",
+      "sourceId": "anthropics-skills-mcp-builder",
+      "sourceUrl": "https://github.com/anthropics/skills/tree/dbd4588f9e1033efb41dad4bef2f7947c8993d44/skills/mcp-builder",
+      "commit": "dbd4588f9e1033efb41dad4bef2f7947c8993d44",
+      "path": "upstream/anthropics__skills/mcp-builder",
+      "entrypoint": "SKILL.md",
+      "license": "Apache-2.0",
+      "licensePath": "LICENSE.txt",
+      "files": [
+        {
+          "path": "LICENSE.txt",
+          "sha256": "bc6b3af2f331cbc7fb0da1344efb2cbe5877a31498b4d70dbc7000f3405a1362",
+          "bytes": 11345,
+          "sourcePath": "skills/mcp-builder/LICENSE.txt"
+        },
+        {
+          "path": "SKILL.md",
+          "sha256": "0f4592dcb53cf2b5d6b7febee6b4152018b565551a1c29e3c612f57b218ab295",
+          "bytes": 9092,
+          "sourcePath": "skills/mcp-builder/SKILL.md"
+        },
+        {
+          "path": "reference/evaluation.md",
+          "sha256": "8c99479f8a2d22a636c38e274537aac3610879e26f34e0709825077c4576f427",
+          "bytes": 21663,
+          "sourcePath": "skills/mcp-builder/reference/evaluation.md"
+        },
+        {
+          "path": "reference/mcp_best_practices.md",
+          "sha256": "80fb4369a349447cf18ecdd7494fe7938b6065377e9f08c077cec411093a3007",
+          "bytes": 7330,
+          "sourcePath": "skills/mcp-builder/reference/mcp_best_practices.md"
+        },
+        {
+          "path": "reference/node_mcp_server.md",
+          "sha256": "c3ba35a4f599dd53be9c6555ae72c19a7bf412cd5426576c2c08d42755482c66",
+          "bytes": 28550,
+          "sourcePath": "skills/mcp-builder/reference/node_mcp_server.md"
+        },
+        {
+          "path": "reference/python_mcp_server.md",
+          "sha256": "2da52f77e675191014ca2e146a4b95aa04d0ca7dd7e2b100322df15ade685e80",
+          "bytes": 25099,
+          "sourcePath": "skills/mcp-builder/reference/python_mcp_server.md"
+        },
+        {
+          "path": "scripts/connections.py",
+          "sha256": "9403668a2041568772082a8b334122c1f88daf0541fb393af4522d0094a47a6e",
+          "bytes": 4875,
+          "sourcePath": "skills/mcp-builder/scripts/connections.py"
+        },
+        {
+          "path": "scripts/evaluation.py",
+          "sha256": "49ed1d17cdce5da101b210197740713f49b935c29d4f339542a14b132658e6f7",
+          "bytes": 12579,
+          "sourcePath": "skills/mcp-builder/scripts/evaluation.py"
+        },
+        {
+          "path": "scripts/example_evaluation.xml",
+          "sha256": "9272b348ddcc4b06ba562367ccd0770e018158c0068ac5116d5e34aaeff8777a",
+          "bytes": 1194,
+          "sourcePath": "skills/mcp-builder/scripts/example_evaluation.xml"
+        },
+        {
+          "path": "scripts/requirements.txt",
+          "sha256": "d5d7558b2368ecea9dfeed7d1fbc71ee9e0750bebd1282faa527d528a344c3c7",
+          "bytes": 29,
+          "sourcePath": "skills/mcp-builder/scripts/requirements.txt"
+        }
+      ],
+      "status": "imported-reference",
+      "blockedReasons": [],
+      "dependencies": [],
+      "overlaps": [],
+      "executed": false,
+      "admitted": false,
+      "qualificationWarnings": [
+        "Runtime evaluation, independent review and host permission checks have not been performed."
+      ],
+      "requiresExecutionReview": true,
+      "executableAssets": [
+        "scripts/connections.py",
+        "scripts/evaluation.py"
+      ],
+      "behavioralStatus": "not_evaluated"
+    },
+    {
+      "id": "anthropics-webapp-testing",
+      "name": "Webapp Testing",
+      "category": "testing",
+      "sourceId": "anthropics-skills-webapp-testing",
+      "sourceUrl": "https://github.com/anthropics/skills/tree/dbd4588f9e1033efb41dad4bef2f7947c8993d44/skills/webapp-testing",
+      "commit": "dbd4588f9e1033efb41dad4bef2f7947c8993d44",
+      "path": "upstream/anthropics__skills/webapp-testing",
+      "entrypoint": "SKILL.md",
+      "license": "Apache-2.0",
+      "licensePath": "LICENSE.txt",
+      "files": [
+        {
+          "path": "LICENSE.txt",
+          "sha256": "bc6b3af2f331cbc7fb0da1344efb2cbe5877a31498b4d70dbc7000f3405a1362",
+          "bytes": 11345,
+          "sourcePath": "skills/webapp-testing/LICENSE.txt"
+        },
+        {
+          "path": "SKILL.md",
+          "sha256": "51b7349e77ec63b7744a6f63647e7566a0b4d2e301121cc10e8c2113af6556a2",
+          "bytes": 3913,
+          "sourcePath": "skills/webapp-testing/SKILL.md"
+        },
+        {
+          "path": "examples/console_logging.py",
+          "sha256": "ea46877289acb82da7e7ce59d0bc37c8977cd57e2a006d0c88d7a1c625bf95da",
+          "bytes": 1027,
+          "sourcePath": "skills/webapp-testing/examples/console_logging.py"
+        },
+        {
+          "path": "examples/element_discovery.py",
+          "sha256": "d63c89604a22f8845d724e95dda45db49b1bf57c25ce0a83afbb7b8da3d402f0",
+          "bytes": 1463,
+          "sourcePath": "skills/webapp-testing/examples/element_discovery.py"
+        },
+        {
+          "path": "examples/static_html_automation.py",
+          "sha256": "9d533aafb875ee3ab8b8ebf8f5b9003ac8d999da3d09b285cce252e623140064",
+          "bytes": 953,
+          "sourcePath": "skills/webapp-testing/examples/static_html_automation.py"
+        },
+        {
+          "path": "scripts/with_server.py",
+          "sha256": "b0dcf4918935b795f4eda9821579b9902119235ff4447f687a30286e7d0925fd",
+          "bytes": 3693,
+          "sourcePath": "skills/webapp-testing/scripts/with_server.py"
+        }
+      ],
+      "status": "imported-reference",
+      "blockedReasons": [],
+      "dependencies": [
+        {
+          "path": "scripts/with_server.py",
+          "present": true,
+          "kind": "local-reference"
+        }
+      ],
+      "overlaps": [
+        "verification"
+      ],
+      "executed": false,
+      "admitted": false,
+      "qualificationWarnings": [
+        "Runtime evaluation, independent review and host permission checks have not been performed."
+      ],
+      "requiresExecutionReview": true,
+      "executableAssets": [
+        "examples/console_logging.py",
+        "examples/element_discovery.py",
+        "examples/static_html_automation.py",
+        "scripts/with_server.py"
+      ],
+      "behavioralStatus": "not_evaluated"
+    },
+    {
+      "id": "microsoft-azure-identity-py",
+      "name": "Azure Identity Py",
+      "category": "integration",
+      "sourceId": "microsoft-skills",
+      "sourceUrl": "https://github.com/microsoft/skills/tree/d2f769fd9d7ee81b4d768301bcd2eae14ddcfd0a/.github/plugins/azure-sdk-python/skills/azure-identity-py",
+      "commit": "d2f769fd9d7ee81b4d768301bcd2eae14ddcfd0a",
+      "path": "upstream/microsoft__skills/azure-identity-py",
+      "entrypoint": "SKILL.md",
+      "license": "MIT",
+      "licensePath": "LICENSE",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "d9a1b1e30d633d5732ea18e3cba9538d293ebc53e1a9e4e96ab739e0c5c4f1cb",
+          "bytes": 1140,
+          "sourcePath": "LICENSE"
+        },
+        {
+          "path": "SKILL.md",
+          "sha256": "b10709c8cadc23134bfee415010f9f0292e39f06c216df3f3dd6fc826897414c",
+          "bytes": 17698,
+          "sourcePath": ".github/plugins/azure-sdk-python/skills/azure-identity-py/SKILL.md"
+        },
+        {
+          "path": "references/capabilities.md",
+          "sha256": "294c3cb8b688c5a435acfd5633ecea51cd07845363fc893fa29efcc418f597b0",
+          "bytes": 2234,
+          "sourcePath": ".github/plugins/azure-sdk-python/skills/azure-identity-py/references/capabilities.md"
+        },
+        {
+          "path": "references/non-hero-scenarios.md",
+          "sha256": "3c3fdd62c8a3bc43e71b7bd4010a51d8d2809b5458eb898426523e28466bbdd1",
+          "bytes": 4355,
+          "sourcePath": ".github/plugins/azure-sdk-python/skills/azure-identity-py/references/non-hero-scenarios.md"
+        }
+      ],
+      "status": "imported-reference",
+      "blockedReasons": [],
+      "dependencies": [
+        {
+          "path": "references/capabilities.md",
+          "present": true,
+          "kind": "local-reference"
+        },
+        {
+          "path": "references/non-hero-scenarios.md",
+          "present": true,
+          "kind": "local-reference"
+        }
+      ],
+      "overlaps": [],
+      "executed": false,
+      "admitted": false,
+      "qualificationWarnings": [
+        "Runtime evaluation, independent review and host permission checks have not been performed."
+      ],
+      "requiresExecutionReview": false,
+      "executableAssets": [],
+      "behavioralStatus": "not_evaluated"
+    },
+    {
+      "id": "microsoft-azure-search-documents-py",
+      "name": "Azure Search Documents Py",
+      "category": "integration",
+      "sourceId": "microsoft-skills",
+      "sourceUrl": "https://github.com/microsoft/skills/tree/d2f769fd9d7ee81b4d768301bcd2eae14ddcfd0a/.github/plugins/azure-sdk-python/skills/azure-search-documents-py",
+      "commit": "d2f769fd9d7ee81b4d768301bcd2eae14ddcfd0a",
+      "path": "upstream/microsoft__skills/azure-search-documents-py",
+      "entrypoint": "SKILL.md",
+      "license": "MIT",
+      "licensePath": "LICENSE",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "d9a1b1e30d633d5732ea18e3cba9538d293ebc53e1a9e4e96ab739e0c5c4f1cb",
+          "bytes": 1140,
+          "sourcePath": "LICENSE"
+        },
+        {
+          "path": "SKILL.md",
+          "sha256": "4a8d46e6e8def539b71987804fdc2d0946948e6e332c98ca831eeaea9e596401",
+          "bytes": 17752,
+          "sourcePath": ".github/plugins/azure-sdk-python/skills/azure-search-documents-py/SKILL.md"
+        },
+        {
+          "path": "references/agentic-retrieval.md",
+          "sha256": "4f11c80e8833130a2ecf85e475de8e9c3f1dbf645ed9d0b10bfb7dba98963091",
+          "bytes": 7432,
+          "sourcePath": ".github/plugins/azure-sdk-python/skills/azure-search-documents-py/references/agentic-retrieval.md"
+        },
+        {
+          "path": "references/semantic-ranking.md",
+          "sha256": "010b66e83c07e299f0d46d54b83cf281c498a5d7efecea5ff5ba95cbd7d78e1f",
+          "bytes": 7540,
+          "sourcePath": ".github/plugins/azure-sdk-python/skills/azure-search-documents-py/references/semantic-ranking.md"
+        },
+        {
+          "path": "references/vector-search.md",
+          "sha256": "c8a5c4f990e9f72735b835ad249891fc43d7a44fc5b6a24bcf8ff438eb017a0f",
+          "bytes": 6960,
+          "sourcePath": ".github/plugins/azure-sdk-python/skills/azure-search-documents-py/references/vector-search.md"
+        },
+        {
+          "path": "scripts/setup_agentic_retrieval.py",
+          "sha256": "5b9353822db9c542fd5278d7d0dccd7933ceaa29ad1888e0d7f7235a02b74a3b",
+          "bytes": 6960,
+          "sourcePath": ".github/plugins/azure-sdk-python/skills/azure-search-documents-py/scripts/setup_agentic_retrieval.py"
+        },
+        {
+          "path": "scripts/setup_vector_index.py",
+          "sha256": "c97810b42b0d26d73709a0070fe204280eb2c2345377d863fbcd82e6e71b1104",
+          "bytes": 6143,
+          "sourcePath": ".github/plugins/azure-sdk-python/skills/azure-search-documents-py/scripts/setup_vector_index.py"
+        }
+      ],
+      "status": "imported-reference",
+      "blockedReasons": [],
+      "dependencies": [
+        {
+          "path": "references/agentic-retrieval.md",
+          "present": true,
+          "kind": "local-reference"
+        },
+        {
+          "path": "references/semantic-ranking.md",
+          "present": true,
+          "kind": "local-reference"
+        },
+        {
+          "path": "references/vector-search.md",
+          "present": true,
+          "kind": "local-reference"
+        },
+        {
+          "path": "scripts/setup_vector_index.py",
+          "present": true,
+          "kind": "local-reference"
+        }
+      ],
+      "overlaps": [],
+      "executed": false,
+      "admitted": false,
+      "qualificationWarnings": [
+        "Runtime evaluation, independent review and host permission checks have not been performed."
+      ],
+      "requiresExecutionReview": true,
+      "executableAssets": [
+        "scripts/setup_agentic_retrieval.py",
+        "scripts/setup_vector_index.py"
+      ],
+      "behavioralStatus": "not_evaluated"
+    },
+    {
+      "id": "microsoft-azure-storage-blob-py",
+      "name": "Azure Storage Blob Py",
+      "category": "integration",
+      "sourceId": "microsoft-skills",
+      "sourceUrl": "https://github.com/microsoft/skills/tree/d2f769fd9d7ee81b4d768301bcd2eae14ddcfd0a/.github/plugins/azure-sdk-python/skills/azure-storage-blob-py",
+      "commit": "d2f769fd9d7ee81b4d768301bcd2eae14ddcfd0a",
+      "path": "upstream/microsoft__skills/azure-storage-blob-py",
+      "entrypoint": "SKILL.md",
+      "license": "MIT",
+      "licensePath": "LICENSE",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "d9a1b1e30d633d5732ea18e3cba9538d293ebc53e1a9e4e96ab739e0c5c4f1cb",
+          "bytes": 1140,
+          "sourcePath": "LICENSE"
+        },
+        {
+          "path": "SKILL.md",
+          "sha256": "036cde228f87b9e6aacbd3ec317bd504cb5639e04aec81f1b3ef631a9b240622",
+          "bytes": 9154,
+          "sourcePath": ".github/plugins/azure-sdk-python/skills/azure-storage-blob-py/SKILL.md"
+        },
+        {
+          "path": "references/capabilities.md",
+          "sha256": "5f07b3f4925a40b16c7f5aaa4ad7e61524142a72a7d88de4031773297d67b942",
+          "bytes": 1310,
+          "sourcePath": ".github/plugins/azure-sdk-python/skills/azure-storage-blob-py/references/capabilities.md"
+        },
+        {
+          "path": "references/non-hero-scenarios.md",
+          "sha256": "b0ad5f98350ef38460ebda48b5ae2299b24a7b93dec149610ee5b10911533db6",
+          "bytes": 1621,
+          "sourcePath": ".github/plugins/azure-sdk-python/skills/azure-storage-blob-py/references/non-hero-scenarios.md"
+        }
+      ],
+      "status": "imported-reference",
+      "blockedReasons": [],
+      "dependencies": [
+        {
+          "path": "references/capabilities.md",
+          "present": true,
+          "kind": "local-reference"
+        },
+        {
+          "path": "references/non-hero-scenarios.md",
+          "present": true,
+          "kind": "local-reference"
+        }
+      ],
+      "overlaps": [],
+      "executed": false,
+      "admitted": false,
+      "qualificationWarnings": [
+        "Runtime evaluation, independent review and host permission checks have not been performed."
+      ],
+      "requiresExecutionReview": false,
+      "executableAssets": [],
+      "behavioralStatus": "not_evaluated"
+    },
+    {
+      "id": "microsoft-azure-servicebus-py",
+      "name": "Azure Servicebus Py",
+      "category": "integration",
+      "sourceId": "microsoft-skills",
+      "sourceUrl": "https://github.com/microsoft/skills/tree/d2f769fd9d7ee81b4d768301bcd2eae14ddcfd0a/.github/plugins/azure-sdk-python/skills/azure-servicebus-py",
+      "commit": "d2f769fd9d7ee81b4d768301bcd2eae14ddcfd0a",
+      "path": "upstream/microsoft__skills/azure-servicebus-py",
+      "entrypoint": "SKILL.md",
+      "license": "MIT",
+      "licensePath": "LICENSE",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "d9a1b1e30d633d5732ea18e3cba9538d293ebc53e1a9e4e96ab739e0c5c4f1cb",
+          "bytes": 1140,
+          "sourcePath": "LICENSE"
+        },
+        {
+          "path": "SKILL.md",
+          "sha256": "6d1905fe12c4c84a3e4520ee6c03d21b205111b0c394c14e4a0d5bb322c94435",
+          "bytes": 10353,
+          "sourcePath": ".github/plugins/azure-sdk-python/skills/azure-servicebus-py/SKILL.md"
+        },
+        {
+          "path": "references/dead-letter.md",
+          "sha256": "9213e789c05b55575e9cce342aaabd1b65ec6dc8a1d5c4ca77720b7852dbd611",
+          "bytes": 14139,
+          "sourcePath": ".github/plugins/azure-sdk-python/skills/azure-servicebus-py/references/dead-letter.md"
+        },
+        {
+          "path": "references/patterns.md",
+          "sha256": "5f046b927a52f311b9b6baec8af14eb74bfe4621c07554f1d2fb46a7990e883e",
+          "bytes": 13912,
+          "sourcePath": ".github/plugins/azure-sdk-python/skills/azure-servicebus-py/references/patterns.md"
+        },
+        {
+          "path": "scripts/setup_servicebus.py",
+          "sha256": "5f982ff5bd7b7c1eef0cad121879c6351174f3caec3bcc8f4d8f4b8486175048",
+          "bytes": 13291,
+          "sourcePath": ".github/plugins/azure-sdk-python/skills/azure-servicebus-py/scripts/setup_servicebus.py"
+        }
+      ],
+      "status": "imported-reference",
+      "blockedReasons": [],
+      "dependencies": [
+        {
+          "path": "references/dead-letter.md",
+          "present": true,
+          "kind": "local-reference"
+        },
+        {
+          "path": "references/patterns.md",
+          "present": true,
+          "kind": "local-reference"
+        },
+        {
+          "path": "scripts/setup_servicebus.py",
+          "present": true,
+          "kind": "local-reference"
+        }
+      ],
+      "overlaps": [],
+      "executed": false,
+      "admitted": false,
+      "qualificationWarnings": [
+        "Runtime evaluation, independent review and host permission checks have not been performed."
+      ],
+      "requiresExecutionReview": true,
+      "executableAssets": [
+        "scripts/setup_servicebus.py"
+      ],
+      "behavioralStatus": "not_evaluated"
+    },
+    {
+      "id": "microsoft-appinsights-instrumentation",
+      "name": "Appinsights Instrumentation",
+      "category": "integration",
+      "sourceId": "microsoft-skills-appinsights-instrumentation",
+      "sourceUrl": "https://github.com/microsoft/skills/tree/d2f769fd9d7ee81b4d768301bcd2eae14ddcfd0a/.github/plugins/azure-skills/skills/appinsights-instrumentation",
+      "commit": "d2f769fd9d7ee81b4d768301bcd2eae14ddcfd0a",
+      "path": "upstream/microsoft__skills/appinsights-instrumentation",
+      "entrypoint": "SKILL.md",
+      "license": "MIT",
+      "licensePath": "LICENSE.txt",
+      "files": [
+        {
+          "path": "LICENSE.txt",
+          "sha256": "cacacf3e9ede21a9237d9fdef6728ebe7a27d489f6df08cbf946f622ad9b834c",
+          "bytes": 1078,
+          "sourcePath": ".github/plugins/azure-skills/skills/appinsights-instrumentation/LICENSE.txt"
+        },
+        {
+          "path": "SKILL.md",
+          "sha256": "8865590c029e53142edc56634914625fe23869baf7828a8181aed67e096a9e31",
+          "bytes": 3794,
+          "sourcePath": ".github/plugins/azure-skills/skills/appinsights-instrumentation/SKILL.md"
+        },
+        {
+          "path": "examples/appinsights.bicep",
+          "sha256": "35793f28333b37b4639f866b2204a48eebcab343f0e52ab44128a618a28eaacb",
+          "bytes": 759,
+          "sourcePath": ".github/plugins/azure-skills/skills/appinsights-instrumentation/examples/appinsights.bicep"
+        },
+        {
+          "path": "references/aspnetcore.md",
+          "sha256": "29986d08a27b4d7a9086e89c1d56f9cc9b4e27bfd88ef65517f8bed641c7f636",
+          "bytes": 1717,
+          "sourcePath": ".github/plugins/azure-skills/skills/appinsights-instrumentation/references/aspnetcore.md"
+        },
+        {
+          "path": "references/auto.md",
+          "sha256": "8a0a447289e232dc54909017b4a490b46ca5fc1eb90099645eeb99b1b9a8a732",
+          "bytes": 891,
+          "sourcePath": ".github/plugins/azure-skills/skills/appinsights-instrumentation/references/auto.md"
+        },
+        {
+          "path": "references/container-apps.md",
+          "sha256": "66a7eaa29c8257abb33c7637ce2500356515f434f0f0262b3764409c08e69aae",
+          "bytes": 7367,
+          "sourcePath": ".github/plugins/azure-skills/skills/appinsights-instrumentation/references/container-apps.md"
+        },
+        {
+          "path": "references/nodejs.md",
+          "sha256": "6b36d0a8a1d2bb64ce8d0e7d51ddaac282c7bf180124c988e2c956e3c467bc1a",
+          "bytes": 1815,
+          "sourcePath": ".github/plugins/azure-skills/skills/appinsights-instrumentation/references/nodejs.md"
+        },
+        {
+          "path": "references/python.md",
+          "sha256": "fa5785231dde00eaad3a6f141211dfe291e82a44a24163eca3f4a3285e6e1742",
+          "bytes": 1812,
+          "sourcePath": ".github/plugins/azure-skills/skills/appinsights-instrumentation/references/python.md"
+        },
+        {
+          "path": "references/sdk/azure-monitor-opentelemetry-exporter-java.md",
+          "sha256": "f525e167b23bd98062600c9aa422df359a90342054f30cba1ef98642af3fb250",
+          "bytes": 1173,
+          "sourcePath": ".github/plugins/azure-skills/skills/appinsights-instrumentation/references/sdk/azure-monitor-opentelemetry-exporter-java.md"
+        },
+        {
+          "path": "references/sdk/azure-monitor-opentelemetry-exporter-py.md",
+          "sha256": "4394ed04bcc4c99bc5f584fdccbdd08592c07d14ebebe37dee56488f457cbc1e",
+          "bytes": 963,
+          "sourcePath": ".github/plugins/azure-skills/skills/appinsights-instrumentation/references/sdk/azure-monitor-opentelemetry-exporter-py.md"
+        },
+        {
+          "path": "references/sdk/azure-monitor-opentelemetry-py.md",
+          "sha256": "2d8cab0440063297890e686c2f1cd58c3a21dc291937858abc915fb4a5740977",
+          "bytes": 880,
+          "sourcePath": ".github/plugins/azure-skills/skills/appinsights-instrumentation/references/sdk/azure-monitor-opentelemetry-py.md"
+        },
+        {
+          "path": "references/sdk/azure-monitor-opentelemetry-ts.md",
+          "sha256": "648599ce299edc3c765f4fc8daa356b9e90f71026a42682cff5da39641cae487",
+          "bytes": 986,
+          "sourcePath": ".github/plugins/azure-skills/skills/appinsights-instrumentation/references/sdk/azure-monitor-opentelemetry-ts.md"
+        },
+        {
+          "path": "scripts/appinsights.ps1",
+          "sha256": "69e1ccdf00b138e9f7a245e8da1d28d0ac00112f2a6a05c76d4432cc16fe9919",
+          "bytes": 1221,
+          "sourcePath": ".github/plugins/azure-skills/skills/appinsights-instrumentation/scripts/appinsights.ps1"
+        }
+      ],
+      "status": "imported-reference",
+      "blockedReasons": [],
+      "dependencies": [
+        {
+          "path": "examples/appinsights.bicep",
+          "present": true,
+          "kind": "local-reference"
+        },
+        {
+          "path": "references/aspnetcore.md",
+          "present": true,
+          "kind": "local-reference"
+        },
+        {
+          "path": "references/auto.md",
+          "present": true,
+          "kind": "local-reference"
+        },
+        {
+          "path": "references/container-apps.md",
+          "present": true,
+          "kind": "local-reference"
+        },
+        {
+          "path": "references/nodejs.md",
+          "present": true,
+          "kind": "local-reference"
+        },
+        {
+          "path": "references/python.md",
+          "present": true,
+          "kind": "local-reference"
+        },
+        {
+          "path": "references/sdk/azure-monitor-opentelemetry-exporter-java.md",
+          "present": true,
+          "kind": "local-reference"
+        },
+        {
+          "path": "references/sdk/azure-monitor-opentelemetry-exporter-py.md",
+          "present": true,
+          "kind": "local-reference"
+        },
+        {
+          "path": "references/sdk/azure-monitor-opentelemetry-py.md",
+          "present": true,
+          "kind": "local-reference"
+        },
+        {
+          "path": "references/sdk/azure-monitor-opentelemetry-ts.md",
+          "present": true,
+          "kind": "local-reference"
+        },
+        {
+          "path": "scripts/appinsights.ps1",
+          "present": true,
+          "kind": "local-reference"
+        }
+      ],
+      "overlaps": [],
+      "executed": false,
+      "admitted": false,
+      "qualificationWarnings": [
+        "Runtime evaluation, independent review and host permission checks have not been performed."
+      ],
+      "requiresExecutionReview": true,
+      "executableAssets": [
+        "scripts/appinsights.ps1"
+      ],
+      "behavioralStatus": "not_evaluated"
+    },
+    {
+      "id": "microsoft-azure-cosmos-py",
+      "name": "Azure Cosmos Py",
+      "category": "data",
+      "sourceId": "microsoft-skills",
+      "sourceUrl": "https://github.com/microsoft/skills/tree/d2f769fd9d7ee81b4d768301bcd2eae14ddcfd0a/.github/plugins/azure-sdk-python/skills/azure-cosmos-py",
+      "commit": "d2f769fd9d7ee81b4d768301bcd2eae14ddcfd0a",
+      "path": "upstream/microsoft__skills/azure-cosmos-py",
+      "entrypoint": "SKILL.md",
+      "license": "MIT",
+      "licensePath": "LICENSE",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "d9a1b1e30d633d5732ea18e3cba9538d293ebc53e1a9e4e96ab739e0c5c4f1cb",
+          "bytes": 1140,
+          "sourcePath": "LICENSE"
+        },
+        {
+          "path": "SKILL.md",
+          "sha256": "7b3c8cbbee11c4900cec94db00927a60f69d002385194df953af665768281925",
+          "bytes": 9316,
+          "sourcePath": ".github/plugins/azure-sdk-python/skills/azure-cosmos-py/SKILL.md"
+        },
+        {
+          "path": "references/partitioning.md",
+          "sha256": "c8e7e4005dbb09a9f6d2f5e5bf84eb9aea1654d4189c68affafae160dfe07e1d",
+          "bytes": 10514,
+          "sourcePath": ".github/plugins/azure-sdk-python/skills/azure-cosmos-py/references/partitioning.md"
+        },
+        {
+          "path": "references/query-patterns.md",
+          "sha256": "e95a0bbf78d434e3a78058aab1152cb53110486c1edd98ea6417d2834f038d10",
+          "bytes": 10868,
+          "sourcePath": ".github/plugins/azure-sdk-python/skills/azure-cosmos-py/references/query-patterns.md"
+        }
+      ],
+      "status": "quarantined",
+      "blockedReasons": [
+        "Referenced asset is absent from pinned upstream skill directory: scripts/setup_cosmos_container.py"
+      ],
+      "dependencies": [
+        {
+          "path": "references/partitioning.md",
+          "present": true,
+          "kind": "local-reference"
+        },
+        {
+          "path": "references/query-patterns.md",
+          "present": true,
+          "kind": "local-reference"
+        },
+        {
+          "path": "scripts/setup_cosmos_container.py",
+          "present": false,
+          "kind": "local-reference"
+        }
+      ],
+      "overlaps": [],
+      "executed": false,
+      "admitted": false,
+      "qualificationWarnings": [
+        "Runtime evaluation, independent review and host permission checks have not been performed.",
+        "Unresolved referenced paths: scripts/setup_cosmos_container.py"
+      ],
+      "requiresExecutionReview": false,
+      "executableAssets": [],
+      "behavioralStatus": "not_evaluated"
+    },
+    {
+      "id": "microsoft-azure-data-tables-py",
+      "name": "Azure Data Tables Py",
+      "category": "data",
+      "sourceId": "microsoft-skills",
+      "sourceUrl": "https://github.com/microsoft/skills/tree/d2f769fd9d7ee81b4d768301bcd2eae14ddcfd0a/.github/plugins/azure-sdk-python/skills/azure-data-tables-py",
+      "commit": "d2f769fd9d7ee81b4d768301bcd2eae14ddcfd0a",
+      "path": "upstream/microsoft__skills/azure-data-tables-py",
+      "entrypoint": "SKILL.md",
+      "license": "MIT",
+      "licensePath": "LICENSE",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "d9a1b1e30d633d5732ea18e3cba9538d293ebc53e1a9e4e96ab739e0c5c4f1cb",
+          "bytes": 1140,
+          "sourcePath": "LICENSE"
+        },
+        {
+          "path": "SKILL.md",
+          "sha256": "e28e8908e2a19511abab4ede57bfb967e75dba99b92b242c97c0eb23d729cc7a",
+          "bytes": 8418,
+          "sourcePath": ".github/plugins/azure-sdk-python/skills/azure-data-tables-py/SKILL.md"
+        },
+        {
+          "path": "references/capabilities.md",
+          "sha256": "85f71185bb124f051c6c2213c12512155670d516a3270be35db032677d73e7c4",
+          "bytes": 1389,
+          "sourcePath": ".github/plugins/azure-sdk-python/skills/azure-data-tables-py/references/capabilities.md"
+        },
+        {
+          "path": "references/non-hero-scenarios.md",
+          "sha256": "33485310a13b17feab2f2d5e5be4cd48f6c287680a431334170dcbebb9b0682c",
+          "bytes": 1755,
+          "sourcePath": ".github/plugins/azure-sdk-python/skills/azure-data-tables-py/references/non-hero-scenarios.md"
+        }
+      ],
+      "status": "imported-reference",
+      "blockedReasons": [],
+      "dependencies": [
+        {
+          "path": "references/capabilities.md",
+          "present": true,
+          "kind": "local-reference"
+        },
+        {
+          "path": "references/non-hero-scenarios.md",
+          "present": true,
+          "kind": "local-reference"
+        }
+      ],
+      "overlaps": [],
+      "executed": false,
+      "admitted": false,
+      "qualificationWarnings": [
+        "Runtime evaluation, independent review and host permission checks have not been performed."
+      ],
+      "requiresExecutionReview": false,
+      "executableAssets": [],
+      "behavioralStatus": "not_evaluated"
+    },
+    {
+      "id": "microsoft-azure-keyvault-py",
+      "name": "Azure Keyvault Py",
+      "category": "integration",
+      "sourceId": "microsoft-skills",
+      "sourceUrl": "https://github.com/microsoft/skills/tree/d2f769fd9d7ee81b4d768301bcd2eae14ddcfd0a/.github/plugins/azure-sdk-python/skills/azure-keyvault-py",
+      "commit": "d2f769fd9d7ee81b4d768301bcd2eae14ddcfd0a",
+      "path": "upstream/microsoft__skills/azure-keyvault-py",
+      "entrypoint": "SKILL.md",
+      "license": "MIT",
+      "licensePath": "LICENSE",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "d9a1b1e30d633d5732ea18e3cba9538d293ebc53e1a9e4e96ab739e0c5c4f1cb",
+          "bytes": 1140,
+          "sourcePath": "LICENSE"
+        },
+        {
+          "path": "SKILL.md",
+          "sha256": "5300434b6d8025604bfb4e16514b27d1e380255f0a587c65d000cbdf59248ce1",
+          "bytes": 9599,
+          "sourcePath": ".github/plugins/azure-sdk-python/skills/azure-keyvault-py/SKILL.md"
+        },
+        {
+          "path": "references/capabilities.md",
+          "sha256": "46d0a786957f19e87e0e1ade56bd94e1e77cfb6db20421ad53438d80bbc58377",
+          "bytes": 1287,
+          "sourcePath": ".github/plugins/azure-sdk-python/skills/azure-keyvault-py/references/capabilities.md"
+        },
+        {
+          "path": "references/non-hero-scenarios.md",
+          "sha256": "1f2fb0a97eff30cbabe4e5af479e9edba42dc7517480b1a82a147652c3071359",
+          "bytes": 1060,
+          "sourcePath": ".github/plugins/azure-sdk-python/skills/azure-keyvault-py/references/non-hero-scenarios.md"
+        }
+      ],
+      "status": "imported-reference",
+      "blockedReasons": [],
+      "dependencies": [
+        {
+          "path": "references/capabilities.md",
+          "present": true,
+          "kind": "local-reference"
+        },
+        {
+          "path": "references/non-hero-scenarios.md",
+          "present": true,
+          "kind": "local-reference"
+        }
+      ],
+      "overlaps": [],
+      "executed": false,
+      "admitted": false,
+      "qualificationWarnings": [
+        "Runtime evaluation, independent review and host permission checks have not been performed."
+      ],
+      "requiresExecutionReview": false,
+      "executableAssets": [],
+      "behavioralStatus": "not_evaluated"
+    },
+    {
+      "id": "microsoft-azure-monitor-opentelemetry-py",
+      "name": "Azure Monitor Opentelemetry Py",
+      "category": "operations",
+      "sourceId": "microsoft-skills",
+      "sourceUrl": "https://github.com/microsoft/skills/tree/d2f769fd9d7ee81b4d768301bcd2eae14ddcfd0a/.github/plugins/azure-sdk-python/skills/azure-monitor-opentelemetry-py",
+      "commit": "d2f769fd9d7ee81b4d768301bcd2eae14ddcfd0a",
+      "path": "upstream/microsoft__skills/azure-monitor-opentelemetry-py",
+      "entrypoint": "SKILL.md",
+      "license": "MIT",
+      "licensePath": "LICENSE",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "d9a1b1e30d633d5732ea18e3cba9538d293ebc53e1a9e4e96ab739e0c5c4f1cb",
+          "bytes": 1140,
+          "sourcePath": "LICENSE"
+        },
+        {
+          "path": "SKILL.md",
+          "sha256": "5f3da3c631f76fe4a52a159c8eb055e54819eb6fd5269803b4106773a70f98fd",
+          "bytes": 7877,
+          "sourcePath": ".github/plugins/azure-sdk-python/skills/azure-monitor-opentelemetry-py/SKILL.md"
+        },
+        {
+          "path": "references/capabilities.md",
+          "sha256": "a77bb9ba1d178a1543689630c2ec13a66597b51224513dc2c50eef38f4e48f37",
+          "bytes": 2609,
+          "sourcePath": ".github/plugins/azure-sdk-python/skills/azure-monitor-opentelemetry-py/references/capabilities.md"
+        },
+        {
+          "path": "references/non-hero-scenarios.md",
+          "sha256": "69fb0a7db8cb2d54955df1175e6363b252ce06d3b99382054488565b5966953d",
+          "bytes": 3616,
+          "sourcePath": ".github/plugins/azure-sdk-python/skills/azure-monitor-opentelemetry-py/references/non-hero-scenarios.md"
+        }
+      ],
+      "status": "imported-reference",
+      "blockedReasons": [],
+      "dependencies": [
+        {
+          "path": "references/capabilities.md",
+          "present": true,
+          "kind": "local-reference"
+        },
+        {
+          "path": "references/non-hero-scenarios.md",
+          "present": true,
+          "kind": "local-reference"
+        }
+      ],
+      "overlaps": [],
+      "executed": false,
+      "admitted": false,
+      "qualificationWarnings": [
+        "Runtime evaluation, independent review and host permission checks have not been performed."
+      ],
+      "requiresExecutionReview": false,
+      "executableAssets": [],
+      "behavioralStatus": "not_evaluated"
+    },
+    {
+      "id": "microsoft-azure-monitor-query-py",
+      "name": "Azure Monitor Query Py",
+      "category": "operations",
+      "sourceId": "microsoft-skills",
+      "sourceUrl": "https://github.com/microsoft/skills/tree/d2f769fd9d7ee81b4d768301bcd2eae14ddcfd0a/.github/plugins/azure-sdk-python/skills/azure-monitor-query-py",
+      "commit": "d2f769fd9d7ee81b4d768301bcd2eae14ddcfd0a",
+      "path": "upstream/microsoft__skills/azure-monitor-query-py",
+      "entrypoint": "SKILL.md",
+      "license": "MIT",
+      "licensePath": "LICENSE",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "d9a1b1e30d633d5732ea18e3cba9538d293ebc53e1a9e4e96ab739e0c5c4f1cb",
+          "bytes": 1140,
+          "sourcePath": "LICENSE"
+        },
+        {
+          "path": "SKILL.md",
+          "sha256": "02a36d349fa9ce1b194f032975ad82cd04d95598059f6d14902872162688edbd",
+          "bytes": 8569,
+          "sourcePath": ".github/plugins/azure-sdk-python/skills/azure-monitor-query-py/SKILL.md"
+        },
+        {
+          "path": "references/capabilities.md",
+          "sha256": "34bae8188f7a80b55d852633f95e86e30448386e4003b8a4ecdb444670abbc16",
+          "bytes": 1090,
+          "sourcePath": ".github/plugins/azure-sdk-python/skills/azure-monitor-query-py/references/capabilities.md"
+        },
+        {
+          "path": "references/non-hero-scenarios.md",
+          "sha256": "0a34c80f2b7525a4ec0d504701e8b075cb630121c83c9b4761b82e8ad0f91e5b",
+          "bytes": 389,
+          "sourcePath": ".github/plugins/azure-sdk-python/skills/azure-monitor-query-py/references/non-hero-scenarios.md"
+        }
+      ],
+      "status": "imported-reference",
+      "blockedReasons": [],
+      "dependencies": [
+        {
+          "path": "references/capabilities.md",
+          "present": true,
+          "kind": "local-reference"
+        },
+        {
+          "path": "references/non-hero-scenarios.md",
+          "present": true,
+          "kind": "local-reference"
+        }
+      ],
+      "overlaps": [],
+      "executed": false,
+      "admitted": false,
+      "qualificationWarnings": [
+        "Runtime evaluation, independent review and host permission checks have not been performed."
+      ],
+      "requiresExecutionReview": false,
+      "executableAssets": [],
+      "behavioralStatus": "not_evaluated"
+    },
+    {
+      "id": "obra-brainstorming",
+      "name": "Brainstorming",
+      "category": "engineering",
+      "sourceId": "obra-superpowers",
+      "sourceUrl": "https://github.com/obra/superpowers/tree/bb92a77741419a4ab5f06e711a283343f1ada0c3/skills/brainstorming",
+      "commit": "bb92a77741419a4ab5f06e711a283343f1ada0c3",
+      "path": "upstream/obra__superpowers/brainstorming",
+      "entrypoint": "SKILL.md",
+      "license": "MIT",
+      "licensePath": "LICENSE",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400",
+          "bytes": 1070,
+          "sourcePath": "LICENSE"
+        },
+        {
+          "path": "SKILL.md",
+          "sha256": "6ee10d1481b8a2580d5336ff66c5c08acc9d4b251b13bbc3bfd31be99c261d43",
+          "bytes": 10073,
+          "sourcePath": "skills/brainstorming/SKILL.md"
+        },
+        {
+          "path": "builder-check-prompt.md",
+          "sha256": "36d51a4723d6f0a3ce5811a0ea3b3a8424f07533947e1355f5d8cb8cce40c55e",
+          "bytes": 881,
+          "sourcePath": "skills/brainstorming/builder-check-prompt.md"
+        },
+        {
+          "path": "scripts/frame-template.html",
+          "sha256": "6a8a4e58bd6a44b904e2e3c57de774481d909204597e1498de53f1b2fecc4c4e",
+          "bytes": 8094,
+          "sourcePath": "skills/brainstorming/scripts/frame-template.html"
+        },
+        {
+          "path": "scripts/helper.js",
+          "sha256": "43c6d69954a46ec34a2a262bcc62a9a7e83e839c739f199cb72646d397c686e3",
+          "bytes": 5615,
+          "sourcePath": "skills/brainstorming/scripts/helper.js"
+        },
+        {
+          "path": "scripts/server.cjs",
+          "sha256": "763abf96510e0b892a1141397b31aa82ef900cf87ed34dde94bc8782baf4a7ca",
+          "bytes": 25699,
+          "sourcePath": "skills/brainstorming/scripts/server.cjs"
+        },
+        {
+          "path": "scripts/start-server.sh",
+          "sha256": "a4e5ae84275bcaacd2f84345afeabe59cf7b00ba080e123da7cc1fb226f12847",
+          "bytes": 6908,
+          "sourcePath": "skills/brainstorming/scripts/start-server.sh"
+        },
+        {
+          "path": "scripts/stop-server.sh",
+          "sha256": "0b5ccbbd57f62d3ed88993f7940b5ee0e5c0fc9b21c550c623da4f6292e47daf",
+          "bytes": 3263,
+          "sourcePath": "skills/brainstorming/scripts/stop-server.sh"
+        },
+        {
+          "path": "visual-companion.md",
+          "sha256": "6ffcb038b53254bd31debaa15e12dcd4ff24bd63d690e0b644ac6396701cf2e2",
+          "bytes": 13413,
+          "sourcePath": "skills/brainstorming/visual-companion.md"
+        }
+      ],
+      "status": "imported-reference",
+      "blockedReasons": [],
+      "dependencies": [
+        {
+          "id": "obra-writing-plans",
+          "kind": "skill",
+          "present": true
+        }
+      ],
+      "overlaps": [
+        "planning-and-design"
+      ],
+      "executed": false,
+      "admitted": false,
+      "qualificationWarnings": [
+        "Runtime evaluation, independent review and host permission checks have not been performed.",
+        "Host tool aliases and cross-skill Superpowers references require an adapter or explicit compatibility qualification."
+      ],
+      "requiresExecutionReview": true,
+      "executableAssets": [
+        "scripts/helper.js",
+        "scripts/start-server.sh",
+        "scripts/stop-server.sh"
+      ],
+      "behavioralStatus": "not_evaluated"
+    },
+    {
+      "id": "obra-systematic-debugging",
+      "name": "Systematic Debugging",
+      "category": "engineering",
+      "sourceId": "obra-superpowers",
+      "sourceUrl": "https://github.com/obra/superpowers/tree/bb92a77741419a4ab5f06e711a283343f1ada0c3/skills/systematic-debugging",
+      "commit": "bb92a77741419a4ab5f06e711a283343f1ada0c3",
+      "path": "upstream/obra__superpowers/systematic-debugging",
+      "entrypoint": "SKILL.md",
+      "license": "MIT",
+      "licensePath": "LICENSE",
+      "files": [
+        {
+          "path": "CREATION-LOG.md",
+          "sha256": "c24733a5b1821bd6bed1fc950261f0b9f4e90097e0bbb96459d8179713730789",
+          "bytes": 4257,
+          "sourcePath": "skills/systematic-debugging/CREATION-LOG.md"
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400",
+          "bytes": 1070,
+          "sourcePath": "LICENSE"
+        },
+        {
+          "path": "SKILL.md",
+          "sha256": "51c6435d98c83c42c96ba7c35725a0b2c376cd487fb1a4e6bd0ddbe7e33ef202",
+          "bytes": 9530,
+          "sourcePath": "skills/systematic-debugging/SKILL.md"
+        },
+        {
+          "path": "condition-based-waiting-example.ts",
+          "sha256": "40ae5ebe497fdf310200e43fe986552546d0a22837c0d39e855db1cfd33eb88e",
+          "bytes": 5054,
+          "sourcePath": "skills/systematic-debugging/condition-based-waiting-example.ts"
+        },
+        {
+          "path": "condition-based-waiting.md",
+          "sha256": "e89fec8400d6cd50f43407cec9fab50976ba4d55d0ec2eb51c0bd68036b54c26",
+          "bytes": 3516,
+          "sourcePath": "skills/systematic-debugging/condition-based-waiting.md"
+        },
+        {
+          "path": "defense-in-depth.md",
+          "sha256": "1e175fb86fc357e58c6aebf5441e481e1b7868b4380c0456b63a17eefbd18ba7",
+          "bytes": 3650,
+          "sourcePath": "skills/systematic-debugging/defense-in-depth.md"
+        },
+        {
+          "path": "find-polluter.sh",
+          "sha256": "dd7b8f13c4cc2a24b33ff87b18da9248f3e1c80a085c3316224f69ff0fa5c43c",
+          "bytes": 1986,
+          "sourcePath": "skills/systematic-debugging/find-polluter.sh"
+        },
+        {
+          "path": "root-cause-tracing.md",
+          "sha256": "75b933b6a8c40bdb2031b10f21654395b56ec6ab6bc7b018c18d3fe57aeb7fb8",
+          "bytes": 5321,
+          "sourcePath": "skills/systematic-debugging/root-cause-tracing.md"
+        },
+        {
+          "path": "test-academic.md",
+          "sha256": "fe2ba480d78ac0d686dc025f41c2a32a43d642bf533f91b0c6053a04d35d6486",
+          "bytes": 653,
+          "sourcePath": "skills/systematic-debugging/test-academic.md"
+        },
+        {
+          "path": "test-pressure-1.md",
+          "sha256": "0b6a915db0054577819834c79be9eb614e97bddba10d73768e1fbe91cfed048a",
+          "bytes": 1900,
+          "sourcePath": "skills/systematic-debugging/test-pressure-1.md"
+        },
+        {
+          "path": "test-pressure-2.md",
+          "sha256": "b2030aeffba07050e8ad573ddf87486457c4a016a786bb326235bebd856f2016",
+          "bytes": 2283,
+          "sourcePath": "skills/systematic-debugging/test-pressure-2.md"
+        },
+        {
+          "path": "test-pressure-3.md",
+          "sha256": "96b50a52e2c7989c9cf20fb752c47c1e9a3a70dc362f8f7989f8f5b64dac7708",
+          "bytes": 2692,
+          "sourcePath": "skills/systematic-debugging/test-pressure-3.md"
+        }
+      ],
+      "status": "imported-reference",
+      "blockedReasons": [],
+      "dependencies": [
+        {
+          "id": "obra-test-driven-development",
+          "kind": "skill",
+          "present": true
+        },
+        {
+          "id": "obra-verification-before-completion",
+          "kind": "skill",
+          "present": true
+        }
+      ],
+      "overlaps": [],
+      "executed": false,
+      "admitted": false,
+      "qualificationWarnings": [
+        "Runtime evaluation, independent review and host permission checks have not been performed.",
+        "Host tool aliases and cross-skill Superpowers references require an adapter or explicit compatibility qualification."
+      ],
+      "requiresExecutionReview": true,
+      "executableAssets": [
+        "condition-based-waiting-example.ts",
+        "find-polluter.sh"
+      ],
+      "behavioralStatus": "not_evaluated"
+    },
+    {
+      "id": "obra-test-driven-development",
+      "name": "Test Driven Development",
+      "category": "engineering",
+      "sourceId": "obra-superpowers",
+      "sourceUrl": "https://github.com/obra/superpowers/tree/bb92a77741419a4ab5f06e711a283343f1ada0c3/skills/test-driven-development",
+      "commit": "bb92a77741419a4ab5f06e711a283343f1ada0c3",
+      "path": "upstream/obra__superpowers/test-driven-development",
+      "entrypoint": "SKILL.md",
+      "license": "MIT",
+      "licensePath": "LICENSE",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400",
+          "bytes": 1070,
+          "sourcePath": "LICENSE"
+        },
+        {
+          "path": "SKILL.md",
+          "sha256": "64b03fce4aee5a97a93160cea8111f3ba13a17b7c001db4bd5836d67fd10705d",
+          "bytes": 9578,
+          "sourcePath": "skills/test-driven-development/SKILL.md"
+        },
+        {
+          "path": "writing-good-tests.md",
+          "sha256": "51471c853306ff92ca8bb41dcaea05f31c0e46b03651f8f3c99754b7172f4ae1",
+          "bytes": 8268,
+          "sourcePath": "skills/test-driven-development/writing-good-tests.md"
+        }
+      ],
+      "status": "imported-reference",
+      "blockedReasons": [],
+      "dependencies": [],
+      "overlaps": [],
+      "executed": false,
+      "admitted": false,
+      "qualificationWarnings": [
+        "Runtime evaluation, independent review and host permission checks have not been performed.",
+        "Host tool aliases and cross-skill Superpowers references require an adapter or explicit compatibility qualification."
+      ],
+      "requiresExecutionReview": false,
+      "executableAssets": [],
+      "behavioralStatus": "not_evaluated"
+    },
+    {
+      "id": "obra-verification-before-completion",
+      "name": "Verification Before Completion",
+      "category": "engineering",
+      "sourceId": "obra-superpowers",
+      "sourceUrl": "https://github.com/obra/superpowers/tree/bb92a77741419a4ab5f06e711a283343f1ada0c3/skills/verification-before-completion",
+      "commit": "bb92a77741419a4ab5f06e711a283343f1ada0c3",
+      "path": "upstream/obra__superpowers/verification-before-completion",
+      "entrypoint": "SKILL.md",
+      "license": "MIT",
+      "licensePath": "LICENSE",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400",
+          "bytes": 1070,
+          "sourcePath": "LICENSE"
+        },
+        {
+          "path": "SKILL.md",
+          "sha256": "2befe7fc55bcadaa3d97dd9e8efeb633d2561c0ebe74c5a8b17c4d9e7e4520b3",
+          "bytes": 3646,
+          "sourcePath": "skills/verification-before-completion/SKILL.md"
+        }
+      ],
+      "status": "imported-reference",
+      "blockedReasons": [],
+      "dependencies": [],
+      "overlaps": [
+        "verification"
+      ],
+      "executed": false,
+      "admitted": false,
+      "qualificationWarnings": [
+        "Runtime evaluation, independent review and host permission checks have not been performed.",
+        "Host tool aliases and cross-skill Superpowers references require an adapter or explicit compatibility qualification."
+      ],
+      "requiresExecutionReview": false,
+      "executableAssets": [],
+      "behavioralStatus": "not_evaluated"
+    },
+    {
+      "id": "obra-writing-plans",
+      "name": "Writing Plans",
+      "category": "engineering",
+      "sourceId": "obra-superpowers",
+      "sourceUrl": "https://github.com/obra/superpowers/tree/bb92a77741419a4ab5f06e711a283343f1ada0c3/skills/writing-plans",
+      "commit": "bb92a77741419a4ab5f06e711a283343f1ada0c3",
+      "path": "upstream/obra__superpowers/writing-plans",
+      "entrypoint": "SKILL.md",
+      "license": "MIT",
+      "licensePath": "LICENSE",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400",
+          "bytes": 1070,
+          "sourcePath": "LICENSE"
+        },
+        {
+          "path": "SKILL.md",
+          "sha256": "a6c67c1900064347c2a329990dd3c555657c51c3ec53b259a08aa01a2c26139a",
+          "bytes": 10335,
+          "sourcePath": "skills/writing-plans/SKILL.md"
+        }
+      ],
+      "status": "imported-reference",
+      "blockedReasons": [],
+      "dependencies": [
+        {
+          "id": "obra-executing-plans",
+          "kind": "skill",
+          "present": true
+        },
+        {
+          "id": "obra-subagent-driven-development",
+          "kind": "skill",
+          "present": true
+        },
+        {
+          "id": "obra-using-git-worktrees",
+          "kind": "skill",
+          "present": true
+        }
+      ],
+      "overlaps": [
+        "planning-and-design"
+      ],
+      "executed": false,
+      "admitted": false,
+      "qualificationWarnings": [
+        "Runtime evaluation, independent review and host permission checks have not been performed.",
+        "Host tool aliases and cross-skill Superpowers references require an adapter or explicit compatibility qualification."
+      ],
+      "requiresExecutionReview": false,
+      "executableAssets": [],
+      "behavioralStatus": "not_evaluated"
+    },
+    {
+      "id": "obra-receiving-code-review",
+      "name": "Receiving Code Review",
+      "category": "engineering",
+      "sourceId": "obra-superpowers",
+      "sourceUrl": "https://github.com/obra/superpowers/tree/bb92a77741419a4ab5f06e711a283343f1ada0c3/skills/receiving-code-review",
+      "commit": "bb92a77741419a4ab5f06e711a283343f1ada0c3",
+      "path": "upstream/obra__superpowers/receiving-code-review",
+      "entrypoint": "SKILL.md",
+      "license": "MIT",
+      "licensePath": "LICENSE",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400",
+          "bytes": 1070,
+          "sourcePath": "LICENSE"
+        },
+        {
+          "path": "SKILL.md",
+          "sha256": "091df1629510af1b92fc4abd6f96732ebedb4cb2c0f3457e8f2740b0504a2438",
+          "bytes": 6203,
+          "sourcePath": "skills/receiving-code-review/SKILL.md"
+        }
+      ],
+      "status": "imported-reference",
+      "blockedReasons": [],
+      "dependencies": [],
+      "overlaps": [
+        "code-review"
+      ],
+      "executed": false,
+      "admitted": false,
+      "qualificationWarnings": [
+        "Runtime evaluation, independent review and host permission checks have not been performed.",
+        "Host tool aliases and cross-skill Superpowers references require an adapter or explicit compatibility qualification."
+      ],
+      "requiresExecutionReview": false,
+      "executableAssets": [],
+      "behavioralStatus": "not_evaluated"
+    },
+    {
+      "id": "obra-requesting-code-review",
+      "name": "Requesting Code Review",
+      "category": "engineering",
+      "sourceId": "obra-superpowers",
+      "sourceUrl": "https://github.com/obra/superpowers/tree/bb92a77741419a4ab5f06e711a283343f1ada0c3/skills/requesting-code-review",
+      "commit": "bb92a77741419a4ab5f06e711a283343f1ada0c3",
+      "path": "upstream/obra__superpowers/requesting-code-review",
+      "entrypoint": "SKILL.md",
+      "license": "MIT",
+      "licensePath": "LICENSE",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400",
+          "bytes": 1070,
+          "sourcePath": "LICENSE"
+        },
+        {
+          "path": "SKILL.md",
+          "sha256": "2180e14a448e9410bec88e6646a2d1f0ce7fdd58de27388c1e052e929679d2bc",
+          "bytes": 2974,
+          "sourcePath": "skills/requesting-code-review/SKILL.md"
+        },
+        {
+          "path": "code-reviewer.md",
+          "sha256": "82e370be6b3447523816286195571e4216ba56ba1ad6ad0e87862294c4c78dcb",
+          "bytes": 6449,
+          "sourcePath": "skills/requesting-code-review/code-reviewer.md"
+        }
+      ],
+      "status": "imported-reference",
+      "blockedReasons": [],
+      "dependencies": [],
+      "overlaps": [
+        "code-review"
+      ],
+      "executed": false,
+      "admitted": false,
+      "qualificationWarnings": [
+        "Runtime evaluation, independent review and host permission checks have not been performed.",
+        "Host tool aliases and cross-skill Superpowers references require an adapter or explicit compatibility qualification."
+      ],
+      "requiresExecutionReview": false,
+      "executableAssets": [],
+      "behavioralStatus": "not_evaluated"
+    },
+    {
+      "id": "obra-using-git-worktrees",
+      "name": "Using Git Worktrees",
+      "category": "engineering",
+      "sourceId": "obra-superpowers",
+      "sourceUrl": "https://github.com/obra/superpowers/tree/bb92a77741419a4ab5f06e711a283343f1ada0c3/skills/using-git-worktrees",
+      "commit": "bb92a77741419a4ab5f06e711a283343f1ada0c3",
+      "path": "upstream/obra__superpowers/using-git-worktrees",
+      "entrypoint": "SKILL.md",
+      "license": "MIT",
+      "licensePath": "LICENSE",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400",
+          "bytes": 1070,
+          "sourcePath": "LICENSE"
+        },
+        {
+          "path": "SKILL.md",
+          "sha256": "8cfb86f121269e8f7f12361e6795c4f6738828340e28964c9229d365666c9edd",
+          "bytes": 6813,
+          "sourcePath": "skills/using-git-worktrees/SKILL.md"
+        }
+      ],
+      "status": "imported-reference",
+      "blockedReasons": [],
+      "dependencies": [],
+      "overlaps": [],
+      "executed": false,
+      "admitted": false,
+      "qualificationWarnings": [
+        "Runtime evaluation, independent review and host permission checks have not been performed.",
+        "Host tool aliases and cross-skill Superpowers references require an adapter or explicit compatibility qualification."
+      ],
+      "requiresExecutionReview": false,
+      "executableAssets": [],
+      "behavioralStatus": "not_evaluated"
+    },
+    {
+      "id": "obra-executing-plans",
+      "name": "Executing Plans",
+      "category": "engineering",
+      "sourceId": "obra-superpowers",
+      "sourceUrl": "https://github.com/obra/superpowers/tree/bb92a77741419a4ab5f06e711a283343f1ada0c3/skills/executing-plans",
+      "commit": "bb92a77741419a4ab5f06e711a283343f1ada0c3",
+      "path": "upstream/obra__superpowers/executing-plans",
+      "entrypoint": "SKILL.md",
+      "license": "MIT",
+      "licensePath": "LICENSE",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400",
+          "bytes": 1070,
+          "sourcePath": "LICENSE"
+        },
+        {
+          "path": "SKILL.md",
+          "sha256": "f38e8f2ddcf079f65493adc713c1fed78421dfaf5f4dbf6b3a6b2b1d95466e71",
+          "bytes": 20405,
+          "sourcePath": "skills/executing-plans/SKILL.md"
+        },
+        {
+          "path": "scripts/task-done",
+          "sha256": "d0d4f2397c85a4426443ea955e699ef12568b41b408ec6122d4ec2433ee3a5f6",
+          "bytes": 1692,
+          "sourcePath": "skills/executing-plans/scripts/task-done"
+        },
+        {
+          "path": "scripts/task-start",
+          "sha256": "f833693c8fce3700fc9f841562d80f8015cd40f652c168a3405ac3e46947a1fe",
+          "bytes": 963,
+          "sourcePath": "skills/executing-plans/scripts/task-start"
+        }
+      ],
+      "status": "quarantined",
+      "blockedReasons": [
+        "Named upstream skill dependency is not included: superpowers:finishing-a-development-branch",
+        "Referenced asset is absent from pinned upstream skill directory: scripts/review-package",
+        "Referenced asset is absent from pinned upstream skill directory: scripts/sdd-workspace"
+      ],
+      "dependencies": [
+        {
+          "path": "scripts/review-package",
+          "present": false,
+          "kind": "local-reference"
+        },
+        {
+          "path": "scripts/sdd-workspace",
+          "present": false,
+          "kind": "local-reference"
+        },
+        {
+          "path": "scripts/task-done",
+          "present": true,
+          "kind": "local-reference"
+        },
+        {
+          "path": "scripts/task-start",
+          "present": true,
+          "kind": "local-reference"
+        },
+        {
+          "id": "obra-finishing-a-development-branch",
+          "kind": "skill",
+          "present": false
+        },
+        {
+          "id": "obra-requesting-code-review",
+          "kind": "skill",
+          "present": true
+        },
+        {
+          "id": "obra-subagent-driven-development",
+          "kind": "skill",
+          "present": true
+        },
+        {
+          "id": "obra-systematic-debugging",
+          "kind": "skill",
+          "present": true
+        },
+        {
+          "id": "obra-test-driven-development",
+          "kind": "skill",
+          "present": true
+        },
+        {
+          "id": "obra-using-git-worktrees",
+          "kind": "skill",
+          "present": true
+        },
+        {
+          "id": "obra-verification-before-completion",
+          "kind": "skill",
+          "present": true
+        },
+        {
+          "id": "obra-writing-plans",
+          "kind": "skill",
+          "present": true
+        }
+      ],
+      "overlaps": [],
+      "executed": false,
+      "admitted": false,
+      "qualificationWarnings": [
+        "Runtime evaluation, independent review and host permission checks have not been performed.",
+        "Unresolved referenced paths: scripts/review-package, scripts/sdd-workspace",
+        "Host tool aliases and cross-skill Superpowers references require an adapter or explicit compatibility qualification."
+      ],
+      "requiresExecutionReview": false,
+      "executableAssets": [],
+      "behavioralStatus": "not_evaluated"
+    },
+    {
+      "id": "obra-subagent-driven-development",
+      "name": "Subagent Driven Development",
+      "category": "engineering",
+      "sourceId": "obra-superpowers",
+      "sourceUrl": "https://github.com/obra/superpowers/tree/bb92a77741419a4ab5f06e711a283343f1ada0c3/skills/subagent-driven-development",
+      "commit": "bb92a77741419a4ab5f06e711a283343f1ada0c3",
+      "path": "upstream/obra__superpowers/subagent-driven-development",
+      "entrypoint": "SKILL.md",
+      "license": "MIT",
+      "licensePath": "LICENSE",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400",
+          "bytes": 1070,
+          "sourcePath": "LICENSE"
+        },
+        {
+          "path": "SKILL.md",
+          "sha256": "8dde5589ee083fb4999106d116f01c8fdaf3116a8a9813fdedeb80329de49046",
+          "bytes": 32577,
+          "sourcePath": "skills/subagent-driven-development/SKILL.md"
+        },
+        {
+          "path": "implementer-prompt.md",
+          "sha256": "81dd9d5a3fb0b09b96b5829f03b9796842f3199ef7591d1ba1c2db2a515f64d0",
+          "bytes": 6335,
+          "sourcePath": "skills/subagent-driven-development/implementer-prompt.md"
+        },
+        {
+          "path": "re-review-prompt.md",
+          "sha256": "0828a5e9cbb12ba49f14621dd8c3953c48c0fc383e75bb5494f055ed0d6d824f",
+          "bytes": 4761,
+          "sourcePath": "skills/subagent-driven-development/re-review-prompt.md"
+        },
+        {
+          "path": "scripts/review-package",
+          "sha256": "f9275175b2276b1d5fdb1bae0bedaadd2a950659b7c6f311ea37ff85e1861b1f",
+          "bytes": 2029,
+          "sourcePath": "skills/subagent-driven-development/scripts/review-package"
+        },
+        {
+          "path": "scripts/sdd-workspace",
+          "sha256": "4fd9770e7a49b6bde488c0e92bac1b3bd01fcbdaf8f06b6c4efbe3a1abd99f86",
+          "bytes": 3684,
+          "sourcePath": "skills/subagent-driven-development/scripts/sdd-workspace"
+        },
+        {
+          "path": "scripts/task-brief",
+          "sha256": "cc563538e09abf719b34ddf4b2fa7a65cf3b301729039dbfa923cb060f729146",
+          "bytes": 1322,
+          "sourcePath": "skills/subagent-driven-development/scripts/task-brief"
+        },
+        {
+          "path": "task-reviewer-prompt.md",
+          "sha256": "bfed55c8f19d0ff6ed57b0fe09127c92890e9311c6c73917129598826bf9ebe8",
+          "bytes": 9031,
+          "sourcePath": "skills/subagent-driven-development/task-reviewer-prompt.md"
+        }
+      ],
+      "status": "quarantined",
+      "blockedReasons": [
+        "Named upstream skill dependency is not included: superpowers:finishing-a-development-branch"
+      ],
+      "dependencies": [
+        {
+          "path": "scripts/review-package",
+          "present": true,
+          "kind": "local-reference"
+        },
+        {
+          "path": "scripts/sdd-workspace",
+          "present": true,
+          "kind": "local-reference"
+        },
+        {
+          "path": "scripts/task-brief",
+          "present": true,
+          "kind": "local-reference"
+        },
+        {
+          "id": "obra-finishing-a-development-branch",
+          "kind": "skill",
+          "present": false
+        },
+        {
+          "id": "obra-requesting-code-review",
+          "kind": "skill",
+          "present": true
+        },
+        {
+          "id": "obra-using-git-worktrees",
+          "kind": "skill",
+          "present": true
+        }
+      ],
+      "overlaps": [],
+      "executed": false,
+      "admitted": false,
+      "qualificationWarnings": [
+        "Runtime evaluation, independent review and host permission checks have not been performed.",
+        "Host tool aliases and cross-skill Superpowers references require an adapter or explicit compatibility qualification."
+      ],
+      "requiresExecutionReview": false,
+      "executableAssets": [],
+      "behavioralStatus": "not_evaluated"
+    },
+    {
+      "id": "openai-security-best-practices",
+      "name": "Security Best Practices",
+      "category": "security",
+      "sourceId": "openai-skills-security-best-practices",
+      "sourceUrl": "https://github.com/openai/skills/tree/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/security-best-practices",
+      "commit": "49f948faa9258a0c61caceaf225e179651397431",
+      "path": "upstream/openai__skills/security-best-practices",
+      "entrypoint": "SKILL.md",
+      "license": "Apache-2.0",
+      "licensePath": "LICENSE.txt",
+      "files": [
+        {
+          "path": "LICENSE.txt",
+          "sha256": "4dd13869245e356246a5b770723247bbb80a8f07a181d1d3d873a1734297cdb9",
+          "bytes": 10776,
+          "sourcePath": "skills/.curated/security-best-practices/LICENSE.txt"
+        },
+        {
+          "path": "SKILL.md",
+          "sha256": "7b3dae1ffc5434d890f3c65c8f552af52d0307fab3b35dec13013c9ca3844c4f",
+          "bytes": 8612,
+          "sourcePath": "skills/.curated/security-best-practices/SKILL.md"
+        },
+        {
+          "path": "agents/openai.yaml",
+          "sha256": "6e9c6f2edce448eb2b589f81ad6e3f722665021785513bcbfd0bf7b86b529171",
+          "bytes": 237,
+          "sourcePath": "skills/.curated/security-best-practices/agents/openai.yaml"
+        },
+        {
+          "path": "references/golang-general-backend-security.md",
+          "sha256": "a73c47c34497b120672d48411fe51dc90d426a571801a0b3f649e2ce4ec658b4",
+          "bytes": 38659,
+          "sourcePath": "skills/.curated/security-best-practices/references/golang-general-backend-security.md"
+        },
+        {
+          "path": "references/javascript-express-web-server-security.md",
+          "sha256": "427835cbb5be7ba96172ea6ca9af80ddd4419c833e9ebf870996740c80d8406c",
+          "bytes": 49357,
+          "sourcePath": "skills/.curated/security-best-practices/references/javascript-express-web-server-security.md"
+        },
+        {
+          "path": "references/javascript-general-web-frontend-security.md",
+          "sha256": "3a7bc7b3f6e7ff043db9dbaa8933894d7a19d987d0607e4ddae5d70184a63d63",
+          "bytes": 38638,
+          "sourcePath": "skills/.curated/security-best-practices/references/javascript-general-web-frontend-security.md"
+        },
+        {
+          "path": "references/javascript-jquery-web-frontend-security.md",
+          "sha256": "bcbad2fa6c2a02709e47e889e70102c76886bf36bc798624d27db570eccf40da",
+          "bytes": 33581,
+          "sourcePath": "skills/.curated/security-best-practices/references/javascript-jquery-web-frontend-security.md"
+        },
+        {
+          "path": "references/javascript-typescript-nextjs-web-server-security.md",
+          "sha256": "71c773f7a97ce60c853adfa100b3d88b3b7bc4c6b8acaef1432ffabd923ee182",
+          "bytes": 43423,
+          "sourcePath": "skills/.curated/security-best-practices/references/javascript-typescript-nextjs-web-server-security.md"
+        },
+        {
+          "path": "references/javascript-typescript-react-web-frontend-security.md",
+          "sha256": "d3030c0f24bddb56b9bbb91bbec1ee49eb7778bce4d3e0297b2641b2fc6b0d9c",
+          "bytes": 41686,
+          "sourcePath": "skills/.curated/security-best-practices/references/javascript-typescript-react-web-frontend-security.md"
+        },
+        {
+          "path": "references/javascript-typescript-vue-web-frontend-security.md",
+          "sha256": "77c6a747f9f17e3df03aad0fcb20d99ac7898001b81aef8b80908e45ac14a688",
+          "bytes": 31445,
+          "sourcePath": "skills/.curated/security-best-practices/references/javascript-typescript-vue-web-frontend-security.md"
+        },
+        {
+          "path": "references/python-django-web-server-security.md",
+          "sha256": "4fb69b5d45f10e588d1a8c35cdc5f59e18910f6b46a93e2d342d90f286f8dfd2",
+          "bytes": 38661,
+          "sourcePath": "skills/.curated/security-best-practices/references/python-django-web-server-security.md"
+        },
+        {
+          "path": "references/python-fastapi-web-server-security.md",
+          "sha256": "7383c7f4fc271190b05e562ada7e825982a2c76b6c79a9f95a1da7687b65a616",
+          "bytes": 44926,
+          "sourcePath": "skills/.curated/security-best-practices/references/python-fastapi-web-server-security.md"
+        },
+        {
+          "path": "references/python-flask-web-server-security.md",
+          "sha256": "9606d69190c04c167fdeac57e61297547a57b0542fd89dede36f355970446929",
+          "bytes": 31748,
+          "sourcePath": "skills/.curated/security-best-practices/references/python-flask-web-server-security.md"
+        }
+      ],
+      "status": "imported-reference",
+      "blockedReasons": [],
+      "dependencies": [],
+      "overlaps": [
+        "security"
+      ],
+      "executed": false,
+      "admitted": false,
+      "qualificationWarnings": [
+        "Runtime evaluation, independent review and host permission checks have not been performed."
+      ],
+      "requiresExecutionReview": false,
+      "executableAssets": [],
+      "behavioralStatus": "not_evaluated"
+    },
+    {
+      "id": "openai-security-threat-model",
+      "name": "Security Threat Model",
+      "category": "security",
+      "sourceId": "openai-skills-security-threat-model",
+      "sourceUrl": "https://github.com/openai/skills/tree/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/security-threat-model",
+      "commit": "49f948faa9258a0c61caceaf225e179651397431",
+      "path": "upstream/openai__skills/security-threat-model",
+      "entrypoint": "SKILL.md",
+      "license": "Apache-2.0",
+      "licensePath": "LICENSE.txt",
+      "files": [
+        {
+          "path": "LICENSE.txt",
+          "sha256": "4dd13869245e356246a5b770723247bbb80a8f07a181d1d3d873a1734297cdb9",
+          "bytes": 10776,
+          "sourcePath": "skills/.curated/security-threat-model/LICENSE.txt"
+        },
+        {
+          "path": "SKILL.md",
+          "sha256": "1283c0dd62a8104d9edda4583569b5d8510b4ddaa45120687c999250fd96bad2",
+          "bytes": 5561,
+          "sourcePath": "skills/.curated/security-threat-model/SKILL.md"
+        },
+        {
+          "path": "agents/openai.yaml",
+          "sha256": "3319b59736312abceca614e341c0e59cae47263e3b58a22b2b5ddf1e5fc8c227",
+          "bytes": 254,
+          "sourcePath": "skills/.curated/security-threat-model/agents/openai.yaml"
+        },
+        {
+          "path": "references/prompt-template.md",
+          "sha256": "81a59aa3fb3ac3a739d6a26ab38e4015965f215581ee54becef21a2b121ec29b",
+          "bytes": 12642,
+          "sourcePath": "skills/.curated/security-threat-model/references/prompt-template.md"
+        },
+        {
+          "path": "references/security-controls-and-assets.md",
+          "sha256": "d536cfa9acad2523dc39134bcf33b9566c29dd9a57b407cbc9901637230c6b98",
+          "bytes": 1680,
+          "sourcePath": "skills/.curated/security-threat-model/references/security-controls-and-assets.md"
+        }
+      ],
+      "status": "imported-reference",
+      "blockedReasons": [],
+      "dependencies": [
+        {
+          "path": "references/prompt-template.md",
+          "present": true,
+          "kind": "local-reference"
+        },
+        {
+          "path": "references/security-controls-and-assets.md",
+          "present": true,
+          "kind": "local-reference"
+        }
+      ],
+      "overlaps": [
+        "security"
+      ],
+      "executed": false,
+      "admitted": false,
+      "qualificationWarnings": [
+        "Runtime evaluation, independent review and host permission checks have not been performed."
+      ],
+      "requiresExecutionReview": false,
+      "executableAssets": [],
+      "behavioralStatus": "not_evaluated"
+    },
+    {
+      "id": "openai-security-ownership-map",
+      "name": "Security Ownership Map",
+      "category": "security",
+      "sourceId": "openai-skills-security-ownership-map",
+      "sourceUrl": "https://github.com/openai/skills/tree/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/security-ownership-map",
+      "commit": "49f948faa9258a0c61caceaf225e179651397431",
+      "path": "upstream/openai__skills/security-ownership-map",
+      "entrypoint": "SKILL.md",
+      "license": "Apache-2.0",
+      "licensePath": "LICENSE.txt",
+      "files": [
+        {
+          "path": "LICENSE.txt",
+          "sha256": "4dd13869245e356246a5b770723247bbb80a8f07a181d1d3d873a1734297cdb9",
+          "bytes": 10776,
+          "sourcePath": "skills/.curated/security-ownership-map/LICENSE.txt"
+        },
+        {
+          "path": "SKILL.md",
+          "sha256": "f06c1a59247569326702c945f397af163ea96cf2ecfdf2dde280605bf89a3ec8",
+          "bytes": 8736,
+          "sourcePath": "skills/.curated/security-ownership-map/SKILL.md"
+        },
+        {
+          "path": "agents/openai.yaml",
+          "sha256": "40877a3cdb1753aa187fc85a83bc138a866a1edb74165e009c885cfb6a16e433",
+          "bytes": 253,
+          "sourcePath": "skills/.curated/security-ownership-map/agents/openai.yaml"
+        },
+        {
+          "path": "references/neo4j-import.md",
+          "sha256": "176d0ef2ed3588530ed65ccda7cb30ae322e4cbec5c374dba5d1685e2bb9dd02",
+          "bytes": 2428,
+          "sourcePath": "skills/.curated/security-ownership-map/references/neo4j-import.md"
+        },
+        {
+          "path": "scripts/build_ownership_map.py",
+          "sha256": "c0454c47c7eb001b6e247cd7e473df1b28a3a148a2dca6b2fe88a74a7602cc9b",
+          "bytes": 34330,
+          "sourcePath": "skills/.curated/security-ownership-map/scripts/build_ownership_map.py"
+        },
+        {
+          "path": "scripts/community_maintainers.py",
+          "sha256": "95adec5458cc85b41d0ae7965b0a17e4e8eaa6aaab274459324580d9a91cc3cc",
+          "bytes": 18122,
+          "sourcePath": "skills/.curated/security-ownership-map/scripts/community_maintainers.py"
+        },
+        {
+          "path": "scripts/query_ownership.py",
+          "sha256": "0f8d1a1ac3ef807a9b66939a8cdfd02564f4cda018489a3664d37f8c3a7b1b93",
+          "bytes": 17991,
+          "sourcePath": "skills/.curated/security-ownership-map/scripts/query_ownership.py"
+        },
+        {
+          "path": "scripts/run_ownership_map.py",
+          "sha256": "362b547d6133659eb5c4fe889b8b930bea790f31e412f3198671baae09eec692",
+          "bytes": 5890,
+          "sourcePath": "skills/.curated/security-ownership-map/scripts/run_ownership_map.py"
+        }
+      ],
+      "status": "imported-reference",
+      "blockedReasons": [],
+      "dependencies": [
+        {
+          "path": "references/neo4j-import.md",
+          "present": true,
+          "kind": "local-reference"
+        },
+        {
+          "path": "scripts/community_maintainers.py",
+          "present": true,
+          "kind": "local-reference"
+        },
+        {
+          "path": "scripts/query_ownership.py",
+          "present": true,
+          "kind": "local-reference"
+        },
+        {
+          "path": "scripts/run_ownership_map.py",
+          "present": true,
+          "kind": "local-reference"
+        }
+      ],
+      "overlaps": [
+        "security"
+      ],
+      "executed": false,
+      "admitted": false,
+      "qualificationWarnings": [
+        "Runtime evaluation, independent review and host permission checks have not been performed."
+      ],
+      "requiresExecutionReview": true,
+      "executableAssets": [
+        "scripts/build_ownership_map.py",
+        "scripts/community_maintainers.py",
+        "scripts/query_ownership.py",
+        "scripts/run_ownership_map.py"
+      ],
+      "behavioralStatus": "not_evaluated"
+    },
+    {
+      "id": "openai-gh-fix-ci",
+      "name": "Gh Fix Ci",
+      "category": "engineering",
+      "sourceId": "openai-skills-gh-fix-ci",
+      "sourceUrl": "https://github.com/openai/skills/tree/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/gh-fix-ci",
+      "commit": "49f948faa9258a0c61caceaf225e179651397431",
+      "path": "upstream/openai__skills/gh-fix-ci",
+      "entrypoint": "SKILL.md",
+      "license": "Apache-2.0",
+      "licensePath": "LICENSE.txt",
+      "files": [
+        {
+          "path": "LICENSE.txt",
+          "sha256": "4dd13869245e356246a5b770723247bbb80a8f07a181d1d3d873a1734297cdb9",
+          "bytes": 10776,
+          "sourcePath": "skills/.curated/gh-fix-ci/LICENSE.txt"
+        },
+        {
+          "path": "SKILL.md",
+          "sha256": "7b326b4a2f0f5f85122144628ec02077e48841e0e0e82efce88b3415bcfb7c26",
+          "bytes": 3651,
+          "sourcePath": "skills/.curated/gh-fix-ci/SKILL.md"
+        },
+        {
+          "path": "agents/openai.yaml",
+          "sha256": "36f73b9450504983d1647c960689596f59bf9147c14b1b43162912ed7ada9af6",
+          "bytes": 302,
+          "sourcePath": "skills/.curated/gh-fix-ci/agents/openai.yaml"
+        },
+        {
+          "path": "assets/github-small.svg",
+          "sha256": "ee05e92d373d4d84f4612af3c1090ef67698d421bbe30896a4ed5a00cb86a069",
+          "bytes": 853,
+          "sourcePath": "skills/.curated/gh-fix-ci/assets/github-small.svg"
+        },
+        {
+          "path": "assets/github.png",
+          "sha256": "d55a9baa41798d8b5108e3058df3a5bda09914ea9fd73b49929cc38a8832424f",
+          "bytes": 1838,
+          "sourcePath": "skills/.curated/gh-fix-ci/assets/github.png"
+        },
+        {
+          "path": "scripts/inspect_pr_checks.py",
+          "sha256": "9459e5b03f86785d184a83e5cd8d621b832e918ec04158a2962d867785812c6c",
+          "bytes": 15222,
+          "sourcePath": "skills/.curated/gh-fix-ci/scripts/inspect_pr_checks.py"
+        }
+      ],
+      "status": "imported-reference",
+      "blockedReasons": [],
+      "dependencies": [
+        {
+          "path": "scripts/inspect_pr_checks.py",
+          "present": true,
+          "kind": "local-reference"
+        }
+      ],
+      "overlaps": [
+        "verification"
+      ],
+      "executed": false,
+      "admitted": false,
+      "qualificationWarnings": [
+        "Runtime evaluation, independent review and host permission checks have not been performed."
+      ],
+      "requiresExecutionReview": true,
+      "executableAssets": [
+        "scripts/inspect_pr_checks.py"
+      ],
+      "behavioralStatus": "not_evaluated"
+    },
+    {
+      "id": "openai-gh-address-comments",
+      "name": "Gh Address Comments",
+      "category": "engineering",
+      "sourceId": "openai-skills-gh-address-comments",
+      "sourceUrl": "https://github.com/openai/skills/tree/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/gh-address-comments",
+      "commit": "49f948faa9258a0c61caceaf225e179651397431",
+      "path": "upstream/openai__skills/gh-address-comments",
+      "entrypoint": "SKILL.md",
+      "license": "Apache-2.0",
+      "licensePath": "LICENSE.txt",
+      "files": [
+        {
+          "path": "LICENSE.txt",
+          "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+          "bytes": 11357,
+          "sourcePath": "skills/.curated/gh-address-comments/LICENSE.txt"
+        },
+        {
+          "path": "SKILL.md",
+          "sha256": "77389eefd3fb6584210668ca8e43f4b8de87e7722ddd953474bc9e24cdfaaedd",
+          "bytes": 1278,
+          "sourcePath": "skills/.curated/gh-address-comments/SKILL.md"
+        },
+        {
+          "path": "agents/openai.yaml",
+          "sha256": "12cf845a78254dde85e60eefb45a60e6ce2129d321f3e1d691d4ebca9a140861",
+          "bytes": 303,
+          "sourcePath": "skills/.curated/gh-address-comments/agents/openai.yaml"
+        },
+        {
+          "path": "assets/github-small.svg",
+          "sha256": "ee05e92d373d4d84f4612af3c1090ef67698d421bbe30896a4ed5a00cb86a069",
+          "bytes": 853,
+          "sourcePath": "skills/.curated/gh-address-comments/assets/github-small.svg"
+        },
+        {
+          "path": "assets/github.png",
+          "sha256": "d55a9baa41798d8b5108e3058df3a5bda09914ea9fd73b49929cc38a8832424f",
+          "bytes": 1838,
+          "sourcePath": "skills/.curated/gh-address-comments/assets/github.png"
+        },
+        {
+          "path": "scripts/fetch_comments.py",
+          "sha256": "d7bc64f6b26f7482f9ca9dd7c923a5b8b20e1ef13491ae2d9052cd208a7c1ad1",
+          "bytes": 6537,
+          "sourcePath": "skills/.curated/gh-address-comments/scripts/fetch_comments.py"
+        }
+      ],
+      "status": "imported-reference",
+      "blockedReasons": [],
+      "dependencies": [
+        {
+          "path": "scripts/fetch_comments.py",
+          "present": true,
+          "kind": "local-reference"
+        }
+      ],
+      "overlaps": [
+        "code-review"
+      ],
+      "executed": false,
+      "admitted": false,
+      "qualificationWarnings": [
+        "Runtime evaluation, independent review and host permission checks have not been performed."
+      ],
+      "requiresExecutionReview": true,
+      "executableAssets": [
+        "scripts/fetch_comments.py"
+      ],
+      "behavioralStatus": "not_evaluated"
+    },
+    {
+      "id": "openai-openai-docs",
+      "name": "Openai Docs",
+      "category": "engineering",
+      "sourceId": "openai-skills-openai-docs",
+      "sourceUrl": "https://github.com/openai/skills/tree/49f948faa9258a0c61caceaf225e179651397431/skills/.system/openai-docs",
+      "commit": "49f948faa9258a0c61caceaf225e179651397431",
+      "path": "upstream/openai__skills/openai-docs",
+      "entrypoint": "SKILL.md",
+      "license": "Apache-2.0",
+      "licensePath": "LICENSE.txt",
+      "files": [
+        {
+          "path": "LICENSE.txt",
+          "sha256": "4dd13869245e356246a5b770723247bbb80a8f07a181d1d3d873a1734297cdb9",
+          "bytes": 10776,
+          "sourcePath": "skills/.system/openai-docs/LICENSE.txt"
+        },
+        {
+          "path": "SKILL.md",
+          "sha256": "669a42ccf3323fe0ceda6e466730bcb05dddf1e0c220d6523ea504909fc49165",
+          "bytes": 18747,
+          "sourcePath": "skills/.system/openai-docs/SKILL.md"
+        },
+        {
+          "path": "agents/openai.yaml",
+          "sha256": "004c73f6e01409cfd7db699e815f5fed4ced3b63dd2cc25874f6791eae7fd4bc",
+          "bytes": 598,
+          "sourcePath": "skills/.system/openai-docs/agents/openai.yaml"
+        },
+        {
+          "path": "assets/openai-small.svg",
+          "sha256": "45be1f0757eb18889eefb1e7db79668ef46a275dc4e0e78e8df5ebd7f6cdeadc",
+          "bytes": 1091,
+          "sourcePath": "skills/.system/openai-docs/assets/openai-small.svg"
+        },
+        {
+          "path": "assets/openai.png",
+          "sha256": "156cc84d7332bfe95b310350bd470b690d22aa33d65340cc6c2e06022946194c",
+          "bytes": 1429,
+          "sourcePath": "skills/.system/openai-docs/assets/openai.png"
+        },
+        {
+          "path": "references/latest-model.md",
+          "sha256": "997e0c438432f983aae1a5e8bfec27d936314501da363bb40db4e146bbfa5fc1",
+          "bytes": 1959,
+          "sourcePath": "skills/.system/openai-docs/references/latest-model.md"
+        },
+        {
+          "path": "references/prompting-guide.md",
+          "sha256": "ecdf49b4a824a87367c7a6ec3c0218e2c5783dff951b30a101c3b6a95152aafa",
+          "bytes": 14338,
+          "sourcePath": "skills/.system/openai-docs/references/prompting-guide.md"
+        },
+        {
+          "path": "references/upgrade-guide.md",
+          "sha256": "563784eb13ad1b44c3a592f940aa7ac2086ebeb97df3f4a09ba038b2f1564d39",
+          "bytes": 11308,
+          "sourcePath": "skills/.system/openai-docs/references/upgrade-guide.md"
+        },
+        {
+          "path": "scripts/fetch-codex-manual.mjs",
+          "sha256": "f53eb6d2f286e9efcc397e8bee93a938e37296c90953e4e06e94899ef1b6c363",
+          "bytes": 16085,
+          "sourcePath": "skills/.system/openai-docs/scripts/fetch-codex-manual.mjs"
+        },
+        {
+          "path": "scripts/resolve-latest-model-info.js",
+          "sha256": "3fc420a12ab1a344ac49b852138f599d01e3ac561ec86426ba161f42a03d3e52",
+          "bytes": 3463,
+          "sourcePath": "skills/.system/openai-docs/scripts/resolve-latest-model-info.js"
+        }
+      ],
+      "status": "imported-reference",
+      "blockedReasons": [],
+      "dependencies": [
+        {
+          "path": "references/latest-model.md",
+          "present": true,
+          "kind": "local-reference"
+        },
+        {
+          "path": "references/prompting-guide.md",
+          "present": true,
+          "kind": "local-reference"
+        },
+        {
+          "path": "references/upgrade-guide.md",
+          "present": true,
+          "kind": "local-reference"
+        },
+        {
+          "path": "scripts/fetch-codex-manual.mjs",
+          "present": true,
+          "kind": "local-reference"
+        },
+        {
+          "path": "scripts/resolve-latest-model-info.js",
+          "present": true,
+          "kind": "local-reference"
+        },
+        {
+          "id": "mcp__openaiDeveloperDocs__fetch_openai_doc",
+          "kind": "host-tool",
+          "present": false,
+          "resolution": "Host must provide and authorize this tool; intake grants no authority."
+        },
+        {
+          "id": "mcp__openaiDeveloperDocs__get_openapi_spec",
+          "kind": "host-tool",
+          "present": false,
+          "resolution": "Host must provide and authorize this tool; intake grants no authority."
+        },
+        {
+          "id": "mcp__openaiDeveloperDocs__list_openai_docs",
+          "kind": "host-tool",
+          "present": false,
+          "resolution": "Host must provide and authorize this tool; intake grants no authority."
+        },
+        {
+          "id": "mcp__openaiDeveloperDocs__search_openai_docs",
+          "kind": "host-tool",
+          "present": false,
+          "resolution": "Host must provide and authorize this tool; intake grants no authority."
+        }
+      ],
+      "overlaps": [],
+      "executed": false,
+      "admitted": false,
+      "qualificationWarnings": [
+        "Runtime evaluation, independent review and host permission checks have not been performed."
+      ],
+      "requiresExecutionReview": true,
+      "executableAssets": [
+        "scripts/fetch-codex-manual.mjs",
+        "scripts/resolve-latest-model-info.js"
+      ],
+      "behavioralStatus": "not_evaluated"
+    },
+    {
+      "id": "openai-aspnet-core",
+      "name": "Aspnet Core",
+      "category": "architecture",
+      "sourceId": "openai-skills-aspnet-core",
+      "sourceUrl": "https://github.com/openai/skills/tree/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/aspnet-core",
+      "commit": "49f948faa9258a0c61caceaf225e179651397431",
+      "path": "upstream/openai__skills/aspnet-core",
+      "entrypoint": "SKILL.md",
+      "license": "Apache-2.0",
+      "licensePath": "LICENSE.txt",
+      "files": [
+        {
+          "path": "LICENSE.txt",
+          "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+          "bytes": 11357,
+          "sourcePath": "skills/.curated/aspnet-core/LICENSE.txt"
+        },
+        {
+          "path": "SKILL.md",
+          "sha256": "1f487ef3565e5ac1ee6c93cbeb9ac666292b30285877c82ddb0a77c9777fe92f",
+          "bytes": 5544,
+          "sourcePath": "skills/.curated/aspnet-core/SKILL.md"
+        },
+        {
+          "path": "agents/openai.yaml",
+          "sha256": "06a421ca2f92fc86d83dc7c02e31ad5c85da8193eebbe17aa883ef274e26011a",
+          "bytes": 222,
+          "sourcePath": "skills/.curated/aspnet-core/agents/openai.yaml"
+        },
+        {
+          "path": "assets/dotnet-logo.png",
+          "sha256": "7f561a8f84ca88130803ecc8664914a4c619530836c705a4b9169704b4195d7c",
+          "bytes": 2270,
+          "sourcePath": "skills/.curated/aspnet-core/assets/dotnet-logo.png"
+        },
+        {
+          "path": "references/_sections.md",
+          "sha256": "eefa51074986d078dd108857ff1e376bf6b75935ee125ebdafef47ba53a57f19",
+          "bytes": 2412,
+          "sourcePath": "skills/.curated/aspnet-core/references/_sections.md"
+        },
+        {
+          "path": "references/apis-minimal-and-controllers.md",
+          "sha256": "156283486289a1765d0cad6f7c296bad2f8aa45ad24d730c8ed0b845713cfee1",
+          "bytes": 3040,
+          "sourcePath": "skills/.curated/aspnet-core/references/apis-minimal-and-controllers.md"
+        },
+        {
+          "path": "references/data-state-and-services.md",
+          "sha256": "9b0f2253c77a9ade7ebd39103de8fdfe1ae0cd73f71a86936bb1f5ccde064ef4",
+          "bytes": 2422,
+          "sourcePath": "skills/.curated/aspnet-core/references/data-state-and-services.md"
+        },
+        {
+          "path": "references/program-and-pipeline.md",
+          "sha256": "375d4e4580ce43f72f5d3d01e7c26a292eec2f43dc63c03f0200a4e24dbcd543",
+          "bytes": 4182,
+          "sourcePath": "skills/.curated/aspnet-core/references/program-and-pipeline.md"
+        },
+        {
+          "path": "references/realtime-grpc-and-background-work.md",
+          "sha256": "ba6cfd463620b608c33ed65bcc4d6b25c4ec921cc77bd2fb9379cb486a11a824",
+          "bytes": 1896,
+          "sourcePath": "skills/.curated/aspnet-core/references/realtime-grpc-and-background-work.md"
+        },
+        {
+          "path": "references/security-and-identity.md",
+          "sha256": "a661dc33dc64e44f9a389d08c20f4e89f1ed62970197a3d2df35036b07884f35",
+          "bytes": 2941,
+          "sourcePath": "skills/.curated/aspnet-core/references/security-and-identity.md"
+        },
+        {
+          "path": "references/source-map.md",
+          "sha256": "21e11fee79253f9c0050a3fb207b91e0c44360572662b2c900a855d0a332fa93",
+          "bytes": 2040,
+          "sourcePath": "skills/.curated/aspnet-core/references/source-map.md"
+        },
+        {
+          "path": "references/stack-selection.md",
+          "sha256": "9de61ba6c4c1fbb9b4b68d2fb6a9f3ed475feb87d912999c8a1c81911f38c8a3",
+          "bytes": 3700,
+          "sourcePath": "skills/.curated/aspnet-core/references/stack-selection.md"
+        },
+        {
+          "path": "references/testing-performance-and-operations.md",
+          "sha256": "14fecd1e3f5c7a54de2e7ffdd51a91a52101da5765f1ccdfd1f6c6437dd6c8ec",
+          "bytes": 2698,
+          "sourcePath": "skills/.curated/aspnet-core/references/testing-performance-and-operations.md"
+        },
+        {
+          "path": "references/ui-blazor.md",
+          "sha256": "37267429839b21d084b35749550e85fa96077e06e96fef4917d558b8602afdcc",
+          "bytes": 2478,
+          "sourcePath": "skills/.curated/aspnet-core/references/ui-blazor.md"
+        },
+        {
+          "path": "references/ui-mvc.md",
+          "sha256": "25657bf06f9f485967cc07d9cd93b5631d4a49871cd63bd7b2ae982fb776e659",
+          "bytes": 1954,
+          "sourcePath": "skills/.curated/aspnet-core/references/ui-mvc.md"
+        },
+        {
+          "path": "references/ui-razor-pages.md",
+          "sha256": "3f3e2dc6e47ce6202649f28fd3143087c067048e60cb997030f8f0bc17a09f1a",
+          "bytes": 1937,
+          "sourcePath": "skills/.curated/aspnet-core/references/ui-razor-pages.md"
+        },
+        {
+          "path": "references/versioning-and-upgrades.md",
+          "sha256": "3a51900fb9046ea9c0aec738410389854ab2474950253ab0719909aaf709a840",
+          "bytes": 2085,
+          "sourcePath": "skills/.curated/aspnet-core/references/versioning-and-upgrades.md"
+        }
+      ],
+      "status": "imported-reference",
+      "blockedReasons": [],
+      "dependencies": [
+        {
+          "path": "references/_sections.md",
+          "present": true,
+          "kind": "local-reference"
+        },
+        {
+          "path": "references/apis-minimal-and-controllers.md",
+          "present": true,
+          "kind": "local-reference"
+        },
+        {
+          "path": "references/data-state-and-services.md",
+          "present": true,
+          "kind": "local-reference"
+        },
+        {
+          "path": "references/program-and-pipeline.md",
+          "present": true,
+          "kind": "local-reference"
+        },
+        {
+          "path": "references/realtime-grpc-and-background-work.md",
+          "present": true,
+          "kind": "local-reference"
+        },
+        {
+          "path": "references/security-and-identity.md",
+          "present": true,
+          "kind": "local-reference"
+        },
+        {
+          "path": "references/source-map.md",
+          "present": true,
+          "kind": "local-reference"
+        },
+        {
+          "path": "references/stack-selection.md",
+          "present": true,
+          "kind": "local-reference"
+        },
+        {
+          "path": "references/testing-performance-and-operations.md",
+          "present": true,
+          "kind": "local-reference"
+        },
+        {
+          "path": "references/ui-blazor.md",
+          "present": true,
+          "kind": "local-reference"
+        },
+        {
+          "path": "references/ui-mvc.md",
+          "present": true,
+          "kind": "local-reference"
+        },
+        {
+          "path": "references/ui-razor-pages.md",
+          "present": true,
+          "kind": "local-reference"
+        },
+        {
+          "path": "references/versioning-and-upgrades.md",
+          "present": true,
+          "kind": "local-reference"
+        }
+      ],
+      "overlaps": [],
+      "executed": false,
+      "admitted": false,
+      "qualificationWarnings": [
+        "Runtime evaluation, independent review and host permission checks have not been performed."
+      ],
+      "requiresExecutionReview": false,
+      "executableAssets": [],
+      "behavioralStatus": "not_evaluated"
+    },
+    {
+      "id": "openai-cli-creator",
+      "name": "Cli Creator",
+      "category": "architecture",
+      "sourceId": "openai-skills-cli-creator",
+      "sourceUrl": "https://github.com/openai/skills/tree/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/cli-creator",
+      "commit": "49f948faa9258a0c61caceaf225e179651397431",
+      "path": "upstream/openai__skills/cli-creator",
+      "entrypoint": "SKILL.md",
+      "license": "Apache-2.0",
+      "licensePath": "LICENSE.txt",
+      "files": [
+        {
+          "path": "LICENSE.txt",
+          "sha256": "4dd13869245e356246a5b770723247bbb80a8f07a181d1d3d873a1734297cdb9",
+          "bytes": 10776,
+          "sourcePath": "skills/.curated/cli-creator/LICENSE.txt"
+        },
+        {
+          "path": "SKILL.md",
+          "sha256": "24058eabf0aafce6def3fb937ac93cbe3fa341c653c658dc589edb77f73d6152",
+          "bytes": 10502,
+          "sourcePath": "skills/.curated/cli-creator/SKILL.md"
+        },
+        {
+          "path": "agents/openai.yaml",
+          "sha256": "356c648dcdd7e10d65df0c348175344b36f28c7da51e031010a7385124a89f4c",
+          "bytes": 280,
+          "sourcePath": "skills/.curated/cli-creator/agents/openai.yaml"
+        },
+        {
+          "path": "references/agent-cli-patterns.md",
+          "sha256": "ac11612b780a80a97b15a5ffca23b21a182f854003911cce2363dd69b6126272",
+          "bytes": 5244,
+          "sourcePath": "skills/.curated/cli-creator/references/agent-cli-patterns.md"
+        }
+      ],
+      "status": "imported-reference",
+      "blockedReasons": [],
+      "dependencies": [
+        {
+          "path": "references/agent-cli-patterns.md",
+          "present": true,
+          "kind": "local-reference"
+        }
+      ],
+      "overlaps": [],
+      "executed": false,
+      "admitted": false,
+      "qualificationWarnings": [
+        "Runtime evaluation, independent review and host permission checks have not been performed."
+      ],
+      "requiresExecutionReview": false,
+      "executableAssets": [],
+      "behavioralStatus": "not_evaluated"
+    },
+    {
+      "id": "openai-notion-knowledge-capture",
+      "name": "Notion Knowledge Capture",
+      "category": "documentation",
+      "sourceId": "openai-skills-notion-knowledge-capture",
+      "sourceUrl": "https://github.com/openai/skills/tree/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/notion-knowledge-capture",
+      "commit": "49f948faa9258a0c61caceaf225e179651397431",
+      "path": "upstream/openai__skills/notion-knowledge-capture",
+      "entrypoint": "SKILL.md",
+      "license": "MIT",
+      "licensePath": "LICENSE.txt",
+      "files": [
+        {
+          "path": "LICENSE.txt",
+          "sha256": "0f377d9b2a1db642e4b0531ffa126e96d9bc6c085f8d9441f220fb25f723c6f8",
+          "bytes": 1057,
+          "sourcePath": "skills/.curated/notion-knowledge-capture/LICENSE.txt"
+        },
+        {
+          "path": "SKILL.md",
+          "sha256": "b49383b229bc766190ea22bb58502cfcf7e08449f5fce55a104eef1e54e27f00",
+          "bytes": 3316,
+          "sourcePath": "skills/.curated/notion-knowledge-capture/SKILL.md"
+        },
+        {
+          "path": "agents/openai.yaml",
+          "sha256": "549a8c26475f190cb1518c960312bab5c5cf43cc3b0693cd67268e82c5f42b3a",
+          "bytes": 512,
+          "sourcePath": "skills/.curated/notion-knowledge-capture/agents/openai.yaml"
+        },
+        {
+          "path": "assets/notion-small.svg",
+          "sha256": "00f5e4b758cc5c3e36e783dca2fabfafd05169c2f2175063e56d2e1fb6a55f81",
+          "bytes": 15777,
+          "sourcePath": "skills/.curated/notion-knowledge-capture/assets/notion-small.svg"
+        },
+        {
+          "path": "assets/notion.png",
+          "sha256": "5eef1e62d96a3d09bc9d18e4140486c22799145b017033bd0924c2c49d741cd4",
+          "bytes": 8526,
+          "sourcePath": "skills/.curated/notion-knowledge-capture/assets/notion.png"
+        },
+        {
+          "path": "evaluations/README.md",
+          "sha256": "2d965e000d73b013a0a0ab50802fa53e81efb8a657dba49a3d79ec6562ab3d23",
+          "bytes": 3487,
+          "sourcePath": "skills/.curated/notion-knowledge-capture/evaluations/README.md"
+        },
+        {
+          "path": "evaluations/conversation-to-wiki.json",
+          "sha256": "ff08f8d2b7c0634314b70e96cc2f7fa8aa757683dd0652d99d665c678c6c53ba",
+          "bytes": 2035,
+          "sourcePath": "skills/.curated/notion-knowledge-capture/evaluations/conversation-to-wiki.json"
+        },
+        {
+          "path": "evaluations/decision-record.json",
+          "sha256": "9f7c3de9390cb57dde8278fa0537bd3f779b4e7066b9a17ec72ec7a108e7ba32",
+          "bytes": 2220,
+          "sourcePath": "skills/.curated/notion-knowledge-capture/evaluations/decision-record.json"
+        },
+        {
+          "path": "examples/conversation-to-faq.md",
+          "sha256": "2c78414d86d3d854ba51ff6c88ea5f1315268742816e2d3b13ee6848f1158a73",
+          "bytes": 16242,
+          "sourcePath": "skills/.curated/notion-knowledge-capture/examples/conversation-to-faq.md"
+        },
+        {
+          "path": "examples/decision-capture.md",
+          "sha256": "c6fc42d095d842ac55ab1a95322bab7d0146669089e0b0d470f791ad8477b586",
+          "bytes": 3568,
+          "sourcePath": "skills/.curated/notion-knowledge-capture/examples/decision-capture.md"
+        },
+        {
+          "path": "examples/how-to-guide.md",
+          "sha256": "5c13ac240bf07a0575b1295a6c5d7f95d0112702652d92870a9858e3c74033e7",
+          "bytes": 2838,
+          "sourcePath": "skills/.curated/notion-knowledge-capture/examples/how-to-guide.md"
+        },
+        {
+          "path": "reference/database-best-practices.md",
+          "sha256": "72190afe54894b8ef2566d6f6d60fdcfe39822f5a1db02e75c2186c6952ad83c",
+          "bytes": 2876,
+          "sourcePath": "skills/.curated/notion-knowledge-capture/reference/database-best-practices.md"
+        },
+        {
+          "path": "reference/decision-log-database.md",
+          "sha256": "77d23a69b94cecaad520cb84f18b214994fa2c7873b88928f8d13da8b301c773",
+          "bytes": 2033,
+          "sourcePath": "skills/.curated/notion-knowledge-capture/reference/decision-log-database.md"
+        },
+        {
+          "path": "reference/documentation-database.md",
+          "sha256": "727f6bb7a341e871ba8afe155f9b261fe6f5ecf7f5ca7a43db3ad646fee7244d",
+          "bytes": 2745,
+          "sourcePath": "skills/.curated/notion-knowledge-capture/reference/documentation-database.md"
+        },
+        {
+          "path": "reference/faq-database.md",
+          "sha256": "2fedbd91f02df20541fa14372661d82d19e04cb96d261a184a74aff5b90089be",
+          "bytes": 2037,
+          "sourcePath": "skills/.curated/notion-knowledge-capture/reference/faq-database.md"
+        },
+        {
+          "path": "reference/how-to-guide-database.md",
+          "sha256": "a6002d032b0563e0234a4c225226ea6a207b120e69b0c839315c8402813b30e5",
+          "bytes": 1237,
+          "sourcePath": "skills/.curated/notion-knowledge-capture/reference/how-to-guide-database.md"
+        },
+        {
+          "path": "reference/learning-database.md",
+          "sha256": "8ceaa72bc7ab944ce1084df6233001c05b65d06ee5913a23caf760f248236e83",
+          "bytes": 1322,
+          "sourcePath": "skills/.curated/notion-knowledge-capture/reference/learning-database.md"
+        },
+        {
+          "path": "reference/team-wiki-database.md",
+          "sha256": "b08cfd417d2d61cda223c1d44c199b0a588e35c177f75328681c1b820b6450f8",
+          "bytes": 927,
+          "sourcePath": "skills/.curated/notion-knowledge-capture/reference/team-wiki-database.md"
+        }
+      ],
+      "status": "imported-reference",
+      "blockedReasons": [],
+      "dependencies": [],
+      "overlaps": [],
+      "executed": false,
+      "admitted": false,
+      "qualificationWarnings": [
+        "Runtime evaluation, independent review and host permission checks have not been performed.",
+        "Unresolved referenced paths: assets/code"
+      ],
+      "requiresExecutionReview": false,
+      "executableAssets": [],
+      "behavioralStatus": "not_evaluated"
+    },
+    {
+      "id": "openai-notion-research-documentation",
+      "name": "Notion Research Documentation",
+      "category": "documentation",
+      "sourceId": "openai-skills-notion-research-documentation",
+      "sourceUrl": "https://github.com/openai/skills/tree/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/notion-research-documentation",
+      "commit": "49f948faa9258a0c61caceaf225e179651397431",
+      "path": "upstream/openai__skills/notion-research-documentation",
+      "entrypoint": "SKILL.md",
+      "license": "MIT",
+      "licensePath": "LICENSE.txt",
+      "files": [
+        {
+          "path": "LICENSE.txt",
+          "sha256": "0f377d9b2a1db642e4b0531ffa126e96d9bc6c085f8d9441f220fb25f723c6f8",
+          "bytes": 1057,
+          "sourcePath": "skills/.curated/notion-research-documentation/LICENSE.txt"
+        },
+        {
+          "path": "SKILL.md",
+          "sha256": "e88a46da978cf6f088a788fa92ee736df699a355a72f41f14bdc258bf3ef57e7",
+          "bytes": 3404,
+          "sourcePath": "skills/.curated/notion-research-documentation/SKILL.md"
+        },
+        {
+          "path": "agents/openai.yaml",
+          "sha256": "4b30833ad6a110f63a7809ee1f11f2154f2301f4ae845d0432208f386d97f3d3",
+          "bytes": 497,
+          "sourcePath": "skills/.curated/notion-research-documentation/agents/openai.yaml"
+        },
+        {
+          "path": "assets/notion-small.svg",
+          "sha256": "00f5e4b758cc5c3e36e783dca2fabfafd05169c2f2175063e56d2e1fb6a55f81",
+          "bytes": 15777,
+          "sourcePath": "skills/.curated/notion-research-documentation/assets/notion-small.svg"
+        },
+        {
+          "path": "assets/notion.png",
+          "sha256": "5eef1e62d96a3d09bc9d18e4140486c22799145b017033bd0924c2c49d741cd4",
+          "bytes": 8526,
+          "sourcePath": "skills/.curated/notion-research-documentation/assets/notion.png"
+        },
+        {
+          "path": "evaluations/README.md",
+          "sha256": "3b4e26d61cf17f9357e5a80f90da662f3d858294f69cad5e94c620bf1ce29455",
+          "bytes": 4254,
+          "sourcePath": "skills/.curated/notion-research-documentation/evaluations/README.md"
+        },
+        {
+          "path": "evaluations/basic-research.json",
+          "sha256": "41077f0746f28d4e6a12d88c6c2a23ceb5590dc448df4ed8c1335165d0ac6bb9",
+          "bytes": 1731,
+          "sourcePath": "skills/.curated/notion-research-documentation/evaluations/basic-research.json"
+        },
+        {
+          "path": "evaluations/research-to-database.json",
+          "sha256": "a442c3a60b864f98c2de80bc2e55176773fe31f87feab59b9d1bfd029966496d",
+          "bytes": 1681,
+          "sourcePath": "skills/.curated/notion-research-documentation/evaluations/research-to-database.json"
+        },
+        {
+          "path": "examples/competitor-analysis.md",
+          "sha256": "e51bf2f471d928c4c908f85c86fba81a1b42ceba468bb46024e33adf5c29e4ca",
+          "bytes": 8213,
+          "sourcePath": "skills/.curated/notion-research-documentation/examples/competitor-analysis.md"
+        },
+        {
+          "path": "examples/market-research.md",
+          "sha256": "cb4ed96c9763fe2309354a40a7822c4770a7952909c01b890b3962e0e01adc4d",
+          "bytes": 1899,
+          "sourcePath": "skills/.curated/notion-research-documentation/examples/market-research.md"
+        },
+        {
+          "path": "examples/technical-investigation.md",
+          "sha256": "2db3f3a1664e6bff4b196b0e96d76e8048fc641722f570cb156f36aed8e74d85",
+          "bytes": 6521,
+          "sourcePath": "skills/.curated/notion-research-documentation/examples/technical-investigation.md"
+        },
+        {
+          "path": "examples/trip-planning.md",
+          "sha256": "3e2f7f8fc31fb2244af76a09649b8ecf2691ef737398ddef66d5da6e515c350b",
+          "bytes": 3789,
+          "sourcePath": "skills/.curated/notion-research-documentation/examples/trip-planning.md"
+        },
+        {
+          "path": "reference/advanced-search.md",
+          "sha256": "f9c70a3b731ce76f35aee7caa53888cc8b22dadc17dd0f54cce95933a0cbbe91",
+          "bytes": 4593,
+          "sourcePath": "skills/.curated/notion-research-documentation/reference/advanced-search.md"
+        },
+        {
+          "path": "reference/citations.md",
+          "sha256": "fc81043a5220a350ec17d818c43814f0a5fd466c6cbaaf732fc487d21833a5a6",
+          "bytes": 5152,
+          "sourcePath": "skills/.curated/notion-research-documentation/reference/citations.md"
+        },
+        {
+          "path": "reference/comparison-format.md",
+          "sha256": "e80f6ca6573d5d776e24454df04b4a038498dcd2aa93d97edb4113cfdbd88851",
+          "bytes": 870,
+          "sourcePath": "skills/.curated/notion-research-documentation/reference/comparison-format.md"
+        },
+        {
+          "path": "reference/comparison-template.md",
+          "sha256": "4c3af7b72a704beb22ab8741e97d26830421dbb5f489fdc53509fdcbe4000f2f",
+          "bytes": 911,
+          "sourcePath": "skills/.curated/notion-research-documentation/reference/comparison-template.md"
+        },
+        {
+          "path": "reference/comprehensive-report-format.md",
+          "sha256": "956da824ce2e9c5a167dcca8322b18e29c0438ca91109f7e2cbede6785541979",
+          "bytes": 1077,
+          "sourcePath": "skills/.curated/notion-research-documentation/reference/comprehensive-report-format.md"
+        },
+        {
+          "path": "reference/comprehensive-report-template.md",
+          "sha256": "043096d757ab5cb681c8e0abc3783663dbc5afe544012f8a9a230b0c31d62882",
+          "bytes": 1270,
+          "sourcePath": "skills/.curated/notion-research-documentation/reference/comprehensive-report-template.md"
+        },
+        {
+          "path": "reference/format-selection-guide.md",
+          "sha256": "6280f5219e141b3e284fbe47e550a1bed1831de044eb0b1b145b43ac86f38133",
+          "bytes": 2798,
+          "sourcePath": "skills/.curated/notion-research-documentation/reference/format-selection-guide.md"
+        },
+        {
+          "path": "reference/quick-brief-format.md",
+          "sha256": "de02fca650fb676db4e2dd5772c9393b91fc9467edc2d4e33ca57df7ccd58d13",
+          "bytes": 767,
+          "sourcePath": "skills/.curated/notion-research-documentation/reference/quick-brief-format.md"
+        },
+        {
+          "path": "reference/quick-brief-template.md",
+          "sha256": "280912ecdb1c1543038a883d6341587aa8afc8f699952b7449e314dbe68c9243",
+          "bytes": 473,
+          "sourcePath": "skills/.curated/notion-research-documentation/reference/quick-brief-template.md"
+        },
+        {
+          "path": "reference/research-summary-format.md",
+          "sha256": "29308d84318a717c8f8550bbfaded1826d4f7372f658c68638380d6a2b58f89b",
+          "bytes": 841,
+          "sourcePath": "skills/.curated/notion-research-documentation/reference/research-summary-format.md"
+        },
+        {
+          "path": "reference/research-summary-template.md",
+          "sha256": "c1e704d6b28b4414fd8d37b07095859704e34ce92041fa872b15e53da15dfa2a",
+          "bytes": 1152,
+          "sourcePath": "skills/.curated/notion-research-documentation/reference/research-summary-template.md"
+        }
+      ],
+      "status": "imported-reference",
+      "blockedReasons": [],
+      "dependencies": [],
+      "overlaps": [],
+      "executed": false,
+      "admitted": false,
+      "qualificationWarnings": [
+        "Runtime evaluation, independent review and host permission checks have not been performed.",
+        "Unresolved referenced paths: references/citations"
+      ],
+      "requiresExecutionReview": false,
+      "executableAssets": [],
+      "behavioralStatus": "not_evaluated"
+    },
+    {
+      "id": "openai-pdf",
+      "name": "Pdf",
+      "category": "engineering",
+      "sourceId": "openai-skills-pdf",
+      "sourceUrl": "https://github.com/openai/skills/tree/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/pdf",
+      "commit": "49f948faa9258a0c61caceaf225e179651397431",
+      "path": "upstream/openai__skills/pdf",
+      "entrypoint": "SKILL.md",
+      "license": "Apache-2.0",
+      "licensePath": "LICENSE.txt",
+      "files": [
+        {
+          "path": "LICENSE.txt",
+          "sha256": "4dd13869245e356246a5b770723247bbb80a8f07a181d1d3d873a1734297cdb9",
+          "bytes": 10776,
+          "sourcePath": "skills/.curated/pdf/LICENSE.txt"
+        },
+        {
+          "path": "SKILL.md",
+          "sha256": "d108cf2b36355ab37eb5962933f4d09785ec002f3105c506129320209306b9d2",
+          "bytes": 2517,
+          "sourcePath": "skills/.curated/pdf/SKILL.md"
+        },
+        {
+          "path": "agents/openai.yaml",
+          "sha256": "f8b223e25343559f57e1839ccd849fd1494a9729da33da04bb5074b7f80f4887",
+          "bytes": 219,
+          "sourcePath": "skills/.curated/pdf/agents/openai.yaml"
+        },
+        {
+          "path": "assets/pdf.png",
+          "sha256": "17da356d195d4e3fa24f9becbee6b8d9e60e13005762b5ab0809c520c76da6ee",
+          "bytes": 1312,
+          "sourcePath": "skills/.curated/pdf/assets/pdf.png"
+        }
+      ],
+      "status": "imported-reference",
+      "blockedReasons": [],
+      "dependencies": [],
+      "overlaps": [],
+      "executed": false,
+      "admitted": false,
+      "qualificationWarnings": [
+        "Runtime evaluation, independent review and host permission checks have not been performed."
+      ],
+      "requiresExecutionReview": false,
+      "executableAssets": [],
+      "behavioralStatus": "not_evaluated"
+    },
+    {
+      "id": "ruvnet-ddd-context",
+      "name": "Ddd Context",
+      "category": "architecture",
+      "sourceId": "ruvnet-ruflo",
+      "sourceUrl": "https://github.com/ruvnet/ruflo/tree/1882006a02487590c8c66a7eec8d7504f6af33c3/plugins/ruflo-ddd/skills/ddd-context",
+      "commit": "1882006a02487590c8c66a7eec8d7504f6af33c3",
+      "path": "upstream/ruvnet__ruflo/ddd-context",
+      "entrypoint": "SKILL.md",
+      "license": "MIT",
+      "licensePath": "LICENSE",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "a45ba66fa502c49ad108440536d8aa91dfe9c04575a32a01287839bee336199c",
+          "bytes": 1068,
+          "sourcePath": "LICENSE"
+        },
+        {
+          "path": "SKILL.md",
+          "sha256": "86a0b9f77478e961e1bc6e58e2b6602b7c33af8bbf424320319efb7bb7370954",
+          "bytes": 2503,
+          "sourcePath": "plugins/ruflo-ddd/skills/ddd-context/SKILL.md"
+        }
+      ],
+      "status": "imported-reference",
+      "blockedReasons": [],
+      "dependencies": [
+        {
+          "id": "mcp__plugin_ruflo-core_ruflo__agentdb_causal-edge",
+          "kind": "host-tool",
+          "present": false,
+          "resolution": "Host must provide and authorize this tool; intake grants no authority."
+        },
+        {
+          "id": "mcp__plugin_ruflo-core_ruflo__agentdb_hierarchical-store",
+          "kind": "host-tool",
+          "present": false,
+          "resolution": "Host must provide and authorize this tool; intake grants no authority."
+        },
+        {
+          "id": "mcp__plugin_ruflo-core_ruflo__memory_search",
+          "kind": "host-tool",
+          "present": false,
+          "resolution": "Host must provide and authorize this tool; intake grants no authority."
+        },
+        {
+          "id": "mcp__plugin_ruflo-core_ruflo__memory_store",
+          "kind": "host-tool",
+          "present": false,
+          "resolution": "Host must provide and authorize this tool; intake grants no authority."
+        }
+      ],
+      "overlaps": [
+        "planning-and-design"
+      ],
+      "executed": false,
+      "admitted": false,
+      "qualificationWarnings": [
+        "Runtime evaluation, independent review and host permission checks have not been performed.",
+        "Requires Ruflo runtime/tool contracts and host authorization; not installed or executed by intake."
+      ],
+      "requiresExecutionReview": false,
+      "executableAssets": [],
+      "behavioralStatus": "not_evaluated"
+    },
+    {
+      "id": "ruvnet-adr-create",
+      "name": "Adr Create",
+      "category": "architecture",
+      "sourceId": "ruvnet-ruflo",
+      "sourceUrl": "https://github.com/ruvnet/ruflo/tree/1882006a02487590c8c66a7eec8d7504f6af33c3/plugins/ruflo-adr/skills/adr-create",
+      "commit": "1882006a02487590c8c66a7eec8d7504f6af33c3",
+      "path": "upstream/ruvnet__ruflo/adr-create",
+      "entrypoint": "SKILL.md",
+      "license": "MIT",
+      "licensePath": "LICENSE",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "a45ba66fa502c49ad108440536d8aa91dfe9c04575a32a01287839bee336199c",
+          "bytes": 1068,
+          "sourcePath": "LICENSE"
+        },
+        {
+          "path": "SKILL.md",
+          "sha256": "5a7334223fa826f2ca75be0446b3e7d6c358aa02e795fd1f42599ea7d4d43153",
+          "bytes": 2720,
+          "sourcePath": "plugins/ruflo-adr/skills/adr-create/SKILL.md"
+        }
+      ],
+      "status": "imported-reference",
+      "blockedReasons": [],
+      "dependencies": [
+        {
+          "id": "mcp__plugin_ruflo-core_ruflo__agentdb_causal-edge",
+          "kind": "host-tool",
+          "present": false,
+          "resolution": "Host must provide and authorize this tool; intake grants no authority."
+        },
+        {
+          "id": "mcp__plugin_ruflo-core_ruflo__agentdb_hierarchical-recall",
+          "kind": "host-tool",
+          "present": false,
+          "resolution": "Host must provide and authorize this tool; intake grants no authority."
+        },
+        {
+          "id": "mcp__plugin_ruflo-core_ruflo__agentdb_hierarchical-store",
+          "kind": "host-tool",
+          "present": false,
+          "resolution": "Host must provide and authorize this tool; intake grants no authority."
+        },
+        {
+          "id": "mcp__plugin_ruflo-core_ruflo__memory_search",
+          "kind": "host-tool",
+          "present": false,
+          "resolution": "Host must provide and authorize this tool; intake grants no authority."
+        },
+        {
+          "id": "mcp__plugin_ruflo-core_ruflo__memory_store",
+          "kind": "host-tool",
+          "present": false,
+          "resolution": "Host must provide and authorize this tool; intake grants no authority."
+        }
+      ],
+      "overlaps": [
+        "planning-and-design"
+      ],
+      "executed": false,
+      "admitted": false,
+      "qualificationWarnings": [
+        "Runtime evaluation, independent review and host permission checks have not been performed.",
+        "Requires Ruflo runtime/tool contracts and host authorization; not installed or executed by intake."
+      ],
+      "requiresExecutionReview": false,
+      "executableAssets": [],
+      "behavioralStatus": "not_evaluated"
+    },
+    {
+      "id": "ruvnet-test-gaps",
+      "name": "Test Gaps",
+      "category": "architecture",
+      "sourceId": "ruvnet-ruflo",
+      "sourceUrl": "https://github.com/ruvnet/ruflo/tree/1882006a02487590c8c66a7eec8d7504f6af33c3/plugins/ruflo-testgen/skills/test-gaps",
+      "commit": "1882006a02487590c8c66a7eec8d7504f6af33c3",
+      "path": "upstream/ruvnet__ruflo/test-gaps",
+      "entrypoint": "SKILL.md",
+      "license": "MIT",
+      "licensePath": "LICENSE",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "a45ba66fa502c49ad108440536d8aa91dfe9c04575a32a01287839bee336199c",
+          "bytes": 1068,
+          "sourcePath": "LICENSE"
+        },
+        {
+          "path": "SKILL.md",
+          "sha256": "af23a403e73b7267203727e1810a1e821e54efbca20091d8a540ea08be73c15a",
+          "bytes": 927,
+          "sourcePath": "plugins/ruflo-testgen/skills/test-gaps/SKILL.md"
+        }
+      ],
+      "status": "imported-reference",
+      "blockedReasons": [],
+      "dependencies": [
+        {
+          "id": "mcp__plugin_ruflo-core_ruflo__hooks_worker-dispatch",
+          "kind": "host-tool",
+          "present": false,
+          "resolution": "Host must provide and authorize this tool; intake grants no authority."
+        }
+      ],
+      "overlaps": [
+        "verification"
+      ],
+      "executed": false,
+      "admitted": false,
+      "qualificationWarnings": [
+        "Runtime evaluation, independent review and host permission checks have not been performed.",
+        "Requires Ruflo runtime/tool contracts and host authorization; not installed or executed by intake."
+      ],
+      "requiresExecutionReview": false,
+      "executableAssets": [],
+      "behavioralStatus": "not_evaluated"
+    }
+  ],
+  "exclusions": [
+    {
+      "repository": "anthropics/skills",
+      "commit": "dbd4588f9e1033efb41dad4bef2f7947c8993d44",
+      "skill": "docx",
+      "reason": "Per-skill proprietary license is tied to Anthropic services and restricts extraction, copying, derivatives and redistribution; not imported.",
+      "sourceUrl": "https://github.com/anthropics/skills/blob/dbd4588f9e1033efb41dad4bef2f7947c8993d44/skills/docx/LICENSE.txt",
+      "licenseSha256": "79f6d8f5b427252fa3b1c11ecdbdb6bf610b944f7530b4de78f770f38741cfaa",
+      "verifiedRestrictions": true
+    },
+    {
+      "repository": "anthropics/skills",
+      "commit": "dbd4588f9e1033efb41dad4bef2f7947c8993d44",
+      "skill": "pdf",
+      "reason": "Per-skill proprietary license is tied to Anthropic services and restricts extraction, copying, derivatives and redistribution; not imported.",
+      "sourceUrl": "https://github.com/anthropics/skills/blob/dbd4588f9e1033efb41dad4bef2f7947c8993d44/skills/pdf/LICENSE.txt",
+      "licenseSha256": "79f6d8f5b427252fa3b1c11ecdbdb6bf610b944f7530b4de78f770f38741cfaa",
+      "verifiedRestrictions": true
+    },
+    {
+      "repository": "anthropics/skills",
+      "commit": "dbd4588f9e1033efb41dad4bef2f7947c8993d44",
+      "skill": "pptx",
+      "reason": "Per-skill proprietary license is tied to Anthropic services and restricts extraction, copying, derivatives and redistribution; not imported.",
+      "sourceUrl": "https://github.com/anthropics/skills/blob/dbd4588f9e1033efb41dad4bef2f7947c8993d44/skills/pptx/LICENSE.txt",
+      "licenseSha256": "79f6d8f5b427252fa3b1c11ecdbdb6bf610b944f7530b4de78f770f38741cfaa",
+      "verifiedRestrictions": true
+    },
+    {
+      "repository": "anthropics/skills",
+      "commit": "dbd4588f9e1033efb41dad4bef2f7947c8993d44",
+      "skill": "xlsx",
+      "reason": "Per-skill proprietary license is tied to Anthropic services and restricts extraction, copying, derivatives and redistribution; not imported.",
+      "sourceUrl": "https://github.com/anthropics/skills/blob/dbd4588f9e1033efb41dad4bef2f7947c8993d44/skills/xlsx/LICENSE.txt",
+      "licenseSha256": "79f6d8f5b427252fa3b1c11ecdbdb6bf610b944f7530b4de78f770f38741cfaa",
+      "verifiedRestrictions": true
+    }
+  ],
+  "overlapClusters": [
+    {
+      "capability": "code-review",
+      "members": [
+        "obra-receiving-code-review",
+        "obra-requesting-code-review",
+        "openai-gh-address-comments"
+      ],
+      "policy": "Separate receiving, requesting and resolving review; select by task, never concatenate all instructions."
+    },
+    {
+      "capability": "verification",
+      "members": [
+        "obra-verification-before-completion",
+        "anthropics-webapp-testing",
+        "ruvnet-test-gaps",
+        "openai-gh-fix-ci"
+      ],
+      "policy": "Use one primary verification workflow and optional scoped adapters; do not treat execution receipts as admission."
+    },
+    {
+      "capability": "planning-and-design",
+      "members": [
+        "obra-brainstorming",
+        "obra-writing-plans",
+        "ruvnet-ddd-context",
+        "ruvnet-adr-create"
+      ],
+      "policy": "Sequence explicit domain/decision/planning outputs; preserve source skills unmodified."
+    },
+    {
+      "capability": "security",
+      "members": [
+        "openai-security-best-practices",
+        "openai-security-threat-model",
+        "openai-security-ownership-map"
+      ],
+      "policy": "Distinct code guidance, threat model and ownership artifacts; fetch only the requested skill."
+    }
+  ],
+  "limits": {
+    "repositories": 6,
+    "inventoryEntries": 5000,
+    "downloadBytes": 31457280,
+    "candidateCount": 40,
+    "filesPerCandidate": 256,
+    "bytesPerCandidate": 2097152,
+    "bytesPerFile": 262144
+  },
+  "summary": {
+    "repositoryCount": 6,
+    "inventoriedSkills": 678,
+    "selectedCandidates": 38,
+    "downloadBytes": 1632542,
+    "importedReferenceCount": 35,
+    "quarantinedCount": 3,
+    "runtimeEvaluated": 0,
+    "admitted": 0,
+    "fileCount": 244,
+    "candidatesWithExecutableAssets": 11
+  }
+}
