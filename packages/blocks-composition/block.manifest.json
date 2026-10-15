@@ -1,0 +1,16 @@
+{
+  "schema": "gradia.block.manifest.v1",
+  "id": "composition-planner",
+  "version": "0.1.0",
+  "status": "reference-candidate",
+  "category": "workflow-composition",
+  "license": "Apache-2.0",
+  "runtime": "Python 3.9+ standard library; POSIX local file reader",
+  "capabilities": ["dependency-closure-locks", "lock-reproduction", "reverse-dependency-impact", "typed-port-identity-checks", "private-variant-scope-checks", "mermaid-dependency-diagrams"],
+  "execution": false,
+  "automaticPromotion": false,
+  "admission": "not_admitted",
+  "telemetry": {"mode": "local metadata planning reports", "graphIdentity": "sha256", "cost": "unknown", "externalCollector": false},
+  "limits": {"documentBytes": 1048576, "nodes": 128, "dependencies": 512, "connections": 512, "roots": 8, "portsPerDirection": 32},
+  "boundary": "Offline structural planner over a host-authorized supplied snapshot. Declared hashes do not attest artifacts; port-schema identity does not prove business compatibility. No live topology discovery, execution, migrations, canaries or promotion."
+}

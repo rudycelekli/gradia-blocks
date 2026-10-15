@@ -1,0 +1,102 @@
+{
+  "schema": "gradia.composition.lock.v1",
+  "scope": "demo-tenant",
+  "graphSha256": "f161cc8f3e92e4b21211a675a344b6ca9025cb368348b04b9c3736c6e05883e4",
+  "roots": [
+    "custom-triage"
+  ],
+  "nodes": [
+    {
+      "id": "custom-triage",
+      "kind": "variant",
+      "edition": "0.1.0",
+      "scope": "demo-tenant",
+      "requires": [
+        {
+          "id": "feedback-triage",
+          "edition": "0.1.0",
+          "artifactSha256": "b16f5d54e124b6bb6523326d9c03e451849a7eb3be67de2bc062445a842778e1",
+          "contractSha256": "8ec6b70031c0971132acb9d01303b1fda219447c4a48e20386701ab9c7ced897"
+        }
+      ],
+      "inputs": {
+        "review": "8f7f5b4d644d3a6eca1a4bac8ad8aea4bf6c1aafa23fec18afa4abd0346d1f7f"
+      },
+      "outputs": {},
+      "artifactSha256": "a0dfba0ed11ce5b41261420c1976ed8d625e4b955cbb3d5d4ff4b6600c9daad3",
+      "contractSha256": "bbae3d8672c6c9a3709a09bad84178a0640aef6c70bc1d86afbdb8d55fb9d7e7"
+    },
+    {
+      "id": "feedback",
+      "kind": "block",
+      "edition": "0.2.0",
+      "scope": "public",
+      "requires": [],
+      "inputs": {},
+      "outputs": {
+        "record": "d3f02c3a7852911dbdc81df3024642ee671a8fd006e99f29d38a6f179dbed7b8"
+      },
+      "artifactSha256": "92c31beac8922f4ed871c10d51cc87e690174fdf5a9e664f41ef79e2dea4ee43",
+      "contractSha256": "50d98005546250ba4853000a5e3b964c7e1c418f0c6e2ec79887f6add558104b"
+    },
+    {
+      "id": "feedback-triage",
+      "kind": "workflow",
+      "edition": "0.1.0",
+      "scope": "demo-tenant",
+      "requires": [
+        {
+          "id": "feedback",
+          "edition": "0.2.0",
+          "artifactSha256": "92c31beac8922f4ed871c10d51cc87e690174fdf5a9e664f41ef79e2dea4ee43",
+          "contractSha256": "50d98005546250ba4853000a5e3b964c7e1c418f0c6e2ec79887f6add558104b"
+        },
+        {
+          "id": "ruflo-bridge",
+          "edition": "0.1.0",
+          "artifactSha256": "dab326ffcd440339ee240b1bd2cf97c7a3f04becc469597d12256d09509524b2",
+          "contractSha256": "cd4740359994a28e31e6b8475c148892524e8e7dce0029cec09cfde57203d612"
+        }
+      ],
+      "inputs": {
+        "feedback": "d3f02c3a7852911dbdc81df3024642ee671a8fd006e99f29d38a6f179dbed7b8"
+      },
+      "outputs": {
+        "review": "8f7f5b4d644d3a6eca1a4bac8ad8aea4bf6c1aafa23fec18afa4abd0346d1f7f"
+      },
+      "artifactSha256": "b16f5d54e124b6bb6523326d9c03e451849a7eb3be67de2bc062445a842778e1",
+      "contractSha256": "8ec6b70031c0971132acb9d01303b1fda219447c4a48e20386701ab9c7ced897"
+    },
+    {
+      "id": "ruflo-bridge",
+      "kind": "bridge",
+      "edition": "0.1.0",
+      "scope": "public",
+      "requires": [],
+      "inputs": {},
+      "outputs": {},
+      "artifactSha256": "dab326ffcd440339ee240b1bd2cf97c7a3f04becc469597d12256d09509524b2",
+      "contractSha256": "cd4740359994a28e31e6b8475c148892524e8e7dce0029cec09cfde57203d612"
+    }
+  ],
+  "connections": [
+    {
+      "fromNode": "feedback",
+      "fromPort": "record",
+      "toNode": "feedback-triage",
+      "toPort": "feedback"
+    },
+    {
+      "fromNode": "feedback-triage",
+      "fromPort": "review",
+      "toNode": "custom-triage",
+      "toPort": "review"
+    }
+  ],
+  "unresolvedInputs": [],
+  "compatibility": "UNKNOWN",
+  "promotionAuthorized": false,
+  "artifactVerification": "DECLARED_HASHES_ONLY",
+  "boundary": "Offline structural plan; no execution, behavioral evaluation, runtime attestation or promotion",
+  "lockSha256": "f296bb4412042a84d54db5a3d8fe8f9db79f8368ccd99ac09b474dcbc4907e05"
+}

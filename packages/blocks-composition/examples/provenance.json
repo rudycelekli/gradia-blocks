@@ -1,0 +1,12 @@
+{
+  "boundary": "Illustrative dependency graph; workflow, private variant and candidate are synthetic and never executed",
+  "publicNodes": "Feedback/Ruflo artifactSha256 values hash local block.manifest.json bytes only; contract hashes canonical local OpenAPI/provider manifests; no full package or runtime attestation",
+  "tenant": "Fictional demo-tenant; no customer data",
+  "ports": "FeedbackRecord schema pin uses local OpenAPI definition; review-proposal is synthetic",
+  "expectedImpact": [
+    "ruflo-bridge",
+    "feedback-triage",
+    "custom-triage"
+  ],
+  "expectedBlocker": "stale_dependency_pin"
+}

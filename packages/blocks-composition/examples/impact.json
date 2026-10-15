@@ -1,0 +1,47 @@
+{
+  "schema": "gradia.composition.impact.v1",
+  "scope": "demo-tenant",
+  "baselineGraphSha256": "f161cc8f3e92e4b21211a675a344b6ca9025cb368348b04b9c3736c6e05883e4",
+  "candidateGraphSha256": "2f9f65c24fc2a177ffcbd0273d69028c20b679ccd4d0db3d13b85011bbcd99f5",
+  "baselineLockSha256": "f296bb4412042a84d54db5a3d8fe8f9db79f8368ccd99ac09b474dcbc4907e05",
+  "changed": [
+    "ruflo-bridge"
+  ],
+  "affected": [
+    "custom-triage",
+    "feedback-triage",
+    "ruflo-bridge"
+  ],
+  "affectedRoots": [
+    "custom-triage"
+  ],
+  "requiredVerification": [
+    {
+      "node": "custom-triage",
+      "kind": "variant",
+      "status": "UNKNOWN"
+    },
+    {
+      "node": "feedback-triage",
+      "kind": "workflow",
+      "status": "UNKNOWN"
+    },
+    {
+      "node": "ruflo-bridge",
+      "kind": "bridge",
+      "status": "UNKNOWN"
+    }
+  ],
+  "blockers": [
+    {
+      "kind": "stale_dependency_pin",
+      "consumer": "feedback-triage",
+      "dependency": "ruflo-bridge"
+    }
+  ],
+  "candidateLock": null,
+  "graphCoverage": "SUPPLIED_SNAPSHOT_ONLY",
+  "compatibility": "UNKNOWN",
+  "promotionAuthorized": false,
+  "reportSha256": "6cf8d6e44c543d16afac751891df7551ff79215b8f168765a6d3cf503dd062e4"
+}
