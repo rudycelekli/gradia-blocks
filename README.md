@@ -13,7 +13,7 @@ Gradia is an AI Research & Implementation Lab. This repository starts our open c
 | [Feedback](packages/blocks-feedback/README.md) | FastAPI/SQLite API, tenant-scoped reports, operator triage, idempotency, local telemetry, optional audio attachments | Local reference candidate; no managed hosting or production admission |
 | [TypeScript client](packages/blocks-feedback/typescript/client.ts) | Calls the same HTTP contract; distinguishes acknowledgment from uncertain transport | A client, not another server implementation |
 | [React widget](packages/blocks-feedback/typescript/feedback-widget.tsx) | Configurable labels/accent/categories, optional explicit microphone capture and audio review | Host supplies transport and authority; never embed operator keys in a browser |
-| [Admission screen](packages/blocks-admission/README.md) | Checks pinned artifacts and independently supplied gate receipts | Does not run tests, prove claims or merge changes |
+| [Admission screen](packages/blocks-admission/README.md) | Checks pinned artifacts and independently supplied gate receipts; bounded parallel trusted-lane runner | Does not run tests, prove claims or merge changes |
 | [Skills](packages/blocks-skills/README.md) | First-party integration/review instructions with explicit scope | Instructions grant no tool permissions or credentials |
 | [Diagrams](diagrams/README.md) | Standalone interactive HTML and SVG; typed source IR | Planned nodes remain labeled; no external provider calls |
 

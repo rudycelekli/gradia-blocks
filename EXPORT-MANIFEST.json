@@ -1,11 +1,11 @@
 {
   "scope": "Original reference packages and attributed Archify diagrams; excludes private plans/customer implementations",
-  "validation": "Local14API+28admission+3SDK+8Rust tests passed; strict widget compilation; CI status separatelyverified",
+  "validation": "Local14API+37admission/runner+3SDK+8Rust tests passed; strict widget compilation; CI separatelyverified",
   "files": [
     {
       "path": ".github/workflows/ci.yml",
-      "sha256": "9bc9460cf3ecc7ecf300232eea57d5fc1cc89b51405b3684c3c9333a995a7933",
-      "bytes": 1015
+      "sha256": "714103f9fa586ca0dd742020e08cff61f50dd019dfec130c88234e1fcadadf59",
+      "bytes": 1978
     },
     {
       "path": ".gitignore",
@@ -29,8 +29,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "3ed53cdc7fae5f6771a96d361dbb88744e490b46aaa98377bbbb9fc1c0aee58d",
-      "bytes": 4591
+      "sha256": "e7711a21555bc5d26ef56413c05d6f391f840cfabcef4a8ed12a44794053d07b",
+      "bytes": 4629
     },
     {
       "path": "SECURITY.md",
@@ -104,8 +104,8 @@
     },
     {
       "path": "packages/blocks-admission/README.md",
-      "sha256": "1846930d55584f18e6c7e45e808134efe6e78c923f380100b7effc035286c3d3",
-      "bytes": 8732
+      "sha256": "c471df526ad25089dd4da4ff8bac01ae3a1c5ae6b196adf0b39486a41e517194",
+      "bytes": 12722
     },
     {
       "path": "packages/blocks-admission/examples/candidate.json",
@@ -133,9 +133,19 @@
       "bytes": 664
     },
     {
+      "path": "packages/blocks-admission/gradia_admission/runner.py",
+      "sha256": "fd0c8cd7a59c91d51d149b96adf3c22e6254d283ac309631a67d75ef10c895f0",
+      "bytes": 8408
+    },
+    {
       "path": "packages/blocks-admission/tests/test_evaluator.py",
       "sha256": "90ce7f0528b74418e8540a9b44867934b0d360222d24b607a433f61c958ba35c",
       "bytes": 10537
+    },
+    {
+      "path": "packages/blocks-admission/tests/test_runner.py",
+      "sha256": "0c67e022abd33e387323de33bac5ec9edfc457a980df1d3dc3e37eb56c5f80fa",
+      "bytes": 5325
     },
     {
       "path": "packages/blocks-contracts-rust/.gitignore",

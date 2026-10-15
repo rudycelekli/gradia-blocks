@@ -3,24 +3,50 @@ on: [push, pull_request]
 permissions:
   contents: read
 jobs:
-  reference:
+  checks:
+    name: ${{ matrix.lane }}
     runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        lane: [feedback-api, admission-and-runner, client-and-widget, rust-contracts]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: python -m pip install -r packages/blocks-feedback/requirements-tested.txt
-      - run: python -m pip install --no-deps -e packages/blocks-feedback
-      - run: python -m pytest -c /dev/null -p no:cacheprovider packages/blocks-feedback/tests -q
-      - run: PYTHONPATH=packages/blocks-admission python -m unittest discover -s packages/blocks-admission/tests -v
+      - if: matrix.lane == 'feedback-api'
+        run: |
+          python -m pip install -r packages/blocks-feedback/requirements-tested.txt
+          python -m pip install --no-deps -e packages/blocks-feedback
+          python -m pytest -c /dev/null -p no:cacheprovider packages/blocks-feedback/tests -q
+      - if: matrix.lane == 'admission-and-runner'
+        run: PYTHONPATH=packages/blocks-admission python -m unittest discover -s packages/blocks-admission/tests -v
       - uses: actions/setup-node@v4
+        if: matrix.lane == 'client-and-widget'
         with:
           node-version: '22'
           cache: npm
-      - run: npm ci --ignore-scripts --no-audit --no-fund
-      - run: npm run test:client
-      - run: npm run check:widget
-
-      - run: rustup toolchain install 1.90.0 --profile minimal
-      - run: cargo +1.90.0 test --locked --manifest-path packages/blocks-contracts-rust/Cargo.toml
+      - if: matrix.lane == 'client-and-widget'
+        run: |
+          npm ci --ignore-scripts --no-audit --no-fund
+          npm run test:client
+          npm run check:widget
+      - if: matrix.lane == 'rust-contracts'
+        run: |
+          rustup toolchain install 1.90.0 --profile minimal
+          cargo +1.90.0 test --locked --manifest-path packages/blocks-contracts-rust/Cargo.toml
+  mechanical-summary:
+    needs: checks
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Distinguish test execution from admission
+        env:
+          MECHANICAL_RESULT: ${{ needs.checks.result }}
+        run: |
+          echo "Mechanical lanes: $MECHANICAL_RESULT" >> "$GITHUB_STEP_SUMMARY"
+          echo "AI review, rights approval and production admission are separate. Missing evidence remains UNKNOWN." >> "$GITHUB_STEP_SUMMARY"
+          test "$MECHANICAL_RESULT" = success

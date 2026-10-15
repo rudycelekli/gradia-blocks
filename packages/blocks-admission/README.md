@@ -83,3 +83,34 @@ The current regression suite includes a fully synthetic eligible case and delibe
 ## License
 
 This original admission reference package is Apache-2.0; see LICENSE. Third-party dependencies retain their licenses.
+
+
+## Bounded parallel trusted test lanes
+
+`gradia_admission.runner` adds actual local parallel test execution, separate from evidence screening. It is a small host runner, not Ruflo, Agentic QE, a remote AI judge, an OS sandbox or a release pipeline. **Execution is disabled by default.** The operator constructs an immutable `TrustedLane` registry in trusted Python code; candidate data may select only registered IDs. No candidate JSON command field is interpreted.
+
+```python
+from pathlib import Path
+import sys
+from gradia_admission.runner import TrustedLane, run_lanes
+
+registry = {
+    "contract": TrustedLane(
+        "contract", (sys.executable, "-m", "unittest", "discover", "-s", "tests"),
+        cwd=Path("/absolute/path/to/isolated/operator-test-checkout"),
+        timeout_seconds=30,
+    )
+}
+report = run_lanes(registry, ["contract"], execute=True,
+                   max_parallel=2, total_deadline_seconds=90)
+```
+
+Limits: 1–4 concurrent lanes, 1–32 unique selections, explicit absolute executable and real working directory, positive lane/global deadlines bounded to one hour, and 64 KiB combined observed output before termination. Process execution uses argument arrays with `shell=False`, no stdin, a new process group, and an explicit minimal environment. Only operator-specified `PATH`, `LANG`, `LC_ALL` and `PYTHONPATH` overrides are allowed; host credentials are not inherited. Deadlines/output overflow kill the process group. Results retain command hashes, timing, exit status and bounded output-prefix hashes; raw stdout/stderr is not returned or logged. Do not put credentials into argv, identifiers or the allowed environment.
+
+The registry and its executable files, working directory, tests and dependencies must be operator-owned and protected against candidate modification. A temporary directory is not a sandbox. Commands run with the calling user's OS permissions: they are **not** network-, memory-, CPU- or filesystem-isolated, and trusted commands can spawn detached children. Run hostile candidate code only in an independently configured container/VM/CI isolation boundary with hard resource/network controls. This module does not launch that boundary or limit aggregate spend. macOS/POSIX process-group behavior is the tested platform; Windows execution is unqualified.
+
+A lane returns `execution_result` of `completed`, `failed`, `timed_out` or `unknown`. **Exit zero does not establish that any test ran or passed.** Even stdout claiming all checks passed, reporting skips, or claiming approval leaves `admission_status: UNKNOWN` and `promotion_authorized: false`. The separate evaluator still requires independently pinned structured receipts with positive complete check counts, no skips/failures and exact artifact/manifest/protocol identity. Test frameworks must generate those receipts through a trusted adapter; this runner does not infer them from console text.
+
+AI review and human rights review remain `UNKNOWN` by default. `review_advisory(source_sha256, adapter=None)` defines an optional host adapter contract: a recommendation (`REVIEW`, `REJECT` or `INCONCLUSIVE`), the same source digest and an evidence reference. No provider is configured or called by default. A supplied adapter remains operator-controlled and must enforce its own provider authorization, deadlines, isolation and cost controls. The wrapper preserves unknown token usage/cost and never turns a recommendation into approval. Human rights/maintainer decisions and deployment authority remain separate.
+
+Runner tests verify real overlap with at most two lanes, deadline treatment of queued work, process-group termination of an ordinary descendant, nonzero exits, output bounds, credential non-inheritance, unregistered-lane rejection, disabled execution, exit-zero/skip-claim uncertainty, and absent/stale/advisory-only AI review. Run `PYTHONPATH=packages/blocks-admission python3 -m unittest discover -s packages/blocks-admission/tests -p test_runner.py -v`.
