@@ -1,0 +1,12 @@
+{
+  "schema_version": "1",
+  "id": "gradia.reference-skills",
+  "version": "0.2.0",
+  "license": "Apache-2.0",
+  "status": "public_reference",
+  "skills": {
+    "integrate-feedback": "0.2.0",
+    "review-block-candidate": "0.1.0"
+  },
+  "authority": "Instructions do not grant tool or tenant access"
+}

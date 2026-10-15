@@ -324,8 +324,13 @@
       "bytes": 1381
     },
     {
+      "path": "packages/blocks-skills/block.manifest.json",
+      "sha256": "9cbb44917bad8bebdf46e42665f2925ae05b45cc5edec317fdb685eb6961124c",
+      "bytes": 302
+    },
+    {
       "path": "packages/blocks-skills/skills/integrate-feedback.md",
-      "sha256": "278b157b3b462da24b7a7599afbb93057a64430645f120769f8a8c95d0aa7ec9",
+      "sha256": "a9c7db934209dde0226f72ab9c26d1fce94177c2f85b454fe7f34b9f6ef9fe55",
       "bytes": 3329
     },
     {

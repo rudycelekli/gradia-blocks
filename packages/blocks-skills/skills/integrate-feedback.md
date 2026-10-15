@@ -1,6 +1,6 @@
 ---
 name: integrate-feedback
-version: 0.1.0
+version: 0.2.0
 description: Integrate the Gradia Feedback reference block through a separately authorized deployment.
 ---
 
