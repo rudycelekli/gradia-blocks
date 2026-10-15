@@ -1,0 +1,110 @@
+{
+  "schema": "gradia.recipe.source-pins.v1",
+  "implementations": {
+    "feedback": {
+      "sha256": "6aabfd4cda016aeb2eb1dc011ec7605ebf245cc4a0b09913b2e5f3cb449300d4",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        {
+          "path": "NOTICE",
+          "sha256": "5429fba57af2a532bd485903881387b3f2c81a39714c1f87125335ff512962dc"
+        },
+        {
+          "path": "README.md",
+          "sha256": "32b1ef3568981a56573a90612071cb899b9d2c3c12b34d94d3adea95e2686b69"
+        },
+        {
+          "path": "block.manifest.json",
+          "sha256": "388d5694fe1027145ecd1869a177ec07f68711edb7a3aea6f46cdd5a74ff582d"
+        },
+        {
+          "path": "gradia_feedback/__init__.py",
+          "sha256": "8f42e4c636ae262a8b8bd5af451301d74c35ba30510b8edc98c10e10b104f747"
+        },
+        {
+          "path": "gradia_feedback/api.py",
+          "sha256": "ff6381ead37e792858a5b13e02f2ebd5ab2432c75fd8d9be336a139113a1529d"
+        },
+        {
+          "path": "gradia_feedback/contracts.py",
+          "sha256": "ab19aa454d476082057eb456cfb13d4c295f9288b5de7856a0c352e66844c343"
+        },
+        {
+          "path": "gradia_feedback/server.py",
+          "sha256": "fa5804bd6dfe2626005340de3ad2ee88b45d27860c673621b387f3cdb762bc3c"
+        },
+        {
+          "path": "gradia_feedback/store.py",
+          "sha256": "746477485d07b6cb85b7a74aa73ec56eacd0ae83b3c10be2fd0722e227ebbb1e"
+        },
+        {
+          "path": "gradia_feedback/telemetry.py",
+          "sha256": "3e0c774926654e462281de4dc7ee4b924d4cec1a40f76caea1152f2f7546782c"
+        },
+        {
+          "path": "pyproject.toml",
+          "sha256": "07973f8305926a4fc7df08d2321aeb7789a6aeff2747a6a0fa481423f21c194e"
+        },
+        {
+          "path": "requirements-tested.txt",
+          "sha256": "3f4783038c7cc5973cb8c9df90d682267b0749fe43f30d5e9396e955c5ba09a6"
+        }
+      ],
+      "scope": "Root source/config/license files and implementation Python modules; excludes tests and generated examples"
+    },
+    "work-items": {
+      "sha256": "47c80e72a9b030cf191180336f0b5d7d60a1fe7c5e79be276f9f4e568f92c167",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        {
+          "path": "README.md",
+          "sha256": "57e8e3b3b22f742a6b1dce82ea2fec9b13e544c4892e7c7e30e945b964850360"
+        },
+        {
+          "path": "block.manifest.json",
+          "sha256": "b7c82db217f73f5dbbf5b7a68040b310484bbb818b309ddd8e424b81fd4b702a"
+        },
+        {
+          "path": "gradia_work_items/__init__.py",
+          "sha256": "74930db668990e83f0cefc73bee18ba4b4461a7accd4c04a02c68187273af7af"
+        },
+        {
+          "path": "gradia_work_items/api.py",
+          "sha256": "8df49bf697b999d11e2d4394ec340513feeae16d0b320ae228281554bf0cd19f"
+        },
+        {
+          "path": "gradia_work_items/contracts.py",
+          "sha256": "037ccc3e02fc48e18e6f184eccf94d3fceefdcd0e92102612cb520e50282d2ad"
+        },
+        {
+          "path": "gradia_work_items/handoff.py",
+          "sha256": "a4b27a099a30895308d77390742b0d1f90b2782da29cb0c26fd71975c0da110c"
+        },
+        {
+          "path": "gradia_work_items/server.py",
+          "sha256": "8c18d0abda3c25b4b264057cc7c097223b26fbcc6687164bdfb5ed72e35dfa4e"
+        },
+        {
+          "path": "gradia_work_items/store.py",
+          "sha256": "1b9719284ba3dddb4e7f7e925437dc5bbdc66b0e0726f9d16b51e97a48a82fc9"
+        },
+        {
+          "path": "pyproject.toml",
+          "sha256": "83d90e9d886d0e4e91e514551954cf63211a617bc2503e8d11288bd5502c1eca"
+        },
+        {
+          "path": "requirements-tested.txt",
+          "sha256": "3f4783038c7cc5973cb8c9df90d682267b0749fe43f30d5e9396e955c5ba09a6"
+        }
+      ],
+      "scope": "Root source/config/license files and implementation Python modules; excludes tests and generated examples"
+    }
+  },
+  "boundary": "Declared local implementation identity and schema lock; TCP fixture success is separate evidence, not full runtime attestation or arbitrary workflow qualification"
+}

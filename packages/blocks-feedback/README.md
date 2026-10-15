@@ -255,3 +255,12 @@ is intentionally separate from a durable service acknowledgment.
 Screen-capture requirements and browser limitations follow the
 [MediaDevices.getDisplayMedia reference](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getDisplayMedia);
 recording follows the [MediaRecorder reference](https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder).
+
+
+## Patch0.2.1: authenticated handoff identity
+
+`GET /v1/feedback/session` returns the authenticated tenant, actor, role, block version and configuration digest. Authenticated responses expose `X-Gradia-Principal-Sha256` over canonical tenant/actor/role metadata. Optional `If-Gradia-Principal`, `If-Gradia-Configuration` and `If-Gradia-Block-Version` headers refuse409 when that binding/profile changes before a request. These hashes are neither credentials nor independent attestation. Existing submission/media/triage contracts remain available.
+
+The separately configured Work Items reference requires this patch for its same-tenant Feedback proposal handoff. Older0.2.0 archives stay immutable and independently usable for their declared scope. No work-item server, data transfer, polling or automatic retry activates merely by updating Feedback.
+
+Patch0.2.1 also exposes generated `X-Gradia-Correlation-Id` and explicit unknown-cost headers, linking authenticated reads to bounded metadata attempts without exposing request bodies or keys.

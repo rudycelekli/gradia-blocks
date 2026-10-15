@@ -1,0 +1,7 @@
+# Exact direct dependency versions exercised for the 0.1.0 local candidate.
+# This is not a transitive lock or a reproducible production image.
+fastapi==0.141.1
+pydantic==2.14.1
+uvicorn==0.52.4
+httpx==0.28.1
+pytest==9.1.1

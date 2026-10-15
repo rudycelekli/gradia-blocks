@@ -17,7 +17,7 @@ from .contracts import Acknowledgment, BlockSettings, FeedbackPage, FeedbackReco
 from .store import Store, record
 from .telemetry import AttemptStore, AttemptTelemetry
 
-VERSION = "0.2.0"
+VERSION = "0.2.1"
 MAX_BODY = 400000
 
 
@@ -103,7 +103,10 @@ def create_app(database_path, api_keys: dict[str, Principal], settings: BlockSet
         request.scope["gradia.error_code"] = "persistence_unavailable"
         return JSONResponse({"error": {"code": "persistence_unavailable", "message": "Media storage unavailable; reconcile with the same idempotency key"}}, status_code=503)
 
-    def principal(request: Request, authorization: Annotated[str | None, Header()] = None):
+    def principal(request: Request, authorization: Annotated[str | None, Header()] = None,
+                  if_gradia_principal: Annotated[str | None, Header(pattern=r'^[0-9a-f]{64}$')] = None,
+                  if_gradia_configuration: Annotated[str | None, Header(pattern=r'^[0-9a-f]{64}$')] = None,
+                  if_gradia_block_version: Annotated[str | None, Header(min_length=1,max_length=40)] = None):
         token = authorization[7:] if authorization and authorization.startswith("Bearer ") else ""
         found = None
         for key, candidate in principals:
@@ -112,6 +115,15 @@ def create_app(database_path, api_keys: dict[str, Principal], settings: BlockSet
         if found is None:
             fail(401, "unauthorized", "A configured bearer credential is required")
         request.scope["gradia.principal"] = found
+        expected = if_gradia_principal
+        actual = hashlib.sha256(json.dumps(found.model_dump(mode="json"), sort_keys=True, separators=(",", ":"), ensure_ascii=True).encode()).hexdigest()
+        if expected is not None and expected != actual:
+            fail(409, "principal_changed", "The authenticated binding changed; recheck the authorized session")
+        expected_config = if_gradia_configuration
+        if expected_config is not None and expected_config != config_digest:
+            fail(409, "configuration_changed", "The configured profile changed; recheck the authorized session")
+        if if_gradia_block_version is not None and if_gradia_block_version != VERSION:
+            fail(409, "block_version_changed", "The block edition changed; requalify the profile")
         if not settings.features.enabled:
             fail(403, "feature_disabled", "Feedback is disabled")
         return found
@@ -130,6 +142,11 @@ def create_app(database_path, api_keys: dict[str, Principal], settings: BlockSet
     def event(conn, actor, identity, revision, operation, started, correlation_id):
         payload = {"schema_version": "1", "event_id": str(uuid.uuid4()), "block_id": "gradia.feedback", "block_version": VERSION, "edition": VERSION, "correlation_id": correlation_id, "actor_type": "configured_principal", "human_involvement": "unknown", "privacy": "metadata_only", "configuration_digest": config_digest, "tenant_id": actor.tenant_id, "actor_id": actor.actor_id, "feedback_id": identity, "revision": revision, "operation": operation, "result": "persisted", "acceptance": "not_evaluated", "billability": "not_evaluated", "cost": {"status": "unknown", "amount": None, "currency": None}, "coverage": "committed_mutations_only", "duration_ms": round((time.monotonic() - started) * 1000, 3), "occurred_at": datetime.now(timezone.utc).isoformat()}
         conn.execute("INSERT INTO events(tenant,feedback_id,payload) VALUES(?,?,?)", (actor.tenant_id, identity, canonical(payload)))
+
+    @app.get("/v1/feedback/session")
+    def session(actor: Principal = Depends(principal)):
+        return {"version": VERSION, "tenant_id": actor.tenant_id, "actor_id": actor.actor_id,
+                "role": actor.role, "configuration_digest": config_digest}
 
     @app.get("/v1/feedback/diagnostics/attempts")
     def attempt_diagnostics(actor: Principal = Depends(operator)):

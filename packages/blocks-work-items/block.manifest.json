@@ -1,0 +1,16 @@
+{
+  "schema": "gradia.block.manifest.v1",
+  "id": "work-items",
+  "version": "0.1.0",
+  "status": "reference-candidate",
+  "license": "Apache-2.0",
+  "category": "workflow-state",
+  "runtime": "Python3.11+ / FastAPI / SQLite",
+  "capabilities": ["configurable-states-and-transitions", "revision-safe-mutations", "actor-scoped-idempotency", "source-binding-reconciliation", "tenant-and-role-scoped-access", "authenticated-session-identity", "conditional-principal-and-config-fences", "durable-atomic-mutation-evidence", "bounded-volatile-attempt-telemetry", "feedback-proposal-handoff"],
+  "api": "/v1/work-items",
+  "telemetry": {"mode": "durable SQLite mutation events and bounded metadata HTTP attempts; handoff receipts", "rawPayloads": false, "cost": "unknown", "externalCollector": false},
+  "handoffProfile": {"source": "Feedback0.2.1 operator", "target": "WorkItems0.1.0 bridge", "sameTenantRequired": true, "initialStatusRequired": "proposed", "automaticRetries": false, "mediaCopy": false},
+  "limits": {"requestBytes": 49152, "responseBytesForHandoff": 65536, "states": 12, "transitions": 40, "httpAttemptCapacityPerTenant": 100},
+  "admission": "not_admitted",
+  "boundary": "Independent local reference. No SSO, HA, arbitrary workflow execution, notification service, complete audit retention, database quotas or enterprise admission. A work-item proposal is not completed business work."
+}

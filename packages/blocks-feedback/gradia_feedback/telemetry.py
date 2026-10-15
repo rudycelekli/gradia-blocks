@@ -1,5 +1,7 @@
 """Bounded volatile HTTP evidence. No request bodies, URLs or credentials."""
 import threading
+import hashlib
+import json
 import time
 import uuid
 from collections import deque
@@ -45,6 +47,13 @@ class AttemptTelemetry:
             nonlocal response_status
             if message["type"] == "http.response.start":
                 response_status = message["status"]
+                headers = list(message.get("headers", []))
+                headers.extend([(b"x-gradia-correlation-id", correlation_id.encode()), (b"x-gradia-cost-status", b"unknown")])
+                actor = scope.get("gradia.principal")
+                if actor is not None:
+                    payload = json.dumps(actor.model_dump(mode="json"), sort_keys=True, separators=(",", ":"), ensure_ascii=True)
+                    headers.append((b"x-gradia-principal-sha256", hashlib.sha256(payload.encode()).hexdigest().encode()))
+                message = {**message, "headers": headers}
             await send(message)
         try:
             await self.app(scope, receive, observe_send)

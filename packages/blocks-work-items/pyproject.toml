@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=75,<81"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gradia-blocks-work-items"
+version = "0.1.0"
+description = "Tenant-scoped configurable work-item reference and verified Feedback proposal handoff"
+requires-python = ">=3.11"
+license = "Apache-2.0"
+dependencies = ["fastapi>=0.115,<0.142", "pydantic>=2.8,<3", "httpx>=0.27,<0.29", "uvicorn>=0.30,<0.53"]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10"]
+
+[tool.setuptools.packages.find]
+include = ["gradia_work_items*"]

@@ -1,6 +1,6 @@
 {
-  "scope": "Original reference packages plus screened, attributed upstream skill bundles and Archify diagrams; quarantined raw skill bundles excluded; original dynamic local CLI provider bridge (upstream runtime excluded); original offline composition planner and fictional example graphs",
-  "validation": "39 static intake/export regressions passed; filtered distribution rescreen matched20upstream+4Gradia references; behavioral qualification not established;27 bridge tests passed locally with pinned Ruflo3.56.9; CI actual-runtime test may skip;37 composition lock/CLI/observation/adversarial tests passed locally",
+  "scope": "Original reference packages plus screened, attributed upstream skill bundles and Archify diagrams; quarantined raw skill bundles excluded; original dynamic local CLI provider bridge (upstream runtime excluded); original offline composition planner and fictional example graphs; Work Items original state API/handoff and Feedback0.2.1 identity patch",
+  "validation": "39 static intake/export regressions passed; filtered distribution rescreen matched20upstream+4Gradia references; behavioral qualification not established;27 bridge tests passed locally with pinned Ruflo3.56.9; CI actual-runtime test may skip;37 composition lock/CLI/observation/adversarial tests passed locally;76 combined WorkItems/Feedback tests plus real TCP happy-path and post-commit acknowledgment-loss restart replays passed",
   "files": [
     {
       "path": ".build/client/client.js",
@@ -24,8 +24,8 @@
     },
     {
       "path": ".github/workflows/ci.yml",
-      "sha256": "5ee871b827341ecdc7be8b74232ea3c7fd192b6fcc7289ddb1998fc5f4dc23ef",
-      "bytes": 2742
+      "sha256": "a017cf7960343088d7e65e94bf0dfbf12f25fe415b9d9583bab1b081edb56902",
+      "bytes": 3315
     },
     {
       "path": ".gitignore",
@@ -49,8 +49,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "5ceabe1848ab3b3b085665089040b0a5e6d055ac6b7675f18c25f3df3337bbd6",
-      "bytes": 6704
+      "sha256": "c62b21c7ffdbbaed66abd711992268aa09732453bf1a75de729cd924e93f5a28",
+      "bytes": 6980
     },
     {
       "path": "SECURITY.md",
@@ -111,6 +111,11 @@
       "path": "docs/decisions/0025-composition-locks-and-impact.md",
       "sha256": "ce6120242de1d317f27db5f0859b848f536841759b454f329666ea3598afb0f6",
       "bytes": 3287
+    },
+    {
+      "path": "docs/decisions/0026-work-items-and-authenticated-handoff.md",
+      "sha256": "3aa7da1fef11520f2e7ee5a764795cc27fd8954f5899e60f162205d51681b84b",
+      "bytes": 4245
     },
     {
       "path": "package-lock.json",
@@ -314,13 +319,13 @@
     },
     {
       "path": "packages/blocks-feedback/README.md",
-      "sha256": "d7ea11eda028509ea4f6798e18170b4539a54cb638887715ad59cf2d128b3e9e",
-      "bytes": 16421
+      "sha256": "32b1ef3568981a56573a90612071cb899b9d2c3c12b34d94d3adea95e2686b69",
+      "bytes": 17468
     },
     {
       "path": "packages/blocks-feedback/block.manifest.json",
-      "sha256": "92c31beac8922f4ed871c10d51cc87e690174fdf5a9e664f41ef79e2dea4ee43",
-      "bytes": 4303
+      "sha256": "388d5694fe1027145ecd1869a177ec07f68711edb7a3aea6f46cdd5a74ff582d",
+      "bytes": 4430
     },
     {
       "path": "packages/blocks-feedback/examples/media-enabled.json",
@@ -339,8 +344,8 @@
     },
     {
       "path": "packages/blocks-feedback/gradia_feedback/api.py",
-      "sha256": "c06dda02c5718e0839cbc5d58e51b00c1572c63719db7006d49865946a40916f",
-      "bytes": 17440
+      "sha256": "ff6381ead37e792858a5b13e02f2ebd5ab2432c75fd8d9be336a139113a1529d",
+      "bytes": 18811
     },
     {
       "path": "packages/blocks-feedback/gradia_feedback/contracts.py",
@@ -359,12 +364,12 @@
     },
     {
       "path": "packages/blocks-feedback/gradia_feedback/telemetry.py",
-      "sha256": "3b5ebe0d7bd1e3f897907ccaefcf917dc31573bf340f5d96cdfe67219904ee5f",
-      "bytes": 3469
+      "sha256": "3e0c774926654e462281de4dc7ee4b924d4cec1a40f76caea1152f2f7546782c",
+      "bytes": 4084
     },
     {
       "path": "packages/blocks-feedback/pyproject.toml",
-      "sha256": "f101cbe22e8facb489cdf9788add2088cb5c75a0f3dbbed584f1a94b719fee1d",
+      "sha256": "07973f8305926a4fc7df08d2321aeb7789a6aeff2747a6a0fa481423f21c194e",
       "bytes": 491
     },
     {
@@ -381,6 +386,11 @@
       "path": "packages/blocks-feedback/tests/test_reference.py",
       "sha256": "4428fee198f0b52ed323c271af6eafba989980e4d07daf5d9ab437d6a0b33303",
       "bytes": 13248
+    },
+    {
+      "path": "packages/blocks-feedback/tests/test_session.py",
+      "sha256": "d7c6294bad115eb3cd435f8d3808b686e444812f919dbfcac0ce8aa6326809b0",
+      "bytes": 1441
     },
     {
       "path": "packages/blocks-feedback/typescript/client.test.cjs",
@@ -926,6 +936,126 @@
       "path": "packages/blocks-skills/upstream/ruvnet__ruflo/test-gaps/SKILL.md",
       "sha256": "af23a403e73b7267203727e1810a1e821e54efbca20091d8a540ea08be73c15a",
       "bytes": 927
+    },
+    {
+      "path": "packages/blocks-work-items/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358
+    },
+    {
+      "path": "packages/blocks-work-items/README.md",
+      "sha256": "57e8e3b3b22f742a6b1dce82ea2fec9b13e544c4892e7c7e30e945b964850360",
+      "bytes": 11497
+    },
+    {
+      "path": "packages/blocks-work-items/block.manifest.json",
+      "sha256": "b7c82db217f73f5dbbf5b7a68040b310484bbb818b309ddd8e424b81fd4b702a",
+      "bytes": 1403
+    },
+    {
+      "path": "packages/blocks-work-items/examples/build_recipe.py",
+      "sha256": "08cc75d374cb2f16fffc80998b8bffc8e771c1421d9a31a6c98016f5ae022204",
+      "bytes": 4049
+    },
+    {
+      "path": "packages/blocks-work-items/examples/feedback-openapi.json",
+      "sha256": "b833f9a5ea8e6d1c98efc79b84686b2e4a3d7ca16c4882ab773ba3b0cb4599b5",
+      "bytes": 39651
+    },
+    {
+      "path": "packages/blocks-work-items/examples/feedback-to-work-item.graph.json",
+      "sha256": "8b5ecefcaa0eb82435f4d144075358167fcf359029ee293980520d789bcaa8a7",
+      "bytes": 3071
+    },
+    {
+      "path": "packages/blocks-work-items/examples/feedback-to-work-item.lock.json",
+      "sha256": "11d94db53269845166fff8834ce9cfe65fb3c346b32a67a86c4886f722640097",
+      "bytes": 3535
+    },
+    {
+      "path": "packages/blocks-work-items/examples/feedback-to-work-item.mmd",
+      "sha256": "68634892e15e219e3478b9c6128fd6a492fb82b455efb7636fde9b3180fc65ca",
+      "bytes": 217
+    },
+    {
+      "path": "packages/blocks-work-items/examples/recipe-source-pins.json",
+      "sha256": "bdb9bf6dcd1bb0902f37bfb87e9ebf43d4ea66bf153fa71d6c059be502d23627",
+      "bytes": 4228
+    },
+    {
+      "path": "packages/blocks-work-items/examples/tcp_replay.py",
+      "sha256": "2b6c50d2861187816b082569d805266270983b19a243d3a94a07c77188cff063",
+      "bytes": 7441
+    },
+    {
+      "path": "packages/blocks-work-items/examples/work-items-openapi.json",
+      "sha256": "d0f96ca10fdd1e759f539e4a084468ab68dd1e7c34c370ded47b13be9f2a32be",
+      "bytes": 32475
+    },
+    {
+      "path": "packages/blocks-work-items/gradia_work_items/__init__.py",
+      "sha256": "74930db668990e83f0cefc73bee18ba4b4461a7accd4c04a02c68187273af7af",
+      "bytes": 141
+    },
+    {
+      "path": "packages/blocks-work-items/gradia_work_items/api.py",
+      "sha256": "8df49bf697b999d11e2d4394ec340513feeae16d0b320ae228281554bf0cd19f",
+      "bytes": 17294
+    },
+    {
+      "path": "packages/blocks-work-items/gradia_work_items/contracts.py",
+      "sha256": "037ccc3e02fc48e18e6f184eccf94d3fceefdcd0e92102612cb520e50282d2ad",
+      "bytes": 3220
+    },
+    {
+      "path": "packages/blocks-work-items/gradia_work_items/handoff.py",
+      "sha256": "a4b27a099a30895308d77390742b0d1f90b2782da29cb0c26fd71975c0da110c",
+      "bytes": 11596
+    },
+    {
+      "path": "packages/blocks-work-items/gradia_work_items/server.py",
+      "sha256": "8c18d0abda3c25b4b264057cc7c097223b26fbcc6687164bdfb5ed72e35dfa4e",
+      "bytes": 1790
+    },
+    {
+      "path": "packages/blocks-work-items/gradia_work_items/store.py",
+      "sha256": "1b9719284ba3dddb4e7f7e925437dc5bbdc66b0e0726f9d16b51e97a48a82fc9",
+      "bytes": 4297
+    },
+    {
+      "path": "packages/blocks-work-items/pyproject.toml",
+      "sha256": "83d90e9d886d0e4e91e514551954cf63211a617bc2503e8d11288bd5502c1eca",
+      "bytes": 533
+    },
+    {
+      "path": "packages/blocks-work-items/requirements-tested.txt",
+      "sha256": "3f4783038c7cc5973cb8c9df90d682267b0749fe43f30d5e9396e955c5ba09a6",
+      "bytes": 222
+    },
+    {
+      "path": "packages/blocks-work-items/tests/test_adversarial.py",
+      "sha256": "020b8fdcfa09e531657a21fececf0cbacd41011a300003f1ae9d46f0d51c16d5",
+      "bytes": 13408
+    },
+    {
+      "path": "packages/blocks-work-items/tests/test_handoff.py",
+      "sha256": "9364c13d9f9718af1bd3f6c4e34e3f1c9e74037756ab252ea6fbf8354cb2708a",
+      "bytes": 8580
+    },
+    {
+      "path": "packages/blocks-work-items/tests/test_handoff_adversarial.py",
+      "sha256": "0ebc5594926b38b14d7781a0a09901d08bb83ed1893f3f6d851180b553d897ed",
+      "bytes": 7065
+    },
+    {
+      "path": "packages/blocks-work-items/tests/test_host_configuration.py",
+      "sha256": "17f6e9fbee689153f57bb31dd3c0fc4c9e0d75d09e18e2eaad31a327fd942ff8",
+      "bytes": 3528
+    },
+    {
+      "path": "packages/blocks-work-items/tests/test_recipe.py",
+      "sha256": "7a5ccee58059bef88d0afbec52d0d91567ec8ab7d1c2193810f756341d82428e",
+      "bytes": 1919
     }
   ]
 }

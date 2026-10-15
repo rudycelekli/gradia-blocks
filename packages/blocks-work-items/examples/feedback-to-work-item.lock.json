@@ -1,0 +1,102 @@
+{
+  "schema": "gradia.composition.lock.v1",
+  "scope": "demo",
+  "graphSha256": "b25541e85e70dc3eca8289c4829f0e7d9124a91cc386e2551010ac8eb5eea7b6",
+  "roots": [
+    "feedback-to-work-item"
+  ],
+  "nodes": [
+    {
+      "id": "feedback",
+      "kind": "block",
+      "edition": "0.2.1",
+      "artifactSha256": "6aabfd4cda016aeb2eb1dc011ec7605ebf245cc4a0b09913b2e5f3cb449300d4",
+      "contractSha256": "e4145b0c85dcc2b28583736692017f46add1da24d13f39b8efa7308bbece7cd7",
+      "scope": "public",
+      "requires": [],
+      "inputs": {},
+      "outputs": {
+        "feedback": "d3f02c3a7852911dbdc81df3024642ee671a8fd006e99f29d38a6f179dbed7b8"
+      }
+    },
+    {
+      "id": "feedback-proposal-handoff",
+      "kind": "bridge",
+      "edition": "0.1.0",
+      "artifactSha256": "47c80e72a9b030cf191180336f0b5d7d60a1fe7c5e79be276f9f4e568f92c167",
+      "contractSha256": "9dac2d1a591f1911ef4731e86a6f364059860137202f3153837246d1f13f7830",
+      "scope": "public",
+      "requires": [
+        {
+          "id": "feedback",
+          "edition": "0.2.1",
+          "artifactSha256": "6aabfd4cda016aeb2eb1dc011ec7605ebf245cc4a0b09913b2e5f3cb449300d4",
+          "contractSha256": "e4145b0c85dcc2b28583736692017f46add1da24d13f39b8efa7308bbece7cd7"
+        },
+        {
+          "id": "work-items",
+          "edition": "0.1.0",
+          "artifactSha256": "47c80e72a9b030cf191180336f0b5d7d60a1fe7c5e79be276f9f4e568f92c167",
+          "contractSha256": "699651da315a7457c19a6b7537fb82572e3bfa2b069c5804729f18e0d0fb477b"
+        }
+      ],
+      "inputs": {
+        "feedback": "d3f02c3a7852911dbdc81df3024642ee671a8fd006e99f29d38a6f179dbed7b8"
+      },
+      "outputs": {
+        "item": "8f8f6b4f629eb8d56fc8c259278c0672f2b651ed219505a12d94410623fc267c"
+      }
+    },
+    {
+      "id": "feedback-to-work-item",
+      "kind": "workflow",
+      "edition": "0.1.0",
+      "artifactSha256": "2b6c50d2861187816b082569d805266270983b19a243d3a94a07c77188cff063",
+      "contractSha256": "94f7db42078d47b796abf7da0f24e0d2870467c9b449b98ddb446b678c898687",
+      "scope": "demo",
+      "requires": [
+        {
+          "id": "feedback-proposal-handoff",
+          "edition": "0.1.0",
+          "artifactSha256": "47c80e72a9b030cf191180336f0b5d7d60a1fe7c5e79be276f9f4e568f92c167",
+          "contractSha256": "9dac2d1a591f1911ef4731e86a6f364059860137202f3153837246d1f13f7830"
+        }
+      ],
+      "inputs": {
+        "item": "8f8f6b4f629eb8d56fc8c259278c0672f2b651ed219505a12d94410623fc267c"
+      },
+      "outputs": {}
+    },
+    {
+      "id": "work-items",
+      "kind": "block",
+      "edition": "0.1.0",
+      "artifactSha256": "47c80e72a9b030cf191180336f0b5d7d60a1fe7c5e79be276f9f4e568f92c167",
+      "contractSha256": "699651da315a7457c19a6b7537fb82572e3bfa2b069c5804729f18e0d0fb477b",
+      "scope": "public",
+      "requires": [],
+      "inputs": {},
+      "outputs": {}
+    }
+  ],
+  "connections": [
+    {
+      "fromNode": "feedback",
+      "fromPort": "feedback",
+      "toNode": "feedback-proposal-handoff",
+      "toPort": "feedback"
+    },
+    {
+      "fromNode": "feedback-proposal-handoff",
+      "fromPort": "item",
+      "toNode": "feedback-to-work-item",
+      "toPort": "item"
+    }
+  ],
+  "unresolvedInputs": [],
+  "compatibility": "UNKNOWN",
+  "promotionAuthorized": false,
+  "artifactVerification": "DECLARED_HASHES_ONLY",
+  "boundary": "Offline structural plan; no execution, behavioral evaluation, runtime attestation or promotion",
+  "lockSha256": "7729c43e0220589a38bbdb179a878c674487d648ae98652f529fc5af6ed89c7f"
+}
