@@ -87,3 +87,8 @@ Static screening is not behavioral qualification or production admission.
 PYTHONPATH=packages/blocks-skills python -m unittest discover -s packages/blocks-skills/tests -v
 PYTHONPATH=packages/blocks-skills python -m gradia_skills.verify --root packages/blocks-skills
 ```
+
+
+## Extensible provider bridge
+
+[Gradia Ruflo bridge](packages/blocks-ruflo/README.md) wraps an operator-supplied pinned CLI. Version inspection, structured swarm status and idempotent coordination initialization have actual-local checks. Provider/edition/operation registration extends the same gateway; future editions/providers are fixture-tested only. No upstream runtime is bundled and no model-backed agent execution or enterprise admission is claimed. CI skips the actual-runtime check when the pinned installation is absent.

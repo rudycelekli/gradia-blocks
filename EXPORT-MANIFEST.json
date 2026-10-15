@@ -1,11 +1,31 @@
 {
-  "scope": "Original reference packages plus screened, attributed upstream skill bundles and Archify diagrams; quarantined raw skill bundles excluded",
-  "validation": "39 static intake/export regressions passed; filtered distribution rescreen matched20upstream+4Gradia references; behavioral qualification not established",
+  "scope": "Original reference packages plus screened, attributed upstream skill bundles and Archify diagrams; quarantined raw skill bundles excluded; original dynamic local CLI provider bridge (upstream runtime excluded)",
+  "validation": "39 static intake/export regressions passed; filtered distribution rescreen matched20upstream+4Gradia references; behavioral qualification not established;27 bridge tests passed locally with pinned Ruflo3.56.9; CI actual-runtime test may skip",
   "files": [
     {
+      "path": ".build/client/client.js",
+      "sha256": "86f0d2471e55fe4c7d47fe895d1dc70ba78980fed7056ebd17c0d3259e857da7",
+      "bytes": 5998
+    },
+    {
+      "path": ".build/client/feedback-widget.js",
+      "sha256": "e1f0dfe44a4bf9d80cf94b4949f5723e8c504034fd165421cedfba703ab20394",
+      "bytes": 23370
+    },
+    {
+      "path": ".build/client/host-integration.js",
+      "sha256": "ca01064e7ebfc90be62ed60314f714f09b1f505362b30decb3374d5701d19fb8",
+      "bytes": 2275
+    },
+    {
+      "path": ".build/client/media.js",
+      "sha256": "b83285299dbc65beed5e3e45490710be0f286769c6e67814fb16f31820d3a57a",
+      "bytes": 3924
+    },
+    {
       "path": ".github/workflows/ci.yml",
-      "sha256": "12f1d84b06035a9df4b1a5997cd25b1030f58fefcda87f65d922d8394d6ae92d",
-      "bytes": 2292
+      "sha256": "df3c7076542e4e5e769323f94e06e673ed480b11d0e45a3b4e98014a5b6d8bd1",
+      "bytes": 2552
     },
     {
       "path": ".gitignore",
@@ -29,8 +49,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "803388e66edf6c0adfdd981d753d1b6520c20867cb7d3b822e98b32bd43757aa",
-      "bytes": 5923
+      "sha256": "468ee96aa97efdcb939334452cdc7355776889717c83ad3ab90c93fb0f75c265",
+      "bytes": 6457
     },
     {
       "path": "SECURITY.md",
@@ -311,6 +331,51 @@
       "path": "packages/blocks-feedback/typescript/media.ts",
       "sha256": "ee02a90c21d7217281f01c5332c5e80c4c8ff44f4c49e1d00524cadbee51fd13",
       "bytes": 3889
+    },
+    {
+      "path": "packages/blocks-ruflo/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358
+    },
+    {
+      "path": "packages/blocks-ruflo/README.md",
+      "sha256": "5aa3b7e7be29023c8e971747df576f9092241987a5faa6b947e7c649f11522d4",
+      "bytes": 9676
+    },
+    {
+      "path": "packages/blocks-ruflo/block.manifest.json",
+      "sha256": "dab326ffcd440339ee240b1bd2cf97c7a3f04becc469597d12256d09509524b2",
+      "bytes": 1189
+    },
+    {
+      "path": "packages/blocks-ruflo/gradia_bridges/__init__.py",
+      "sha256": "7c69506d815ba160c356ad8007e0a5c8b263aa7338777c1a90dae897a4d98fec",
+      "bytes": 347
+    },
+    {
+      "path": "packages/blocks-ruflo/gradia_bridges/adapter.py",
+      "sha256": "3d50243f382411e6cfd3553c6ea9ab233cd61a440f54147e943bebcc9a39054f",
+      "bytes": 19564
+    },
+    {
+      "path": "packages/blocks-ruflo/gradia_bridges/api.py",
+      "sha256": "fec3aa20c19886e7c97872c91b079e57c158cc98af3aba1a69ccc851170cc162",
+      "bytes": 4930
+    },
+    {
+      "path": "packages/blocks-ruflo/provider.manifest.json",
+      "sha256": "dd695e47da2e0379ec9de2cc04f32490ea6eb7973070a34310254b77485af79c",
+      "bytes": 1182
+    },
+    {
+      "path": "packages/blocks-ruflo/tests/test_adversarial.py",
+      "sha256": "276dc5cebf905d8e5a07a8d94685234bc23b7d8d1956ef51385044be3ffb0e57",
+      "bytes": 8938
+    },
+    {
+      "path": "packages/blocks-ruflo/tests/test_bridge.py",
+      "sha256": "5ceb105309094579d5ebe4ba41404f367115040d8d2102dcf19f8890f394961f",
+      "bytes": 11833
     },
     {
       "path": "packages/blocks-skills/LICENSE",

@@ -1,0 +1,38 @@
+{
+  "schema": "gradia.block.manifest.v1",
+  "id": "ruflo-bridge",
+  "version": "0.1.0",
+  "status": "reference-candidate",
+  "category": "agent-orchestration",
+  "implementation": "Original Apache-2.0 bridge around separately installed MIT Ruflo CLI",
+  "providerContract": "provider.manifest.json",
+  "capabilities": [
+    "version-inspection",
+    "swarm-status-invocation",
+    "bounded-swarm-initialization",
+    "selected-structured-swarm-status"
+  ],
+  "runtime": "Python3.12 + host-pinned Node/Ruflo3.56.9; optional FastAPI",
+  "telemetry": {
+    "mode": "metadata-only receipts + HTTP response headers",
+    "rawOutput": false,
+    "cost": "unknown"
+  },
+  "admission": "not_admitted",
+  "limitations": [
+    "not an OS sandbox",
+    "not all Ruflo capabilities exposed",
+    "no model-backed execution",
+    "transitive dependency attestation incomplete",
+    "single-instance concurrency only"
+  ],
+  "extensionInterface": {
+    "registryKey": [
+      "providerId",
+      "edition"
+    ],
+    "hostRegistration": "ProviderEdition Protocol / LocalCliEdition + typed OperationSpec",
+    "gateway": "/v1/providers/{provider}/catalog|execute",
+    "automaticActivation": false
+  }
+}
