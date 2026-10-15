@@ -1,0 +1,107 @@
+{
+  "schema_version": "1",
+  "id": "gradia.feedback",
+  "version": "0.1.0",
+  "status": "local_reference_candidate",
+  "summary": "Tenant-scoped feedback intake, optional bounded audio, triage and committed mutation evidence",
+  "license": "Apache-2.0",
+  "implementation": {
+    "language": "Python",
+    "runtime": ">=3.11",
+    "framework": "FastAPI",
+    "storage": "SQLite schema 1"
+  },
+  "clients": [
+    {
+      "language": "TypeScript",
+      "path": "typescript/client.ts",
+      "support": "typed_http_client"
+    }
+  ],
+  "ports": [
+    {
+      "name": "feedback.submit.v1",
+      "direction": "provided",
+      "transport": "HTTP",
+      "method": "POST",
+      "path": "/v1/feedback",
+      "request_schema": "Submission",
+      "response_schema": "Acknowledgment",
+      "authority": "configured tenant bearer principal",
+      "idempotency": "tenant+actor+key, canonical payload digest, original receipt replay",
+      "effect": "atomic feedback+audit+receipt SQLite transaction"
+    },
+    {
+      "name": "feedback.triage.v1",
+      "direction": "provided",
+      "transport": "HTTP",
+      "method": "PATCH",
+      "path": "/v1/feedback/{identity}",
+      "request_schema": "Triage",
+      "authority": "tenant operator",
+      "concurrency": "expected_revision required",
+      "effect": "atomic feedback revision+audit transaction"
+    },
+    {
+      "name": "feedback.events.v1",
+      "direction": "provided",
+      "transport": "HTTP",
+      "method": "GET",
+      "path": "/v1/feedback/{identity}/events",
+      "authority": "tenant operator",
+      "effect": "read only; bounded sequence pagination"
+    },
+    {
+      "name": "feedback.storage.sqlite.v1",
+      "direction": "required",
+      "transport": "local file",
+      "authority": "host filesystem owner",
+      "effect": "persistent customer feedback and optional audio bytes"
+    }
+  ],
+  "configuration_namespaces": [
+    "design",
+    "content",
+    "features",
+    "config"
+  ],
+  "discovery": {
+    "openapi": "/openapi.json",
+    "interactive_docs": "/docs",
+    "configuration": "/v1/feedback/config",
+    "http_attempt_diagnostics": "/v1/feedback/diagnostics/attempts"
+  },
+  "verification": {
+    "command": "PYTHONPATH=packages/blocks-feedback python -m pytest packages/blocks-feedback/tests -q",
+    "negative_cases": [
+      "cross_tenant",
+      "role_bypass",
+      "idempotency_conflict",
+      "revision_conflict",
+      "disabled_feature",
+      "invalid_audio",
+      "oversized_payload",
+      "audit_failure_rollback"
+    ]
+  },
+  "limitations": [
+    "Not admitted, published, production deployed or universally compatible",
+    "No anonymous intake, transcription, screenshot annotation, external delivery or hosted telemetry",
+    "Audio signatures are not media decoding or malware verification",
+    "No private-variant resolver or compatibility graph runtime yet",
+    "No distributed runtime or SQLite replication qualification"
+  ],
+  "rights": {
+    "origin": "new reference implementation; no customer source copied",
+    "upstream_dependencies": "dependencies retain their own licenses",
+    "scope": "this package only; repository-wide license unchanged"
+  },
+  "telemetry": {
+    "mandatory": true,
+    "durable_coverage": "committed_mutations_only",
+    "volatile_coverage": "http_attempts",
+    "per_tenant_attempt_capacity": 100,
+    "export": "none",
+    "privacy": "metadata_only; no body/audio/token/raw URL"
+  }
+}

@@ -1,0 +1,6 @@
+Gradia Feedback reference block
+Copyright 2026 Gradia contributors
+
+This package is newly authored reference code. Its Apache-2.0 license applies
+only to files within packages/blocks-feedback, and does not change the license
+of the containing Gradia repository or any third-party dependency.

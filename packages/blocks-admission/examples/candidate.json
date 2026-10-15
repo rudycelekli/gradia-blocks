@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "candidate_id": "example.feedback/0.1",
+  "profiles": ["service", "ui"],
+  "provenance": {"source": "https://example.invalid/source", "revision": "replace-with-exact-revision", "license_expression": "Apache-2.0"},
+  "budgets": {"max_cost_usd": 2, "max_duration_seconds": 120},
+  "privacy": {"tenant_boundary": "isolated", "raw_content_default": "off", "telemetry_export": "off"}
+}

@@ -1,0 +1,16 @@
+{
+  "name": "gradia-blocks-reference",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Local Gradia Blocks reference artifacts and transport checks",
+  "license": "Apache-2.0",
+  "scripts": {
+    "test:client": "tsc --strict --target ES2022 --module commonjs --lib ES2022,DOM --outDir .build/client packages/blocks-feedback/typescript/client.ts && GRADIA_FEEDBACK_COMPILED_CLIENT=../../../.build/client/client.js node --test packages/blocks-feedback/typescript/client.test.cjs",
+    "check:widget": "tsc --noEmit --strict --target ES2022 --module ESNext --moduleResolution bundler --jsx react-jsx --lib ES2022,DOM packages/blocks-feedback/typescript/feedback-widget.tsx"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3",
+    "react": "19.2.8",
+    "@types/react": "19.2.18"
+  }
+}

@@ -1,0 +1,232 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Feedback block: local reference architecture",
+    "output": "apps/console/public/blocks/diagrams/feedback-architecture.html",
+    "locale": "en",
+    "quality_profile": "showcase",
+    "repository": {
+      "url": "https://github.com/rudycelekli/gradia.git",
+      "revision": "d7a9b2945f860bedb106f31230343ae7b3c37bea",
+      "link_mode": "local-only"
+    }
+  },
+  "components": [
+    {
+      "id": "client",
+      "type": "external",
+      "label": "Client or agent",
+      "sublabel": "POST /v1/feedback",
+      "pos": [
+        40,
+        60
+      ],
+      "size": [
+        160,
+        64
+      ],
+      "sources": [
+        {
+          "path": "packages/blocks-feedback/gradia_feedback/api.py",
+          "line": 134,
+          "end_line": 136
+        },
+        {
+          "path": "packages/blocks-feedback/gradia_feedback/telemetry.py",
+          "line": 34,
+          "end_line": 70
+        }
+      ]
+    },
+    {
+      "id": "auth",
+      "type": "security",
+      "label": "Tenant authority",
+      "sublabel": "Configured bearer key",
+      "pos": [
+        300,
+        60
+      ],
+      "size": [
+        160,
+        64
+      ],
+      "sources": [
+        {
+          "path": "packages/blocks-feedback/gradia_feedback/api.py",
+          "line": 98,
+          "end_line": 114
+        }
+      ]
+    },
+    {
+      "id": "bounds",
+      "type": "backend",
+      "label": "Input + feature gates",
+      "sublabel": "Text / optional audio",
+      "pos": [
+        560,
+        60
+      ],
+      "size": [
+        170,
+        64
+      ],
+      "sources": [
+        {
+          "path": "packages/blocks-feedback/gradia_feedback/api.py",
+          "line": 135,
+          "end_line": 152
+        }
+      ]
+    },
+    {
+      "id": "idempotency",
+      "type": "backend",
+      "label": "Idempotency scope",
+      "sublabel": "Tenant + actor + key",
+      "pos": [
+        560,
+        260
+      ],
+      "size": [
+        170,
+        64
+      ],
+      "sources": [
+        {
+          "path": "packages/blocks-feedback/gradia_feedback/api.py",
+          "line": 153,
+          "end_line": 168
+        }
+      ]
+    },
+    {
+      "id": "sqlite",
+      "type": "database",
+      "label": "SQLite transaction",
+      "sublabel": "Feedback / events / receipts",
+      "pos": [
+        300,
+        260
+      ],
+      "size": [
+        170,
+        64
+      ],
+      "sources": [
+        {
+          "path": "packages/blocks-feedback/gradia_feedback/store.py",
+          "line": 6,
+          "end_line": 23
+        }
+      ]
+    },
+    {
+      "id": "ack",
+      "type": "backend",
+      "label": "Committed receipt",
+      "sublabel": "201 new / 200 replay",
+      "pos": [
+        40,
+        260
+      ],
+      "size": [
+        170,
+        64
+      ],
+      "sources": [
+        {
+          "path": "packages/blocks-feedback/gradia_feedback/api.py",
+          "line": 155,
+          "end_line": 170
+        }
+      ]
+    },
+    {
+      "id": "operator",
+      "type": "external",
+      "label": "Tenant operator",
+      "sublabel": "Read / triage / audio",
+      "pos": [
+        300,
+        450
+      ],
+      "size": [
+        170,
+        64
+      ],
+      "sources": [
+        {
+          "path": "packages/blocks-feedback/gradia_feedback/api.py",
+          "line": 172,
+          "end_line": 221
+        },
+        {
+          "path": "packages/blocks-feedback/gradia_feedback/api.py",
+          "line": 126,
+          "end_line": 128
+        }
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "client-auth",
+      "from": "client",
+      "to": "auth",
+      "label": "Bearer"
+    },
+    {
+      "id": "auth-bounds",
+      "from": "auth",
+      "to": "bounds",
+      "label": "Scoped"
+    },
+    {
+      "id": "bounds-idempotency",
+      "from": "bounds",
+      "to": "idempotency",
+      "label": "Validated"
+    },
+    {
+      "id": "idempotency-sqlite",
+      "from": "idempotency",
+      "to": "sqlite",
+      "label": "Atomic write"
+    },
+    {
+      "id": "sqlite-ack",
+      "from": "sqlite",
+      "to": "ack",
+      "label": "Commit first"
+    },
+    {
+      "id": "operator-sqlite",
+      "from": "operator",
+      "to": "sqlite",
+      "label": "Tenant read"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Implemented local reference",
+      "items": [
+        "Authenticated API; tenant-scoped operator reads and triage",
+        "Audio is optional and bounded; no anonymous capture"
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "Telemetry: two evidence tiers",
+      "items": [
+        "Durable metadata events commit with each mutation",
+        "HTTP attempts and refusals: volatile 100-event tenant ring",
+        "Operator diagnostics show eviction and collection gaps",
+        "Costs remain unknown; no bodies, URLs or secrets in attempt events"
+      ]
+    }
+  ]
+}

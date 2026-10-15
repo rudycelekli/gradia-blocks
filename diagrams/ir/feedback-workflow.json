@@ -1,0 +1,129 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "Feedback composition: working core and planned extensions",
+    "output": "apps/console/public/blocks/diagrams/feedback-workflow.html",
+    "locale": "en",
+    "quality_profile": "showcase"
+  },
+  "lanes": [
+    {
+      "id": "core",
+      "label": "Working reference block"
+    },
+    {
+      "id": "future",
+      "label": "Planned composition \u2014 not implemented"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "capture",
+      "lane": "core",
+      "col": 0,
+      "type": "frontend",
+      "label": "Capture feedback",
+      "sublabel": "Text + optional audio"
+    },
+    {
+      "id": "persist",
+      "lane": "core",
+      "col": 1,
+      "type": "database",
+      "label": "Persist + receipt",
+      "sublabel": "Commit before success"
+    },
+    {
+      "id": "triage",
+      "lane": "core",
+      "col": 2,
+      "type": "backend",
+      "label": "Operator triage",
+      "sublabel": "Expected revision"
+    },
+    {
+      "id": "approval",
+      "lane": "future",
+      "col": 3,
+      "type": "security",
+      "label": "Planned approval",
+      "sublabel": "Human release decision"
+    },
+    {
+      "id": "notify",
+      "lane": "future",
+      "col": 4,
+      "type": "messagebus",
+      "label": "Planned notification",
+      "sublabel": "Provider acknowledgment"
+    },
+    {
+      "id": "evidence",
+      "lane": "future",
+      "col": 5,
+      "type": "database",
+      "label": "Planned evidence",
+      "sublabel": "Linked workflow result"
+    }
+  ],
+  "mainPath": [
+    "capture",
+    "persist",
+    "triage",
+    "approval",
+    "notify",
+    "evidence"
+  ],
+  "edges": [
+    {
+      "id": "capture-persist",
+      "from": "capture",
+      "to": "persist",
+      "variant": "default"
+    },
+    {
+      "id": "persist-triage",
+      "from": "persist",
+      "to": "triage",
+      "variant": "default"
+    },
+    {
+      "id": "triage-approval",
+      "from": "triage",
+      "to": "approval",
+      "variant": "dashed"
+    },
+    {
+      "id": "approval-notify",
+      "from": "approval",
+      "to": "notify",
+      "variant": "dashed"
+    },
+    {
+      "id": "notify-evidence",
+      "from": "notify",
+      "to": "evidence",
+      "variant": "dashed"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Working now",
+      "items": [
+        "Local feedback API and optional audio attachment",
+        "Tenant operator reads and revision-checked triage",
+        "Durable mutation events plus volatile HTTP attempt telemetry"
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "Future blocks \u2014 illustrative chain",
+      "items": [
+        "Approval, notification and linked workflow evidence are planned",
+        "No automatic actions or live provider connections here"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+node_modules/
+.build/
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.sqlite
+*.sqlite-*
+credentials.json
+.env

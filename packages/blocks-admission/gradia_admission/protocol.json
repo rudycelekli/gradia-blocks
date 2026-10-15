@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "protocol_id": "gradia-candidate-screen/0.1",
+  "base_gates": ["rights", "behavior", "security", "tenant_isolation", "privacy", "api_contract", "telemetry", "composition", "upgrade", "recovery", "maintainer", "support"],
+  "profiles": {
+    "service": [],
+    "ui": ["accessibility"],
+    "enterprise_connector": ["identity", "permissions", "provider_failure"]
+  },
+  "human_gates": ["rights", "maintainer", "support"],
+  "artifact_limits": {"max_files": 10000, "max_bytes": 104857600},
+  "excluded_directories": [".git", "__pycache__", ".pytest_cache", ".mypy_cache", ".venv", "node_modules"],
+  "excluded_suffixes": [".pyc", ".pyo"]
+}
