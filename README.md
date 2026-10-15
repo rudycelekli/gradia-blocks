@@ -2,7 +2,7 @@
 
 **Adaptable capabilities. Explicit contracts. Evidence before promotion.**
 
-Gradia is an AI Research & Implementation Lab. This repository starts our open capability library with a working **Feedback reference block**, an independent **candidate admission screen**, and source-pinned **Skills**. Build a small useful workflow, inspect its contract, and adapt it to your application.
+Gradia is an AI Research & Implementation Lab. This repository ships independently runnable **Feedback**, **Work Items**, **Event Relay** and **Outbox** references, an independent **candidate admission screen**, and source-pinned **Skills**. Build a small useful workflow, inspect its contract, and adapt it to your application.
 
 ![Feedback architecture](diagrams/feedback-architecture.svg)
 
@@ -15,8 +15,9 @@ Gradia is an AI Research & Implementation Lab. This repository starts our open c
 | [React widget](packages/blocks-feedback/typescript/feedback-widget.tsx) | Configurable labels/accent/categories, explicit image paste/upload, screen/photo/video/audio capture and review | Host supplies transport and authority; never embed operator keys in a browser |
 | [Admission screen](packages/blocks-admission/README.md) | Checks pinned artifacts and independently supplied gate receipts; bounded parallel trusted-lane runner | Does not run tests, prove claims or merge changes |
 | [Skills](packages/blocks-skills/README.md) | 24 statically screened Gradia/upstream references, selected resources and intake screening | Instructions grant no tool permissions or credentials |
+| [Checkpointed Event Relay](packages/blocks-event-relay/README.md) | Anchored Work Items changes → metadata-only Outbox enqueue; verified acknowledgment precedes checkpoint | Enqueue-only authority, explicit bounded runs and stable event recovery; no automatic notifications or complete-source attestation |
 | [Durable webhook outbox](packages/blocks-outbox/README.md) | Durable queue, exclusive send claim, signed acknowledgments and explicit receipt reconciliation | Self-hosted custom receiver protocol; no automatic retry, generic provider adapter or managed backend |
-| [Work Items and Feedback handoff](packages/blocks-work-items/README.md) | Configurable state API, scoped proposals, revision-safe transitions, metadata evidence and restart-safe text handoff | Local reference; same-tenant host credentials; no Kanban UI or managed backend |
+| [Work Items and Feedback handoff](packages/blocks-work-items/README.md) | Configurable state API, anchored changefeed, scoped proposals, revision-safe transitions, metadata evidence and restart-safe text handoff | Local reference; same-tenant host credentials; no Kanban UI or managed backend |
 | [Composition planner](packages/blocks-composition/README.md) | Exact dependency locks, reverse impact, port checks, private variants, metadata receipts and diagrams | Offline structural reference; compatibility UNKNOWN; no execution/promotion |
 | [Diagrams](diagrams/README.md) | Standalone interactive HTML and SVG; typed source IR | Planned nodes remain labeled; no external provider calls |
 

@@ -83,3 +83,53 @@ class Acknowledgment(StrictModel):
     status: Literal['acknowledged']
     item: Item
     replayed: StrictBool
+
+
+class MetadataModel(BaseModel):
+    model_config=ConfigDict(extra='forbid',strict=True,frozen=True)
+
+
+class EventCost(MetadataModel):
+    status:Literal['unknown']
+    amount:None
+    currency:None
+
+
+class ChangeEvent(MetadataModel):
+    schema:Literal['gradia.work-items.event.v1']
+    schema_version:Literal['1']
+    event_id:str=Field(pattern=r'^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$')
+    block_id:Literal['gradia.work-items']
+    block_version:Literal['0.1.0','0.2.0']
+    edition:Literal['0.1.0','0.2.0']
+    tenant_id:str=Field(pattern=NAME)
+    actor_id:str=Field(pattern=NAME)
+    item_id:str=Field(pattern=r'^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$')
+    revision:int=Field(ge=1,le=2147483647)
+    operation:Literal['item.proposed','item.updated']
+    result:Literal['persisted']
+    correlation_id:str=Field(pattern=r'^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$')
+    configuration_digest:str=Field(pattern=r'^[0-9a-f]{64}$')
+    duration_ms:int|float=Field(ge=0,allow_inf_nan=False)
+    occurred_at:str=Field(max_length=64)
+    privacy:Literal['metadata_only']
+    acceptance:Literal['not_evaluated']
+    billability:Literal['not_evaluated']
+    actor_type:Literal['configured_principal']
+    human_involvement:Literal['unknown']
+    cost:EventCost
+    coverage:Literal['committed_mutations_only']
+
+
+class ChangeRecord(MetadataModel):
+    sequence:int=Field(ge=1,le=9007199254740991)
+    event:ChangeEvent
+
+
+class ChangeFeedPage(MetadataModel):
+    schema:Literal['gradia.work-items.changefeed.v1']
+    journal_id:str=Field(pattern=r'^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$')
+    tenant_id:str=Field(pattern=NAME)
+    head_sequence:int=Field(ge=0,le=9007199254740991)
+    items:list[ChangeRecord]=Field(max_length=100)
+    next_after:int=Field(ge=0,le=9007199254740991)

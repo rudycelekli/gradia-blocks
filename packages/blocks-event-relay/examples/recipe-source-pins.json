@@ -1,0 +1,228 @@
+{
+  "schema": "gradia.recipe.source-pins.v1",
+  "implementations": {
+    "feedback": {
+      "sha256": "6aabfd4cda016aeb2eb1dc011ec7605ebf245cc4a0b09913b2e5f3cb449300d4",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        {
+          "path": "NOTICE",
+          "sha256": "5429fba57af2a532bd485903881387b3f2c81a39714c1f87125335ff512962dc"
+        },
+        {
+          "path": "README.md",
+          "sha256": "32b1ef3568981a56573a90612071cb899b9d2c3c12b34d94d3adea95e2686b69"
+        },
+        {
+          "path": "block.manifest.json",
+          "sha256": "388d5694fe1027145ecd1869a177ec07f68711edb7a3aea6f46cdd5a74ff582d"
+        },
+        {
+          "path": "gradia_feedback/__init__.py",
+          "sha256": "8f42e4c636ae262a8b8bd5af451301d74c35ba30510b8edc98c10e10b104f747"
+        },
+        {
+          "path": "gradia_feedback/api.py",
+          "sha256": "ff6381ead37e792858a5b13e02f2ebd5ab2432c75fd8d9be336a139113a1529d"
+        },
+        {
+          "path": "gradia_feedback/contracts.py",
+          "sha256": "ab19aa454d476082057eb456cfb13d4c295f9288b5de7856a0c352e66844c343"
+        },
+        {
+          "path": "gradia_feedback/server.py",
+          "sha256": "fa5804bd6dfe2626005340de3ad2ee88b45d27860c673621b387f3cdb762bc3c"
+        },
+        {
+          "path": "gradia_feedback/store.py",
+          "sha256": "746477485d07b6cb85b7a74aa73ec56eacd0ae83b3c10be2fd0722e227ebbb1e"
+        },
+        {
+          "path": "gradia_feedback/telemetry.py",
+          "sha256": "3e0c774926654e462281de4dc7ee4b924d4cec1a40f76caea1152f2f7546782c"
+        },
+        {
+          "path": "pyproject.toml",
+          "sha256": "07973f8305926a4fc7df08d2321aeb7789a6aeff2747a6a0fa481423f21c194e"
+        },
+        {
+          "path": "requirements-tested.txt",
+          "sha256": "3f4783038c7cc5973cb8c9df90d682267b0749fe43f30d5e9396e955c5ba09a6"
+        }
+      ],
+      "scope": "Root source/config/license files, implementation Python modules and packaged skill Markdown; excludes tests and generated examples"
+    },
+    "work-items": {
+      "sha256": "d5c5e9560bd5baf64567b975bef5011404eb4a4efa6ebe9f3ecaef45ad8ed2e9",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        {
+          "path": "README.md",
+          "sha256": "69a50bed2904b83cc8374ddca77b0f0008359fd9cee4eac0c46f61bd0f6b3af6"
+        },
+        {
+          "path": "block.manifest.json",
+          "sha256": "6cc0498ec9ee874ced3b597981e6dee5b741a29005efe0421982f6c7485c6212"
+        },
+        {
+          "path": "gradia_work_items/__init__.py",
+          "sha256": "74930db668990e83f0cefc73bee18ba4b4461a7accd4c04a02c68187273af7af"
+        },
+        {
+          "path": "gradia_work_items/api.py",
+          "sha256": "982851cf98c67984bda212f7136af682f6306fe9eae98677bdc087719787c402"
+        },
+        {
+          "path": "gradia_work_items/contracts.py",
+          "sha256": "671808d3b69d2c0cdff240e021aabdc4688d3fba336a3b94a2c77b1cda9d8608"
+        },
+        {
+          "path": "gradia_work_items/handoff.py",
+          "sha256": "149bf277b648d6f24c1ea9bf0936d9a622ff4fdda5b20edb900d06e6321e2760"
+        },
+        {
+          "path": "gradia_work_items/server.py",
+          "sha256": "8c18d0abda3c25b4b264057cc7c097223b26fbcc6687164bdfb5ed72e35dfa4e"
+        },
+        {
+          "path": "gradia_work_items/store.py",
+          "sha256": "6366df9fb71e7a405bfb5f67c38a6d857256bb9dd0061a88baa8dd31fbdf3205"
+        },
+        {
+          "path": "pyproject.toml",
+          "sha256": "b017b397dcefe1143be7d65b881ae1a249de8ac8b2a63668902f6338eb3af428"
+        },
+        {
+          "path": "requirements-tested.txt",
+          "sha256": "3f4783038c7cc5973cb8c9df90d682267b0749fe43f30d5e9396e955c5ba09a6"
+        }
+      ],
+      "scope": "Root source/config/license files, implementation Python modules and packaged skill Markdown; excludes tests and generated examples"
+    },
+    "outbox": {
+      "sha256": "5be3cba2d6edbe81ab449ea7fb935f260e8e580782be0cd821738a787bc1d014",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        {
+          "path": "README.md",
+          "sha256": "64ec72a9f50263f039270615f60bcebd8863087c04443160b2071ddeb46f6bae"
+        },
+        {
+          "path": "block.manifest.json",
+          "sha256": "ff681a707a9c04df8181a0cebd3ff45b2f80e99725eb8b313e240a9788ad5082"
+        },
+        {
+          "path": "gradia_outbox/__init__.py",
+          "sha256": "4dc8dc72d69325d093f137d11652aee6bbf83351d7fc821741aae88cf28b3e32"
+        },
+        {
+          "path": "gradia_outbox/api.py",
+          "sha256": "a074e79c116cece335d7800b0dd8ab7826178b554c207b293cf79492bcf6bae7"
+        },
+        {
+          "path": "gradia_outbox/contracts.py",
+          "sha256": "9616f252c02681cdd5aba10c0d5b344dd75ec0506bf8c01d5a7f786cc11c5ffa"
+        },
+        {
+          "path": "gradia_outbox/delivery.py",
+          "sha256": "6cd6a8a05cf0d015455d7444c42be94c25dba89b7af051ce16fb86ecc8112d45"
+        },
+        {
+          "path": "gradia_outbox/server.py",
+          "sha256": "d40ac34d1e434da74cc804760a0458e32a14fcad17cb83e3bc8cc0ae5515ea17"
+        },
+        {
+          "path": "gradia_outbox/store.py",
+          "sha256": "8948b10607e358d530ba2ad3021182fe356902243c588df8e1e17f1fe8394245"
+        },
+        {
+          "path": "pyproject.toml",
+          "sha256": "b64d83d8690be19ce063730ee50c4cf3456771b7eabeed3a4dbae4a38f5f6ced"
+        },
+        {
+          "path": "requirements-tested.txt",
+          "sha256": "06c25384eb2c6f24c2adf6116a340dc1e7d67fc6c95259b73ecd1b2cb79b7596"
+        }
+      ],
+      "scope": "Root source/config/license files, implementation Python modules and packaged skill Markdown; excludes tests and generated examples"
+    },
+    "event-relay": {
+      "sha256": "3b3d494dc2170f7c6268fa15796be1a05727c0ab03d728340148702c1347309e",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        {
+          "path": "README.md",
+          "sha256": "2bcd68160f04305b6098f0fa41a2072664526a7f5ac8fc609292562a5636a2eb"
+        },
+        {
+          "path": "block.manifest.json",
+          "sha256": "7250e5ba347d312b0248dc0ebd92433625526ef14985f2cdcb0b2a4cf6263643"
+        },
+        {
+          "path": "gradia_event_relay/__init__.py",
+          "sha256": "990a0d00e7b185a9cad3e7db266d6b8058595b6f27eee70bc68b972cb3cb8d7d"
+        },
+        {
+          "path": "gradia_event_relay/api.py",
+          "sha256": "743452f2c76ba2eaa8965f7109976b505a61176df11ca7853004ffe7355d001a"
+        },
+        {
+          "path": "gradia_event_relay/contracts.py",
+          "sha256": "667d9782f71d9a2725368174008bf261ce90fc2ca31cb554ebcc0f49321865e4"
+        },
+        {
+          "path": "gradia_event_relay/relay.py",
+          "sha256": "b7f6b27a97a63daa86ad56c2d599fe24d417448490a5ffedbb1bdc3741ecb298"
+        },
+        {
+          "path": "gradia_event_relay/server.py",
+          "sha256": "b46fb992c478ee61d93a75ccf4dc4ad45e08082a13025d310460e69c6e968b5f"
+        },
+        {
+          "path": "gradia_event_relay/store.py",
+          "sha256": "20173a64c0531ac1a0cccad626a8aac97983954167cc122246afa8c7299bea75"
+        },
+        {
+          "path": "pyproject.toml",
+          "sha256": "a729772a0f3ab1eb14f840e22473f0edaa40a768ff000eca874385c7ee37eb08"
+        },
+        {
+          "path": "requirements-tested.txt",
+          "sha256": "06c25384eb2c6f24c2adf6116a340dc1e7d67fc6c95259b73ecd1b2cb79b7596"
+        },
+        {
+          "path": "skills/relay-work-item-events.md",
+          "sha256": "a64124fadf1526c6286eda02553eac7bc45aa1d809420013169add58ca7f9078"
+        }
+      ],
+      "scope": "Root source/config/license files, implementation Python modules and packaged skill Markdown; excludes tests and generated examples"
+    }
+  },
+  "workflowDrivers": [
+    {
+      "path": "full_tcp_replay.py",
+      "sha256": "c2807b0ec72e9fb751c3ee198ad84f3a312ec667abd36d52aedf8e285e42cc5a"
+    },
+    {
+      "path": "fixture_enqueue_proxy.py",
+      "sha256": "3a6279b565dfe0d70e6f5bf34509793f4f5e096bb247274b866daba3fc24834f"
+    }
+  ],
+  "receiverFixture": {
+    "path": "packages/blocks-outbox/examples/fixture_receiver.py",
+    "sha256": "4dc3945ddcb6c13f6deb20e120d151c8712e45d76bb0f2bcb67c1b25e41c5648"
+  },
+  "boundary": "Declared dependency/contract DAG, not HTTP call ordering. Page port pins actual typed producer OpenAPI contract; separate stricter consumer projection limits pages to25. Schema identity is not semantic compatibility proof. Workflow driver pair and receiver source pinned separately. No full-package/runtime attestation or arbitrary workflow qualification."
+}

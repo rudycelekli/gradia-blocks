@@ -18,9 +18,9 @@
     {
       "id": "work-items",
       "kind": "block",
-      "edition": "0.1.0",
-      "artifactSha256": "47c80e72a9b030cf191180336f0b5d7d60a1fe7c5e79be276f9f4e568f92c167",
-      "contractSha256": "699651da315a7457c19a6b7537fb82572e3bfa2b069c5804729f18e0d0fb477b",
+      "edition": "0.2.0",
+      "artifactSha256": "d5c5e9560bd5baf64567b975bef5011404eb4a4efa6ebe9f3ecaef45ad8ed2e9",
+      "contractSha256": "56d0b98631d9f240f11e3d52fe4763ee199ee728b7dd7a981900436e6c749153",
       "scope": "public",
       "requires": [],
       "inputs": {},
@@ -30,8 +30,8 @@
       "id": "feedback-proposal-handoff",
       "kind": "bridge",
       "edition": "0.1.0",
-      "artifactSha256": "47c80e72a9b030cf191180336f0b5d7d60a1fe7c5e79be276f9f4e568f92c167",
-      "contractSha256": "9dac2d1a591f1911ef4731e86a6f364059860137202f3153837246d1f13f7830",
+      "artifactSha256": "d5c5e9560bd5baf64567b975bef5011404eb4a4efa6ebe9f3ecaef45ad8ed2e9",
+      "contractSha256": "a0805565b863ad20e2affdc6e5dfd7de093953195de66bbf1cac7fc9d4c59bda",
       "scope": "public",
       "requires": [
         {
@@ -42,9 +42,9 @@
         },
         {
           "id": "work-items",
-          "edition": "0.1.0",
-          "artifactSha256": "47c80e72a9b030cf191180336f0b5d7d60a1fe7c5e79be276f9f4e568f92c167",
-          "contractSha256": "699651da315a7457c19a6b7537fb82572e3bfa2b069c5804729f18e0d0fb477b"
+          "edition": "0.2.0",
+          "artifactSha256": "d5c5e9560bd5baf64567b975bef5011404eb4a4efa6ebe9f3ecaef45ad8ed2e9",
+          "contractSha256": "56d0b98631d9f240f11e3d52fe4763ee199ee728b7dd7a981900436e6c749153"
         }
       ],
       "inputs": {
@@ -58,15 +58,15 @@
       "id": "feedback-to-work-item",
       "kind": "workflow",
       "edition": "0.1.0",
-      "artifactSha256": "2b6c50d2861187816b082569d805266270983b19a243d3a94a07c77188cff063",
-      "contractSha256": "94f7db42078d47b796abf7da0f24e0d2870467c9b449b98ddb446b678c898687",
+      "artifactSha256": "8c34797d8667b8ce3ef527518614947b3f43dbd37483504b9998d2b805925be1",
+      "contractSha256": "3819399fcfa99d0e3d49dbb3838a190bf3d4fba8813f95d5bf28be69da91e0d2",
       "scope": "demo",
       "requires": [
         {
           "id": "feedback-proposal-handoff",
           "edition": "0.1.0",
-          "artifactSha256": "47c80e72a9b030cf191180336f0b5d7d60a1fe7c5e79be276f9f4e568f92c167",
-          "contractSha256": "9dac2d1a591f1911ef4731e86a6f364059860137202f3153837246d1f13f7830"
+          "artifactSha256": "d5c5e9560bd5baf64567b975bef5011404eb4a4efa6ebe9f3ecaef45ad8ed2e9",
+          "contractSha256": "a0805565b863ad20e2affdc6e5dfd7de093953195de66bbf1cac7fc9d4c59bda"
         }
       ],
       "inputs": {

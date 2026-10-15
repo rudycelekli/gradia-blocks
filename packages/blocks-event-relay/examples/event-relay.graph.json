@@ -1,0 +1,219 @@
+{
+  "schema": "gradia.composition.graph.v1",
+  "scope": "demo",
+  "nodes": [
+    {
+      "id": "feedback",
+      "kind": "block",
+      "edition": "0.2.1",
+      "artifactSha256": "6aabfd4cda016aeb2eb1dc011ec7605ebf245cc4a0b09913b2e5f3cb449300d4",
+      "contractSha256": "e4145b0c85dcc2b28583736692017f46add1da24d13f39b8efa7308bbece7cd7",
+      "scope": "public",
+      "requires": [],
+      "inputs": {},
+      "outputs": {
+        "feedback-record": "d3f02c3a7852911dbdc81df3024642ee671a8fd006e99f29d38a6f179dbed7b8"
+      }
+    },
+    {
+      "id": "work-items",
+      "kind": "block",
+      "edition": "0.2.0",
+      "artifactSha256": "d5c5e9560bd5baf64567b975bef5011404eb4a4efa6ebe9f3ecaef45ad8ed2e9",
+      "contractSha256": "56d0b98631d9f240f11e3d52fe4763ee199ee728b7dd7a981900436e6c749153",
+      "scope": "public",
+      "requires": [],
+      "inputs": {},
+      "outputs": {
+        "item": "8f8f6b4f629eb8d56fc8c259278c0672f2b651ed219505a12d94410623fc267c",
+        "changefeed-producer-contract": "3b270788ec7f317ea36c87b36e2638139bc05f3b957e569cacd5c5de7e911662"
+      }
+    },
+    {
+      "id": "outbox",
+      "kind": "block",
+      "edition": "0.1.0",
+      "artifactSha256": "5be3cba2d6edbe81ab449ea7fb935f260e8e580782be0cd821738a787bc1d014",
+      "contractSha256": "d36e98b971ac00d1834c2936b3ff7ce33105076ae54fe3aaa8cbf698a737bc82",
+      "scope": "public",
+      "requires": [],
+      "inputs": {},
+      "outputs": {
+        "enqueue-contract": "08a61617a340430ae12dad87816fc238ba48f0876cd10ec08c344677431bfd2e",
+        "acknowledged-item": "617329e9e1ecadb482e2b3501f073ab74a93f291cfe4c63c28e41fda1913622e",
+        "signed-webhook": "58e93c7ed1dbeeffafc24a15332eda43e4fe3ac1848eb6fd489b0221264f1a6a"
+      }
+    },
+    {
+      "id": "feedback-proposal-handoff",
+      "kind": "bridge",
+      "edition": "0.2.0",
+      "artifactSha256": "d5c5e9560bd5baf64567b975bef5011404eb4a4efa6ebe9f3ecaef45ad8ed2e9",
+      "contractSha256": "a0805565b863ad20e2affdc6e5dfd7de093953195de66bbf1cac7fc9d4c59bda",
+      "scope": "public",
+      "requires": [
+        {
+          "id": "feedback",
+          "edition": "0.2.1",
+          "artifactSha256": "6aabfd4cda016aeb2eb1dc011ec7605ebf245cc4a0b09913b2e5f3cb449300d4",
+          "contractSha256": "e4145b0c85dcc2b28583736692017f46add1da24d13f39b8efa7308bbece7cd7"
+        },
+        {
+          "id": "work-items",
+          "edition": "0.2.0",
+          "artifactSha256": "d5c5e9560bd5baf64567b975bef5011404eb4a4efa6ebe9f3ecaef45ad8ed2e9",
+          "contractSha256": "56d0b98631d9f240f11e3d52fe4763ee199ee728b7dd7a981900436e6c749153"
+        }
+      ],
+      "inputs": {
+        "selected-feedback": "d3f02c3a7852911dbdc81df3024642ee671a8fd006e99f29d38a6f179dbed7b8",
+        "target-item-contract": "8f8f6b4f629eb8d56fc8c259278c0672f2b651ed219505a12d94410623fc267c"
+      },
+      "outputs": {
+        "item-proposal": "8f8f6b4f629eb8d56fc8c259278c0672f2b651ed219505a12d94410623fc267c"
+      }
+    },
+    {
+      "id": "event-relay",
+      "kind": "bridge",
+      "edition": "0.1.0",
+      "artifactSha256": "3b3d494dc2170f7c6268fa15796be1a05727c0ab03d728340148702c1347309e",
+      "contractSha256": "b978ea714169241494511a58d966cb047b68006dac2c5a2516a2cb4194c3c795",
+      "scope": "public",
+      "requires": [
+        {
+          "id": "work-items",
+          "edition": "0.2.0",
+          "artifactSha256": "d5c5e9560bd5baf64567b975bef5011404eb4a4efa6ebe9f3ecaef45ad8ed2e9",
+          "contractSha256": "56d0b98631d9f240f11e3d52fe4763ee199ee728b7dd7a981900436e6c749153"
+        },
+        {
+          "id": "outbox",
+          "edition": "0.1.0",
+          "artifactSha256": "5be3cba2d6edbe81ab449ea7fb935f260e8e580782be0cd821738a787bc1d014",
+          "contractSha256": "d36e98b971ac00d1834c2936b3ff7ce33105076ae54fe3aaa8cbf698a737bc82"
+        }
+      ],
+      "inputs": {
+        "work-item-metadata": "3b270788ec7f317ea36c87b36e2638139bc05f3b957e569cacd5c5de7e911662",
+        "target-enqueue-contract": "08a61617a340430ae12dad87816fc238ba48f0876cd10ec08c344677431bfd2e",
+        "target-acknowledged-item": "617329e9e1ecadb482e2b3501f073ab74a93f291cfe4c63c28e41fda1913622e"
+      },
+      "outputs": {
+        "target-acknowledgment": "cf537ddc10065b298dc420c586b50dd705741add19cf5f20366cd87e0f399b39"
+      }
+    },
+    {
+      "id": "signed-receiver-fixture",
+      "kind": "block",
+      "edition": "0.1.0",
+      "artifactSha256": "4dc3945ddcb6c13f6deb20e120d151c8712e45d76bb0f2bcb67c1b25e41c5648",
+      "contractSha256": "58e93c7ed1dbeeffafc24a15332eda43e4fe3ac1848eb6fd489b0221264f1a6a",
+      "scope": "demo",
+      "requires": [
+        {
+          "id": "outbox",
+          "edition": "0.1.0",
+          "artifactSha256": "5be3cba2d6edbe81ab449ea7fb935f260e8e580782be0cd821738a787bc1d014",
+          "contractSha256": "d36e98b971ac00d1834c2936b3ff7ce33105076ae54fe3aaa8cbf698a737bc82"
+        }
+      ],
+      "inputs": {
+        "signed-webhook": "58e93c7ed1dbeeffafc24a15332eda43e4fe3ac1848eb6fd489b0221264f1a6a"
+      },
+      "outputs": {
+        "signed-receiver-acknowledgment": "54c6bea6e034f55594517c60abcde21fcf4f29f75d917293d315ded96b4b2af7"
+      }
+    },
+    {
+      "id": "feedback-event-delivery",
+      "kind": "workflow",
+      "edition": "0.1.0",
+      "artifactSha256": "052cad7581284bcf4147e751a20c4bf358073e64ffe9cae4c106fdff9c530e0a",
+      "contractSha256": "bf831be6bca4353fe9c8f06617fb458752b8faff0a892591bd520db6b64837ad",
+      "scope": "demo",
+      "requires": [
+        {
+          "id": "feedback-proposal-handoff",
+          "edition": "0.2.0",
+          "artifactSha256": "d5c5e9560bd5baf64567b975bef5011404eb4a4efa6ebe9f3ecaef45ad8ed2e9",
+          "contractSha256": "a0805565b863ad20e2affdc6e5dfd7de093953195de66bbf1cac7fc9d4c59bda"
+        },
+        {
+          "id": "event-relay",
+          "edition": "0.1.0",
+          "artifactSha256": "3b3d494dc2170f7c6268fa15796be1a05727c0ab03d728340148702c1347309e",
+          "contractSha256": "b978ea714169241494511a58d966cb047b68006dac2c5a2516a2cb4194c3c795"
+        },
+        {
+          "id": "signed-receiver-fixture",
+          "edition": "0.1.0",
+          "artifactSha256": "4dc3945ddcb6c13f6deb20e120d151c8712e45d76bb0f2bcb67c1b25e41c5648",
+          "contractSha256": "58e93c7ed1dbeeffafc24a15332eda43e4fe3ac1848eb6fd489b0221264f1a6a"
+        }
+      ],
+      "inputs": {
+        "item-proposal": "8f8f6b4f629eb8d56fc8c259278c0672f2b651ed219505a12d94410623fc267c",
+        "enqueue-acknowledgment": "cf537ddc10065b298dc420c586b50dd705741add19cf5f20366cd87e0f399b39",
+        "receiver-acknowledgment": "54c6bea6e034f55594517c60abcde21fcf4f29f75d917293d315ded96b4b2af7"
+      },
+      "outputs": {}
+    }
+  ],
+  "connections": [
+    {
+      "fromNode": "feedback",
+      "fromPort": "feedback-record",
+      "toNode": "feedback-proposal-handoff",
+      "toPort": "selected-feedback"
+    },
+    {
+      "fromNode": "work-items",
+      "fromPort": "item",
+      "toNode": "feedback-proposal-handoff",
+      "toPort": "target-item-contract"
+    },
+    {
+      "fromNode": "work-items",
+      "fromPort": "changefeed-producer-contract",
+      "toNode": "event-relay",
+      "toPort": "work-item-metadata"
+    },
+    {
+      "fromNode": "outbox",
+      "fromPort": "enqueue-contract",
+      "toNode": "event-relay",
+      "toPort": "target-enqueue-contract"
+    },
+    {
+      "fromNode": "outbox",
+      "fromPort": "acknowledged-item",
+      "toNode": "event-relay",
+      "toPort": "target-acknowledged-item"
+    },
+    {
+      "fromNode": "outbox",
+      "fromPort": "signed-webhook",
+      "toNode": "signed-receiver-fixture",
+      "toPort": "signed-webhook"
+    },
+    {
+      "fromNode": "feedback-proposal-handoff",
+      "fromPort": "item-proposal",
+      "toNode": "feedback-event-delivery",
+      "toPort": "item-proposal"
+    },
+    {
+      "fromNode": "event-relay",
+      "fromPort": "target-acknowledgment",
+      "toNode": "feedback-event-delivery",
+      "toPort": "enqueue-acknowledgment"
+    },
+    {
+      "fromNode": "signed-receiver-fixture",
+      "fromPort": "signed-receiver-acknowledgment",
+      "toNode": "feedback-event-delivery",
+      "toPort": "receiver-acknowledgment"
+    }
+  ]
+}

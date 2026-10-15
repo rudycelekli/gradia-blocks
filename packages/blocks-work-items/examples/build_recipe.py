@@ -32,7 +32,7 @@ def build():
         return {'id':id,'kind':kind,'edition':version,'artifactSha256':artifact,'contractSha256':contract,'scope':scope,'requires':requires or [],'inputs':{},'outputs':{}}
     def pin(value):return {key:value[key] for key in ('id','edition','artifactSha256','contractSha256')}
     f=node('feedback','block','0.2.1',pins['feedback']['sha256'],sha(canonical(feedback)))
-    w=node('work-items','block','0.1.0',pins['work-items']['sha256'],sha(canonical(items)))
+    w=node('work-items','block','0.2.0',pins['work-items']['sha256'],sha(canonical(items)))
     profile=json.loads((target/'block.manifest.json').read_text())['handoffProfile']
     h=node('feedback-proposal-handoff','bridge','0.1.0',pins['work-items']['sha256'],sha(canonical(profile)),requires=[pin(f),pin(w)])
     fixture=node('feedback-to-work-item','workflow','0.1.0',sha((OUT/'tcp_replay.py').read_bytes()),sha(canonical({'profile':profile,'driver':'tcp_replay.py','scope':'synthetic local workflow acceptance fixture'})),scope='demo',requires=[pin(h)])

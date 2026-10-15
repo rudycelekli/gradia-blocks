@@ -1,0 +1,1130 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Gradia Event Relay reference",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/v1/event-relay/session": {
+      "get": {
+        "summary": "Session",
+        "operationId": "session_v1_event_relay_session_get",
+        "parameters": [
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Authorization"
+            }
+          },
+          {
+            "name": "if-gradia-principal",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{64}$"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "If-Gradia-Principal"
+            }
+          },
+          {
+            "name": "if-gradia-configuration",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{64}$"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "If-Gradia-Configuration"
+            }
+          },
+          {
+            "name": "if-gradia-block-version",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "maxLength": 40
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "If-Gradia-Block-Version"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RelaySession"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/event-relay/run": {
+      "post": {
+        "summary": "Run",
+        "operationId": "run_v1_event_relay_run_post",
+        "parameters": [
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Authorization"
+            }
+          },
+          {
+            "name": "if-gradia-principal",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{64}$"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "If-Gradia-Principal"
+            }
+          },
+          {
+            "name": "if-gradia-configuration",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{64}$"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "If-Gradia-Configuration"
+            }
+          },
+          {
+            "name": "if-gradia-block-version",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "maxLength": 40
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "If-Gradia-Block-Version"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Run"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RunResult"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/event-relay/status": {
+      "get": {
+        "summary": "Status",
+        "operationId": "status_v1_event_relay_status_get",
+        "parameters": [
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Authorization"
+            }
+          },
+          {
+            "name": "if-gradia-principal",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{64}$"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "If-Gradia-Principal"
+            }
+          },
+          {
+            "name": "if-gradia-configuration",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{64}$"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "If-Gradia-Configuration"
+            }
+          },
+          {
+            "name": "if-gradia-block-version",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "maxLength": 40
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "If-Gradia-Block-Version"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RelayStatus"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/event-relay/events": {
+      "get": {
+        "summary": "Events",
+        "operationId": "events_v1_event_relay_events_get",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 100,
+              "minimum": 1,
+              "default": 100,
+              "title": "Limit"
+            }
+          },
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Authorization"
+            }
+          },
+          {
+            "name": "if-gradia-principal",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{64}$"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "If-Gradia-Principal"
+            }
+          },
+          {
+            "name": "if-gradia-configuration",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{64}$"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "If-Gradia-Configuration"
+            }
+          },
+          {
+            "name": "if-gradia-block-version",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "maxLength": 40
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "If-Gradia-Block-Version"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/event-relay/diagnostics/attempts": {
+      "get": {
+        "summary": "Diagnostics",
+        "operationId": "diagnostics_v1_event_relay_diagnostics_attempts_get",
+        "parameters": [
+          {
+            "name": "authorization",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Authorization"
+            }
+          },
+          {
+            "name": "if-gradia-principal",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{64}$"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "If-Gradia-Principal"
+            }
+          },
+          {
+            "name": "if-gradia-configuration",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{64}$"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "If-Gradia-Configuration"
+            }
+          },
+          {
+            "name": "if-gradia-block-version",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "maxLength": 40
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "If-Gradia-Block-Version"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Anchor": {
+        "properties": {
+          "sequence": {
+            "type": "integer",
+            "maximum": 9007199254740991.0,
+            "minimum": 1.0,
+            "title": "Sequence"
+          },
+          "event_id": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+            "title": "Event Id"
+          },
+          "event_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$",
+            "title": "Event Sha256"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "sequence",
+          "event_id",
+          "event_sha256"
+        ],
+        "title": "Anchor"
+      },
+      "Binding": {
+        "properties": {
+          "principal_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$",
+            "title": "Principal Sha256"
+          },
+          "configuration_digest": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$",
+            "title": "Configuration Digest"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "principal_sha256",
+          "configuration_digest"
+        ],
+        "title": "Binding"
+      },
+      "Bindings": {
+        "properties": {
+          "source": {
+            "$ref": "#/components/schemas/SourceBinding"
+          },
+          "target": {
+            "$ref": "#/components/schemas/Binding"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "source",
+          "target"
+        ],
+        "title": "Bindings"
+      },
+      "Checkpoint": {
+        "properties": {
+          "bindings": {
+            "$ref": "#/components/schemas/Bindings"
+          },
+          "anchor": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Anchor"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "cursor": {
+            "type": "integer",
+            "maximum": 9007199254740991.0,
+            "minimum": 0.0,
+            "title": "Cursor"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "bindings",
+          "anchor",
+          "cursor"
+        ],
+        "title": "Checkpoint"
+      },
+      "Cost": {
+        "properties": {
+          "status": {
+            "type": "string",
+            "const": "unknown",
+            "title": "Status"
+          },
+          "amount": {
+            "type": "null",
+            "title": "Amount"
+          },
+          "currency": {
+            "type": "null",
+            "title": "Currency"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "status",
+          "amount",
+          "currency"
+        ],
+        "title": "Cost"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "QueuedTransfer": {
+        "properties": {
+          "source_sequence": {
+            "type": "integer",
+            "maximum": 9007199254740991.0,
+            "minimum": 1.0,
+            "title": "Source Sequence"
+          },
+          "outbox_item_id": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+            "title": "Outbox Item Id"
+          },
+          "replayed": {
+            "type": "boolean",
+            "title": "Replayed"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "source_sequence",
+          "outbox_item_id",
+          "replayed"
+        ],
+        "title": "QueuedTransfer"
+      },
+      "RelaySession": {
+        "properties": {
+          "version": {
+            "type": "string",
+            "const": "0.1.0",
+            "title": "Version"
+          },
+          "tenant_id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$",
+            "title": "Tenant Id"
+          },
+          "actor_id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$",
+            "title": "Actor Id"
+          },
+          "role": {
+            "type": "string",
+            "const": "operator",
+            "title": "Role"
+          },
+          "configuration_digest": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$",
+            "title": "Configuration Digest"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "version",
+          "tenant_id",
+          "actor_id",
+          "role",
+          "configuration_digest"
+        ],
+        "title": "RelaySession"
+      },
+      "RelayStatus": {
+        "properties": {
+          "schema": {
+            "type": "string",
+            "const": "gradia.event-relay.status.v1",
+            "title": "Schema"
+          },
+          "version": {
+            "type": "string",
+            "const": "0.1.0",
+            "title": "Version"
+          },
+          "tenant_id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$",
+            "title": "Tenant Id"
+          },
+          "profile_id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$",
+            "title": "Profile Id"
+          },
+          "configuration_digest": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$",
+            "title": "Configuration Digest"
+          },
+          "checkpoint": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Checkpoint"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "automatic_polling": {
+            "type": "boolean",
+            "const": false,
+            "title": "Automatic Polling"
+          },
+          "delivery_authorized": {
+            "type": "boolean",
+            "const": false,
+            "title": "Delivery Authorized"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "schema",
+          "version",
+          "tenant_id",
+          "profile_id",
+          "configuration_digest",
+          "checkpoint",
+          "automatic_polling",
+          "delivery_authorized"
+        ],
+        "title": "RelayStatus"
+      },
+      "Run": {
+        "properties": {
+          "limit": {
+            "type": "integer",
+            "maximum": 25.0,
+            "minimum": 1.0,
+            "title": "Limit",
+            "default": 25
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "Run"
+      },
+      "RunReceipt": {
+        "properties": {
+          "schema": {
+            "type": "string",
+            "const": "gradia.event-relay.event.v1",
+            "title": "Schema"
+          },
+          "block_id": {
+            "type": "string",
+            "const": "gradia.event-relay",
+            "title": "Block Id"
+          },
+          "edition": {
+            "type": "string",
+            "const": "0.1.0",
+            "title": "Edition"
+          },
+          "event_id": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+            "title": "Event Id"
+          },
+          "tenant_id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$",
+            "title": "Tenant Id"
+          },
+          "profile_id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$",
+            "title": "Profile Id"
+          },
+          "occurred_at": {
+            "type": "string",
+            "maxLength": 64,
+            "title": "Occurred At"
+          },
+          "operation": {
+            "type": "string",
+            "const": "relay.run",
+            "title": "Operation"
+          },
+          "configuration_digest": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$",
+            "title": "Configuration Digest"
+          },
+          "privacy": {
+            "type": "string",
+            "const": "metadata_only",
+            "title": "Privacy"
+          },
+          "cost": {
+            "$ref": "#/components/schemas/Cost"
+          },
+          "acceptance": {
+            "type": "string",
+            "const": "not_evaluated",
+            "title": "Acceptance"
+          },
+          "billability": {
+            "type": "string",
+            "const": "not_evaluated",
+            "title": "Billability"
+          },
+          "human_involvement": {
+            "type": "string",
+            "const": "unknown",
+            "title": "Human Involvement"
+          },
+          "correlation_id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$",
+            "title": "Correlation Id"
+          },
+          "actor_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Actor Id"
+          },
+          "result": {
+            "type": "string",
+            "enum": [
+              "enqueued",
+              "idle",
+              "refused",
+              "uncertain"
+            ],
+            "title": "Result"
+          },
+          "reason": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 100
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reason"
+          },
+          "automatic_retry": {
+            "type": "boolean",
+            "const": false,
+            "title": "Automatic Retry"
+          },
+          "delivery_authorized": {
+            "type": "boolean",
+            "const": false,
+            "title": "Delivery Authorized"
+          },
+          "coverage": {
+            "type": "string",
+            "const": "this_invocation_only",
+            "title": "Coverage"
+          },
+          "phase": {
+            "type": "string",
+            "enum": [
+              "validate",
+              "sessions",
+              "source_page",
+              "target_enqueue",
+              "checkpoint"
+            ],
+            "title": "Phase"
+          },
+          "duration_ms": {
+            "type": "number",
+            "minimum": 0.0,
+            "title": "Duration Ms"
+          },
+          "acknowledged_count": {
+            "type": "integer",
+            "maximum": 25.0,
+            "minimum": 0.0,
+            "title": "Acknowledged Count"
+          },
+          "source_read_correlation_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source Read Correlation Id"
+          },
+          "target_enqueue_correlation_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Target Enqueue Correlation Id"
+          },
+          "source_principal_sha256": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source Principal Sha256"
+          },
+          "target_principal_sha256": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Target Principal Sha256"
+          },
+          "journal_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Journal Id"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "schema",
+          "block_id",
+          "edition",
+          "event_id",
+          "tenant_id",
+          "profile_id",
+          "occurred_at",
+          "operation",
+          "configuration_digest",
+          "privacy",
+          "cost",
+          "acceptance",
+          "billability",
+          "human_involvement",
+          "correlation_id",
+          "actor_id",
+          "result",
+          "reason",
+          "automatic_retry",
+          "delivery_authorized",
+          "coverage",
+          "phase",
+          "duration_ms",
+          "acknowledged_count"
+        ],
+        "title": "RunReceipt"
+      },
+      "RunResult": {
+        "properties": {
+          "receipt": {
+            "$ref": "#/components/schemas/RunReceipt"
+          },
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/QueuedTransfer"
+            },
+            "type": "array",
+            "maxItems": 25,
+            "title": "Items"
+          },
+          "checkpoint": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Checkpoint"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "receipt",
+          "items",
+          "checkpoint"
+        ],
+        "title": "RunResult"
+      },
+      "SourceBinding": {
+        "properties": {
+          "principal_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$",
+            "title": "Principal Sha256"
+          },
+          "configuration_digest": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$",
+            "title": "Configuration Digest"
+          },
+          "journal_id": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+            "title": "Journal Id"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "principal_sha256",
+          "configuration_digest",
+          "journal_id"
+        ],
+        "title": "SourceBinding"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      }
+    }
+  }
+}

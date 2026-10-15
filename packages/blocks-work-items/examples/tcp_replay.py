@@ -90,7 +90,7 @@ def replay(lose_ack=False):
                 items=client.get(target_url+'/v1/work-items',headers=operator).json()['items']
                 assert len(items)==1 and len(events)==4
                 assert 'Clarify the pending' not in json.dumps(events)
-                return {'schema':'gradia.work-items.tcp-replay.v1','transport':'real_loopback_tcp','services':'two independent subprocesses','sourceVersion':'0.2.1','targetVersion':'0.1.0','postCommitAcknowledgmentDropped':lose_ack,'proposal':first['receipt'],'restartRecovery':recovered['receipt'],'sameItemAfterRestart':True,'persistedItems':1,'operatorTransitions':['proposed','open','in_progress','done'],'staleRevisionStatus':stale.status_code,'durableMutationEvents':len(events),'eventMetadataOnly':True,'finalRevision':completed.json()['item']['revision'],'credentialsLogged':False,'scope':'Synthetic local acceptance fixture; no customer workflow acceptance, provider calls or enterprise admission'}
+                return {'schema':'gradia.work-items.tcp-replay.v1','transport':'real_loopback_tcp','services':'two independent subprocesses','sourceVersion':'0.2.1','targetVersion':'0.2.0','postCommitAcknowledgmentDropped':lose_ack,'proposal':first['receipt'],'restartRecovery':recovered['receipt'],'sameItemAfterRestart':True,'persistedItems':1,'operatorTransitions':['proposed','open','in_progress','done'],'staleRevisionStatus':stale.status_code,'durableMutationEvents':len(events),'eventMetadataOnly':True,'finalRevision':completed.json()['item']['revision'],'credentialsLogged':False,'scope':'Synthetic local acceptance fixture; no customer workflow acceptance, provider calls or enterprise admission'}
         finally:
             for process in processes:
                 if process.poll() is None:

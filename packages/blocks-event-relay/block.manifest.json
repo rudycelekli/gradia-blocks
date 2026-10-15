@@ -1,0 +1,17 @@
+{
+  "schema": "gradia.block.manifest.v1",
+  "id": "connection-sync",
+  "version": "0.1.0",
+  "status": "reference-candidate",
+  "license": "Apache-2.0",
+  "category": "connections",
+  "runtime": "Python3.11+ / FastAPI / HTTPX / SQLite / POSIX lock",
+  "capabilities": ["anchored-source-changefeed", "durable-checkpoint", "same-tenant-session-binding", "conditional-principal-config-edition-fences", "metadata-only-transfer", "deterministic-event-idempotency", "ack-before-checkpoint", "explicit-uncertain-transfer-recovery", "whole-page-validation-before-effects", "serialized-bounded-runs", "durable-metadata-evidence", "bounded-http-observations"],
+  "api": "/v1/event-relay",
+  "profiles": {"source": "Work Items0.2.0 operator", "target": "Outbox0.1.0 submitter", "sameTenant": true, "automaticPolling": false, "automaticHttpRetry": false, "notificationDeliveryAuthority": false},
+  "agentSkill": "skills/relay-work-item-events.md",
+  "telemetry": {"mode": "durable checkpoint/mutation metadata and bounded process-local HTTP observations", "rawFeedbackText": false, "media": false, "externalCollector": false, "cost": "unknown"},
+  "limits": {"pageEvents": 25, "upstreamResponseBytes": 262144, "apiRequestBytes": 4096, "apiCredentialCount": 256, "httpAttemptCapacityPerTenant": 100, "runDeadlineSecondsCooperative": 20},
+  "admission": "not_admitted",
+  "boundary": "Self-hosted metadata relay for a specific trusted changefeed and Outbox contract. Local source mutation/event intent is atomic; cross-service transfer is not a distributed transaction. No general provider adapter, universal exactly-once guarantee, complete source attestation, managed service, autonomous watcher or enterprise admission."
+}

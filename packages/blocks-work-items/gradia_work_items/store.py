@@ -4,6 +4,7 @@ import os
 from pathlib import Path
 import sqlite3
 import stat
+import uuid
 
 SCHEMA='''
 CREATE TABLE IF NOT EXISTS work_item_metadata(key TEXT PRIMARY KEY,value TEXT NOT NULL);
@@ -51,10 +52,15 @@ class Store:
                             cols=tuple(tuple(c)[2] for c in database.execute('SELECT seqno,cid,name FROM pragma_index_info(?)',(row[1],)))
                             indexes.append((row[2],row[3],row[4],cols))
                         return columns,sorted(indexes)
-                    if any(signature(conn,table)!=signature(expected,table) for table in allowed):
+                    objects=lambda db:[tuple(row) for row in db.execute("SELECT type,name,tbl_name,sql FROM sqlite_master ORDER BY type,name")]
+                    if objects(conn)!=objects(expected) or any(signature(conn,table)!=signature(expected,table) for table in allowed):
                         raise ValueError('Stored schema changed; explicit migration required')
                 finally:
                     expected.close()
+            if tables:
+                metadata=dict(conn.execute('SELECT key,value FROM work_item_metadata'))
+                if metadata.get('schema')!='1' or metadata.get('configuration_digest')!=configuration_digest or set(metadata) not in ({'schema','configuration_digest'},{'schema','configuration_digest','journal_id'}):
+                    raise ValueError('Stored metadata identity missing or changed; explicit offline migration required')
             # Execute separately to retain the startup transaction (executescript commits implicitly).
             for statement in SCHEMA.split(';'):
                 if statement.strip():conn.execute(statement)
@@ -63,6 +69,14 @@ class Store:
                 conn.execute('INSERT OR IGNORE INTO work_item_metadata VALUES(?,?)',(key,value))
                 if conn.execute('SELECT value FROM work_item_metadata WHERE key=?',(key,)).fetchone()[0]!=value:
                     raise ValueError('Stored configuration changed; explicit offline migration required')
+            # Additive metadata bootstrap: existing schema-1 databases acquire one stable
+            # journal identity in the same startup transaction, without changing tables.
+            conn.execute('INSERT OR IGNORE INTO work_item_metadata VALUES(?,?)',('journal_id',str(uuid.uuid4())))
+            journal=conn.execute("SELECT value FROM work_item_metadata WHERE key='journal_id'").fetchone()[0]
+            try:
+                if str(uuid.UUID(journal))!=journal:raise ValueError('noncanonical')
+            except (ValueError,TypeError,AttributeError):
+                raise ValueError('Invalid stored journal identity') from None
 
     @contextmanager
     def connection(self):

@@ -12,10 +12,10 @@ from typing import Annotated
 from fastapi import FastAPI,Depends,Header,Query,Request
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
-from .contracts import Principal,Settings,Submission,Mutation,Acknowledgment,Item
+from .contracts import Principal,Settings,Submission,Mutation,Acknowledgment,Item,ChangeFeedPage
 from .store import Store,record
 
-VERSION='0.1.0'
+VERSION='0.2.0'
 MAX_BODY=49152
 
 
@@ -116,6 +116,9 @@ def create_app(database_path,api_keys,settings=None):
     async def database_error(request,exc):return JSONResponse({'error':{'code':'persistence_uncertain','recovery':'reconcile_before_retry'}},status_code=503)
 
     def actor(request:Request,authorization:Annotated[str|None,Header()]=None,if_gradia_principal:Annotated[str|None,Header(pattern=r'^[0-9a-f]{64}$')]=None,if_gradia_configuration:Annotated[str|None,Header(pattern=r'^[0-9a-f]{64}$')]=None,if_gradia_block_version:Annotated[str|None,Header(min_length=1,max_length=40)]=None):
+        protected={b'authorization',b'if-gradia-principal',b'if-gradia-configuration',b'if-gradia-block-version',b'idempotency-key'}
+        names=[name.lower() for name,_ in request.scope['headers']]
+        if any(names.count(name)>1 for name in protected):fail(400,'duplicate_authority_header')
         if authorization is None or not authorization.startswith('Bearer '):fail(401,'unauthorized')
         token=authorization[7:];found=None
         for key,principal in principals:
@@ -152,7 +155,9 @@ def create_app(database_path,api_keys,settings=None):
     @app.get('/v1/work-items/session')
     def session(request:Request,principal:Principal=Depends(actor)):
         request.scope['work_items.operation']='session.read'
-        return {'version':VERSION,'tenant_id':principal.tenant_id,'actor_id':principal.actor_id,'role':principal.role,'configuration_digest':config_digest}
+        with store.connection() as conn:
+            journal=conn.execute("SELECT value FROM work_item_metadata WHERE key='journal_id'").fetchone()[0]
+        return {'version':VERSION,'tenant_id':principal.tenant_id,'actor_id':principal.actor_id,'role':principal.role,'configuration_digest':config_digest,'journal_id':journal}
 
     @app.get('/v1/work-items/config')
     def config(request:Request,principal:Principal=Depends(actor)):
@@ -213,6 +218,27 @@ def create_app(database_path,api_keys,settings=None):
         with store.connection() as conn:
             rows=conn.execute('SELECT * FROM work_items WHERE tenant=? AND id>?'+extra+' ORDER BY id LIMIT ?',(*params,limit+1)).fetchall()
             return {'items':[record(row) for row in rows[:limit]],'next_cursor':rows[limit-1]['id'] if len(rows)>limit else None}
+
+    @app.get('/v1/work-items/changes',response_model=ChangeFeedPage)
+    def changes(request:Request,after_sequence:int=Query(default=0,ge=0,le=9007199254740991),limit:int=Query(default=100,ge=1,le=100),expected_journal_id:str|None=Query(default=None,pattern=r'^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$'),after_event_id:str|None=Query(default=None,pattern=r'^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$'),after_event_sha256:str|None=Query(default=None,pattern=r'^[0-9a-f]{64}$'),principal:Principal=Depends(operator)):
+        request.scope['work_items.operation']='changes.read'
+        allowed=('after_sequence','limit','expected_journal_id','after_event_id','after_event_sha256')
+        if any(key not in allowed or len(request.query_params.getlist(key))!=1 for key in request.query_params):fail(400,'unsupported_or_duplicate_parameter')
+        if after_sequence==0 and (after_event_id is not None or after_event_sha256 is not None):fail(422,'invalid_cursor')
+        if after_sequence>0 and any(value is None for value in (expected_journal_id,after_event_id,after_event_sha256)):fail(422,'invalid_cursor')
+        with store.connection() as conn:
+            # Explicit deferred transaction binds identity, anchor, head and rows to one snapshot.
+            conn.execute('BEGIN')
+            journal=conn.execute("SELECT value FROM work_item_metadata WHERE key='journal_id'").fetchone()[0]
+            if expected_journal_id is not None and expected_journal_id!=journal:fail(409,'cursor_invalid')
+            if after_sequence:
+                anchor=conn.execute('SELECT payload FROM work_item_events WHERE tenant=? AND sequence=?',(principal.tenant_id,after_sequence)).fetchone()
+                if anchor is None:fail(409,'cursor_invalid')
+                event=json.loads(anchor['payload'])
+                if event.get('event_id')!=after_event_id or hashlib.sha256(canonical(event).encode()).hexdigest()!=after_event_sha256:fail(409,'cursor_invalid')
+            head=conn.execute('SELECT COALESCE(MAX(sequence),0) FROM work_item_events WHERE tenant=?',(principal.tenant_id,)).fetchone()[0]
+            rows=conn.execute('SELECT sequence,payload FROM work_item_events WHERE tenant=? AND sequence>? ORDER BY sequence LIMIT ?',(principal.tenant_id,after_sequence,limit)).fetchall()
+            return {'schema':'gradia.work-items.changefeed.v1','journal_id':journal,'tenant_id':principal.tenant_id,'head_sequence':head,'items':[{'sequence':row['sequence'],'event':json.loads(row['payload'])} for row in rows],'next_after':rows[-1]['sequence'] if rows else after_sequence}
 
     @app.get('/v1/work-items/{identity}',response_model=Item)
     def get_one(identity:str,request:Request,principal:Principal=Depends(actor)):

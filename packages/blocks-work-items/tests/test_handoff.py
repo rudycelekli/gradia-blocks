@@ -144,3 +144,33 @@ def test_wrong_proposal_profile_and_selector_refused(environment,tmp_path):
         assert handoff.run(feedback['id'],True)['receipt']['reason']=='invalid_selection'
         assert handoff.run('../private',1)['receipt']['reason']=='invalid_selection'
     assert target.get('/v1/work-items',headers=headers(TARGET)).json()['items']==[]
+
+
+def test_target_edition_is_explicit_and_allowlisted(environment):
+    source,target,feedback=environment
+    with proxy(source) as sc,proxy(target) as tc:
+        result=bridge(sc,tc).run(feedback['id'],1)
+        assert result['receipt']['target_version']=='0.2.0'
+        assert result['receipt']['result']=='proposed'
+        legacy=bridge(sc,tc,target_version='0.1.0').run(feedback['id'],1)
+        assert legacy['receipt']['result']=='refused'
+    for version in ('latest','0.3.0',None,True):
+        with pytest.raises(ValueError):
+            FeedbackHandoff(source_origin='http://127.0.0.1:1',target_origin='http://127.0.0.1:2',source_token=SOURCE,target_token=TARGET,tenant_id='alpha',target_version=version)
+
+
+def test_explicit_legacy_profile_binds_requests_to_legacy_edition(environment):
+    source,target,feedback=environment;versions=[]
+    # Simulated legacy session/conditional contract, backed by the same state API.
+    def handler(request):
+        passed=dict(request.headers)
+        if request.url.path.endswith('/session'):
+            response=target.get(request.url.path,headers=passed);data=response.json();data['version']='0.1.0'
+            return httpx.Response(200,headers=response.headers,stream=httpx.ByteStream(json.dumps(data).encode()))
+        versions.append(passed.pop('if-gradia-block-version',None))
+        response=target.request(request.method,request.url.path,headers=passed,content=request.content)
+        return httpx.Response(response.status_code,headers=response.headers,stream=httpx.ByteStream(response.content))
+    with proxy(source) as sc,httpx.Client(transport=httpx.MockTransport(handler)) as tc:
+        result=bridge(sc,tc,target_version='0.1.0').run(feedback['id'],1)
+    assert result['receipt']['result']=='proposed' and result['receipt']['target_version']=='0.1.0'
+    assert versions==['0.1.0']*3

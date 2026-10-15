@@ -11,7 +11,7 @@ jobs:
       fail-fast: false
       max-parallel: 4
       matrix:
-        lane: [feedback-api, admission-and-runner, client-and-widget, rust-contracts, skills-intake, ruflo-bridge, composition-planner, work-items, outbox]
+        lane: [feedback-api, admission-and-runner, client-and-widget, rust-contracts, skills-intake, ruflo-bridge, composition-planner, work-items, outbox, event-relay]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -36,6 +36,12 @@ jobs:
           python -m pip install --no-deps -e packages/blocks-outbox
           python -m pytest -c /dev/null -p no:cacheprovider packages/blocks-outbox/tests -q
           python packages/blocks-outbox/examples/tcp_replay.py
+      - if: matrix.lane == 'event-relay'
+        run: |
+          python -m pip install -r packages/blocks-event-relay/requirements-tested.txt
+          python -m pip install --no-deps -e packages/blocks-event-relay
+          PYTHONPATH=packages/blocks-event-relay:packages/blocks-work-items:packages/blocks-feedback:packages/blocks-outbox:packages/blocks-composition python -m pytest -c /dev/null -p no:cacheprovider packages/blocks-event-relay/tests -q
+          PYTHONPATH=packages/blocks-event-relay:packages/blocks-work-items:packages/blocks-feedback:packages/blocks-outbox python packages/blocks-event-relay/examples/full_tcp_replay.py
       - if: matrix.lane == 'composition-planner'
         run: PYTHONPATH=packages/blocks-composition python -m unittest discover -s packages/blocks-composition/tests -v
       - if: matrix.lane == 'ruflo-bridge'

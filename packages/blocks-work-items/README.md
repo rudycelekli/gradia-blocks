@@ -1,4 +1,4 @@
-# Gradia Work Items — reference 0.1.0
+# Gradia Work Items — reference 0.2.0
 
 Create durable work-item proposals, apply explicit state transitions and connect an authorized Feedback intake to human triage. This Apache-2.0 package runs independently with Python3.11+, FastAPI and a private SQLite file. It supplies an HTTP state-management API and a host-configured Feedback handoff; a visual Kanban board is not implemented.
 
@@ -52,7 +52,8 @@ All `/v1/work-items` operations require bearer authentication. OpenAPI describes
 
 | Operation | Scope and behavior |
 |---|---|
-| `GET /session` | Authenticated tenant/actor/role, block edition and configuration digest |
+| `GET /session` | Authenticated tenant/actor/role, block edition, configuration digest and journal ID |
+| `GET /changes?after_sequence=0&limit=100` | Operator-only tenant-wide durable metadata feed with journal/event-anchored cursors |
 | `GET /config` | Current host-owned workflow and feature profile |
 | `POST /v1/work-items` | Required `Idempotency-Key`; title, optional description, optional bridge-only source |
 | `GET /v1/work-items?limit=25&cursor=…` | Tenant-scoped list; optional status/assignee filters; nonoperators see their own actor's records; limit≤100 |
@@ -68,9 +69,25 @@ Create acknowledgment: `{status:"acknowledged",item:{…},replayed:false}`. A re
 
 `If-Gradia-Principal`, `If-Gradia-Configuration` and `If-Gradia-Block-Version` optionally bind a request to the earlier authenticated session fingerprint/profile; mismatch returns409 before access/write. Responses after authentication expose `X-Gradia-Principal-Sha256` over canonical tenant/actor/role metadata. This digest is not a credential, signature or independent identity attestation. Services and their HTTPS origins remain trusted host configuration.
 
+## Durable changefeed and cursor recovery
+
+`GET /v1/work-items/changes` exposes committed mutation metadata across the authenticated operator's tenant. It does not expose titles, descriptions or application payloads. Events retain their original metadata objects and editions; an existing0.1.0 event is not rewritten as0.2.0. Global SQLite sequence numbers may have gaps from other tenants. Such gaps do not imply loss within the tenant.
+
+The initial request uses `after_sequence=0`, optional `expected_journal_id`, and `limit`1–100. Read the stable UUID `journal_id` from the authenticated session or first page. A page has this shape:
+
+```json
+{"schema":"gradia.work-items.changefeed.v1","journal_id":"<UUID>","tenant_id":"tenant-a","head_sequence":14,"items":[{"sequence":12,"event":{"event_id":"<UUID>","schema":"gradia.work-items.event.v1"}}],"next_after":12}
+```
+
+The example abbreviates the event; actual responses preserve every original event field. Resume after the last accepted row with **all four** cursor parameters: `after_sequence`, `expected_journal_id`, `after_event_id` and `after_event_sha256`. The SHA256 is over UTF-8 bytes of `json.dumps(event, sort_keys=True, separators=(",", ":"), ensure_ascii=True)`. Hash the nested event object, excluding the wrapper sequence. The server validates the exact tenant-scoped anchor before reading subsequent rows. A journal, event ID or event digest mismatch returns409 `cursor_invalid`; an absent required anchor or initial event anchor returns422 `invalid_cursor`. Unknown/duplicate query keys refuse. Sequences are bounded0–9007199254740991. Empty pages preserve the caller's `next_after`.
+
+Journal identity, cursor anchor, tenant head and returned rows are read from one SQLite snapshot. A cursor is an observation checkpoint, not a delivery acknowledgment. Persist a consumer checkpoint only after independently validating and accepting the downstream outcome; use durable downstream idempotency for crash recovery. Restoring a divergent database branch fails a cursor when the anchored event changes or disappears. A restored branch with the same anchor remains indistinguishable at that prefix; neither the UUID nor SHA establishes database authenticity or complete retention.
+
+Startup bootstraps `journal_id` transactionally once in an existing legitimate schema1 database with its required schema/configuration identity intact. This is an additive metadata initialization, not a table-schema migration or attestation. Missing required metadata, altered tables/indexes, triggers/views, invalid journal IDs and workflow changes refuse; host filesystems remain trusted. Removing only journal metadata manually causes a new identity on restart and invalidates stored journal pins. Hosts must back up the metadata with the event journal.
+
 ## Actual Feedback → proposal handoff
 
-Requires **Feedback0.2.1 operator** and **Work Items0.1.0 bridge**, both in the explicitly configured same tenant. Older Feedback0.2.0 lacks the identity/conditional contract and cannot use this profile. Use separate least-scoped host tokens. Feedback is a separate package; core Work Items does not import or require it.
+Requires **Feedback0.2.1 operator** and **Work Items0.2.0 bridge**, both in the explicitly configured same tenant. Older Feedback0.2.0 lacks the identity/conditional contract and cannot use this profile. The default target edition is pinned to0.2.0; set `target_version="0.1.0"` explicitly only for the known legacy Work Items contract. Other editions refuse; there is no wildcard compatibility. Use separate least-scoped host tokens. Feedback is a separate package; core Work Items does not import or require it.
 
 ```python
 from gradia_work_items.handoff import FeedbackHandoff

@@ -1,0 +1,543 @@
+{
+  "schema": "gradia.event-relay.protocol-contracts.v1",
+  "changefeedProducerPage": {
+    "$defs": {
+      "ChangeEvent": {
+        "additionalProperties": false,
+        "properties": {
+          "schema": {
+            "const": "gradia.work-items.event.v1",
+            "title": "Schema",
+            "type": "string"
+          },
+          "schema_version": {
+            "const": "1",
+            "title": "Schema Version",
+            "type": "string"
+          },
+          "event_id": {
+            "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+            "title": "Event Id",
+            "type": "string"
+          },
+          "block_id": {
+            "const": "gradia.work-items",
+            "title": "Block Id",
+            "type": "string"
+          },
+          "block_version": {
+            "enum": [
+              "0.1.0",
+              "0.2.0"
+            ],
+            "title": "Block Version",
+            "type": "string"
+          },
+          "edition": {
+            "enum": [
+              "0.1.0",
+              "0.2.0"
+            ],
+            "title": "Edition",
+            "type": "string"
+          },
+          "tenant_id": {
+            "pattern": "^[a-zA-Z0-9][a-zA-Z0-9._-]{0,99}$",
+            "title": "Tenant Id",
+            "type": "string"
+          },
+          "actor_id": {
+            "pattern": "^[a-zA-Z0-9][a-zA-Z0-9._-]{0,99}$",
+            "title": "Actor Id",
+            "type": "string"
+          },
+          "item_id": {
+            "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+            "title": "Item Id",
+            "type": "string"
+          },
+          "revision": {
+            "maximum": 2147483647,
+            "minimum": 1,
+            "title": "Revision",
+            "type": "integer"
+          },
+          "operation": {
+            "enum": [
+              "item.proposed",
+              "item.updated"
+            ],
+            "title": "Operation",
+            "type": "string"
+          },
+          "result": {
+            "const": "persisted",
+            "title": "Result",
+            "type": "string"
+          },
+          "correlation_id": {
+            "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+            "title": "Correlation Id",
+            "type": "string"
+          },
+          "configuration_digest": {
+            "pattern": "^[0-9a-f]{64}$",
+            "title": "Configuration Digest",
+            "type": "string"
+          },
+          "duration_ms": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "number"
+              }
+            ],
+            "ge": 0,
+            "title": "Duration Ms"
+          },
+          "occurred_at": {
+            "maxLength": 64,
+            "title": "Occurred At",
+            "type": "string"
+          },
+          "privacy": {
+            "const": "metadata_only",
+            "title": "Privacy",
+            "type": "string"
+          },
+          "acceptance": {
+            "const": "not_evaluated",
+            "title": "Acceptance",
+            "type": "string"
+          },
+          "billability": {
+            "const": "not_evaluated",
+            "title": "Billability",
+            "type": "string"
+          },
+          "actor_type": {
+            "const": "configured_principal",
+            "title": "Actor Type",
+            "type": "string"
+          },
+          "human_involvement": {
+            "const": "unknown",
+            "title": "Human Involvement",
+            "type": "string"
+          },
+          "cost": {
+            "$ref": "#/$defs/EventCost"
+          },
+          "coverage": {
+            "const": "committed_mutations_only",
+            "title": "Coverage",
+            "type": "string"
+          }
+        },
+        "required": [
+          "schema",
+          "schema_version",
+          "event_id",
+          "block_id",
+          "block_version",
+          "edition",
+          "tenant_id",
+          "actor_id",
+          "item_id",
+          "revision",
+          "operation",
+          "result",
+          "correlation_id",
+          "configuration_digest",
+          "duration_ms",
+          "occurred_at",
+          "privacy",
+          "acceptance",
+          "billability",
+          "actor_type",
+          "human_involvement",
+          "cost",
+          "coverage"
+        ],
+        "title": "ChangeEvent",
+        "type": "object"
+      },
+      "ChangeRecord": {
+        "additionalProperties": false,
+        "properties": {
+          "sequence": {
+            "maximum": 9007199254740991,
+            "minimum": 1,
+            "title": "Sequence",
+            "type": "integer"
+          },
+          "event": {
+            "$ref": "#/$defs/ChangeEvent"
+          }
+        },
+        "required": [
+          "sequence",
+          "event"
+        ],
+        "title": "ChangeRecord",
+        "type": "object"
+      },
+      "EventCost": {
+        "additionalProperties": false,
+        "properties": {
+          "status": {
+            "const": "unknown",
+            "title": "Status",
+            "type": "string"
+          },
+          "amount": {
+            "title": "Amount",
+            "type": "null"
+          },
+          "currency": {
+            "title": "Currency",
+            "type": "null"
+          }
+        },
+        "required": [
+          "status",
+          "amount",
+          "currency"
+        ],
+        "title": "EventCost",
+        "type": "object"
+      }
+    },
+    "additionalProperties": false,
+    "properties": {
+      "schema": {
+        "const": "gradia.work-items.changefeed.v1",
+        "title": "Schema",
+        "type": "string"
+      },
+      "journal_id": {
+        "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+        "title": "Journal Id",
+        "type": "string"
+      },
+      "tenant_id": {
+        "pattern": "^[a-zA-Z0-9][a-zA-Z0-9._-]{0,99}$",
+        "title": "Tenant Id",
+        "type": "string"
+      },
+      "head_sequence": {
+        "maximum": 9007199254740991,
+        "minimum": 0,
+        "title": "Head Sequence",
+        "type": "integer"
+      },
+      "items": {
+        "items": {
+          "$ref": "#/$defs/ChangeRecord"
+        },
+        "maxItems": 100,
+        "title": "Items",
+        "type": "array"
+      },
+      "next_after": {
+        "maximum": 9007199254740991,
+        "minimum": 0,
+        "title": "Next After",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "schema",
+      "journal_id",
+      "tenant_id",
+      "head_sequence",
+      "items",
+      "next_after"
+    ],
+    "title": "ChangeFeedPage",
+    "type": "object"
+  },
+  "changefeedConsumerPage": {
+    "$defs": {
+      "Change": {
+        "additionalProperties": false,
+        "properties": {
+          "sequence": {
+            "maximum": 9007199254740991,
+            "minimum": 1,
+            "title": "Sequence",
+            "type": "integer"
+          },
+          "event": {
+            "$ref": "#/$defs/ChangeEvent"
+          }
+        },
+        "required": [
+          "sequence",
+          "event"
+        ],
+        "title": "Change",
+        "type": "object"
+      },
+      "ChangeEvent": {
+        "additionalProperties": false,
+        "properties": {
+          "schema": {
+            "const": "gradia.work-items.event.v1",
+            "title": "Schema",
+            "type": "string"
+          },
+          "schema_version": {
+            "const": "1",
+            "title": "Schema Version",
+            "type": "string"
+          },
+          "event_id": {
+            "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+            "title": "Event Id",
+            "type": "string"
+          },
+          "block_id": {
+            "const": "gradia.work-items",
+            "title": "Block Id",
+            "type": "string"
+          },
+          "block_version": {
+            "enum": [
+              "0.1.0",
+              "0.2.0"
+            ],
+            "title": "Block Version",
+            "type": "string"
+          },
+          "edition": {
+            "enum": [
+              "0.1.0",
+              "0.2.0"
+            ],
+            "title": "Edition",
+            "type": "string"
+          },
+          "tenant_id": {
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$",
+            "title": "Tenant Id",
+            "type": "string"
+          },
+          "actor_id": {
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$",
+            "title": "Actor Id",
+            "type": "string"
+          },
+          "item_id": {
+            "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+            "title": "Item Id",
+            "type": "string"
+          },
+          "revision": {
+            "maximum": 2147483647,
+            "minimum": 1,
+            "title": "Revision",
+            "type": "integer"
+          },
+          "operation": {
+            "enum": [
+              "item.proposed",
+              "item.updated"
+            ],
+            "title": "Operation",
+            "type": "string"
+          },
+          "result": {
+            "const": "persisted",
+            "title": "Result",
+            "type": "string"
+          },
+          "correlation_id": {
+            "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+            "title": "Correlation Id",
+            "type": "string"
+          },
+          "configuration_digest": {
+            "pattern": "^[0-9a-f]{64}$",
+            "title": "Configuration Digest",
+            "type": "string"
+          },
+          "duration_ms": {
+            "minimum": 0,
+            "title": "Duration Ms",
+            "type": "number"
+          },
+          "occurred_at": {
+            "maxLength": 64,
+            "title": "Occurred At",
+            "type": "string"
+          },
+          "privacy": {
+            "const": "metadata_only",
+            "title": "Privacy",
+            "type": "string"
+          },
+          "acceptance": {
+            "const": "not_evaluated",
+            "title": "Acceptance",
+            "type": "string"
+          },
+          "billability": {
+            "const": "not_evaluated",
+            "title": "Billability",
+            "type": "string"
+          },
+          "actor_type": {
+            "const": "configured_principal",
+            "title": "Actor Type",
+            "type": "string"
+          },
+          "human_involvement": {
+            "const": "unknown",
+            "title": "Human Involvement",
+            "type": "string"
+          },
+          "cost": {
+            "$ref": "#/$defs/Cost"
+          },
+          "coverage": {
+            "const": "committed_mutations_only",
+            "title": "Coverage",
+            "type": "string"
+          }
+        },
+        "required": [
+          "schema",
+          "schema_version",
+          "event_id",
+          "block_id",
+          "block_version",
+          "edition",
+          "tenant_id",
+          "actor_id",
+          "item_id",
+          "revision",
+          "operation",
+          "result",
+          "correlation_id",
+          "configuration_digest",
+          "duration_ms",
+          "occurred_at",
+          "privacy",
+          "acceptance",
+          "billability",
+          "actor_type",
+          "human_involvement",
+          "cost",
+          "coverage"
+        ],
+        "title": "ChangeEvent",
+        "type": "object"
+      },
+      "Cost": {
+        "additionalProperties": false,
+        "properties": {
+          "status": {
+            "const": "unknown",
+            "title": "Status",
+            "type": "string"
+          },
+          "amount": {
+            "title": "Amount",
+            "type": "null"
+          },
+          "currency": {
+            "title": "Currency",
+            "type": "null"
+          }
+        },
+        "required": [
+          "status",
+          "amount",
+          "currency"
+        ],
+        "title": "Cost",
+        "type": "object"
+      }
+    },
+    "additionalProperties": false,
+    "properties": {
+      "schema": {
+        "const": "gradia.work-items.changefeed.v1",
+        "title": "Schema",
+        "type": "string"
+      },
+      "journal_id": {
+        "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+        "title": "Journal Id",
+        "type": "string"
+      },
+      "tenant_id": {
+        "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$",
+        "title": "Tenant Id",
+        "type": "string"
+      },
+      "head_sequence": {
+        "maximum": 9007199254740991,
+        "minimum": 0,
+        "title": "Head Sequence",
+        "type": "integer"
+      },
+      "items": {
+        "items": {
+          "$ref": "#/$defs/Change"
+        },
+        "maxItems": 25,
+        "title": "Items",
+        "type": "array"
+      },
+      "next_after": {
+        "maximum": 9007199254740991,
+        "minimum": 0,
+        "title": "Next After",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "schema",
+      "journal_id",
+      "tenant_id",
+      "head_sequence",
+      "items",
+      "next_after"
+    ],
+    "title": "Page",
+    "type": "object"
+  },
+  "signedWebhook": {
+    "envelope": {
+      "schema": "gradia.webhook.v1",
+      "fields": [
+        "schema",
+        "delivery_id",
+        "tenant_id",
+        "event_type",
+        "payload_sha256",
+        "payload",
+        "created_at"
+      ]
+    },
+    "acknowledgment": {
+      "schema": "gradia.webhook.ack.v1",
+      "fields": [
+        "schema",
+        "delivery_id",
+        "payload_sha256",
+        "receiver_id",
+        "accepted"
+      ],
+      "accepted": true
+    },
+    "postSignature": "HMAC-SHA256(signing_key, timestamp + dot + immutable_envelope)",
+    "receiptGetSignature": "HMAC-SHA256(signing_key, timestamp + dot + GET + dot + exact_url + dot + immutable_envelope)",
+    "ackSignature": "HMAC-SHA256(signing_key, gradia.webhook.ack.v1. + request_timestamp + dot + attempt_id + dot + response_bytes)"
+  },
+  "boundary": "Declared protocol projection matching current source; not a universal runtime compatibility or authenticity proof"
+}

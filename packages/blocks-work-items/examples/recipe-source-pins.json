@@ -56,7 +56,7 @@
       "scope": "Root source/config/license files and implementation Python modules; excludes tests and generated examples"
     },
     "work-items": {
-      "sha256": "47c80e72a9b030cf191180336f0b5d7d60a1fe7c5e79be276f9f4e568f92c167",
+      "sha256": "d5c5e9560bd5baf64567b975bef5011404eb4a4efa6ebe9f3ecaef45ad8ed2e9",
       "files": [
         {
           "path": "LICENSE",
@@ -64,11 +64,11 @@
         },
         {
           "path": "README.md",
-          "sha256": "57e8e3b3b22f742a6b1dce82ea2fec9b13e544c4892e7c7e30e945b964850360"
+          "sha256": "69a50bed2904b83cc8374ddca77b0f0008359fd9cee4eac0c46f61bd0f6b3af6"
         },
         {
           "path": "block.manifest.json",
-          "sha256": "b7c82db217f73f5dbbf5b7a68040b310484bbb818b309ddd8e424b81fd4b702a"
+          "sha256": "6cc0498ec9ee874ced3b597981e6dee5b741a29005efe0421982f6c7485c6212"
         },
         {
           "path": "gradia_work_items/__init__.py",
@@ -76,15 +76,15 @@
         },
         {
           "path": "gradia_work_items/api.py",
-          "sha256": "8df49bf697b999d11e2d4394ec340513feeae16d0b320ae228281554bf0cd19f"
+          "sha256": "982851cf98c67984bda212f7136af682f6306fe9eae98677bdc087719787c402"
         },
         {
           "path": "gradia_work_items/contracts.py",
-          "sha256": "037ccc3e02fc48e18e6f184eccf94d3fceefdcd0e92102612cb520e50282d2ad"
+          "sha256": "671808d3b69d2c0cdff240e021aabdc4688d3fba336a3b94a2c77b1cda9d8608"
         },
         {
           "path": "gradia_work_items/handoff.py",
-          "sha256": "a4b27a099a30895308d77390742b0d1f90b2782da29cb0c26fd71975c0da110c"
+          "sha256": "149bf277b648d6f24c1ea9bf0936d9a622ff4fdda5b20edb900d06e6321e2760"
         },
         {
           "path": "gradia_work_items/server.py",
@@ -92,11 +92,11 @@
         },
         {
           "path": "gradia_work_items/store.py",
-          "sha256": "1b9719284ba3dddb4e7f7e925437dc5bbdc66b0e0726f9d16b51e97a48a82fc9"
+          "sha256": "6366df9fb71e7a405bfb5f67c38a6d857256bb9dd0061a88baa8dd31fbdf3205"
         },
         {
           "path": "pyproject.toml",
-          "sha256": "83d90e9d886d0e4e91e514551954cf63211a617bc2503e8d11288bd5502c1eca"
+          "sha256": "b017b397dcefe1143be7d65b881ae1a249de8ac8b2a63668902f6338eb3af428"
         },
         {
           "path": "requirements-tested.txt",

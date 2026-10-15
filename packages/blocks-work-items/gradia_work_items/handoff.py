@@ -31,7 +31,9 @@ def _base(value):
 
 
 class FeedbackHandoff:
-    def __init__(self,*,source_origin,target_origin,source_token,target_token,tenant_id,profile_id='feedback-proposal',source_client=None,target_client=None):
+    def __init__(self,*,source_origin,target_origin,source_token,target_token,tenant_id,profile_id='feedback-proposal',target_version='0.2.0',source_client=None,target_client=None):
+        if type(target_version) is not str or target_version not in ('0.1.0','0.2.0'):raise ValueError('Unsupported target edition')
+        self.target_version=target_version
         self.source_origin=_base(source_origin);self.target_origin=_base(target_origin)
         self.tenant=Principal(tenant_id=tenant_id).tenant_id
         if type(profile_id) is not str or not re.fullmatch(r'[a-zA-Z0-9][a-zA-Z0-9._-]{0,99}',profile_id):raise ValueError('Invalid profile ID')
@@ -52,7 +54,7 @@ class FeedbackHandoff:
         headers={'Authorization':'Bearer '+token,'Accept-Encoding':'identity'}
         if fingerprint:headers['If-Gradia-Principal']=fingerprint
         if configuration:headers['If-Gradia-Configuration']=configuration
-        if fingerprint:headers['If-Gradia-Block-Version']='0.2.1' if side=='source' else '0.1.0'
+        if fingerprint:headers['If-Gradia-Block-Version']='0.2.1' if side=='source' else self.target_version
         if key:headers['Idempotency-Key']=key
         remaining=deadline-time.monotonic() if deadline is not None else 3
         if remaining<=0:raise HandoffError('handoff_deadline')
@@ -104,8 +106,8 @@ class FeedbackHandoff:
         try:
             if type(feedback_id) is not str or not re.fullmatch(r'[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}',feedback_id) or type(expected_revision) is not int or not 1<=expected_revision<=2147483647:
                 raise HandoffError('invalid_selection')
-            phase='sessions';source_fp,source_config=self._session('source','operator','0.2.1',deadline);target_fp,target_config=self._session('target','bridge','0.1.0',deadline)
-            receipt.update({'source_principal_sha256':source_fp,'target_principal_sha256':target_fp,'source_configuration_sha256':source_config,'target_configuration_sha256':target_config,'source_version':'0.2.1','target_version':'0.1.0'})
+            phase='sessions';source_fp,source_config=self._session('source','operator','0.2.1',deadline);target_fp,target_config=self._session('target','bridge',self.target_version,deadline)
+            receipt.update({'source_principal_sha256':source_fp,'target_principal_sha256':target_fp,'source_configuration_sha256':source_config,'target_configuration_sha256':target_config,'source_version':'0.2.1','target_version':self.target_version})
             def correlation(headers):
                 value=headers.get('x-gradia-correlation-id')
                 return value if type(value) is str and re.fullmatch(r'[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}',value) else None

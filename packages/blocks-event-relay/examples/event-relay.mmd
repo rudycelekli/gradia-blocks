@@ -1,0 +1,16 @@
+flowchart LR
+  n0["event-relay | bridge | 0.1.0"]
+  n1["feedback | block | 0.2.1"]
+  n2["feedback-event-delivery | workflow | 0.1.0"]
+  n3["feedback-proposal-handoff | bridge | 0.2.0"]
+  n4["outbox | block | 0.1.0"]
+  n5["signed-receiver-fixture | block | 0.1.0"]
+  n6["work-items | block | 0.2.0"]
+  n4 --> n0
+  n6 --> n0
+  n0 --> n2
+  n3 --> n2
+  n5 --> n2
+  n1 --> n3
+  n6 --> n3
+  n4 --> n5
