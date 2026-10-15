@@ -8,3 +8,7 @@ __pycache__/
 *.sqlite-*
 credentials.json
 .env
+
+**/target/
+*.sqlite
+*.sqlite-*

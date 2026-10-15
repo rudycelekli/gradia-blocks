@@ -78,3 +78,8 @@ Hash an immutable staged snapshot. This scanner checks size while reading but is
 The screen says the configured evidence set is complete and consistent with its declared scope. The gate names are a **minimum checklist**, not implementations of every test: each candidate needs an independent test plan covering its actual threats and contracts. Reviewers must test the evaluator too and keep protected holdout cases separate from generation. Cross-tenant requests, secret/redaction failures, retry ambiguity, provider revocations, accessibility, API breakage, consumer compatibility and rollback require runnable tests appropriate to the candidate. An open-source source repository, a successful unit test or a model opinion is insufficient.
 
 The current regression suite includes a fully synthetic eligible case and deliberately broken evidence: changed source, changed profiles, missing/duplicate/unknown gates, self-declared approval, unauthorized or stale receipts, skipped/zero/failed checks, unknown verdicts, unsafe privacy declarations, exceeded budgets, automated-only rights review, stale protocols, symlinks and malformed JSON. These tests verify screening behavior, **not any real block's admission**.
+
+
+## License
+
+This original admission reference package is Apache-2.0; see LICENSE. Third-party dependencies retain their licenses.

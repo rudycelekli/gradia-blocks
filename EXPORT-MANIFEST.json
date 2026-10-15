@@ -1,272 +1,291 @@
 {
-  "schema_version": 1,
-  "release_status": "prepared_reference_export_not_production_admitted",
-  "prepared_date": "2026-10-15",
-  "scope": [
-    "feedback_reference",
-    "admission_screen",
-    "two_first_party_skills",
-    "fixed_diagram_ir_and_outputs"
-  ],
-  "provenance": {
-    "feedback": "Newly authored Gradia reference; package notices retained",
-    "admission": "Newly authored independent screen prototype",
-    "diagrams_archify_revision": "807ad7a31dac511612c951384e7700fbba9660a3",
-    "upstream_renderer": "Archify MIT; no renderer source exported"
-  },
-  "validation": {
-    "python_feedback": {
-      "passed": 14,
-      "warnings": 1,
-      "method": "PYTHONPATH source export with existing isolated dependency environment"
-    },
-    "python_admission": {
-      "passed": 28
-    },
-    "typescript_transport": {
-      "passed": 3
-    },
-    "react_widget": "tsc strict noEmit passed",
-    "heuristic_sensitive_scan": {
-      "patterns": [
-        "private_absolute_path",
-        "private_client_name",
-        "secret_assignment",
-        "private_key",
-        "github_token"
-      ],
-      "findings": [],
-      "limitations": "Pattern screen only, not comprehensive secret detection or security audit",
-      "corrections": "Initial npm --prefix lockfile included local resolution paths; regenerated from canonical directory and clean npm ci passed."
-    },
-    "ci": "Prepared workflow; not yet executed by GitHub Actions",
-    "clean_npm_ci": "passed"
-  },
+  "scope": "Original reference packages and attributed Archify diagrams; excludes private plans/customer implementations",
+  "validation": "Local14API+28admission+3SDK+8Rust tests passed; strict widget compilation; CI status separatelyverified",
   "files": [
     {
       "path": ".github/workflows/ci.yml",
-      "bytes": 852,
-      "sha256": "88cd3659deec509825fcba8526e702aeb85512ebdc66664f143a142c5849cae9"
+      "sha256": "9bc9460cf3ecc7ecf300232eea57d5fc1cc89b51405b3684c3c9333a995a7933",
+      "bytes": 1015
     },
     {
       "path": ".gitignore",
-      "bytes": 109,
-      "sha256": "738160866c83da108eecc499a56d5e57eccc419daf37310a4bb0834f7f177cda"
+      "sha256": "24d7516538d875dc6c6897f3edbf94cef42034a43bb7e11cbd248680f898a9fe",
+      "bytes": 141
     },
     {
       "path": "CONTRIBUTING.md",
-      "bytes": 1441,
-      "sha256": "b4e2e44732c2f00df5e1d56a8c1984add78dc5d8fff11589a2b001c5a5ac5ea6"
+      "sha256": "b4e2e44732c2f00df5e1d56a8c1984add78dc5d8fff11589a2b001c5a5ac5ea6",
+      "bytes": 1441
     },
     {
       "path": "LICENSE",
-      "bytes": 11358,
-      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358
     },
     {
       "path": "NOTICE",
-      "bytes": 442,
-      "sha256": "40c4336a6b1dcc52cbbe9d49ff6e1568aba1a766fd67e1a4b858c578b190fdbf"
+      "sha256": "40c4336a6b1dcc52cbbe9d49ff6e1568aba1a766fd67e1a4b858c578b190fdbf",
+      "bytes": 442
     },
     {
       "path": "README.md",
-      "bytes": 4044,
-      "sha256": "e85f1c206ff499ab1d143071c34cbcb2967ec826f7573ad8086b096845c0ccdf"
+      "sha256": "3ed53cdc7fae5f6771a96d361dbb88744e490b46aaa98377bbbb9fc1c0aee58d",
+      "bytes": 4591
     },
     {
       "path": "SECURITY.md",
-      "bytes": 1350,
-      "sha256": "325054a517fccd8fccf9eeb20996715688fa336eef2a12d4b3ffaeb1092b69a2"
+      "sha256": "325054a517fccd8fccf9eeb20996715688fa336eef2a12d4b3ffaeb1092b69a2",
+      "bytes": 1350
     },
     {
       "path": "diagrams/ARCHIFY-LICENSE.txt",
-      "bytes": 1102,
-      "sha256": "b799ab081703e7821ae5096d2c1abdf14bbdc75e8ea1c4045998c36ed6db9706"
+      "sha256": "b799ab081703e7821ae5096d2c1abdf14bbdc75e8ea1c4045998c36ed6db9706",
+      "bytes": 1102
+    },
+    {
+      "path": "diagrams/PROVENANCE.json",
+      "sha256": "437ff09b7db1a6661d8f5389bf6cde3b6474a40b3570edbe64e9aa6ed7995661",
+      "bytes": 1269
     },
     {
       "path": "diagrams/README.md",
-      "bytes": 541,
-      "sha256": "75744e7a07e68d27911609f4a80fa31c1cf9e717c9415f427baecb62cca7ac7d"
+      "sha256": "5306241acc3f06fd6062dcc797ecd4e68f96100b40cdec698e6b18af90bb8b1c",
+      "bytes": 747
     },
     {
       "path": "diagrams/THIRD-PARTY-NOTICES.md",
-      "bytes": 1341,
-      "sha256": "1a9b0a1692a5efa85aa65a8866cf4c0176b0281cd5eedd621753eaea448dedbc"
+      "sha256": "1a9b0a1692a5efa85aa65a8866cf4c0176b0281cd5eedd621753eaea448dedbc",
+      "bytes": 1341
     },
     {
       "path": "diagrams/feedback-architecture.html",
-      "bytes": 795696,
-      "sha256": "87cf10e55798f1627dab2f9d7856d3e91e0acf118a7aa93c35357648290c3915"
+      "sha256": "87cf10e55798f1627dab2f9d7856d3e91e0acf118a7aa93c35357648290c3915",
+      "bytes": 795696
     },
     {
       "path": "diagrams/feedback-architecture.svg",
-      "bytes": 315657,
-      "sha256": "6a55416a9fbe9cc0ef50a8a578037da713bfc55924661faaf203c0b0d8cdbe9f"
+      "sha256": "6a55416a9fbe9cc0ef50a8a578037da713bfc55924661faaf203c0b0d8cdbe9f",
+      "bytes": 315657
     },
     {
       "path": "diagrams/feedback-workflow.html",
-      "bytes": 790328,
-      "sha256": "8ee7a6571748cba132bbd60fe749fd586f1c2a0ee1941c33c81459bb412875d2"
+      "sha256": "8ee7a6571748cba132bbd60fe749fd586f1c2a0ee1941c33c81459bb412875d2",
+      "bytes": 790328
     },
     {
       "path": "diagrams/feedback-workflow.svg",
-      "bytes": 311528,
-      "sha256": "fbf5a547b4d724903a13bfa25d14831c26aabcf03a21ef8be83b10d7192cb000"
+      "sha256": "fbf5a547b4d724903a13bfa25d14831c26aabcf03a21ef8be83b10d7192cb000",
+      "bytes": 311528
     },
     {
       "path": "diagrams/ir/feedback-architecture.json",
-      "bytes": 4930,
-      "sha256": "628804cd8a414c4b36c9674fedefe98bb75e043aade3f607d4c34ae131f73b6d"
+      "sha256": "628804cd8a414c4b36c9674fedefe98bb75e043aade3f607d4c34ae131f73b6d",
+      "bytes": 4930
     },
     {
       "path": "diagrams/ir/feedback-workflow.json",
-      "bytes": 2826,
-      "sha256": "190423158d985677dbb41497aa9c73785f7cb32a453e3ae0f31f270c9b3cd919"
+      "sha256": "190423158d985677dbb41497aa9c73785f7cb32a453e3ae0f31f270c9b3cd919",
+      "bytes": 2826
     },
     {
       "path": "package-lock.json",
-      "bytes": 1059,
-      "sha256": "b11f865f886da4e37b1fd39d67b192827a8c6d23d330743645b6e8a056246f3a"
+      "sha256": "b11f865f886da4e37b1fd39d67b192827a8c6d23d330743645b6e8a056246f3a",
+      "bytes": 1059
     },
     {
       "path": "package.json",
-      "bytes": 796,
-      "sha256": "b61b1406ad2419af1cca52ab5f3461267c2b5e4d43c1b5288da4d1c5761de8b9"
+      "sha256": "b61b1406ad2419af1cca52ab5f3461267c2b5e4d43c1b5288da4d1c5761de8b9",
+      "bytes": 796
+    },
+    {
+      "path": "packages/blocks-admission/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358
     },
     {
       "path": "packages/blocks-admission/README.md",
-      "bytes": 8600,
-      "sha256": "03867789067fc5d77ad6a647fdbd0d52cebf58fd27eaa3f2dd917c92bf0659e7"
+      "sha256": "1846930d55584f18e6c7e45e808134efe6e78c923f380100b7effc035286c3d3",
+      "bytes": 8732
     },
     {
       "path": "packages/blocks-admission/examples/candidate.json",
-      "bytes": 408,
-      "sha256": "5ed6e2fc6da8949a5bfd0d18636fee29584996ef284586c7e5bbf9c50629143f"
+      "sha256": "5ed6e2fc6da8949a5bfd0d18636fee29584996ef284586c7e5bbf9c50629143f",
+      "bytes": 408
     },
     {
       "path": "packages/blocks-admission/gradia_admission/__init__.py",
-      "bytes": 82,
-      "sha256": "a745f37ecd350da51303d37b8b06d906b02d11b9d159cb73ea29549bd38f4e66"
+      "sha256": "a745f37ecd350da51303d37b8b06d906b02d11b9d159cb73ea29549bd38f4e66",
+      "bytes": 82
     },
     {
       "path": "packages/blocks-admission/gradia_admission/__main__.py",
-      "bytes": 54,
-      "sha256": "7b3c96afbd5c93b8d84cec1093177e7c771160425f1ab37d2c267d3e9770ba9e"
+      "sha256": "7b3c96afbd5c93b8d84cec1093177e7c771160425f1ab37d2c267d3e9770ba9e",
+      "bytes": 54
     },
     {
       "path": "packages/blocks-admission/gradia_admission/evaluator.py",
-      "bytes": 13568,
-      "sha256": "d82dbcafbae301055e42f65c1f8f0b4beda3f3d1ada2f50e66544568e6c86ab2"
+      "sha256": "d82dbcafbae301055e42f65c1f8f0b4beda3f3d1ada2f50e66544568e6c86ab2",
+      "bytes": 13568
     },
     {
       "path": "packages/blocks-admission/gradia_admission/protocol.json",
-      "bytes": 664,
-      "sha256": "932125de94466a71d4ae8ed459cb57dbd6c3bddb872a58a1a71598de0f055069"
+      "sha256": "932125de94466a71d4ae8ed459cb57dbd6c3bddb872a58a1a71598de0f055069",
+      "bytes": 664
     },
     {
       "path": "packages/blocks-admission/tests/test_evaluator.py",
-      "bytes": 10537,
-      "sha256": "90ce7f0528b74418e8540a9b44867934b0d360222d24b607a433f61c958ba35c"
+      "sha256": "90ce7f0528b74418e8540a9b44867934b0d360222d24b607a433f61c958ba35c",
+      "bytes": 10537
+    },
+    {
+      "path": "packages/blocks-contracts-rust/.gitignore",
+      "sha256": "306fd52e74fca6746e12acc750f232de15e71da917756a1270d74c91f5eb7368",
+      "bytes": 9
+    },
+    {
+      "path": "packages/blocks-contracts-rust/Cargo.lock",
+      "sha256": "24466cf78335c526a4cb55c1fdc85a76d05b84af90f722ad2c49246cce266609",
+      "bytes": 2662
+    },
+    {
+      "path": "packages/blocks-contracts-rust/Cargo.toml",
+      "sha256": "3db6a3b66da125ab467a5e3453e39d446c73e98ea2d031a126b8f83332c29b33",
+      "bytes": 196
+    },
+    {
+      "path": "packages/blocks-contracts-rust/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358
+    },
+    {
+      "path": "packages/blocks-contracts-rust/README.md",
+      "sha256": "3d71d27fafa516a29e5f25de013ecf6fbb8cf87d98e78d7b9b3918399ceae0bd",
+      "bytes": 4132
+    },
+    {
+      "path": "packages/blocks-contracts-rust/fixtures/python-events.json",
+      "sha256": "5d3b1c71efe85554a14a27169e9797e8dc9c73bdd5e72b327a186540647e7638",
+      "bytes": 4233
+    },
+    {
+      "path": "packages/blocks-contracts-rust/src/input.rs",
+      "sha256": "fdcb27cd8353d6ca6b977698211a7cd06f0ff5b1d566a9f67373d1f33889a2bf",
+      "bytes": 2221
+    },
+    {
+      "path": "packages/blocks-contracts-rust/src/lib.rs",
+      "sha256": "3b254dcf93870824c781940cb16e6ec1e8cb69f3dea19c60a79e0da7df82bcea",
+      "bytes": 10591
+    },
+    {
+      "path": "packages/blocks-contracts-rust/src/main.rs",
+      "sha256": "27fa7f0efea9fb9c69489c0252af0d189d0ed7170598e7e85bccf7e6188faeb0",
+      "bytes": 1274
+    },
+    {
+      "path": "packages/blocks-contracts-rust/tests/cli.rs",
+      "sha256": "216751fb4f2f2fd985a5c43830bceb19b406e66f5287298e890e31ec68450e16",
+      "bytes": 936
     },
     {
       "path": "packages/blocks-feedback/LICENSE",
-      "bytes": 11358,
-      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358
     },
     {
       "path": "packages/blocks-feedback/NOTICE",
-      "bytes": 292,
-      "sha256": "5429fba57af2a532bd485903881387b3f2c81a39714c1f87125335ff512962dc"
+      "sha256": "5429fba57af2a532bd485903881387b3f2c81a39714c1f87125335ff512962dc",
+      "bytes": 292
     },
     {
       "path": "packages/blocks-feedback/README.md",
-      "bytes": 10649,
-      "sha256": "d276e1b8d68dd5dbc96cea524867ad680456e81d6e59837868b58774e8b1624b"
+      "sha256": "d276e1b8d68dd5dbc96cea524867ad680456e81d6e59837868b58774e8b1624b",
+      "bytes": 10649
     },
     {
       "path": "packages/blocks-feedback/block.manifest.json",
-      "bytes": 3440,
-      "sha256": "6df498f68666a01d8de4dbf5fe74f0cdb118b097d5e3f40cba1e905937bf85ca"
+      "sha256": "6df498f68666a01d8de4dbf5fe74f0cdb118b097d5e3f40cba1e905937bf85ca",
+      "bytes": 3440
     },
     {
       "path": "packages/blocks-feedback/gradia_feedback/__init__.py",
-      "bytes": 196,
-      "sha256": "24e293643d7f726289ada38991075663e0960898706f2100152c8447ed15acd0"
+      "sha256": "24e293643d7f726289ada38991075663e0960898706f2100152c8447ed15acd0",
+      "bytes": 196
     },
     {
       "path": "packages/blocks-feedback/gradia_feedback/api.py",
-      "bytes": 13454,
-      "sha256": "1b2e1392dfd4e93a763930364f97a0b77b0ad03a0f39c286ff9efce77e37282d"
+      "sha256": "1b2e1392dfd4e93a763930364f97a0b77b0ad03a0f39c286ff9efce77e37282d",
+      "bytes": 13454
     },
     {
       "path": "packages/blocks-feedback/gradia_feedback/contracts.py",
-      "bytes": 4231,
-      "sha256": "c84543f7f4beb000d3f1c109061482d04a115bf6e8447ed0e6572bd6783a0040"
+      "sha256": "c84543f7f4beb000d3f1c109061482d04a115bf6e8447ed0e6572bd6783a0040",
+      "bytes": 4231
     },
     {
       "path": "packages/blocks-feedback/gradia_feedback/server.py",
-      "bytes": 1246,
-      "sha256": "550e1a9fc9185eaedde1f9a8ca6248ee4720ef2acdd69e2fab2f7c20817a719f"
+      "sha256": "550e1a9fc9185eaedde1f9a8ca6248ee4720ef2acdd69e2fab2f7c20817a719f",
+      "bytes": 1246
     },
     {
       "path": "packages/blocks-feedback/gradia_feedback/store.py",
-      "bytes": 2730,
-      "sha256": "220d24f1edd4daa22a3333950b9c6f4c51ff6271228d3348c2ce905bf21bc923"
+      "sha256": "220d24f1edd4daa22a3333950b9c6f4c51ff6271228d3348c2ce905bf21bc923",
+      "bytes": 2730
     },
     {
       "path": "packages/blocks-feedback/gradia_feedback/telemetry.py",
-      "bytes": 3469,
-      "sha256": "3b5ebe0d7bd1e3f897907ccaefcf917dc31573bf340f5d96cdfe67219904ee5f"
+      "sha256": "3b5ebe0d7bd1e3f897907ccaefcf917dc31573bf340f5d96cdfe67219904ee5f",
+      "bytes": 3469
     },
     {
       "path": "packages/blocks-feedback/pyproject.toml",
-      "bytes": 491,
-      "sha256": "3f47346f0de95edb48bd9f2e381d48422607221c35ead4d0f3c1ba7c7af932e6"
+      "sha256": "3f47346f0de95edb48bd9f2e381d48422607221c35ead4d0f3c1ba7c7af932e6",
+      "bytes": 491
     },
     {
       "path": "packages/blocks-feedback/requirements-tested.txt",
-      "bytes": 222,
-      "sha256": "3f4783038c7cc5973cb8c9df90d682267b0749fe43f30d5e9396e955c5ba09a6"
+      "sha256": "3f4783038c7cc5973cb8c9df90d682267b0749fe43f30d5e9396e955c5ba09a6",
+      "bytes": 222
     },
     {
       "path": "packages/blocks-feedback/tests/test_reference.py",
-      "bytes": 13248,
-      "sha256": "4428fee198f0b52ed323c271af6eafba989980e4d07daf5d9ab437d6a0b33303"
+      "sha256": "4428fee198f0b52ed323c271af6eafba989980e4d07daf5d9ab437d6a0b33303",
+      "bytes": 13248
     },
     {
       "path": "packages/blocks-feedback/typescript/client.test.cjs",
-      "bytes": 2035,
-      "sha256": "dfe68e0aca31f70e9ba7bbd4957052a7ce6d5af16118e8aac8d879cadc2afb5b"
+      "sha256": "dfe68e0aca31f70e9ba7bbd4957052a7ce6d5af16118e8aac8d879cadc2afb5b",
+      "bytes": 2035
     },
     {
       "path": "packages/blocks-feedback/typescript/client.ts",
-      "bytes": 5876,
-      "sha256": "4fc74e14a5e849edd232061550403f54af658c357bc66ddb96fafac3b6f99554"
+      "sha256": "4fc74e14a5e849edd232061550403f54af658c357bc66ddb96fafac3b6f99554",
+      "bytes": 5876
     },
     {
       "path": "packages/blocks-feedback/typescript/feedback-widget.tsx",
-      "bytes": 8190,
-      "sha256": "7b2b23726a377ecc8d93ce9f1d45588169d4d812b2a45bf90a1197ecbf968352"
+      "sha256": "b973400e17f241f128353a884c7c84133d532a1fa777db131ccde61c2db4f5b8",
+      "bytes": 8302
     },
     {
       "path": "packages/blocks-skills/LICENSE",
-      "bytes": 11358,
-      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358
     },
     {
       "path": "packages/blocks-skills/README.md",
-      "bytes": 1352,
-      "sha256": "8016792113942a27f9d27b6afe23f07f065b8089a2df0a7010f9e09b7d058e08"
+      "sha256": "8016792113942a27f9d27b6afe23f07f065b8089a2df0a7010f9e09b7d058e08",
+      "bytes": 1352
     },
     {
       "path": "packages/blocks-skills/skills/integrate-feedback.md",
-      "bytes": 2126,
-      "sha256": "6e2a2aaa6405fc2cb7242eb283eed620ac9f44cbbd84aca3e12ee3037091733b"
+      "sha256": "6e2a2aaa6405fc2cb7242eb283eed620ac9f44cbbd84aca3e12ee3037091733b",
+      "bytes": 2126
     },
     {
       "path": "packages/blocks-skills/skills/review-block-candidate.md",
-      "bytes": 2009,
-      "sha256": "109cac6b9da62dd336a21df2e50ad99126ecfa41cb3e2368188d752c83c34cb0"
+      "sha256": "109cac6b9da62dd336a21df2e50ad99126ecfa41cb3e2368188d752c83c34cb0",
+      "bytes": 2009
     }
   ]
 }

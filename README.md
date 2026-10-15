@@ -17,6 +17,20 @@ Gradia is an AI Research & Implementation Lab. This repository starts our open c
 | [Skills](packages/blocks-skills/README.md) | First-party integration/review instructions with explicit scope | Instructions grant no tool permissions or credentials |
 | [Diagrams](diagrams/README.md) | Standalone interactive HTML and SVG; typed source IR | Planned nodes remain labeled; no external provider calls |
 
+## Explore and discover
+
+Try the [Blocks & Skills explorer](https://www.gradiahq.com/blocks). The public
+catalog and reference-skill endpoints provide metadata and instructions, not
+hosted feedback execution or private tenant access.
+
+A native [Rust telemetry validator](packages/blocks-contracts-rust/README.md)
+checks the current Python metadata event contract. It is a contract core, not a
+Rust-native feedback server or a throughput claim. Run it with:
+
+```sh
+cargo test --locked --manifest-path packages/blocks-contracts-rust/Cargo.toml
+```
+
 ## First five minutes
 
 Python 3.12+ is recommended for the full reference suite. From this repository:
